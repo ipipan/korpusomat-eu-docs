@@ -1,0 +1,35 @@
+**fleksem**,**skrót**,**forma podstawowa**,**przykład**
+rzeczownik,*subst*,mianownik l. poj.,*doktor*
+rzeczownik deprecjatywny,*depr*,mianownik l. poj. rzeczownika,*doktor*
+liczebnik główny,*num*,mianownik rodz. m3,"*pięć*, *dwa*"
+liczebnik złoż.,*numcomp*,mianownik rodz. m3,"*pięć*, *dwa*"
+przymiotnik,*adj*,mianownik l. poj. rodzaju męskiego st. równego,*polski*
+przymiotnik przyprzyim.,*adja*,mianownik l. poj. rodz. męskiego przymiotnika w st. równym,*polski*
+przymiotnik poprzyim.,*adjp*,mianownik l. poj. rodz. męskiego przymiotnika w st. równym,*polski*
+przysłówek,*adv*,forma stopnia równego,"*dobrze*, *bardzo*"
+zaimek nietrzecioosobowy,*ppron12*,mianownik l. poj.,*ja*
+zaimek trzecioosobowy,*ppron3*,mianownik l. poj.,*on*
+zaimek :small-caps:`siebie`,*siebie*,biernik,*siebie*
+forma nieprzeszła,*fin*,bezokolicznik,*czytać*
+forma przyszła :small-caps:`być`,*bedzie*,bezokolicznik,*być*
+aglutynant :small-caps:`być`,*aglt*,bezokolicznik,*być*
+pseudoimiesłów,*praet*,bezokolicznik,*czytać*
+rozkaźnik,*impt*,bezokolicznik,*czytać*
+bezosobnik,*imps*,bezokolicznik,*czytać*
+bezokolicznik,*inf*,bezokolicznik,*czytać*
+im. przys. współczesny,*pcon*,bezokolicznik,*czytać*
+im. przys. uprzedni,*pant*,bezokolicznik,*czytać*
+odsłownik,*ger*,bezokolicznik,*czytać*
+im. przym. czynny,*pact*,bezokolicznik,*czytać*
+im. przym. bierny,*ppas*,bezokolicznik,*czytać*
+winien,*winien*,forma męska l. poj.,"*winien*, *rad*"
+predykatyw,*pred*,jedyna forma fleksemu,*warto*
+przyimek,*prep*,niewokaliczna forma fleksemu,"*na*, *przez*, *w*"
+spójnik współrz.,*conj*,jedyna forma fleksemu,*oraz*
+spójnik podrz.,*comp*,jedyna forma fleksemu,*że*
+partykuła,*part*,jedyna forma fleksemu,"*nie*, *-li*, *się*"
+skrót,*brev*,forma hasłowa rozwinięcia skrótu,"*rok*, *i_tak_dalej*"
+człon wyrażenia,*frag*,jedyna forma fleksemu,"*wskroś*, *dala*"
+wykrzyknik,*interj*,jedyna forma fleksemu,"*laboga*, *pst*"
+znak interpunkcyjny,*interp*,jedyna forma fleksemu,"*;*, *!*, *?*"
+ciało obce,*xxx*,jedyna forma fleksemu,"*wsio*, *revolutionibus*"

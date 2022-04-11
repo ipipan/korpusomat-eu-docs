@@ -1,0 +1,54 @@
+**Liczba**: (2 wartości),,
+pojedyncza,*sg*,*oko*
+mnoga,*pl*,*oczy*
+**Przypadek**: (7 wartości),,
+mianownik,*nom*,*woda*
+dopełniacz,*gen*,*wody*
+celownik,*dat*,*wodzie*
+biernik,*acc*,*wodę*
+narzędnik,*inst*,*wodą*
+miejscownik,*loc*,*wodzie*
+wołacz,*voc*,*wodo*
+**Rodzaj**: (5 wartości),,
+męski osobowy,*m1*,"*papież*, *kto*, *wujostwo*"
+męski zwierzęcy,*m2*,"*baranek*, *walc*, *babsztyl*"
+męski rzeczowy,*m3*,*stół*
+żeński,*f*,*stuła*
+nijaki,*n*,"*dziecko*, *okno*, *co*, *skrzypce*, *spodnie*"
+**Przyrodzaj**: (3 wartości),,
+przymnogi,*pt*,"*wujostwo*, *skrzypce*, *spodnie*"
+zbiorowy,*col*,*dziecko*
+niezbiorowy,*ncol*,*okno*
+**Osoba**: (3 wartości),,
+pierwsza,*pri*,*bredzę*
+druga,*sec*,*bredzisz*
+trzecia,*ter*,*bredzi*
+**Stopień**: (3 wartości),,
+równy,*pos*,*cudny*
+wyższy,*com*,*cudniejszy*
+najwyższy,*sup*,*najcudniejszy*
+**Aspekt**: (2 wartości),,
+niedokonany,*imperf*,*iść*
+dokonany,*perf*,*zajść*
+**Zanegowanie**: (2 wartości),,
+niezanegowana,*aff*,"*pisanie*, *czytanego*"
+zanegowana,*neg*,"*niepisanie*, *nieczytanego*"
+**Akcentowość**: (3 wartości),,
+akcentowana,*akc*,"*niego*, *jego*, *tobie*"
+nieakcentowana,*nakc*,"*go*, *-ń*, *ci*"
+zneutralizowana,*neut*,"*one*, *im*, *je*"
+**Poprzyimkowość**: (2 wartości) *,,
+poprzyimkowa,*praep*,"*niego*, *-ń*"
+niepoprzyimkowa,*npraep*,"*jego*, *go*"
+**Akomodacyjność**: (2 wartości),,
+uzgadniająca,*congr*,"*dwaj*, *pięcioma*"
+rządząca,*rec*,"*dwóch*, *dwu*, *pięciorgiem*"
+**Aglutynacyjność**: (2 wartości),,
+nieaglutynacyjna,*nagl*,*niósł*
+aglutynacyjna,*agl*,*niosł-*
+**Wokaliczność**: (2 wartości),,
+wokaliczna,*wok*,*-em*
+niewokaliczna,*nwok*,*-m*
+**Kropkowalność**: (2 wartości),,
+z następującą kropką,*pun*,*tzn*
+bez następującej kropki,*npun*,*wg*
