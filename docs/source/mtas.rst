@@ -37,7 +37,7 @@ segmenty mogą być krótsze niż takie słowa. Szczegółowe zasady segmentacji
 Znaczniki morfosyntaktyczne
 =====================================
 
-Wszystkie korpusy w Korpusomacie zawierają warstwę informacji morfosyntaktycznej zgodną ze specyfikacją Universal Dependencies. Informacja ta jest rozdzielona na dwie składowe: oznaczenie części mowy (tzw. UPOS — *universal part of speach*) oraz cechy morfosyntaktyczne (tzw. UFEATS — *universal features*). Obie te składowe (nazwy części mowy, nazwy cech morfoskładniowych i listy ich możliwych wartości) są opisane w dokumentacji `na stronie projektu UD <https://universaldependencies.org/guidelines.html>`__. Ponieważ z zasady jest to opis uniwersalny, każdy z konkretnych języków korzysta tylko z podzbioru cech morfologicznych i ich wartości. 
+Wszystkie korpusy w Korpusomacie zawierają warstwę informacji morfosyntaktycznej zgodną ze specyfikacją Universal Dependencies. Informacja ta jest rozdzielona na dwie składowe: oznaczenie części mowy (tzw. UPOS — *universal part of speech*) oraz cechy morfosyntaktyczne (tzw. UFEATS — *universal features*). Obie te składowe (nazwy części mowy, nazwy cech morfoskładniowych i listy ich możliwych wartości) są opisane w dokumentacji `na stronie projektu UD <https://universaldependencies.org/guidelines.html>`__. Ponieważ z zasady jest to opis uniwersalny, każdy z konkretnych języków korzysta tylko z podzbioru cech morfologicznych i ich wartości. 
 
 Oprócz informacji morfosyntaktycznej zgodnej ze specyfikacją UD w większości korpusów dostępny jest również dodatkowy znacznik, tzn. XPOS, który przechowuje informację morfosyntaktyczną zgodną z tagsetem stosowanym w zasobach dla danego języka. Oba potoki przetwarzania dostarczają znakują teksty również znacznikami XPOS, ale ich konkretna postać zależy zarówno od twórców narzędzi, jak i twórców banku drzew UD. W szczególności od twórców banku drzew zależy, jaka postać znacznika znajdzie się w polu XPOS — zarówno pod względem szczegółowości opisu morfosyntaktycznego, jak i technicznego opisu samego tagsetu, dlatego nie mają one ustandaryzowanej wspólnej postaci. Najczęściej są to jednak systemy znaczników stosowane w narodowych korpusach tych języków. W wypadku gdy twórcy banku drzew UD nie umieścili w nim znaczników XPOS, Korpusomat również nie umożliwa korzystania z nich — tak jest wypadku języka rosyjskiego (w obu potokach przetwarzania). W niektórych wypadkach postać znacznika XPOS może się różnić w zależności od potoku przetwarzania, np. w wypadku języka polskiego Stanza zwraca pełne znaczniki morfosyntaktyczne (w tagsecie stosowanym w polskich korpusach), spaCy zaś ogranicza się tylko do pierwszej części takiego znacznika oznaczającej przynależność słowa do klasy gramatycznej.
 
@@ -231,7 +231,7 @@ wyrażeń.
 
 Specyfikacje segmentów podane powyżej muszą pasować do całych segmentów
 stąd konieczność umieszczenia po obu stronach ciągu ``(la){3,}`` w
-zapytaniu `[lala] <#lala>`__. o segmenty zawierające ciąg *lalala*
+zapytaniu ``[orth=".*(la){3,}.*"]``
 wyrażenia ``.*``, pasującego do dowolnego ciągu znaków.
 
 Zapytania z innymi atrybutami
@@ -335,7 +335,7 @@ oddzielonych od siebie dowolnymi dwoma segmentami, np.:
 
 ::
 
-   [orth="się"][][][base="bać"]
+   [orth="się"][][][lemma="bać"]
 
 W wyniku tego zapytania zostaną znalezione ciągi takie jak *się mnie też
 bać* czy *się nie chcę bać*.
@@ -344,27 +344,27 @@ Dla wielu zastosowań ciekawsza byłaby możliwość zapytania na przykład
 o formy oddalone od siebie o najwyżej pięć pozycji. MTAS umożliwia
 zadawanie takich pytań, gdyż pozwala na formułowanie wyrażeń regularnych
 także na poziomie pozycji korpusu. Na przykład zapytanie o formę leksemu
-bać występującą dwie, trzy lub cztery pozycje dalej niż forma *się* może
+*bać* występującą dwie, trzy lub cztery pozycje dalej niż forma *się* może
 wyglądać następująco:
 
 ::
 
-   [orth="się"][]{2,4}[base="bać"]
+   [orth="się"][]{2,4}[lemma="bać"]
 
 W wyniku tego zapytania zostaną znalezione ciągi uzyskane w wyniku
 poprzedniego zapytania, a także na przykład ciąg *się pani niczego nie
 boi*.
 
 Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form
-tzw. czasownika zwrotnego bać się byłoby zapytanie o *się* w pewnej
+tzw. czasownika zwrotnego *bać się* byłoby zapytanie o *się* w pewnej
 odległości przed formą leksemu bać, ale bez znaku interpunkcyjnego
 pomiędzy tymi formami, lub bezpośrednio za taką formą, ewentualnie
 oddzielone od formy bać zaimkiem osobowym:
 
 ::
 
-   [orth="się"][!orth="[.!?,:]"]{0,5}[base="bać"]
-   | [base="bać"][base="on|ja|ty|my|wy"]?[orth="się"]
+   [orth="się"][!orth="[.!?,:]"]{0,5}[lemma="bać"]
+   | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
 Zapytania o znaczniki morfosyntaktyczne
 ---------------------------------------
@@ -375,45 +375,40 @@ Powyższe zapytanie można uprościć poprzez zastąpienie warunku
 
 ::
 
-   [orth="się"][!pos="interp"]{0,5}[base="bać"]
-   | [base="bać"][base="on|ja|ty|my|wy"]?[orth="się"]
+   [orth="się"][!upos="PUNCT"]{0,5}[lemma="bać"]
+   | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
-Ogólniej, wartościami atrybutu ``pos`` (ang. *part of speech* ‘część
-mowy’) są skróty nazw klas gramatycznych omówionych w p.
-`2.2 <#sec:klasy>`__ (por. tabela `2 <#tab:klasy>`__). Na przykład
+Ogólniej, wartościami atrybutu ``upos`` (*universal part of speech*) są skróty nazw klas gramatycznych 
+`omówionych w dokumentacji Universal Dependencies <https://universaldependencies.org/u/pos/index.html>`__. Na przykład
 zapytanie o sekwencję dwóch form rzeczownikowych rozpoczynających się na
 *a* może być sformułowane w sposób następujący:
 
 ::
 
-   [pos="subst" & orth="a.*"]{2}
+   [upos="NOUN" & orth="a.*"]{2}
 
 Podobnie jak to miało miejsce w wypadku specyfikacji form obu warstw
 tekstowych i form hasłowych, także specyfikacje klas gramatycznych mogą
-zawierać wyrażenia regularne. Na przykład, zważywszy na to, że zaimki
-osobowe należą do klasy zaimków trzecioosobowych *ppron3* i do klasy
-zaimków nietrzecioosobowych *ppron12*, poniższe zapytania mogą posłużyć
-do znalezienia dowolnych form dowolnych zaimków osobowych:
+zawierać wyrażenia regularne.
+
+Dodatkowo za pomocą atrybutu ``xpos`` można odwołać się w zapytaniu do znacznika specyficznego dla języka. Specyfikacja tego atrybutu również może zawierać wyrażenia regularne. Na przykład w korpusie stworzony w języku czeskim następujące zapytanie:
 
 ::
 
-   [pos="ppron12" | pos="ppron3"]
-   [pos="ppron12|ppron3"]
-   [pos="ppron(12|3)"]
-   [pos="ppron[123]+"]
-   [pos="ppron.+"]
+[xpos="NNNS1.*"]
+ 
+wyszuka wszystkie rzeczowniki w rodzaju nijakim w mianowniku liczby pojedynczej. Rzeczowniki o tych samych cechach w polskim korpusie znajdzie zapytanie:
 
-A zatem zapytanie o formy *bać się* może zostać jeszcze bardziej
-uproszczone do następującego zapytania:
+ ::
 
-::
+ [xpos="subst:sg:nom:n.*"]
 
-   [orth="się"][!pos="interp"]{0,5}[base="bać"]
-   | [base="bać"][pos="ppron.+"]?[orth="się"]
+W obu wypadkach wartość atrybutu ``xpos`` jest zakończona wyrażeniem ``.*``, ponieważ po wartościach części mowy, liczby, rodzaju i przypadka mogą pojawić się jeszcze wartości innych kategorii uwzględnionych w obu tagsetach. 
+
 
 W zapytaniach można określić nie tylko postać ortograficzną segmentu (za
-pomocą atrybutu ``orth``), formę hasłową (za pomocą ``base``) i klasę
-gramatyczną (za pomocą ``pos``), ale także wartości poszczególnych
+pomocą atrybutu ``orth``), formę hasłową (za pomocą ``lemma``) i klasę
+gramatyczną (za pomocą ``upos``), ale także wartości poszczególnych
 kategorii gramatycznych, np. przypadka czy rodzaju. Służą do tego
 następujące atrybuty (por. p.\ `2.1 <#sec:kategorie>`__):
 
