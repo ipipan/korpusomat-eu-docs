@@ -34,100 +34,27 @@ ortograficzne (słowa ‘od spacji do spacji’ z oddzieleniem znaków interpunk
 segmenty mogą być krótsze niż takie słowa. Szczegółowe zasady segmentacji dla poszczególnych języków mogą się różnić i zależą od decyzji podjętych przez twórców zasobów jezykowych dla danego języka (głównie twórców banków drzew zależnościowych) oraz przez twórców konkretnych narzędzi programistycznych. Przykładowo, w korpusach języka polskiego (w tym m.in. w Narodowym Korpusie Języka Polskiego) na etapie segmentacji zwykło się oddzielać od form przeszłych czasowników tzw. aglutynant (wykładnik osoby i liczby) a także partykułę *by* będącą wykładnikiem trybu warunkowego. W efekcie słowo jedno słowo tekstowe zostaje rozbite odpowiednio na dwa lub trzy segmenty i każdemu z nich jest przypisana osobna interpretacja fleksyjna: np. *[pisał][eś]*, *[jedli][by][śmy]*. Jednak w Korpusomacie ta decyzja jest dodatkowo zależna od wybranego potoku przetwarzania, bowiem twórcy tych potoków podjęli w tej sprawie różne decyzje: Stanza stosuje segmentację taką, jak w Narodowym Korpusie Języka Polskiego, czyli oddziela aglutynant i partykułę *by*, ale spaCy uznaje formy czasu przeszłego oraz trybu warunkowego za pojedyncze segmenty i nie rozbija ich. To jednak rzadkie i skrajne przypadki wynikające ze specyfiki wykorzystanych narzędzi — w większości wypadków teksty w poszczególnych językach powinny być segmentowane w obu potokach tak samo i zgodnie z typową dla danego języka segmentacją stosowaną w bankach drzew składniowych oraz korpusach narodowych danych języków.
 
 
-Zestaw znaczników morfosyntaktycznych
+Znaczniki morfosyntaktyczne
 =====================================
 
-Każdy znacznik morfosyntaktyczny jest ciągiem wartości rozdzielonych
-dwukropkami, np.: *subst:sg:nom:m1* dla segmentu *chłopiec*. Pierwsza
-wartość, np. *subst*, określa klasę gramatyczną (por. p.
-`2.2 <#sec:klasy>`__), następne zaś, np. *sg*, *nom* i *m1* wartości
-odpowiednich dla tej klasy kategorii gramatycznych (por. p
-`2.1 <#sec:kategorie>`__).
+Wszystkie korpusy w Korpusomacie zawierają warstwę informacji morfosyntaktycznej zgodną ze specyfikacją Universal Dependencies. Informacja ta jest rozdzielona na dwie składowe: oznaczenie części mowy (tzw. UPOS — *universal part of speach*) oraz cechy morfosyntaktyczne (tzw. UFEATS — *universal features*). Obie te składowe (nazwy części mowy, nazwy cech morfoskładniowych i listy ich możliwych wartości) są opisane w dokumentacji `na stronie projektu UD <https://universaldependencies.org/guidelines.html>`__. Ponieważ z zasady jest to opis uniwersalny, każdy z konkretnych języków korzysta tylko z podzbioru cech morfologicznych i ich wartości. 
 
-.. _sec:kategorie:
+Oprócz informacji morfosyntaktycznej zgodnej ze specyfikacją UD w większości korpusów dostępny jest również dodatkowy znacznik, tzn. XPOS, który przechowuje informację morfosyntaktyczną zgodną z tagsetem stosowanym w zasobach dla danego języka. Oba potoki przetwarzania dostarczają znakują teksty również znacznikami XPOS, ale ich konkretna postać zależy zarówno od twórców narzędzi, jak i twórców banku drzew UD. W szczególności od twórców banku drzew zależy, jaka postać znacznika znajdzie się w polu XPOS — zarówno pod względem szczegółowości opisu morfosyntaktycznego, jak i technicznego opisu samego tagsetu, dlatego nie mają one ustandaryzowanej wspólnej postaci. Najczęściej są to jednak systemy znaczników stosowane w narodowych korpusach tych języków. W wypadku gdy twórcy banku drzew UD nie umieścili w nim znaczników XPOS, Korpusomat również nie umożliwa korzystania z nich — tak jest wypadku języka rosyjskiego (w obu potokach przetwarzania). W niektórych wypadkach postać znacznika XPOS może się różnić w zależności od potoku przetwarzania, np. w wypadku języka polskiego Stanza zwraca pełne znaczniki morfosyntaktyczne (w tagsecie stosowanym w polskich korpusach), spaCy zaś ogranicza się tylko do pierwszej części takiego znacznika oznaczającej przynależność słowa do klasy gramatycznej.
 
-Kategorie gramatyczne
----------------------
-
-Tabela `1 <#tab:kategorie>`__ przedstawia repertuar kategorii
-gramatycznych używanych w znakowaniu tekstów w Korpusomacie. Repertuar
-kategorii pochodzi z tagsetu `analizatora morfologicznego
-Morfeusz <http://sgjp.pl/morfeusz/>`__, który jest podobny do tagsetu
-NKJP, ale zawiera też kilka modyfikacji. Najważniejszą cechą tagsetu
-Morfeusza w stosunku do tagsetu NKJP jest wprowadzenie obok kategorii
-rodzaju opcjonalnej tzw. kategorii przyrodzaju o wartościach ``pt``,
-``col`` i ``ncol`` przysługują one wyłącznie klasom ``subst`` i ``num``.
-W wypadku ``subst`` informują o łączliwości danego rzeczownika rodzaju
-nijakiego z liczebnikami głównymi (``ncol``, np. okno) lub zbiorowymi
-(``col``, np. dziecko) oraz o braku w paradygmacie rzeczownika form
-liczby pojedynczej (``pt``, np. skrzypce). W wypadku klasy ``num``
-wartość kategorii przyrodzaju informuje o tym, że dana forma jest
-zbiorowa (``col``, np. *dwoje*) lub niezbiorowa (``ncol``, np. *dwa*).
-Konsekwencją wprowadzenia kategorii przyrodzaju w klasie ``num`` było
-usunięcie z tagsetu klasę ``numcol``. Inne różnice to m.in.:
-
--  ograniczenie klasy przymiotników poprzyimkowych *adjp* wyłącznie do
-   form dopełniacza (np. *(z) wolna*) i celownika (np. *(po) polsku*)
-   dawnej odmiany niezłożonej przymiotników oraz dodanie im wartości
-   przypadka;
-
--  przemianowanie klas ``qub`` i ``burk`` odpowiednio na ``part``
-   i ``frag``.
-
-.. _sec:klasy:
-
-Klasy gramatyczne
------------------
-
-Zasięg tradycyjnych części mowy, takich jak czasownik, rzeczownik,
-liczebnik czy zaimek, jest nieostry i przez to kontrowersyjny: czy tzw.
-odsłowniki, tj. formy typu *picie* i *palenie*, to czasowniki (posiadają
-kategorię aspektu, są regularnie powiązane z formami czasownikowymi typu
-*pić* i *palić*), czy też rzeczowniki (odmieniają się przez przypadek,
-posiadają słownikową kategorię rodzaju)?, czy *piąty* to liczebnik (na
-to wskazuje semantyka), czy też przymiotnik (na to wskazuje odmiana)?,
-czy *taki* to zaimek (semantyka), czy przymiotnik (odmiana)?
-
-W Korpusomacie klasy gramatyczne rozumiane są morfosyntaktycznie, są one
-oparte na pojęciu fleksemu, będącym pojęciem węższym od terminu leksem.
-
-Tabela `2 <#tab:klasy>`__ zawiera przybliżoną charakterystykę
-morfosyntaktyczną wszystkich klas fleksyjnych przyjmowanych w niniejszym
-tagsecie. Symbol :math:`\oplus` oznacza, że dla danej klasy fleksyjnej
-dana kategoria gramatyczna jest morfologiczna (fleksemy należące to tej
-klasy zwykle „odmieniają się” przez tę kategorię), zaś symbol
-:math:`\odot` oznacza, że dana kategoria jest słownikowa (wszystkie
-formy dowolnego fleksemu należącego do tej klasy mają tę samą wartość
-tej kategorii, choć mogą to być różne wartości dla różnych fleksemów,
-jak w wypadku rodzaju rzeczowników).
-
-Tabela `3 <#tab:haslowe>`__ zawiera informacje o formach podstawowych
-dla poszczególnych klas fleksyjnych, a także skróty nazw klas
-fleksyjnych używane w korpusie.
 
 Język zapytań
 =============
 
 Składnia zapytań w programie MTAS została oparta na języku zapytań
-o nazwie Corpus Query Language (CQL), wykorzystywanym w wielu innych
-tego typu programach, m.in. w programie Sketch Engine, ale też w znanym
-z NKJP Poliqarpie (wykorzystywanym w starej wersji Korpusomatu). Należy
-jednak zwrócić uwagę na drobne różnice, ponieważ mogą one wpływać na
-poprawność formułowanych zapytań. Niniejszy rozdział omawia składnię
-zapytań wyszukiwarki MTAS i ilustruje ją wieloma przykładami.
+o nazwie Corpus Query Language (CQL), który jest powszechnie znany i stosowany w wyszukiwarkach korpusowych. 
+Niniejszy rozdział omawia składnię CQL w wariancie zastowanych w Korpusomacie.
 
 MTAS jest uniwersalną wyszukiwarką pozwalającą na przeszukiwanie
-korpusów zawierających wiele warstw anotacyjnych, np. warstwę
-morfosyntaktyczną, warstwę składniową, warstwę nazw własnych, warstwę
-sensu słów itp. Niniejsza instrukcja dotyczy przeszukiwania korpusów
-tekstów polskich w postaci indeksowanej przez Korpusomat, który tworzy
+korpusów zawierających wiele warstw anotacyjnych. Niniejsza instrukcja dotyczy przeszukiwania korpusów 
+postaci indeksowanej przez Korpusomat, który tworzy
 aktualnie trzy warstwy znakowania: warstwę morfosyntaktyczną
-i składniową oraz warstwę jednostek nazewniczych. Z tego powodu
-instrukcja języka zapytań ogranicza się tylko do tych warstw i nie
-uwzględnia możliwości wyszukiwarki zastosowanej do innych korpusów. Nie
-należy jej zatem traktować jako ogólnej instrukcji użytkowania
-wyszukiwarki MTAS. Podstawowa dokumentacja wyszukiwarki znajduje się `na
-jej stronie internetowej <https://meertensinstituut.github.io/mtas/>`__.
+i składniową oraz warstwę jednostek nazewniczych. Ogólna podstawowa dokumentacja 
+wyszukiwarki MTAS znajduje się `na jej stronie internetowej <https://meertensinstituut.github.io/mtas/>`__.
 
 Zapytania o segmenty
 --------------------
@@ -310,25 +237,25 @@ wyrażenia ``.*``, pasującego do dowolnego ciągu znaków.
 Zapytania z innymi atrybutami
 -----------------------------
 
-Aby znaleźć wszystkie formy leksemu korpus, można użyć następującego
+Aby znaleźć wszystkie formy leksemu *korpus*, można użyć następującego
 zapytania:
 
 ::
 
-   [base="korpus"]
+   [lemma="korpus"]
 
-Atrybut ``base`` jest jednym z wielu możliwych atrybutów, jakie mogą
+Atrybut ``lemma`` jest jednym z wielu możliwych atrybutów, jakie mogą
 pojawić się w zapytaniu. Wartością tego atrybutu powinna być
-specyfikacja formy podstawowej (hasłowej), a zatem zapytanie
-``[base="pisać"]`` może być użyte do znalezienia form typu *pisać*,
+forma podstawowa (hasłowa), a zatem zapytanie
+``[lemma="pisać"]`` może być użyte do znalezienia form typu *pisać*,
 *piszę*, *pisała*, *piszcie*, *pisanie*, *pisano*, *pisane* itp.
 
-Podobnie jak w wypadku atrybutu ``orth`` wartościami atrybutu ``base``
+Podobnie jak w wypadku atrybutu ``orth`` wartościami atrybutu ``lemma``
 mogą być wyrażenia regularne, np:
 
 ::
 
-   [base="komit[ae]t"]
+   [lemma="komit[ae]t"]
 
 znalezione zostaną wszystkie segmenty, których forma hasłowa ma postać
 komitet lub komitat.
@@ -340,14 +267,14 @@ zapytanie:
 
 ::
 
-   [orth="minę" & base="mina"] 
+   [orth="minę" & lemma="mina"] 
 
 Podobne znaczenie ma następujące zapytanie o te wystąpienia segmentu
 *minę*, które nie są interpretowane jako formy leksemu minąć.
 
 ::
 
-   [orth="minę" & !base="minąć"]
+   [orth="minę" & !lemma="minąć"]
 
 W powyższych zapytaniach operator ``&`` spełnia rolę logicznej
 koniunkcji. Operatorem do niego dualnym jest operator ``|``, spełniający
@@ -355,31 +282,31 @@ rolę logicznej alternatywy. Oto kilka przykładów użycia tego operatora:
 
 -  ::
 
-      [base="on" | base="ja"]
+      [lemma="on" | base="ja"]
 
-   wszystkie formy zaimków on i ja, równoważne zapytaniu
-   ``[base="on|ja"]``,
-
--  ::
-
-      [base="on" | orth="mnie" | orth="ciebie"]
-
-   wszystkie formy zaimka on, a także segmenty *mnie* i *ciebie*,
+   wszystkie formy zaimków *on* i *ja*, równoważne zapytaniu
+   ``[lemma="on|ja"]``,
 
 -  ::
 
-      [orth="pora" & !(base="por" | base="pora")]
+      [lemma="on" | orth="mnie" | orth="ciebie"]
 
-   segment *pora* nie będący ani formą leksemu por, ani formą leksemu
-   pora.
+   wszystkie formy zaimka *on*, a także segmenty *mnie* i *ciebie*,
+
+-  ::
+
+      [orth="pora" & !(lemma="por" | lemma="pora")]
+
+   segment *pora* niebędący ani formą leksemu *por*, ani formą leksemu
+   *pora*.
 
 Aby lepiej zrozumieć różnicę pomiędzy operatorami ``&`` i ``|``,
 porównajmy następujące dwa zapytania:
 
 ::
 
-   [orth="minę" & base="mina"]
-   [orth="minę" | base="mina"]
+   [orth="minę" & lemma="mina"]
+   [orth="minę" | lemma="mina"]
 
 W wyniku zadania pierwszego zapytania znalezione zostaną te segmenty,
 które są jednocześnie (koniunkcja) segmentem *minę* i formą leksemu
