@@ -15,7 +15,7 @@ instrukcję użytkowania wyszukiwarki Poliqarp z Narodowym Korpusem Języka
 Polskiego. Jej pełna wersja znajduje się w `repozytorium wyszukiwarki
 Poliqarp <https://sourceforge.net/projects/poliqarp/files/poliqarp/1.3.13/>`__.
 
-Niniejszy dokument został przygotowany przez Witolda Kierasia i opisuje
+Aktualna wersja tego dokumentu została przygotowana przez Witolda Kierasia i opisuje
 sposób użytkowania wyszukiwarki MTAS, niepowiązanej z Poliqarpem, ale
 wykorzystującej podobny język zapytań znany pod nazwą *Corpus Query
 Language* (CQL). Modyfikacje wprowadzone do pierwotnej wersji instrukcji
@@ -30,53 +30,9 @@ Segmentacja
 
 Znaczniki morfosyntaktyczne, tzw. tagi, przypisane są segmentom
 (tokenom, w przybliżeniu słowom). Segmenty nie są dłuższe niż słowa
-ortograficzne (słowa ‘od spacji do spacji’), ale w niektórych wypadkach
-segmenty mogą być krótsze niż takie słowa:
+ortograficzne (słowa ‘od spacji do spacji’ z oddzieleniem znaków interpunkcyjnych), ale w niektórych wypadkach
+segmenty mogą być krótsze niż takie słowa. Szczegółowe zasady segmentacji dla poszczególnych języków mogą się różnić i zależą od decyzji podjętych przez twórców zasobów jezykowych dla danego języka (głównie twórców banków drzew zależnościowych) oraz przez twórców konkretnych narzędzi programistycznych. Przykładowo, w korpusach języka polskiego (w tym m.in. w Narodowym Korpusie Języka Polskiego) na etapie segmentacji zwykło się oddzielać od form przeszłych czasowników tzw. aglutynant (wykładnik osoby i liczby) a także partykułę *by* będącą wykładnikiem trybu warunkowego. W efekcie słowo jedno słowo tekstowe zostaje rozbite odpowiednio na dwa lub trzy segmenty i każdemu z nich jest przypisana osobna interpretacja fleksyjna: np. *[pisał][eś]*, *[jedli][by][śmy]*. Jednak w Korpusomacie ta decyzja jest dodatkowo zależna od wybranego potoku przetwarzania, bowiem twórcy tych potoków podjęli w tej sprawie różne decyzje: Stanza stosuje segmentację taką, jak w Narodowym Korpusie Języka Polskiego, czyli oddziela aglutynant i partykułę *by*, ale spaCy uznaje formy czasu przeszłego oraz trybu warunkowego za pojedyncze segmenty i nie rozbija ich. To jednak rzadkie i skrajne przypadki wynikające ze specyfiki wykorzystanych narzędzi — w większości wypadków teksty w poszczególnych językach powinny być segmentowane w obu potokach tak samo i zgodnie z typową dla danego języka segmentacją stosowaną w bankach drzew składniowych oraz korpusach narodowych danych języków.
 
--  Jako odrębne segmenty traktowane są formy aglutynacyjne leksemu być,
-   a zatem następujące słowa reprezentują po dwa segmenty: *[łgał][eś]*,
-   *[długo][śmy]*, *[tak][em]*.
-
--  Za odrębne segmenty uznane są partykuły *by*, *-ż(e)* i *-li*,
-   a zatem następujące słowa reprezentują po kilka segmentów:
-   *[przyszedł][by]*, *[napisała][by][m]*, *[chodź][że]*,
-   *[potrzebował][że][by][ś]*, *[znasz][li]*.
-
--  Odrębnym segmentem jest poprzyimkowa nieakcentowana forma zaimka
-   *-ń*: *[do][ń]*, *[ze][ń]*.
-
--  Dzielone na segmenty są niektóre słowa zawierające łącznik,
-   a mianowicie:
-
-   -  słowa typu *[polsko][-][niemiecki]*,
-
-   -  podwójne nazwiska, np. *[Kowalska][-][Nowakowska]*.
-
-Nie są natomiast dzielone skrótowce zawierające łącznik sygnalizujący
-odmianę, np. *PRL-u*.
-
-Dzielone na segmenty są także występujące na końcu zdania formy kończące
-się kropką, np. skróty typu *itd.*, *itp.*, liczby pisane cyframi w
-znaczeniu porządkowym i inicjały, np. *[itp][.]*, *[George] [W][.*] itp.
-Dzielenie form z kropką kończących zdanie jest uzasadnione podwójną rolą
-kropki w takiej pozycji: jest ona częścią formy i jednocześnie
-sygnalizuje koniec zdania. W wypadku, gdy takie formy nie występują na
-końcu zdania, są one uznawane za pojedyncze segmenty.
-
-Poniżej znajduje się przykładowe zdanie i jego segmentacja zgodna
-z opisanymi w tej części zasadami.
-
-   Pojechalibyśmy z Janem M. Rokitą i Janem Nowakiem-Jeziorańskim na
-   sesję polsko-amerykańską, gdyby nas zaprosił George W. Byłaby to
-   nasza już 2. doń podróż od czasów PRL-u, a może i 3., czy nawet 4.
-
-::
-
-      [Pojechali][by][śmy] [z] [Janem] [M.] [Rokitą] [i] [Janem]
-      [Nowakiem][-][Jeziorańskim] [na] [sesję]
-      [polsko][-][amerykańską][,] [gdyby] [nas] [zaprosił] [George]
-      [W][.] [Była][by] [to] [nasza] [już] [2.] [do][ń] [podróż] [od]
-      [czasów] [PRL-u][,] [a] [może] [i] [3.][,] [czy] [nawet] [4][.] 
 
 Zestaw znaczników morfosyntaktycznych
 =====================================
