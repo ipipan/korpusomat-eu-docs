@@ -815,112 +815,113 @@ składowych. Oto kilka przykładów takich zapytań:
   :width: 1300
   :alt: Hierarchia typów jednostek nazewniczych w NKJP
 
+..
+ Warstwa znakowania wydźwięku emocjonalnego
+ ------------------------------------------
 
-Warstwa znakowania wydźwięku emocjonalnego
-------------------------------------------
+ Znakowanie tekstów w Korpusomacie można również wzbogacić o oznaczenie
+ wydźwięku emocjonalnego słów. Jest to znakowanie wyłącznie słownikowe,
+ opierające się na zbiorze 2902 polskich rzeczowników, przymiotników
+ i czasowników zebranych w bazie NAWL (*Nencki Affective Word List*)
+ stworzonej w ramach `projektu prowadzonego w Instytucie Biologii
+ Doświadczalnej im. M. Nenckiego
+ PAN <https://exp.lobi.nencki.gov.pl/nawl-analysis>`__. W oparciu
+ o badania ankietowe w słowniku sklasyfikowano słowa ze względu na
+ kojarzące się z nimi podstawowe emocje: szczęście (*happiness*), złość
+ (*anger*), smutek (*sadness*), strach (*fear*), wstręt (*disgust*) oraz
+ słowa neutralne emocjonalnie (*neutral*) oraz takie, dla których
+ wskazania były niejednoznaczne i nie umożliwiały zaklasyfikowania
+ (*unclassified*). Poszczególnym klasom odpowiadają etykiety będące
+ pierwszymi literami ich angielskich odpowiedników, czyli H, A, S, F, D,
+ N, U. Etykiety są wartościami atrybutu ``sentiment.nawl``, którego można
+ użyć w zapytaniach korpusowych. Przykładowo, zapytanie postaci:
 
-Znakowanie tekstów w Korpusomacie można również wzbogacić o oznaczenie
-wydźwięku emocjonalnego słów. Jest to znakowanie wyłącznie słownikowe,
-opierające się na zbiorze 2902 polskich rzeczowników, przymiotników
-i czasowników zebranych w bazie NAWL (*Nencki Affective Word List*)
-stworzonej w ramach `projektu prowadzonego w Instytucie Biologii
-Doświadczalnej im. M. Nenckiego
-PAN <https://exp.lobi.nencki.gov.pl/nawl-analysis>`__. W oparciu
-o badania ankietowe w słowniku sklasyfikowano słowa ze względu na
-kojarzące się z nimi podstawowe emocje: szczęście (*happiness*), złość
-(*anger*), smutek (*sadness*), strach (*fear*), wstręt (*disgust*) oraz
-słowa neutralne emocjonalnie (*neutral*) oraz takie, dla których
-wskazania były niejednoznaczne i nie umożliwiały zaklasyfikowania
-(*unclassified*). Poszczególnym klasom odpowiadają etykiety będące
-pierwszymi literami ich angielskich odpowiedników, czyli H, A, S, F, D,
-N, U. Etykiety są wartościami atrybutu ``sentiment.nawl``, którego można
-użyć w zapytaniach korpusowych. Przykładowo, zapytanie postaci:
+ ::
 
-::
+    [sentiment.nawl="A"]
 
-   [sentiment.nawl="A"]
+ odnajdzie wszystkie wystąpienia słów oznaczonych w słowniku NAWL jako
+ kojarzące się ze złością. Tego typu zapytania można łączyć z warunkami
+ dotyczącymi innych warstw znakowania (o ile zostały one wybrane przez
+ użytkownika w trakcie tworzenia korpusu), na przykład można ograniczyć
+ wyniki do określonych części mowy:
 
-odnajdzie wszystkie wystąpienia słów oznaczonych w słowniku NAWL jako
-kojarzące się ze złością. Tego typu zapytania można łączyć z warunkami
-dotyczącymi innych warstw znakowania (o ile zostały one wybrane przez
-użytkownika w trakcie tworzenia korpusu), na przykład można ograniczyć
-wyniki do określonych części mowy:
+ ::
 
-::
+    [sentiment.nawl="A" & pos="adj"]
 
-   [sentiment.nawl="A" & pos="adj"]
+ czy do postaci hasłowej składniowego nadrzędnika w strukturze
+ zależnościowej wypowiedzenia:
 
-czy do postaci hasłowej składniowego nadrzędnika w strukturze
-zależnościowej wypowiedzenia:
+ ::
 
-::
+    [sentiment.nawl="H" & head.base="Polak"]
 
-   [sentiment.nawl="H" & head.base="Polak"]
+ Oczywiście należy pamiętać, że słownik NAWL jest stosunkowo niewielki,
+ zatem zdecydowana większość słów w korpusie nie będzie miała
+ przypisanych żadnych wartości wydźwięku emocjonalnego.
 
-Oczywiście należy pamiętać, że słownik NAWL jest stosunkowo niewielki,
-zatem zdecydowana większość słów w korpusie nie będzie miała
-przypisanych żadnych wartości wydźwięku emocjonalnego.
+ W oryginalnej bazie danych słownika NAWL każde słowo zostało przypisane
+ tylko do jednej kategorii. W zaimplementowanej w Korpusomacie wersji
+ rozszerzonej tego słownika słowo może mieć przypisaną więcej niż jedną
+ etykietę kategorii emocji, jeśli te emocje uzyskały w bazie odpowiednio
+ wysoki wskaźnik. Na przykład rzeczownik wojna w słowniku rozszerzonym ma
+ przypisane dwie etykiety: strach (F) i smutek (S). Zapytanie o każdą
+ z tych emocji zwróci wystąpienia rzeczownika wojna w korpusie (o ile
+ oczywiście to słowo się w nim znajduje). Jednak w oryginalnym słowniku
+ ten sam rzeczownik jest przypisany do kategorii U, czyli słów
+ niesklasyfikowanych ze względu na niejednoznaczne wskazania ankietowe.
+ Obie wersje tego słownika są dostępne w Korpusomacie. Wyniki dla wersji
+ rozszerzonej dostępne są pod atrybutem ``sentiment.nawl``, dla
+ oryginalnej wersji zaś — pod atrybutem ``sentiment.nawl_org``. W wypadku
+ korzystania wersji oryginalnej należy pamiętać, że w wynikach znacznie
+ więcej słów będzie przypisanych do kategorii U.
 
-W oryginalnej bazie danych słownika NAWL każde słowo zostało przypisane
-tylko do jednej kategorii. W zaimplementowanej w Korpusomacie wersji
-rozszerzonej tego słownika słowo może mieć przypisaną więcej niż jedną
-etykietę kategorii emocji, jeśli te emocje uzyskały w bazie odpowiednio
-wysoki wskaźnik. Na przykład rzeczownik wojna w słowniku rozszerzonym ma
-przypisane dwie etykiety: strach (F) i smutek (S). Zapytanie o każdą
-z tych emocji zwróci wystąpienia rzeczownika wojna w korpusie (o ile
-oczywiście to słowo się w nim znajduje). Jednak w oryginalnym słowniku
-ten sam rzeczownik jest przypisany do kategorii U, czyli słów
-niesklasyfikowanych ze względu na niejednoznaczne wskazania ankietowe.
-Obie wersje tego słownika są dostępne w Korpusomacie. Wyniki dla wersji
-rozszerzonej dostępne są pod atrybutem ``sentiment.nawl``, dla
-oryginalnej wersji zaś — pod atrybutem ``sentiment.nawl_org``. W wypadku
-korzystania wersji oryginalnej należy pamiętać, że w wynikach znacznie
-więcej słów będzie przypisanych do kategorii U.
+ Ograniczenie zapytania za pomocą metadanych
+ -------------------------------------------
 
-Ograniczenie zapytania za pomocą metadanych
--------------------------------------------
+ Teksty wprowadzane przez użytkownika do Korpusomatu są domyślnie
+ opatrywane czterema polami metadanych o etykietach: autor, tytuł, rok
+ wydania, gatunek. Od użytkownika zależy to, w jaki sposób zostaną one
+ wypełnione, w szczególności mogą pozostać puste. Użytkownik może też
+ zdefiniować własne pola o dowolnych etykietach.
 
-Teksty wprowadzane przez użytkownika do Korpusomatu są domyślnie
-opatrywane czterema polami metadanych o etykietach: autor, tytuł, rok
-wydania, gatunek. Od użytkownika zależy to, w jaki sposób zostaną one
-wypełnione, w szczególności mogą pozostać puste. Użytkownik może też
-zdefiniować własne pola o dowolnych etykietach.
+ Pól metadanych można użyć następnie do ograniczenia zasięgu zapytań
+ w wyszukaniach korpusowych. Służy do tego przycisk metadane, pod którym
+ można zdefiniować takie ograniczenia. Można nałożyć wiele ograniczeń
+ jednocześnie, dodając je za pomocą przycisku dodaj ograniczenie.
 
-Pól metadanych można użyć następnie do ograniczenia zasięgu zapytań
-w wyszukaniach korpusowych. Służy do tego przycisk metadane, pod którym
-można zdefiniować takie ograniczenia. Można nałożyć wiele ograniczeń
-jednocześnie, dodając je za pomocą przycisku dodaj ograniczenie.
+..
+ Tabele
+ ======
 
-Tabele
-======
+ Kategorie gramatyczne
+ ---------------------
+ .. container::
+    :name: tab:kategorie
 
-Kategorie gramatyczne
----------------------
-.. container::
-   :name: tab:kategorie
+    .. csv-table:: Kategorie gramatyczne
+       :file: kategorie-gramatyczne.csv
+       :header-rows: 1
 
-   .. csv-table:: Kategorie gramatyczne
-      :file: kategorie-gramatyczne.csv
-      :header-rows: 1
+ Klasy gramatyczne
+ -----------------
+ .. container:: landscape
 
-Klasy gramatyczne
------------------
-.. container:: landscape
+    .. container::
+       :name: tab:klasy
 
-   .. container::
-      :name: tab:klasy
+       .. csv-table:: Klasy gramatyczne
+          :file: klasy-gramatyczne.csv
+          :header-rows: 1
 
-      .. csv-table:: Klasy gramatyczne
-         :file: klasy-gramatyczne.csv
-         :header-rows: 1
+ Skróty nazw klas gramatycznych oraz ich formy hasłowe
+ -----------------------------------------------------
+ .. container:: landscape
 
-Skróty nazw klas gramatycznych oraz ich formy hasłowe
------------------------------------------------------
-.. container:: landscape
+    .. container::
+       :name: tab:haslowe
 
-   .. container::
-      :name: tab:haslowe
-
-      .. csv-table:: Skróty nazw klas gramatycznych oraz ich formy hasłowe.
-         :file: skroty.csv
-         :header-rows: 1
+       .. csv-table:: Skróty nazw klas gramatycznych oraz ich formy hasłowe.
+          :file: skroty.csv
+          :header-rows: 1
