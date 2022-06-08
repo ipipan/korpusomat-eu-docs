@@ -744,17 +744,17 @@ składowych. Oto kilka przykładów takich zapytań:
 
 
 
- Ograniczenie zapytania za pomocą metadanych
- -------------------------------------------
+Ograniczenie zapytania za pomocą metadanych
+-------------------------------------------
 
- Teksty wprowadzane przez użytkownika do Korpusomatu są domyślnie
- opatrywane czterema polami metadanych o etykietach: autor, tytuł, rok
- wydania, gatunek. Od użytkownika zależy to, w jaki sposób zostaną one
- wypełnione, w szczególności mogą pozostać puste. Użytkownik może też
- zdefiniować własne pola o dowolnych etykietach.
+Teksty wprowadzane przez użytkownika do Korpusomatu są domyślnie
+opatrywane czterema polami metadanych o etykietach: autor, tytuł, rok
+wydania, gatunek. Od użytkownika zależy to, w jaki sposób zostaną one
+wypełnione, w szczególności mogą pozostać puste. Użytkownik może też
+zdefiniować własne pola o dowolnych etykietach.
 
- Pól metadanych można użyć następnie do ograniczenia zasięgu zapytań
- w wyszukaniach korpusowych. Służy do tego przycisk metadane, pod którym
- można zdefiniować takie ograniczenia. Można nałożyć wiele ograniczeń
- jednocześnie, dodając je za pomocą przycisku dodaj ograniczenie.
+Pól metadanych można użyć następnie do ograniczenia zasięgu zapytań
+w wyszukaniach korpusowych. Służy do tego przycisk metadane, pod którym
+można zdefiniować takie ograniczenia. Można nałożyć wiele ograniczeń
+jednocześnie, dodając je za pomocą przycisku dodaj ograniczenie.
 
