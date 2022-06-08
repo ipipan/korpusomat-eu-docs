@@ -14,9 +14,10 @@ Dokumentacja
 
    instrukcja/index
    mtas
+   narzedzia
+
+..
    profile-slow
    statystyki
-   narzedzia
-..
    publikacje
    cytowanie
