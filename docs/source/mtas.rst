@@ -453,37 +453,39 @@ A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe 
 
  -  ``[pos="subst" & feat="acc" & feat="pl" & feat="f"]``
 
-Interpretacje spoza słownika
-----------------------------
 
-Interpretacje fleksyjne w znakowaniu morfosyntaktycznym Korpusomatu
-pochodzą z analizatora Morfeusz 2 i tagera Concraft 2 — analizator
-zwraca wszystkie możliwe interpretacje dla danego słowa, a tager wybiera
-najbardziej prawdopodobną ze względu na swój model statystyczny.
-Interpretacje Morfeusza pochodzą ze `Słownika gramatycznego języka
-polskiego <http://www.sgjp.pl/>`__ (SGJP). Jeśli danego słowa nie da się
-w żaden sposób zinterpretować jako formy wyrazowej leksemu zanotowanego
-w SGJP, to Morfeusz nie zwraca żadnej interpretacji. Wówczas tager
-„zgaduje” znacznik morfosyntaktyczny, czyli wybiera taki, który zgodnie
-z jego modelem jest najbardziej prawdopodobny. Skuteczność zgadywania
-jest w oczywisty sposób dużo niższa niż skuteczność wybierania spośród
-gotowych interpretacji z Morfeusza, dlatego użytkownik może uznać za
-przydatną możliwość sterowania tym parametrem w swoich wyszukaniach, np.
-w wypadku słownictwa najnowszego, nienotowanego w słownikach. Segmenty,
-którym Morfeusz nie przypisał żadnej interpretacji, mają dodatkowy
-parametr postaci ``[ign="true"]``. Poniższe przykładowe zapytanie
-odnajdzie w korpusie wszystkie słowa, które zaczynają się od „tofu”
-i nie są znane Morfeuszowi:
+..
+ Interpretacje spoza słownika
+ ----------------------------
 
-::
+ Interpretacje fleksyjne w znakowaniu morfosyntaktycznym Korpusomatu
+ pochodzą z analizatora Morfeusz 2 i tagera Concraft 2 — analizator
+ zwraca wszystkie możliwe interpretacje dla danego słowa, a tager wybiera
+ najbardziej prawdopodobną ze względu na swój model statystyczny.
+ Interpretacje Morfeusza pochodzą ze `Słownika gramatycznego języka
+ polskiego <http://www.sgjp.pl/>`__ (SGJP). Jeśli danego słowa nie da się
+ w żaden sposób zinterpretować jako formy wyrazowej leksemu zanotowanego
+ w SGJP, to Morfeusz nie zwraca żadnej interpretacji. Wówczas tager
+ „zgaduje” znacznik morfosyntaktyczny, czyli wybiera taki, który zgodnie
+ z jego modelem jest najbardziej prawdopodobny. Skuteczność zgadywania
+ jest w oczywisty sposób dużo niższa niż skuteczność wybierania spośród
+ gotowych interpretacji z Morfeusza, dlatego użytkownik może uznać za
+ przydatną możliwość sterowania tym parametrem w swoich wyszukaniach, np.
+ w wypadku słownictwa najnowszego, nienotowanego w słownikach. Segmenty,
+ którym Morfeusz nie przypisał żadnej interpretacji, mają dodatkowy
+ parametr postaci ``[ign="true"]``. Poniższe przykładowe zapytanie
+ odnajdzie w korpusie wszystkie słowa, które zaczynają się od „tofu”
+ i nie są znane Morfeuszowi:
 
-   [orth="tofu.*" & ign="true"]
+ ::
 
-Analogicznie można usunąć z wyszukiwania interpretacje zgadywane, np.:
+    [orth="tofu.*" & ign="true"]
 
-::
+ Analogicznie można usunąć z wyszukiwania interpretacje zgadywane, np.:
 
-   [pos="subst" & !ign="true"]
+ ::
+
+    [pos="subst" & !ign="true"]
 
 Graficzny konstruktor zapytań
 -----------------------------
