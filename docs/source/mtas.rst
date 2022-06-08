@@ -665,9 +665,9 @@ nadrzędnika w zapytaniu:
 
 ::
 
-   [pos="adj" & deprel="adjunct" & head.base="zupa"]
+   [upos="ADJ" & deprel="amod" & head.lemma="zupa"]
 
-zwróci wszystkie przymiotnikowe określenia rzeczownika zupa. Dodanie
+zwróci wszystkie przymiotnikowe określenia rzeczownika ZUPA. Dodanie
 parametru pozycji pozwoli ograniczyć wyszukanie do określeń
 lewostronnych (np. *gorąca zupa*) lub prawostronnych (np. *zupa
 pomidorowa*).
@@ -811,7 +811,7 @@ składowych. Oto kilka przykładów takich zapytań:
    
 — dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam Michnik*, *Antoni Macierewicz*.
 
-.. image:: img/instrukcja/nkjp-ne.png
+.. image:: img/instrukcja/displacy-ud-tree.png
   :width: 1300
   :alt: Hierarchia typów jednostek nazewniczych w NKJP
 
