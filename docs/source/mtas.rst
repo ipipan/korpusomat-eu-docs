@@ -594,8 +594,7 @@ W warstwie znakowania składniowego dostępne są następujące atrybuty:
 
 -  ``deprel`` — typ zależności, jaką dany segment jest związany ze swoim
    bezpośrednim nadrzędnikiem składniowym; wartością tego atrybutu może
-   być jeden z 28 typów zależności przewidzianych w `Polskim Banku Drzew
-   Zależnościowych <http://zil.ipipan.waw.pl/PDB/DepRelTypes>`__,
+   być jedna z 65 relacji zależności przewidzianych w `specyfikacji Universal Dependencies <https://universaldependencies.org/u/dep/index.html>`__ (nie wszystkie muszą jednak wystąpić w rozbiorach zdań w każdym języku),
 
 -  ``head.upos`` — część mowy (UPOS) bezpośredniego nadrzędnika segmentu,
 
@@ -669,28 +668,13 @@ Powyższe przykładowe zapytanie wyszuka dopełnienia bliższe orzeczenia
 w czasie przeszłym, które są oddzielone od tego orzeczenia co najmniej
 jednym elementem.
 
-Jeszcze jednym praktycznym przykładem wykorzystania anotacji składniowej
-jest możliwość wyszukania analitycznych form fleksyjnych, których
-poszczególne elementy nie są oznaczane w warstwie morfosyntaktycznej
-jako składowe takiej formy. Dotyczy to np. form czasu przyszłego
-niedokonanego (utworzonych z formami bezokolicznika lub formy przeszłej czasownika
-lub w obu wariantach):
+Innym przykładem użycia znakowania składniowego w korpusie może być zapytanie wyszukujące konstrukcje w stronie biernej:
 
 ::
 
-   [upos="AUX" & deprel="aux" & head.upos="(inf|praet)"]
+   [upos="AUX" & deprel="aux:pass" & head.upos="ADJ"]
 
-czy analitycznych form stopnia wyższego i najwyższego przymiotników:
-
-::
-
-   [deprel="adjunct" & base="bardzo" & degree="(com|sup)" & head.pos="adj"]
-
-Podobnie w wypadku konstrukcji biernej:
-
-::
-
-   [base="(być|zostać)" & deprel="aux" & head.pos="ppas"]
+którego dopasowaniem są słowa posiłkowe konstrukcji biernej połączone z formą imiesłowu biernego (oznaczoną jako przymiotnik) relacją ``aux:pass``. 
 
 Warstwa jednostek nazewniczych
 ------------------------------
