@@ -17,5 +17,6 @@ Dokumentacja
    profile-slow
    statystyki
    narzedzia
+..
    publikacje
    cytowanie
