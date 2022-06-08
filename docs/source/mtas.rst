@@ -679,20 +679,21 @@ którego dopasowaniem są słowa posiłkowe konstrukcji biernej połączone z fo
 Warstwa jednostek nazewniczych
 ------------------------------
 
-Korpusy indeksowane przez Korpusomat zawierają również warstwę
-znakowania jednostek nazewniczych (ang. *named entities*). Są to
+Ostatnią warstwą informacji znakowaną w Korpusomacie jest warstwa
+jednostek nazewniczych (ang. *named entities*). Są to
 jednostki tekstowe jedno- lub wielowyrazowe nazywające osoby, miejsca,
-instytucje czy momenty czasowe. Automatycznym klasyfikowaniem takich
-jednostek tekstowych zajmuje się wbudowany w Korpusomat program
-`Liner2 <https://github.com/CLARIN-PL/Liner2>`__, który określa początek
-i koniec danej jednostki nazewniczej oraz przydziela jej odpowiednią
-etykietę. Liner2 opiera się na wzorcowej anotacji jednostek nazewniczych
-przygotowanej w ramach projektu NKJP, której szczegóły zostały opisane
-w rozdziale *Anotacja jednostek nazewniczych* (str. 129-167) książki
-`Narodowy Korpus Języka
-Polskiego <http://nkjp.pl/settings/papers/NKJP_ksiazka.pdf>`__.
-Niniejsza instrukcja ogranicza się jedynie do opisania sposobu
-korzystania z tej klasyfikacji w wyszukiwarce Korpusomatu.
+instytucje czy momenty czasowe. Ponieważ nie istnieje międzynarodowy standard i 
+wielojęzyczny zestaw danych oznakowanych, w których oznakowano w spójny sposób jednostki 
+nazewnicze, zbiór wartości i ich zakres różni się w poszczególnych potokach przetwarzania 
+oraz może być różny dla różnych języków w obrębie tych potoków. Ponadto, nie dla wszystkich 
+języków istnieją odpowiednie modele do oznaczania jednostek nazewniczych.
+
+Naprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych składa się tylko z czterech
+elementów: ``PER`` (osoba), ``LOC`` (miejsce), ``ORG`` (organizacja) i ``MISC`` (inne), ale dla niektórych
+języków istnieją bardziej szczegółowe klasyfikacje, np. języki chiński i angielski w potoku Stanzy
+mają 18 wartości klasyfikacji jednostek nezewniczych. Pełną listę wartości klasyfikacji dla danego 
+korpusu użytkownik znajdzie: ???? (TODO). 
+
 
 Jednostki nazewnicze, podobnie jak opisane wyżej zdania i akapity,
 przekraczają granicę segmentu, więc można się do nich odnosić
@@ -716,37 +717,7 @@ nazw miejsc:
 
 ::
 
-   <ne="placeName" />
-
-Ta kategoria jednostek ma swoją dodatkową podkategorię klasyfikującą
-rodzaje miejsc: regiony, kraje, miejscowości itp. Następujące zapytanie
-ograniczy wyniki jedynie do nazw krajów:
-
-::
-
-   <ne="placeName.country" />
-
-Pełny repertuar wartości klasyfikacji jednostek nazewniczych to:
-
--  ``persName`` (nazwy osób) z podtypami: ``forename`` (imiona),
-   ``surname`` (nazwiska) i ``addName`` (pseudonimy, przydomki itp.),
-
--  ``orgName`` (nazwy organizacji),
-
--  ``geogName`` (nazwy geograficzne),
-
--  ``placeName`` (nazwy miejsc czy też tzw. nazwy geopolityczne)
-   z podtypami: ``district`` (jednostki administracyjne miast, np.
-   *Mokotów*), ``settlement`` (miasta, wioski, osady, np. *Warszawa*),
-   ``region`` (jednostki administracyjne większe niż miasto, np.
-   *województwo mazowieckie*), ``country`` (państwa, kraje, wspólnoty,
-   kolonie, np. *Polska*, *Gujana Francuska*), ``bloc`` (organizacje
-   polityczne obejmujące co najmniej dwa państwa, np. *Unia Europejska*,
-   *Grupa Wyszehradzka*),
-
--  wyrażenia czasowe: ``date`` (daty kalendarzowe, np. 13 sierpnia 2018
-   r.) oraz ``time`` (określenia czasu w postaci godzin, minut i sekund,
-   np. *ósma wieczorem*).
+   <ne="LOC" />
 
 Podobnie jak w wypadku zdań i akapitów, zapytania o jednostki nazewnicze
 można łączyć z cechami ortograficznymi i morfosyntaktycznymi segmentów,
@@ -755,93 +726,22 @@ składowych. Oto kilka przykładów takich zapytań:
 
 ::
 
-   [pos="conj" & base="i"] within <ne="orgName" />
+   [upos="CCONJ"] within <ne="PER" />
    
-— wszystkie nazwy organizacji zawierające spójnik i, np. *Krajowa Rada Radiofonii i Telewizji* czy *Instytut Meteorologii i Gospodarki Wodnej*,
+— wszystkie nazwy organizacji zawierające spójnik współrzędny, np. *Krajowa Rada Radiofonii i Telewizji* czy *Instytut Meteorologii i Gospodarki Wodnej*,
 
 ::
 
-   <ne="persName" /> !containing <ne="persName.forename" />
-   
-— wszystkie jednostki nazywające osoby, których składową nie jest imię,
-
-::
-
-   <ne="geogName" /> [pos="conj"] <ne="geogName" />
+   <ne="LOC" /> [upos="CCONJ"] <ne="LOC" />
    
 — wystąpienia dwóch nazw geograficznych połączonych spójnikiem współrzędnym, np. *Europa Zachodnia lub Skandynawia*.
 
 ::
 
-   [orth="A.*"][orth="M.*"] fullyalignedwith <ne="persName" />
+   [orth="A.*"][orth="M.*"] fullyalignedwith <ne="PER" />
    
 — dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam Michnik*, *Antoni Macierewicz*.
 
-.. image:: img/instrukcja/nkjp-ne.png
-  :width: 1300
-  :alt: Hierarchia typów jednostek nazewniczych w NKJP
-
-..
- Warstwa znakowania wydźwięku emocjonalnego
- ------------------------------------------
-
- Znakowanie tekstów w Korpusomacie można również wzbogacić o oznaczenie
- wydźwięku emocjonalnego słów. Jest to znakowanie wyłącznie słownikowe,
- opierające się na zbiorze 2902 polskich rzeczowników, przymiotników
- i czasowników zebranych w bazie NAWL (*Nencki Affective Word List*)
- stworzonej w ramach `projektu prowadzonego w Instytucie Biologii
- Doświadczalnej im. M. Nenckiego
- PAN <https://exp.lobi.nencki.gov.pl/nawl-analysis>`__. W oparciu
- o badania ankietowe w słowniku sklasyfikowano słowa ze względu na
- kojarzące się z nimi podstawowe emocje: szczęście (*happiness*), złość
- (*anger*), smutek (*sadness*), strach (*fear*), wstręt (*disgust*) oraz
- słowa neutralne emocjonalnie (*neutral*) oraz takie, dla których
- wskazania były niejednoznaczne i nie umożliwiały zaklasyfikowania
- (*unclassified*). Poszczególnym klasom odpowiadają etykiety będące
- pierwszymi literami ich angielskich odpowiedników, czyli H, A, S, F, D,
- N, U. Etykiety są wartościami atrybutu ``sentiment.nawl``, którego można
- użyć w zapytaniach korpusowych. Przykładowo, zapytanie postaci:
-
- ::
-
-    [sentiment.nawl="A"]
-
- odnajdzie wszystkie wystąpienia słów oznaczonych w słowniku NAWL jako
- kojarzące się ze złością. Tego typu zapytania można łączyć z warunkami
- dotyczącymi innych warstw znakowania (o ile zostały one wybrane przez
- użytkownika w trakcie tworzenia korpusu), na przykład można ograniczyć
- wyniki do określonych części mowy:
-
- ::
-
-    [sentiment.nawl="A" & pos="adj"]
-
- czy do postaci hasłowej składniowego nadrzędnika w strukturze
- zależnościowej wypowiedzenia:
-
- ::
-
-    [sentiment.nawl="H" & head.base="Polak"]
-
- Oczywiście należy pamiętać, że słownik NAWL jest stosunkowo niewielki,
- zatem zdecydowana większość słów w korpusie nie będzie miała
- przypisanych żadnych wartości wydźwięku emocjonalnego.
-
- W oryginalnej bazie danych słownika NAWL każde słowo zostało przypisane
- tylko do jednej kategorii. W zaimplementowanej w Korpusomacie wersji
- rozszerzonej tego słownika słowo może mieć przypisaną więcej niż jedną
- etykietę kategorii emocji, jeśli te emocje uzyskały w bazie odpowiednio
- wysoki wskaźnik. Na przykład rzeczownik wojna w słowniku rozszerzonym ma
- przypisane dwie etykiety: strach (F) i smutek (S). Zapytanie o każdą
- z tych emocji zwróci wystąpienia rzeczownika wojna w korpusie (o ile
- oczywiście to słowo się w nim znajduje). Jednak w oryginalnym słowniku
- ten sam rzeczownik jest przypisany do kategorii U, czyli słów
- niesklasyfikowanych ze względu na niejednoznaczne wskazania ankietowe.
- Obie wersje tego słownika są dostępne w Korpusomacie. Wyniki dla wersji
- rozszerzonej dostępne są pod atrybutem ``sentiment.nawl``, dla
- oryginalnej wersji zaś — pod atrybutem ``sentiment.nawl_org``. W wypadku
- korzystania wersji oryginalnej należy pamiętać, że w wynikach znacznie
- więcej słów będzie przypisanych do kategorii U.
 
  Ograniczenie zapytania za pomocą metadanych
  -------------------------------------------
