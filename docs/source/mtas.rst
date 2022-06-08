@@ -1,10 +1,10 @@
- .. role:: small-caps
-    :class: small-caps
+.. role:: small-caps
+   :class: small-caps
 
 Tworzenie zapytań do korpusu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wprowadzenie
+:small-caps:`Wprowadzenie`
 ============
 
 Niniejszy dokument powstał w oparciu o `Ściągawkę do Narodowego Korpusu
@@ -667,7 +667,7 @@ nadrzędnika w zapytaniu:
 
    [upos="ADJ" & deprel="amod" & head.lemma="zupa"]
 
-zwróci wszystkie przymiotnikowe określenia rzeczownika ZUPA. Dodanie
+zwróci wszystkie przymiotnikowe określenia rzeczownika :small-caps:`zupa`. Dodanie
 parametru pozycji pozwoli ograniczyć wyszukanie do określeń
 lewostronnych (np. *gorąca zupa*) lub prawostronnych (np. *zupa
 pomidorowa*).
