@@ -777,7 +777,7 @@ składowych. Oto kilka przykładów takich zapytań:
    
 — dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam Michnik*, *Antoni Macierewicz*.
 
-.. image:: img/instrukcja/displacy-ud-tree.png
+.. image:: img/instrukcja/nlkjp-ne.png
   :width: 1300
   :alt: Hierarchia typów jednostek nazewniczych w NKJP
 
