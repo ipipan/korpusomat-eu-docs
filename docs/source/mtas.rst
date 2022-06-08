@@ -490,10 +490,10 @@ Graficzny konstruktor zapytań
 
 Do tworzenia podstawowych zapytań o sekwencje segmentów można użyć
 prostego graficznego konstruktora. W oknie konstruktora można definiować
-warunki określające cechy kolejnych segmentów zapytania, np. część mowy,
+warunki określające cechy kolejnych segmentów zapytania, np. część mowy (UPOS),
 postać segmentu w obu warstwach tekstowych, formę hasłową, a także
-wartości wszystkich kategorii gramatycznych opisanych w tabeli
-`1 <#tab:kategorie>`__. Poszczególne warunki w obrębie segmentu mogą być
+wartości wszystkich kategorii gramatycznych opisanych w `dokumentacji UD
+<https://universaldependencies.org/u/feat/all.html>`__. Poszczególne warunki w obrębie segmentu mogą być
 łączone operatorami *oraz* (koniunkcja) i *lub* (alternatywa). Po
 zdefiniowaniu wszystkich segmentów zapytania należy wcisnąć przycisk
 *Zapisz*, następnie określić dodatkowe parametry wyszukania, np.
@@ -522,24 +522,24 @@ w odległości co najmniej jednego i nie więcej niż dziesięciu segmentów:
 Dodatkowo można również na elementy ``<s/>`` i ``<p/>`` nałożyć pewne
 warunki dotyczące tego, czy zawierają segmenty innego typu. Przykładowo,
 za pomocą następującego zapytania można znaleźć wszystkie wystąpienia
-czasownika być w  czasie przyszłym złożonym ograniczone do zdań
+czasownika pomocniczego *być* w czasie przyszłym ograniczone do zdań
 zawierających formę bezokolicznika:
 
 ::
 
-   [pos="bedzie"] within (<s/> containing [pos="inf"])
+   [upos="AUX" & lemma="być" & tense="fut"] within (<s/> containing [verbform="inf"])
 
 Intencją takiego zapytania jest odnalezienie (w przybliżeniu) wszystkich
 wystąpień konstrukcji czasu przyszłego złożonego, w których pojawia się
 bezokolicznik. Wśród wyników będą oczywiście również takie zdania,
-w których czas przyszły został utworzony z formy pseudoimiesłowu,
+w których czas przyszły został utworzony z użyciem formy przeszłej czasownika,
 a bezokolicznik pełni w zdaniu inną funkcję gramatyczną. Można też
 sformułować zapytanie odwrotnie i zapytać o zdania, w których forma
-pseudoimiesłowu w ogóle nie występuje:
+przeszła w ogóle nie występuje:
 
 ::
 
-   [pos="bedzie"] within (<s/> !containing [pos="praet"])
+   [upos="AUX" & lemma="być" & tense="fut"] within (<s/> !containing [tense="past"])
 
 Pełną listę słów kluczowych, które mogą się pojawić w zapytaniach
 wyszukiwarki MTAS, można znaleźć w jej
@@ -554,14 +554,14 @@ z warunkami definiującymi inne segmenty, np. zapytanie:
 
 ::
 
-   <s> [pos="num"]
+   <s> [upos="NUM"]
 
 odnajdzie wszystkie wystąpienia liczebnika stojącego na początku zdania.
 Analogicznie zapytanie:
 
 ::
 
-   [pos="num"][pos="interp"]</s>
+   [upos="NUM"][upos="PUNCT"]</s>
 
 odnajdzie wszystkie wystąpienia ciągu składającego się z liczebnika
 i znaku interpunkcyjnego stojących na końcu zdania.
@@ -569,14 +569,13 @@ i znaku interpunkcyjnego stojących na końcu zdania.
 Warstwa składniowa
 ------------------
 
-W Korpusomacie jest również wbudowany parser zależnościowy Combo.
+Kolejną warstwą znakowania w Korpusomacie jest parsowanie zależnościowe.
 Wprowadzony przez użytkownika tekst jest automatycznie dzielony na
 wypowiedzenia, które z kolei są poddawane pełnej analizie składniowej
-w aparacie zależnościowym według zasad przyjętych w `Polskim Banku Drzew
-Zależnościowych <http://zil.ipipan.waw.pl/PDB>`__. Przykład takiej
+w aparacie zależnościowym według zasad przyjętych w `projekcie Universal Dependencies <https://universaldependencies.org>`__. Przykład takiej
 analizy znajduje się na poniższym rysunku.
 
-.. image:: img/instrukcja/rysunek-drzewo.png
+.. image:: img/instrukcja/displacy-ud-tree.png
   :width: 1300
   :alt: Rozbiór składniowy przykładowego zdania
 
@@ -598,10 +597,9 @@ W warstwie znakowania składniowego dostępne są następujące atrybuty:
    być jeden z 28 typów zależności przewidzianych w `Polskim Banku Drzew
    Zależnościowych <http://zil.ipipan.waw.pl/PDB/DepRelTypes>`__,
 
--  ``head.pos`` — klasa fleksyjna bezpośredniego nadrzędnika segmentu
-   (tabela `2 <#tab:klasy>`__),
+-  ``head.upos`` — część mowy (UPOS) bezpośredniego nadrzędnika segmentu,
 
--  ``head.base`` — forma hasłowa bezpośredniego nadrzędnika segmentu,
+-  ``head.lemma`` — forma hasłowa bezpośredniego nadrzędnika segmentu,
 
 -  ``head.distance`` — odległość bezpośredniego nadrzędnika segmentu,
 
@@ -609,12 +607,12 @@ W warstwie znakowania składniowego dostępne są następujące atrybuty:
    nadrzędnika względem segmentu w porządku linearnym wypowiedzenia.
 
 Dzięki rozszerzeniu języka zapytań o powyższe atrybuty można np. łatwo
-znaleźć wszystkie rzeczowniki użyte w funkcji dopełnienia bliższego
+znaleźć wszystkie rzeczowniki pospolite użyte w funkcji dopełnienia bliższego
 konkretnego czasownika:
 
 ::
 
-   [pos="subst" & deprel="obj" & head.base="kupić"]
+   [pos="NOUN" & deprel="obj" & head.lemma="kupić"]
 
 Możliwe jest również odwrotne wyszukanie odpowiadające na pytanie, przy
 jakich czasownikach w roli dopełnienia występuje w korpusie konkretny
@@ -622,27 +620,14 @@ rzeczownik:
 
 ::
 
-   [deprel="obj.*" & head.pos="(fin|praet|ppas|pact|ger|impt|imps)" & base="betel"]
+   [deprel="obj" & head.upos="VERB" & lemma="osoba"]
 
 Należy jednak zwrócić uwagę, że w powyższym przykładzie wynikiem
-zapytania będą wystąpienia rzeczownika betel, nadrzędne względem nich
+zapytania będą wystąpienia rzeczownika *osoba*, nadrzędne względem nich
 formy czasownikowe (finitywne i niefinitywne) będą się zaś znajdowały
 w lewym lub prawym kontekście wyników wyróżnione pismem pogrubionym.
 Można je jednak zgrupować i posortować względem ich częstości dzięki
-opcjom Statystyk. Wartością atrybutu ``deprel`` jest wyrażenie
-regularne, do którego dopasowują się dwa możliwe typy relacji
-zależności: *obj* i *obj_th* opisane w dokumentacji Polskiego Banku
-Drzew Zależnościowych.
-
-Podobne wyszukanie możliwe jest również w wypadku wymagań czasownika
-innych niż nominalne. Na przykład za pomocą zapytania:
-
-::
-
-   [deprel="comp" & head.pos="(fin|praet|imps|impt|ppas|pact)" & base="o" & case="loc"]
-
-można znaleźć czasowniki wymagające frazy przyimkowej miejscownikowej
-z przyimkiem o.
+opcjom Statystyk. Wartością atrybutu ``deprel`` jest jedna z etykiet krawędzi w drzewie zależnościowym odnosząca się do dopełnienia bliższego. Pełny zestaw etykiet relacji zależnościowych znajduje się w `dokumentacji UD <https://universaldependencies.org/u/dep/index.html>`__. 
 
 Dzięki atrybutowi kodującemu lewo- i prawostronną pozycję nadrzędnika
 względem segmentu można znaleźć przykłady niekanonicznego szyku zdania,
@@ -650,7 +635,7 @@ np. podmiotu po orzeczeniu:
 
 ::
 
-   [deprel="subj" & head.position="left"]
+   [deprel="nsubj" & head.position="left"]
 
 lub dopełnienia bliższego przed orzeczeniem:
 
@@ -665,10 +650,9 @@ nadrzędnika w zapytaniu:
 
    [upos="ADJ" & deprel="amod" & head.lemma="zupa"]
 
-zwróci wszystkie przymiotnikowe określenia rzeczownika :small-caps:`zupa`. Dodanie
+zwróci wszystkie przymiotnikowe określenia rzeczownika *zupa*. Dodanie
 parametru pozycji pozwoli ograniczyć wyszukanie do określeń
-lewostronnych (np. *gorąca zupa*) lub prawostronnych (np. *zupa
-pomidorowa*).
+lewostronnych (np. *gorąca zupa*) lub prawostronnych (np. *zupa pomidorowa*).
 
 Częściowa anotacja składniowa pozwala na odnalezienie elementów
 wypowiedzenia połączonych ze sobą bezpośrednią relacją zależności bez
@@ -679,7 +663,7 @@ w których elementy nie sąsiadują ze sobą:
 
 ::
 
-   [deprel="obj" & head.pos="praet" & !head.distance="1"]
+   [deprel="obj" & head.upos="VERB" & tense="past" & !head.distance="1"]
 
 Powyższe przykładowe zapytanie wyszuka dopełnienia bliższe orzeczenia
 w czasie przeszłym, które są oddzielone od tego orzeczenia co najmniej
@@ -687,14 +671,14 @@ jednym elementem.
 
 Jeszcze jednym praktycznym przykładem wykorzystania anotacji składniowej
 jest możliwość wyszukania analitycznych form fleksyjnych, których
-poszczególne fleksemy nie są oznaczane w warstwie morfosyntaktycznej
-jako elementy takiej formy. Dotyczy to np. form czasu przyszłego
-niedokonanego (utworzonych z formami bezokolicznika lub pseudoimiesłowu
+poszczególne elementy nie są oznaczane w warstwie morfosyntaktycznej
+jako składowe takiej formy. Dotyczy to np. form czasu przyszłego
+niedokonanego (utworzonych z formami bezokolicznika lub formy przeszłej czasownika
 lub w obu wariantach):
 
 ::
 
-   [pos="bedzie" & deprel="aux" & head.pos="(inf|praet)"]
+   [upos="AUX" & deprel="aux" & head.upos="(inf|praet)"]
 
 czy analitycznych form stopnia wyższego i najwyższego przymiotników:
 
