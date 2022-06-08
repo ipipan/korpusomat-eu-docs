@@ -1,10 +1,8 @@
-.. role:: small-caps
-   :class: small-caps
 
 Tworzenie zapytań do korpusu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:small-caps:`Wprowadzenie`
+Wprowadzenie
 ============
 
 Niniejszy dokument powstał w oparciu o `Ściągawkę do Narodowego Korpusu
