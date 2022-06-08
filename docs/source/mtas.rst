@@ -282,7 +282,7 @@ rolę logicznej alternatywy. Oto kilka przykładów użycia tego operatora:
 
 -  ::
 
-      [lemma="on" | base="ja"]
+      [lemma="on" | lemma="ja"]
 
    wszystkie formy zaimków *on* i *ja*, równoważne zapytaniu
    ``[lemma="on|ja"]``,
@@ -395,109 +395,63 @@ Dodatkowo za pomocą atrybutu ``xpos`` można odwołać się w zapytaniu do znac
 
 ::
 
-[xpos="NNNS1.*"]
+   [xpos="NNNS1.*"]
  
 wyszuka wszystkie rzeczowniki w rodzaju nijakim w mianowniku liczby pojedynczej. Rzeczowniki o tych samych cechach w polskim korpusie znajdzie zapytanie:
 
- ::
+::
 
- [xpos="subst:sg:nom:n.*"]
+   [xpos="subst:sg:nom:n.*"]
 
-W obu wypadkach wartość atrybutu ``xpos`` jest zakończona wyrażeniem ``.*``, ponieważ po wartościach części mowy, liczby, rodzaju i przypadka mogą pojawić się jeszcze wartości innych kategorii uwzględnionych w obu tagsetach. 
+W obu wypadkach wartość atrybutu ``xpos`` jest zakończona wyrażeniem ``.*``, ponieważ po wartościach 
+części mowy, liczby, rodzaju i przypadka mogą pojawić się jeszcze wartości innych kategorii uwzględnionych 
+w obu tagsetach. 
 
 
 W zapytaniach można określić nie tylko postać ortograficzną segmentu (za
 pomocą atrybutu ``orth``), formę hasłową (za pomocą ``lemma``) i klasę
-gramatyczną (za pomocą ``upos``), ale także wartości poszczególnych
-kategorii gramatycznych, np. przypadka czy rodzaju. Służą do tego
-następujące atrybuty (por. p.\ `2.1 <#sec:kategorie>`__):
+gramatyczną (za pomocą ``upos`` lub ewentualnie ``xpos``), ale także wartości poszczególnych
+kategorii gramatycznych, np. przypadka czy rodzaju — o ile te kategorie występują w danym języku. W korpusach 
+danego języka można używać atrybutów o nazwie kategorii obecnych w banku drzew zależnościowych w warstwie 
+cech morfosyntaktycznych (UFEATS) dla tego języka. Listę wszystkich kategorii można znaleźć `na stronie Universal Dependencies <https://universaldependencies.org/u/feat/all.html>`__. 
+ 
 
-+---------------------------+-----------------+----------------------------------+
-| **atrybut**               | **kategoria**   | **możliwe wartości**             |
-+===========================+=================+==================================+
-| ``number``                | liczba          | ``sg pl``                        |
-+---------------------------+-----------------+----------------------------------+
-| ``case``                  | przypadek       | ``nom gen dat acc inst loc voc`` |
-+---------------------------+-----------------+----------------------------------+
-| ``gender``                | rodzaj          | ``m1 m2 m3 f n``                 |
-+---------------------------+-----------------+----------------------------------+
-| ``subgender``             | przyrodzaj      | ``col ncol pt``                  |
-+---------------------------+-----------------+----------------------------------+
-| ``person``                | osoba           | ``pri sec ter``                  |
-+---------------------------+-----------------+----------------------------------+
-| ``degree``                | stopień         | ``pos comp sup``                 |
-+---------------------------+-----------------+----------------------------------+
-| ``aspect``                | aspekt          | ``imperf perf``                  |
-+---------------------------+-----------------+----------------------------------+
-| ``negation``              | zanegowanie     | ``aff neg``                      |
-+---------------------------+-----------------+----------------------------------+
-| ``accentability``         | akcentowość     | ``akc nakc``                     |
-+---------------------------+-----------------+----------------------------------+
-| ``post-prepositionality`` | poprzyimkowość  | ``npraep praep``                 |
-+---------------------------+-----------------+----------------------------------+
-| ``agglutination``         | aglutynacyjność | ``agl nagl``                     |
-+---------------------------+-----------------+----------------------------------+
-| ``vocalicity``            | wokaliczność    | ``nwok wok``                     |
-+---------------------------+-----------------+----------------------------------+
-| ``fullstoppedness``       | kropkowalność   | ``pun npun``                     |
-+---------------------------+-----------------+----------------------------------+
-
-A zatem możliwe jest zadanie na przykład następujących zapytań:
+A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe jest zadanie na przykład następujących zapytań:
 
 #. ::
 
-      [number="sg"]
+      [number="sing"]
 
    znalezione zostaną wszystkie formy w liczbie pojedynczej,
 
 #. ::
 
-      [pos="subst" & number="sg"]
+      [upos="NOUN" & number="sing"]
 
-   znalezione zostaną formy rzeczownikowe w liczbie pojedynczej,
-
-#. ::
-
-      [pos="subst" & !gender="f"]
-
-   formy rzeczownikowe rodzaju męskiego lub nijakiego,
+   znalezione zostaną formy rzeczowników pospolitych w liczbie pojedynczej,
 
 #. ::
 
-      [number="sg" & case="nom|acc" & gender="m[123]"]
+      [upos="NOUN" & !gender="fem"]
 
-   pojedyncze mianownikowe lub biernikowe formy męskie.
+   formy rzeczowników pospolitych w rodzaju innym niż żeński (czyli np. dla polskiego, czeskiego czy ukraińskiego: w rodzaju męskim lub nijakim),
 
-O klasy gramatyczne i kategorie gramatyczne można także pytać łącznie,
-używając do tego atrybutu ``tag``. Na przykład, aby znaleźć wszystkie
-rzeczowniki żeńskie w mianowniku o pojedynczej wartości liczby, można
-zadać następujące zapytanie:
+#. ::
 
-::
+      [number="sing" & case="(nom|acc)" & gender="masc"]
 
-   [tag="subst:sg:nom:f"]
+   pojedyncze mianownikowe lub biernikowe formy męskie (jeśli w języku są kategorie liczby, przypadka i rodzaju).
 
-Wartości atrybutu ``tag`` mają postać ``kl:kat1:kat2:…:katn``, gdzie
-``kl`` to nazwa klasy gramatycznej, a ``kati`` to wartości kategorii
-przysługujących tej klasie w kolejności, w jakiej zostały podane
-w tabeli `2 <#tab:klasy>`__.
+..
+ Ponieważ nazwy wartości poszczególnych kategorii są rozłączne, można
+ również stosować zbiorczą kategorię ``feat`` (ang. *feature* ‘cecha’)
+ w zastępstwie każdej innej. Ujednoznacznienie dokona się przez
+ odpowiednią wartość. Dlatego następujące dwa zapytania zwrócą te same
+ wyniki:
+..
+ -  ``[pos="subst" & case="acc" & number="pl" & gender="f"]``
 
-Jak w wypadku innych atrybutów, specyfikacja atrybutu ``tag`` może być
-zadana wyrażeniem regularnym, np.:
-
-::
-
-   [tag=".*:sg:(nom|acc):m[123].*"]
-
-Ponieważ nazwy wartości poszczególnych kategorii są rozłączne, można
-również stosować zbiorczą kategorię ``feat`` (ang. *feature* ‘cecha’)
-w zastępstwie każdej innej. Ujednoznacznienie dokona się przez
-odpowiednią wartość. Dlatego następujące dwa zapytania zwrócą te same
-wyniki:
-
--  ``[pos="subst" & case="acc" & number="pl" & gender="f"]``
-
--  ``[pos="subst" & feat="acc" & feat="pl" & feat="f"]``
+ -  ``[pos="subst" & feat="acc" & feat="pl" & feat="f"]``
 
 Interpretacje spoza słownika
 ----------------------------
@@ -563,7 +517,7 @@ w odległości co najmniej jednego i nie więcej niż dziesięciu segmentów:
 
 ::
 
-   [base="bać"][!orth="się"]{1,10}[orth="się"] within <s/>
+   [lemma="bać"][!orth="się"]{1,10}[orth="się"] within <s/>
 
 Dodatkowo można również na elementy ``<s/>`` i ``<p/>`` nałożyć pewne
 warunki dotyczące tego, czy zawierają segmenty innego typu. Przykładowo,
