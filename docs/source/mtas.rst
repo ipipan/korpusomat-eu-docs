@@ -740,7 +740,8 @@ składowych. Oto kilka przykładów takich zapytań:
 
    [orth="A.*"][orth="M.*"] fullyalignedwith <ne="PER" />
    
-— dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam Michnik*, *Antoni Macierewicz*.
+— dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam Michnik*, *Antoni Macierewicz*. 
+
 
 
  Ograniczenie zapytania za pomocą metadanych
@@ -757,37 +758,3 @@ składowych. Oto kilka przykładów takich zapytań:
  można zdefiniować takie ograniczenia. Można nałożyć wiele ograniczeń
  jednocześnie, dodając je za pomocą przycisku dodaj ograniczenie.
 
-..
- Tabele
- ======
-
- Kategorie gramatyczne
- ---------------------
- .. container::
-    :name: tab:kategorie
-
-    .. csv-table:: Kategorie gramatyczne
-       :file: kategorie-gramatyczne.csv
-       :header-rows: 1
-
- Klasy gramatyczne
- -----------------
- .. container:: landscape
-
-    .. container::
-       :name: tab:klasy
-
-       .. csv-table:: Klasy gramatyczne
-          :file: klasy-gramatyczne.csv
-          :header-rows: 1
-
- Skróty nazw klas gramatycznych oraz ich formy hasłowe
- -----------------------------------------------------
- .. container:: landscape
-
-    .. container::
-       :name: tab:haslowe
-
-       .. csv-table:: Skróty nazw klas gramatycznych oraz ich formy hasłowe.
-          :file: skroty.csv
-          :header-rows: 1
