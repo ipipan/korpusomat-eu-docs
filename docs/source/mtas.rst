@@ -305,6 +305,7 @@ oddzielone od formy bać zaimkiem osobowym:
 
    [orth="się"][!orth="[.!?,:]"]{0,5}[lemma="bać"] | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
+
 Zapytania o znaczniki morfosyntaktyczne
 ---------------------------------------
 
@@ -388,9 +389,13 @@ w zastępstwie każdej innej nazwy kategorii. Ujednoznacznienie dokona się prze
 odpowiednią wartość. Dlatego następujące dwa zapytania zwrócą te same
 wyniki:
 
--  ``[upos="NOUN" & case="acc" & number="pl" & gender="f"]``
+::
 
--  ``[upos="NOUN" & ufeat="acc" & ufeat="pl" & ufeat="f"]``
+     [upos="NOUN" & case="acc" & number="pl" & gender="f"]
+
+::
+
+     [upos="NOUN" & ufeat="acc" & ufeat="pl" & ufeat="f"]
 
 
 Graficzny konstruktor zapytań
