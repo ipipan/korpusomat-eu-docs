@@ -310,8 +310,8 @@ Zapytania o znaczniki morfosyntaktyczne
 ---------------------------------------
 
 Powyższe zapytanie można uprościć poprzez zastąpienie warunku
-``orth!="[.!?,:]"`` bezpośrednim odwołaniem do „klasy gramatycznej”
-``interp``:
+``orth!="[.!?,:]"`` bezpośrednim odwołaniem do „części mowy”
+``PUNCT``:
 
 ::
 
