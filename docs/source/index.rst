@@ -1,8 +1,8 @@
 .. role:: todo
-   :class: todo
+    :class: todo
 
 .. role:: lex
-   :class: lex
+    :class: lex
 
 
 Korpusomat
