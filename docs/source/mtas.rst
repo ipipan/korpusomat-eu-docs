@@ -382,7 +382,7 @@ A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe 
 
    pojedyncze mianownikowe lub biernikowe formy męskie (jeśli w języku są kategorie liczby, przypadka i rodzaju).
 
-TODO: Można również stosować zbiorczy atrybut ``ufeat``
+:todo:`TODO`: Można również stosować zbiorczy atrybut ``ufeat``
 w zastępstwie każdej innej nazwy kategorii. Ujednoznacznienie dokona się przez
 odpowiednią wartość. Dlatego następujące dwa zapytania zwrócą te same
 wyniki:
@@ -507,7 +507,7 @@ W warstwie znakowania składniowego dostępne są następujące atrybuty:
 
 -  ``head.lemma`` — forma hasłowa bezpośredniego nadrzędnika segmentu,
 
-- TODO: ``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego nadrzędnika segmentu, 
+- :todo:`TODO`: ``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego nadrzędnika segmentu, 
 
 -  ``head.distance`` — odległość bezpośredniego nadrzędnika segmentu,
 
@@ -601,7 +601,7 @@ Naprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych skł
 elementów: ``PER`` (osoba), ``LOC`` (miejsce), ``ORG`` (organizacja) i ``MISC`` (inne), ale dla niektórych
 języków istnieją bardziej szczegółowe klasyfikacje, np. języki chiński i angielski w potoku Stanzy
 mają 18 wartości klasyfikacji jednostek nezewniczych. W poniższych przykładach stosuje się powyższą najprostszą klasyfikację, która dostępna jest np. w potoku Stanzy dla języków hiszpańskiego, francuskiego, rosyjskiego czy ukraińskiego. Pełną listę wartości klasyfikacji dla danego 
-korpusu użytkownik znajdzie: ???? (TODO). 
+korpusu użytkownik znajdzie: :todo:`???? (TODO)`. 
 
 
 Jednostki nazewnicze, podobnie jak opisane wyżej zdania i akapity,
