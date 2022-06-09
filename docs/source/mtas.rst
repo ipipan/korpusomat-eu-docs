@@ -184,7 +184,7 @@ zapytania:
 
    [lemma="korpus"]
 
-Atrybut ``lemma`` jest jednym z wielu możliwych atrybutów, jakie mogą
+Atrybut ``lemma`` jest jednym z wielu, jakie mogą
 pojawić się w zapytaniu. Wartością tego atrybutu powinna być
 forma podstawowa (hasłowa), a zatem zapytanie
 ``[lemma="pisać"]`` może być użyte do znalezienia form typu *pisać*,
@@ -198,11 +198,11 @@ mogą być wyrażenia regularne, np:
    [lemma="komit[ae]t"]
 
 znalezione zostaną wszystkie segmenty, których forma hasłowa ma postać
-komitet lub komitat.
+:lex:`komitet` lub :lex:`komitat`.
 
 Zapytania o różne atrybuty segmentów można łączyć. Na przykład, aby
 znaleźć wszystkie wystąpienia segmentu *minę* rozumianego jako forma
-leksemu mina (a nie na przykład leksemu minąć), można zadać następujące
+leksemu :lex:`mina` (a nie na przykład leksemu :lex:`minąć`), można zadać następujące
 zapytanie:
 
 ::
@@ -210,7 +210,7 @@ zapytanie:
    [orth="minę" & lemma="mina"] 
 
 Podobne znaczenie ma następujące zapytanie o te wystąpienia segmentu
-*minę*, które nie są interpretowane jako formy leksemu minąć.
+*minę*, które nie są interpretowane jako formy leksemu :lex:`minąć`.
 
 ::
 
@@ -224,21 +224,21 @@ rolę logicznej alternatywy. Oto kilka przykładów użycia tego operatora:
 
       [lemma="on" | lemma="ja"]
 
-   wszystkie formy zaimków *on* i *ja*, równoważne zapytaniu
+   wszystkie formy zaimków :lex:`on` i :lex:`ja`, równoważne zapytaniu
    ``[lemma="on|ja"]``,
 
 -  ::
 
       [lemma="on" | orth="mnie" | orth="ciebie"]
 
-   wszystkie formy zaimka *on*, a także segmenty *mnie* i *ciebie*,
+   wszystkie formy zaimka :lex:`on`, a także segmenty *mnie* i *ciebie*,
 
 -  ::
 
       [orth="pora" & !(lemma="por" | lemma="pora")]
 
-   segment *pora* niebędący ani formą leksemu *por*, ani formą leksemu
-   *pora*.
+   segment *pora* niebędący ani formą leksemu :lex:`por`, ani formą leksemu
+   :lex:`pora`.
 
 Aby lepiej zrozumieć różnicę pomiędzy operatorami ``&`` i ``|``,
 porównajmy następujące dwa zapytania:
@@ -250,13 +250,13 @@ porównajmy następujące dwa zapytania:
 
 W wyniku zadania pierwszego zapytania znalezione zostaną te segmenty,
 które są jednocześnie (koniunkcja) segmentem *minę* i formą leksemu
-mina, a więc wyłącznie te wystąpienia segmentu *minę*, które są
-interpretowane jako formy leksemu mina. W wyniku zadania drugiego
+:lex:`mina`, a więc wyłącznie te wystąpienia segmentu *minę*, które są
+interpretowane jako formy leksemu :lex:`mina`. W wyniku zadania drugiego
 zapytania znalezione natomiast zostaną te segmenty, które są albo
-dowolnie interpretowanym segmentem *minę*, albo formą leksemu mina
-(alternatywa), czyli wszystkie wystąpienia zarówno segmentu minę, jak
-i segmentów mina, miny, minami itp. interpretowanych jako formy leksemu
-mina.
+dowolnie interpretowanym segmentem *minę*, albo formą leksemu :lex:`mina`
+(alternatywa), czyli wszystkie wystąpienia zarówno segmentu *minę*, jak
+i segmentów *mina*, *miny*, *minami* itp. interpretowanych jako formy leksemu
+:lex:`mina`.
 
 Specyfikacje pozycji w korpusie, ujęte w nawiasy kwadratowe, mogą
 zawierać dowolną liczbę warunków typu ``atrybut="wartość"`` (na przykład
@@ -284,7 +284,7 @@ Dla wielu zastosowań ciekawsza byłaby możliwość zapytania na przykład
 o formy oddalone od siebie o najwyżej pięć pozycji. MTAS umożliwia
 zadawanie takich pytań, gdyż pozwala na formułowanie wyrażeń regularnych
 także na poziomie pozycji korpusu. Na przykład zapytanie o formę leksemu
-*bać* występującą dwie, trzy lub cztery pozycje dalej niż forma *się* może
+:lex:`bać` występującą dwie, trzy lub cztery pozycje dalej niż forma *się* może
 wyglądać następująco:
 
 ::
@@ -296,8 +296,8 @@ poprzedniego zapytania, a także na przykład ciąg *się pani niczego nie
 boi*.
 
 Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form
-tzw. czasownika zwrotnego *bać się* byłoby zapytanie o *się* w pewnej
-odległości przed formą leksemu bać, ale bez znaku interpunkcyjnego
+tzw. czasownika zwrotnego :lex:`bać się` byłoby zapytanie o *się* w pewnej
+odległości przed formą leksemu :lex:`bać`, ale bez znaku interpunkcyjnego
 pomiędzy tymi formami, lub bezpośrednio za taką formą, ewentualnie
 oddzielone od formy bać zaimkiem osobowym:
 
@@ -319,8 +319,8 @@ Powyższe zapytanie można uprościć poprzez zastąpienie warunku
    | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
 Ogólniej, wartościami atrybutu ``upos`` (*universal part of speech*) są skróty nazw klas gramatycznych 
-`omówionych w dokumentacji Universal Dependencies <https://universaldependencies.org/u/pos/index.html>`__. Na przykład
-zapytanie o sekwencję dwóch form rzeczownikowych rozpoczynających się na
+`omówionych w dokumentacji Universal Dependencies <https://universaldependencies.org/u/pos/index.html>`__. 
+Na przykład zapytanie o sekwencję dwóch form rzeczownikowych rozpoczynających się na
 *a* może być sformułowane w sposób następujący:
 
 ::
@@ -331,13 +331,16 @@ Podobnie jak to miało miejsce w wypadku specyfikacji form obu warstw
 tekstowych i form hasłowych, także specyfikacje klas gramatycznych mogą
 zawierać wyrażenia regularne.
 
-Dodatkowo za pomocą atrybutu ``xpos`` można odwołać się w zapytaniu do znacznika specyficznego dla języka. Specyfikacja tego atrybutu również może zawierać wyrażenia regularne. Na przykład w korpusie stworzony w języku czeskim następujące zapytanie:
+Dodatkowo za pomocą atrybutu ``xpos`` można odwołać się w zapytaniu do znacznika specyficznego 
+dla języka. Specyfikacja tego atrybutu również może zawierać wyrażenia regularne. Na przykład 
+w korpusie stworzony w języku czeskim następujące zapytanie:
 
 ::
 
    [xpos="NNNS1.*"]
  
-wyszuka wszystkie rzeczowniki w rodzaju nijakim w mianowniku liczby pojedynczej. Rzeczowniki o tych samych cechach w polskim korpusie znajdzie zapytanie:
+wyszuka wszystkie rzeczowniki w rodzaju nijakim w mianowniku liczby pojedynczej. Rzeczowniki 
+o tych samych cechach w polskim korpusie znajdzie zapytanie:
 
 ::
 
@@ -419,7 +422,7 @@ Aby ograniczyć zasięg zapytania, należy dopisać do zapytania słowo
 kluczowe ``within``, a po nim ``<s/>`` lub ``<p/>``, w zależności od
 tego, czy zasięg ma być ograniczony do zdania (ang. *sentence*) czy do
 akapitu (ang. *paragraph*). Ilustruje to następujący przykład zapytania
-o zdania, w których forma *się* występuje za formą leksemu być,
+o zdania, w których forma *się* występuje za formą leksemu :lex:`być`,
 w odległości co najmniej jednego i nie więcej niż dziesięciu segmentów:
 
 ::
@@ -429,7 +432,7 @@ w odległości co najmniej jednego i nie więcej niż dziesięciu segmentów:
 Dodatkowo można również na elementy ``<s/>`` i ``<p/>`` nałożyć pewne
 warunki dotyczące tego, czy zawierają segmenty innego typu. Przykładowo,
 za pomocą następującego zapytania można znaleźć wszystkie wystąpienia
-czasownika pomocniczego *być* w czasie przyszłym ograniczone do zdań
+czasownika pomocniczego :lex:`być` w czasie przyszłym ograniczone do zdań
 zawierających formę bezokolicznika:
 
 ::
@@ -531,11 +534,14 @@ rzeczownik:
    [deprel="obj" & head.upos="VERB" & lemma="osoba"]
 
 Należy jednak zwrócić uwagę, że w powyższym przykładzie wynikiem
-zapytania będą wystąpienia rzeczownika *osoba*, nadrzędne względem nich
+zapytania będą wystąpienia rzeczownika :lex:`osoba`, nadrzędne względem nich
 formy czasownikowe (finitywne i niefinitywne) będą się zaś znajdowały
 w lewym lub prawym kontekście wyników wyróżnione pismem pogrubionym.
 Można je jednak zgrupować i posortować względem ich częstości dzięki
-opcjom Statystyk. Wartością atrybutu ``deprel`` jest jedna z etykiet krawędzi w drzewie zależnościowym odnosząca się do dopełnienia bliższego. Pełny zestaw etykiet relacji zależnościowych znajduje się w `dokumentacji UD <https://universaldependencies.org/u/dep/index.html>`__. 
+opcjom Statystyk. Wartością atrybutu ``deprel`` jest jedna z etykiet krawędzi 
+w drzewie zależnościowym odnosząca się do dopełnienia bliższego. Pełny zestaw 
+etykiet relacji zależnościowych znajduje się w `dokumentacji 
+UD <https://universaldependencies.org/u/dep/index.html>`__. 
 
 Dzięki atrybutowi kodującemu lewo- i prawostronną pozycję nadrzędnika
 względem segmentu można znaleźć przykłady niekanonicznego szyku zdania,
@@ -558,7 +564,7 @@ nadrzędnika w zapytaniu:
 
    [upos="ADJ" & deprel="amod" & head.lemma="zupa"]
 
-zwróci wszystkie przymiotnikowe określenia rzeczownika *zupa*. Dodanie
+zwróci wszystkie przymiotnikowe określenia rzeczownika :lex:`zupa`. Dodanie
 parametru pozycji pozwoli ograniczyć wyszukanie do określeń
 lewostronnych (np. *gorąca zupa*) lub prawostronnych (np. *zupa pomidorowa*).
 
@@ -577,13 +583,15 @@ Powyższe przykładowe zapytanie wyszuka dopełnienia bliższe orzeczenia
 w czasie przeszłym, które są oddzielone od tego orzeczenia co najmniej
 jednym elementem.
 
-Innym przykładem użycia znakowania składniowego w korpusie może być zapytanie wyszukujące konstrukcje w stronie biernej:
+Innym przykładem użycia znakowania składniowego w korpusie może być zapytanie 
+wyszukujące konstrukcje w stronie biernej:
 
 ::
 
    [upos="AUX" & deprel="aux:pass" & head.upos="ADJ"]
 
-którego dopasowaniem są słowa posiłkowe konstrukcji biernej połączone z formą imiesłowu biernego (oznaczoną jako przymiotnik) relacją ``aux:pass``. 
+którego dopasowaniem są słowa posiłkowe konstrukcji biernej połączone z formą imiesłowu 
+biernego (oznaczoną jako przymiotnik) relacją ``aux:pass``. 
 
 Warstwa jednostek nazewniczych
 ------------------------------
@@ -600,7 +608,9 @@ języków istnieją odpowiednie modele do oznaczania jednostek nazewniczych.
 Naprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych składa się tylko z czterech
 elementów: ``PER`` (osoba), ``LOC`` (miejsce), ``ORG`` (organizacja) i ``MISC`` (inne), ale dla niektórych
 języków istnieją bardziej szczegółowe klasyfikacje, np. języki chiński i angielski w potoku Stanzy
-mają 18 wartości klasyfikacji jednostek nezewniczych. W poniższych przykładach stosuje się powyższą najprostszą klasyfikację, która dostępna jest np. w potoku Stanzy dla języków hiszpańskiego, francuskiego, rosyjskiego czy ukraińskiego. Pełną listę wartości klasyfikacji dla danego 
+mają 18 wartości klasyfikacji jednostek nezewniczych. W poniższych przykładach stosuje się powyższą najprostszą 
+klasyfikację, która dostępna jest np. w potoku Stanzy dla języków hiszpańskiego, francuskiego, rosyjskiego 
+czy ukraińskiego. Pełną listę wartości klasyfikacji dla danego 
 korpusu użytkownik znajdzie: :todo:`???? (TODO)`. 
 
 
