@@ -303,8 +303,7 @@ oddzielone od formy bać zaimkiem osobowym:
 
 ::
 
-   [orth="się"][!orth="[.!?,:]"]{0,5}[lemma="bać"]
-   | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
+   [orth="się"][!orth="[.!?,:]"]{0,5}[lemma="bać"] | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
 Zapytania o znaczniki morfosyntaktyczne
 ---------------------------------------
@@ -315,8 +314,7 @@ Powyższe zapytanie można uprościć poprzez zastąpienie warunku
 
 ::
 
-   [orth="się"][!upos="PUNCT"]{0,5}[lemma="bać"]
-   | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
+   [orth="się"][!upos="PUNCT"]{0,5}[lemma="bać"] | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
 Ogólniej, wartościami atrybutu ``upos`` (*universal part of speech*) są skróty nazw klas gramatycznych 
 `omówionych w dokumentacji Universal Dependencies <https://universaldependencies.org/u/pos/index.html>`__. 
