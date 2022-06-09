@@ -20,6 +20,7 @@ Dokumentacja
    instrukcja/index
    mtas
    narzedzia
+   licencja
 
 ..
    profile-slow
