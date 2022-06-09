@@ -6,7 +6,7 @@ Wprowadzenie
 ============
 
 Niniejszy dokument powstał w oparciu o `Ściągawkę do Narodowego Korpusu
-Języka Polskiego <http://nkjp.pl/poliqarp/help/pl.html>`__, której
+Języka Polskiego <http://nkjp.pl/poliqarp/help/pl.html>`_, której
 autorem jest Adam Przepiórkowski i którą następnie poprawiali
 i rozszerzali Jakub Wilk i Aleksander Buczyński. *Ściągawka* stanowi
 instrukcję użytkowania wyszukiwarki Poliqarp z Narodowym Korpusem Języka
