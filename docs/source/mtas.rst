@@ -2,26 +2,7 @@
 Tworzenie zapytań do korpusu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Wprowadzenie
-============
-
-Niniejszy dokument powstał w oparciu o `Ściągawkę do Narodowego Korpusu
-Języka Polskiego <http://nkjp.pl/poliqarp/help/pl.html>`_, której
-autorem jest Adam Przepiórkowski i którą następnie poprawiali
-i rozszerzali Jakub Wilk i Aleksander Buczyński. *Ściągawka* stanowi
-instrukcję użytkowania wyszukiwarki Poliqarp z Narodowym Korpusem Języka
-Polskiego. Jej pełna wersja znajduje się w `repozytorium wyszukiwarki
-Poliqarp <https://sourceforge.net/projects/poliqarp/files/poliqarp/1.3.13/>`__.
-
-Aktualna wersja tego dokumentu została przygotowana przez Witolda Kierasia i opisuje
-sposób użytkowania wyszukiwarki MTAS, niepowiązanej z Poliqarpem, ale
-wykorzystującej podobny język zapytań znany pod nazwą *Corpus Query
-Language* (CQL). Modyfikacje wprowadzone do pierwotnej wersji instrukcji
-uwzględniają różnice w języku zapytań oraz w tagsecie stosowanym
-w Korpusomacie. Za zgodą wszystkich wyżej wymienionych autorów niniejsza
-wersja dokumentu zostaje udostępniona na zasadach `licencji Creative
-Commons
-BY-SA <https://creativecommons.org/licenses/by-sa/4.0/legalcode.pl>`__.
+Niniejsza część instrukcji opisuje język zapytań CQL w odniesieniu do warstw znakowania dostępnych w Korpusomacie.
 
 Segmentacja
 ===========
@@ -148,13 +129,6 @@ wyrażeń.
 
 #. ::
 
-      [orth=".z.z..?"]
-
-   segmenty składające się z pięciu lub sześciu znaków, w których 2.
-   i 4. znak to *z*, np. *czczą*, *rzezi* i *szczyt*,
-
-#. ::
-
       [orth="a*by"]
 
    gwiazdka oznacza dowolną liczbę wystąpień znaku lub wyrażenia
@@ -197,40 +171,8 @@ wyrażeń.
    ujętego w nawiasy okrągłe wyrażenia bezpośrednio przed nią, a zatem
    zapytanie to może posłużyć do znalezienia segmentów, w których ciąg
    *la* występuje przynajmniej 3 razy z rzędu, np. *tralalala*,
-   *sialalala*, [lala]
+   *sialalala*,
 
-#. ::
-
-      [orth="[bcćdfghjklłmnńprsśtwzźż]{4,}[aąeęioóuy]"]
-
-   segmenty składające się z co najmniej 4 liter spółgłoskowych
-   i dokładnie jednej litery samogłoskowej, np. *źdźbła*, *drzwi*
-   i *czczą*; wyrażenie ``[bcćdfghjklłmnńprsśtwzźż]{4,}`` oznacza co
-   najmniej czterokrotne powtórzenie znaku pasującego do
-   ``[bcćdfghjklłmnńprsśtwzźż]``, tj. co najmniej cztery wystąpienia
-   litery spółgłoskowej (niekoniecznie tej samej),
-
-#. ::
-
-      [orth="([bcćdfghjklłmnńprsśtwzźż]{3}[aąeęioóuy]){2,}"]
-
-   segmenty składające się z co najmniej dwukrotnego powtórzenia wzorca
-   CCCV, gdzie C to litera spółgłoskowa, a V to litera samogłoskowa, np.
-   *wszystko*, *przykrzejszy* i *szlachta*; konstrukcja typu ``n``
-   oznacza dokładnie ``n`` wystąpień znaku lub ujętego w nawiasy okrągłe
-   wyrażenia bezpośrednio przed nią,
-
-#. ::
-
-      [orth="(pod|na|za)jecha.*"]
-
-   segmenty zaczynające się od *podjecha*, *najecha* i *zajecha*, np.
-   *podjechał*, *zajechawszy*.
-
-Specyfikacje segmentów podane powyżej muszą pasować do całych segmentów
-stąd konieczność umieszczenia po obu stronach ciągu ``(la){3,}`` w
-zapytaniu ``[orth=".*(la){3,}.*"]``
-wyrażenia ``.*``, pasującego do dowolnego ciągu znaków.
 
 Zapytania z innymi atrybutami
 -----------------------------
@@ -440,50 +382,15 @@ A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe 
 
    pojedyncze mianownikowe lub biernikowe formy męskie (jeśli w języku są kategorie liczby, przypadka i rodzaju).
 
-..
- Ponieważ nazwy wartości poszczególnych kategorii są rozłączne, można
- również stosować zbiorczą kategorię ``feat`` (ang. *feature* ‘cecha’)
- w zastępstwie każdej innej. Ujednoznacznienie dokona się przez
- odpowiednią wartość. Dlatego następujące dwa zapytania zwrócą te same
- wyniki:
-..
- -  ``[pos="subst" & case="acc" & number="pl" & gender="f"]``
+TODO: Można również stosować zbiorczy atrybut ``ufeat``
+w zastępstwie każdej innej nazwy kategorii. Ujednoznacznienie dokona się przez
+odpowiednią wartość. Dlatego następujące dwa zapytania zwrócą te same
+wyniki:
 
- -  ``[pos="subst" & feat="acc" & feat="pl" & feat="f"]``
+-  ``[upos="NOUN" & case="acc" & number="pl" & gender="f"]``
 
+-  ``[upos="NOUN" & ufeat="acc" & ufeat="pl" & ufeat="f"]``
 
-..
- Interpretacje spoza słownika
- ----------------------------
-
- Interpretacje fleksyjne w znakowaniu morfosyntaktycznym Korpusomatu
- pochodzą z analizatora Morfeusz 2 i tagera Concraft 2 — analizator
- zwraca wszystkie możliwe interpretacje dla danego słowa, a tager wybiera
- najbardziej prawdopodobną ze względu na swój model statystyczny.
- Interpretacje Morfeusza pochodzą ze `Słownika gramatycznego języka
- polskiego <http://www.sgjp.pl/>`__ (SGJP). Jeśli danego słowa nie da się
- w żaden sposób zinterpretować jako formy wyrazowej leksemu zanotowanego
- w SGJP, to Morfeusz nie zwraca żadnej interpretacji. Wówczas tager
- „zgaduje” znacznik morfosyntaktyczny, czyli wybiera taki, który zgodnie
- z jego modelem jest najbardziej prawdopodobny. Skuteczność zgadywania
- jest w oczywisty sposób dużo niższa niż skuteczność wybierania spośród
- gotowych interpretacji z Morfeusza, dlatego użytkownik może uznać za
- przydatną możliwość sterowania tym parametrem w swoich wyszukaniach, np.
- w wypadku słownictwa najnowszego, nienotowanego w słownikach. Segmenty,
- którym Morfeusz nie przypisał żadnej interpretacji, mają dodatkowy
- parametr postaci ``[ign="true"]``. Poniższe przykładowe zapytanie
- odnajdzie w korpusie wszystkie słowa, które zaczynają się od „tofu”
- i nie są znane Morfeuszowi:
-
- ::
-
-    [orth="tofu.*" & ign="true"]
-
- Analogicznie można usunąć z wyszukiwania interpretacje zgadywane, np.:
-
- ::
-
-    [pos="subst" & !ign="true"]
 
 Graficzny konstruktor zapytań
 -----------------------------
@@ -600,6 +507,8 @@ W warstwie znakowania składniowego dostępne są następujące atrybuty:
 
 -  ``head.lemma`` — forma hasłowa bezpośredniego nadrzędnika segmentu,
 
+- TODO: ``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego nadrzędnika segmentu, 
+
 -  ``head.distance`` — odległość bezpośredniego nadrzędnika segmentu,
 
 -  ``head.position`` — położenie (lewo- lub prawostronne) bezpośredniego
@@ -691,7 +600,7 @@ języków istnieją odpowiednie modele do oznaczania jednostek nazewniczych.
 Naprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych składa się tylko z czterech
 elementów: ``PER`` (osoba), ``LOC`` (miejsce), ``ORG`` (organizacja) i ``MISC`` (inne), ale dla niektórych
 języków istnieją bardziej szczegółowe klasyfikacje, np. języki chiński i angielski w potoku Stanzy
-mają 18 wartości klasyfikacji jednostek nezewniczych. Pełną listę wartości klasyfikacji dla danego 
+mają 18 wartości klasyfikacji jednostek nezewniczych. W poniższych przykładach stosuje się powyższą najprostszą klasyfikację, która dostępna jest np. w potoku Stanzy dla języków hiszpańskiego, francuskiego, rosyjskiego czy ukraińskiego. Pełną listę wartości klasyfikacji dla danego 
 korpusu użytkownik znajdzie: ???? (TODO). 
 
 
