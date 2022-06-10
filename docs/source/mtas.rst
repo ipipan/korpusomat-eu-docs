@@ -339,7 +339,7 @@ w korpusie stworzony w języku czeskim następujące zapytanie:
    [xpos="NNNS1.*"]
  
 wyszuka wszystkie rzeczowniki w rodzaju nijakim w mianowniku liczby pojedynczej. Rzeczowniki 
-o tych samych cechach w polskim korpusie znajdzie zapytanie:
+o tych samych cechach w polskim korpusie (w potoku Stanzy) znajdzie zapytanie:
 
 ::
 
