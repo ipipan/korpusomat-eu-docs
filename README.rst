@@ -1,9 +1,4 @@
-Template for the Read the Docs tutorial
-=======================================
+Instrukcja obsługi serwisu Korpusomat.eu
+========================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
-
-Read the tutorial here:
-
-https://docs.readthedocs.io/en/stable/tutorial/
+To repozytorium zawiera jedynie dokumentację Korpusomatu, nie ma tu żadnego kodu.
