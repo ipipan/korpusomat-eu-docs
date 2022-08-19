@@ -6,7 +6,7 @@ ekranu wyszukiwania. W polu „Zapytanie” (27) należy
 wpisać zapytanie, które chcemy wykonać, a następnie
 wcisnąć przycisk „Wyszukaj” (31). Opis języka zapytań
 dostępny jest w 
-`kolejnej części instrukcji <https://korpusomat.readthedocs.io/en/latest/mtas.html>`__.
+`kolejnej części instrukcji <https://korpusomat.readthedocs.io/pl/latest/mtas.html>`__.
 Przycisk (28) uruchamia graficzny konstruktor zapytań.
 Przycisk (29) rozwija menu ograniczenia wyszukiwania
 do tekstów o konkretnych metadanych. Przycisk (30)
