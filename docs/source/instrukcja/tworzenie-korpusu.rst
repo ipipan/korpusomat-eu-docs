@@ -56,8 +56,8 @@ Drugim sposobem jest podanie bezpośrednio linku do
 tekstu w polu tekstowym „Lub podaj URL:” (13), a
 następnie kliknięcie przycisku „Pobierz” (14).
 Korpusomat pobierze wtedy plik automatycznie i
-przetworzy go. W takim przypadku możliwe jest również
-podanie linku do artykułu (np z portalu
+przetworzy go. W takim wypadku możliwe jest również
+podanie linku do artykułu (np. z portalu
 internetowego), z którego zostanie wydobyta treść i
 przetworzona do pliku txt.
 
