@@ -513,7 +513,7 @@ W warstwie znakowania składniowego dostępne są następujące atrybuty:
 
 -  ``head.lemma`` — forma hasłowa bezpośredniego nadrzędnika segmentu,
 
-- :todo:`TODO`: ``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego nadrzędnika segmentu, 
+-  ``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego nadrzędnika segmentu, 
 
 -  ``head.distance`` — odległość bezpośredniego nadrzędnika segmentu,
 
