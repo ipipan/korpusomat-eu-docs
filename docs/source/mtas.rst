@@ -384,18 +384,18 @@ A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe 
 
    pojedyncze mianownikowe lub biernikowe formy męskie (jeśli w języku są kategorie liczby, przypadka i rodzaju).
 
-:todo:`TODO`: Można również stosować zbiorczy atrybut ``ufeat``
+Można również stosować zbiorczy atrybut ``ufeat``
 w zastępstwie każdej innej nazwy kategorii. Ujednoznacznienie dokona się przez
 odpowiednią wartość. Dlatego następujące dwa zapytania zwrócą te same
 wyniki:
 
 ::
 
-     [upos="NOUN" & case="acc" & number="pl" & gender="f"]
+     [upos="NOUN" & case="acc" & number="plur" & gender="fem"]
 
 ::
 
-     [upos="NOUN" & ufeat="acc" & ufeat="pl" & ufeat="f"]
+     [upos="NOUN" & ufeat="acc" & ufeat="plur" & ufeat="fem"]
 
 
 Graficzny konstruktor zapytań
