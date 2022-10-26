@@ -526,7 +526,7 @@ konkretnego czasownika:
 
 ::
 
-   [pos="NOUN" & deprel="obj" & head.lemma="kupić"]
+   [upos="NOUN" & deprel="obj" & head.lemma="kupić"]
 
 Możliwe jest również odwrotne wyszukanie odpowiadające na pytanie, przy
 jakich czasownikach w roli dopełnienia występuje w korpusie konkretny
