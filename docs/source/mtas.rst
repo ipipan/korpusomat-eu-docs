@@ -540,7 +540,7 @@ Należy jednak zwrócić uwagę, że w powyższym przykładzie wynikiem
 zapytania będą wystąpienia rzeczownika :lex:`osoba`, nadrzędne względem nich
 formy czasownikowe (finitywne i niefinitywne) będą się zaś znajdowały
 w lewym lub prawym kontekście wyników wyróżnione pismem pogrubionym.
-Można je jednak zgrupować i posortować względem ich częstości dzięki
+:todo:`TODO: dorobić statystyki` Można je jednak zgrupować i posortować względem ich częstości dzięki
 opcjom Statystyk. Wartością atrybutu ``deprel`` jest jedna z etykiet krawędzi 
 w drzewie zależnościowym odnosząca się do dopełnienia bliższego. Pełny zestaw 
 etykiet relacji zależnościowych znajduje się w `dokumentacji 
