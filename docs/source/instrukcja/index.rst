@@ -6,3 +6,4 @@ Korzystanie z aplikacji
    tworzenie-konta
    tworzenie-korpusu
    wyszukiwanie
+   preferencje
