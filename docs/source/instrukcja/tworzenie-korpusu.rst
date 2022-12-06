@@ -103,7 +103,7 @@ korpusu innym użytkownikom Korpusomatu. W polu (26) należy wpisać
 adres email użytkownika, któremu udostępnia się utworzony korpus,
 następnie wybiera się rodzaj dostępu jaki ma być przydzielony (27).
 Po zatwierdzeniu zmian przyciskiem „Dodaj” (28) nowy użytkownik korpusu
-zostaje dodany. Możemy go usunąć przyciskniem (29). W celu udostępnienia
+zostaje dodany. Możemy go usunąć przyciskiem (29). W celu udostępnienia
 korpusu wszystkim użytkownikom Korpusomatu należy przełączyć przycisk (30).
 
 
