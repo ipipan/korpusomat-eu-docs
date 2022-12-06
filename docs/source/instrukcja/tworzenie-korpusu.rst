@@ -11,9 +11,11 @@ Następnie należy wprowadzić nazwę i opis korpusu (6) oraz
 wybrać język korpusu (7).
 
 |image5|
+|image19|
 
 --------------
-
+Po naciśnięciu ikony ustawień obok pola (7) możliwe jest wybranie preferencyjnego potoku przetwarzania.
+Gdy potok przetwarzania nie zostanie zmieniony, domyślnym potokiem jest spacy.
 W polach (8) można wprowadzić metadane dla wszystkich tekstów w korpusie
 (możliwe jest ich zmodyfikowanie po utworzeniu korpusu). Aby zapisać korpus, należy kliknąć
 przycisk „Utwórz” (9).
@@ -145,4 +147,6 @@ Sposób tworzenia zapytań został opisany w dalszej części instrukcji.
 .. |image12| image:: ../img/new_img/12.png
    :class: center-block
 .. |image13| image:: ../img/new_img/13.png
+   :class: center-block
+.. |image19| image:: ../img/new_img/19.png
    :class: center-block
