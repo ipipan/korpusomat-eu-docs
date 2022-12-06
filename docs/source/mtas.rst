@@ -540,7 +540,7 @@ Należy jednak zwrócić uwagę, że w powyższym przykładzie wynikiem
 zapytania będą wystąpienia rzeczownika :lex:`osoba`, nadrzędne względem nich
 formy czasownikowe (finitywne i niefinitywne) będą się zaś znajdowały
 w lewym lub prawym kontekście wyników wyróżnione pismem pogrubionym.
-:todo:`TODO: dorobić statystyki` Można je jednak zgrupować i posortować względem ich częstości dzięki
+Można je jednak zgrupować i posortować względem ich częstości dzięki
 opcjom Statystyk. Wartością atrybutu ``deprel`` jest jedna z etykiet krawędzi 
 w drzewie zależnościowym odnosząca się do dopełnienia bliższego. Pełny zestaw 
 etykiet relacji zależnościowych znajduje się w `dokumentacji 
@@ -608,13 +608,13 @@ nazewnicze, zbiór wartości i ich zakres różni się w poszczególnych potokac
 oraz może być różny dla różnych języków w obrębie tych potoków. Ponadto, nie dla wszystkich 
 języków istnieją odpowiednie modele do oznaczania jednostek nazewniczych.
 
-Naprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych składa się tylko z czterech
+Najprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych składa się tylko z czterech
 elementów: ``PER`` (osoba), ``LOC`` (miejsce), ``ORG`` (organizacja) i ``MISC`` (inne), ale dla niektórych
 języków istnieją bardziej szczegółowe klasyfikacje, np. języki chiński i angielski w potoku Stanzy
 mają 18 wartości klasyfikacji jednostek nezewniczych. W poniższych przykładach stosuje się powyższą najprostszą 
 klasyfikację, która dostępna jest np. w potoku Stanzy dla języków hiszpańskiego, francuskiego, rosyjskiego 
 czy ukraińskiego. Pełną listę wartości klasyfikacji dla danego 
-korpusu użytkownik znajdzie: :todo:`???? (TODO)`. 
+korpusu użytkownik znajdzie w graficznym konstruktorze zapytań. 
 
 
 Jednostki nazewnicze, podobnie jak opisane wyżej zdania i akapity,
