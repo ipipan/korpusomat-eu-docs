@@ -14,8 +14,9 @@ wybrać język korpusu (7).
 |image19|
 
 --------------
-Po naciśnięciu ikony ustawień obok pola (7) możliwe jest wybranie preferencyjnego potoku przetwarzania.
-Gdy potok przetwarzania nie zostanie zmieniony, domyślnym potokiem jest spacy.
+
+Po naciśnięciu ikony ustawień obok pola (7) możliwe jest wybranie preferowanego potoku przetwarzania.
+Jeśli dla danego języka dostępne są oba potoki przetwarzania, domyślnym potokiem jest Spacy.
 W polach (8) można wprowadzić metadane dla wszystkich tekstów w korpusie
 (możliwe jest ich zmodyfikowanie po utworzeniu korpusu). Aby zapisać korpus, należy kliknąć
 przycisk „Utwórz” (9).
