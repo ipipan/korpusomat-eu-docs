@@ -664,7 +664,14 @@ składowych. Oto kilka przykładów takich zapytań:
    
 — dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam Michnik*, *Antoni Macierewicz*. 
 
+Ponadto indeksowany jest również atrybut zawierający informację o długości jednostki nazewniczej mierzonej w segmentach. Zapytanie:
 
+::
+
+   <ne.len="3" />
+
+odnajdzie wszystkie takie jednostki składające się z dokładnie trzech segmentów.
+  
 
 Ograniczenie zapytania za pomocą metadanych
 -------------------------------------------
