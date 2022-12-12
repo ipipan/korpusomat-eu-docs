@@ -39,7 +39,39 @@ Po wykonaniu zapytania użytkownik zostanie przeniesiony do
 strony z wynikami w postaci konkordancji. Szerszy kontekst znalezionego wyrazu lub wyrażenia oraz metadane tekstu, z którego pochodzi, można obejrzeć, klikając na niego (37). Aby pobrać całą listę wyników w formie pliku CSV lub XLS, należy wybrać typ
 pliku (38) i wcisnąć przycisk „Pobierz wyniki” (39).
 
-|image17|
+|image25|
+|image20|
+
+--------------
+
+Klikając na ikonę (40) użytkownik zostaje przekierowany do strony
+z wizualizacją drzew zależnościowych. Wizualizacji podlega zdanie,
+zawierające konkretny przykład wyszukanych rezultatów zapytania.
+Użytkownik wybiera preferowany układ drzewa: linearny (41), bądź drzewiasty (42).
+
+|image21|
+|image22|
+
+--------------
+
+Użytkownik ma możliwość zwinięcia wybranych węzłów. W tym celu należy najechać
+myszką na wybrany węzeł i kliknąć ikonę (43). Do ich ponownego rozwinięcia służy
+przycisk (44).
+
+|image23|
+
+--------------
+
+Wizualizację drzewa można zapisać w formacie .svg lub .png (45).
+w polach (46) dostępne są dodatkowe opcje:
+-   ukrycia znaków interpunkcyjnych w analizowanym zdaniu,
+-   automatycznego pozycjonowania drzewa (po wybraniu tego przcisku
+    analizowane drzewo zostanie usytuowane w centralnej
+    części okna modalnego)
+-   modyfikacji struktury drzewa (poszczególne węzły można przenosić
+    w obrębie drzewa według upodobań)
+
+|image24|
 
 --------------
 
@@ -49,5 +81,15 @@ pliku (38) i wcisnąć przycisk „Pobierz wyniki” (39).
    :class: center-block
 .. |image16| image:: ../img/new_img/16.png
    :class: center-block
-.. |image17| image:: ../img/new_img/17.png
+.. |image25| image:: ../img/new_img/25.png
+   :class: center-block
+.. |image20| image:: ../img/new_img/20.png
+   :class: center-block
+.. |image21| image:: ../img/new_img/21.png
+   :class: center-block
+.. |image22| image:: ../img/new_img/22.png
+   :class: center-block
+.. |image23| image:: ../img/new_img/23.png
+   :class: center-block
+.. |image24| image:: ../img/new_img/24.png
    :class: center-block
