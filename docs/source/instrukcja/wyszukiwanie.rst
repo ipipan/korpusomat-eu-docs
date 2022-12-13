@@ -64,10 +64,13 @@ wcześniej węzeł lub użyć przycisku (44), który rozwinie wszystkie węzły 
 
 Wizualizację drzewa można zapisać w formacie SVG lub PNG (45).
 w polach (46) dostępne są dodatkowe opcje:
+
 -   ukrycia znaków interpunkcyjnych w analizowanym zdaniu dla zwiększenia jego czytelności,
+
 -   automatycznego pozycjonowania drzewa (po wybraniu tego przcisku
     analizowane drzewo zostanie usytuowane w centralnej
     części okna modalnego)
+    
 -   modyfikacji struktury drzewa (poszczególne węzły można przesuwać w obrębie drzewa)
 
 |image24|
