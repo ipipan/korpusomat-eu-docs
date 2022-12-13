@@ -44,32 +44,31 @@ pliku (38) i wcisnąć przycisk „Pobierz wyniki” (39).
 
 --------------
 
-Klikając na ikonę (40) użytkownik zostaje przekierowany do strony
-z wizualizacją drzew zależnościowych. Wizualizacji podlega zdanie,
+Po kliknięciu ikony (40) użytkownik zostaje przekierowany do strony
+z wizualizacją drzew zależnościowych. Wizualizacji podlega pełne wypowiedzenie,
 zawierające konkretny przykład wyszukanych rezultatów zapytania.
-Użytkownik wybiera preferowany układ drzewa: linearny (41), bądź drzewiasty (42).
+Użytkownik może się przełączać między dwoma układami: linearnym (41), bądź drzewiastym (42).
 
 |image21|
 |image22|
 
 --------------
 
-Użytkownik ma możliwość zwinięcia wybranych węzłów. W tym celu należy najechać
-myszką na wybrany węzeł i kliknąć ikonę (43). Do ich ponownego rozwinięcia służy
-przycisk (44).
+Użytkownik może zwinąć wybrane węzły. W tym celu należy najechać
+myszą na wybrany węzeł i kliknąć ikonę (43). W ten sam sposób można rozwinąć zwinięty 
+wcześniej węzeł lub użyć przycisku (44), który rozwinie wszystkie węzły w drzewie.
 
 |image23|
 
 --------------
 
-Wizualizację drzewa można zapisać w formacie .svg lub .png (45).
+Wizualizację drzewa można zapisać w formacie SVG lub PNG (45).
 w polach (46) dostępne są dodatkowe opcje:
--   ukrycia znaków interpunkcyjnych w analizowanym zdaniu,
+-   ukrycia znaków interpunkcyjnych w analizowanym zdaniu dla zwiększenia jego czytelności,
 -   automatycznego pozycjonowania drzewa (po wybraniu tego przcisku
     analizowane drzewo zostanie usytuowane w centralnej
     części okna modalnego)
--   modyfikacji struktury drzewa (poszczególne węzły można przenosić
-    w obrębie drzewa według upodobań)
+-   modyfikacji struktury drzewa (poszczególne węzły można przesuwać w obrębie drzewa)
 
 |image24|
 
