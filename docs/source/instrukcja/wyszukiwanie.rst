@@ -69,9 +69,9 @@ w polach (46) dostępne są dodatkowe opcje:
 
 -   automatycznego pozycjonowania drzewa (po wybraniu tego przcisku
     analizowane drzewo zostanie usytuowane w centralnej
-    części okna modalnego)
+    części okna modalnego),
     
--   modyfikacji struktury drzewa (poszczególne węzły można przesuwać w obrębie drzewa)
+-   modyfikacji struktury drzewa (poszczególne węzły można przesuwać w obrębie drzewa).
 
 |image24|
 
