@@ -23,6 +23,8 @@ Zespół
 | Programiści:
 |
 | **Sandra Penno**
+|
+
 | **Filip Koselski**
 |
 
