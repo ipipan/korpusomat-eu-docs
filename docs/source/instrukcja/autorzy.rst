@@ -33,4 +33,5 @@ Zespół
 Dotychczasowi kontrybutorzy
 =======================
 
-- to be added
+| Programiści:
+|
