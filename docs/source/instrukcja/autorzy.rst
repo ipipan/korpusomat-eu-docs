@@ -20,10 +20,9 @@ Zespół
 
 --------------
 
-|Programiści:
+| Programiści:
 
 | **Sandra Penno**
-|
 | **Filip Koselski**
 |
 
