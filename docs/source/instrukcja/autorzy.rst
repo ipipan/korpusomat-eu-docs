@@ -3,13 +3,13 @@ Autorzy
 
 - **Zespół**
 
-| -- **Witold Kieraś**
-|    Product Owner
+| **Witold Kieraś**
+| Product Owner
 
 --------------
 
-| -- **Łukasz Kobyliński**
-|    Author
+| **Łukasz Kobyliński**
+| Author
 
 --------------
 
@@ -27,6 +27,6 @@ Autorzy
 
 --------------
 
-| **Past Contributors:**
+| - **Past Contributors:**
 
 - to be added
