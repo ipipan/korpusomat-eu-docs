@@ -20,12 +20,12 @@ Zespół
 
 --------------
 
-| **Sandra Penno**
-| Programista
-|
+|Programiści:
 
+| **Sandra Penno**
+|
 | **Filip Koselski**
-| Programista
+|
 
 --------------
 
