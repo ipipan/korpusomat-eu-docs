@@ -1,32 +1,35 @@
+=======================
 Autorzy
 =======================
 
-- **Zespół**
+Zespół
+=======================
 
 | **Witold Kieraś**
-| Product Owner
+| Ekspert merytoryczny
 
 --------------
 
 | **Łukasz Kobyliński**
-| Author
+| Autor aplikacji
 
 --------------
 
 | **Karol Saputa**
-| Maintainer, Developer
+| Administrator
 
 --------------
 
 | **Sandra Penno**
-| Developer, Contributor
+| Programista
 |
 
 | **Filip Koselski**
-| Developer, Contributor
+| Programista
 
 --------------
 
-| - **Past Contributors:**
+Dotychczasowi kontrybutorzy
+=======================
 
 - to be added
