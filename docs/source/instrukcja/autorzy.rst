@@ -1,13 +1,15 @@
 Autorzy
 =======================
 
-| **Witold Kieraś**
-| Product Owner
+- **Zespół**
+
+| -- **Witold Kieraś**
+|    Product Owner
 
 --------------
 
-| **Łukasz Kobyliński**
-| Author
+| -- **Łukasz Kobyliński**
+|    Author
 
 --------------
 
