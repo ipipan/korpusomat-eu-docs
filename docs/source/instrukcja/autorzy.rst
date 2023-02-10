@@ -6,7 +6,7 @@ Zespół
 =======================
 
 | **Witold Kieraś**
-| Ekspert merytoryczny
+| Opiekun merytoryczny
 
 --------------
 
@@ -30,7 +30,7 @@ Zespół
 
 --------------
 
-Dotychczasowi kontrybutorzy
+Dotychczasowi współpracownicy
 =======================
 
 | Programiści:
