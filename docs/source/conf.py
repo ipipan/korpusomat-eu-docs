@@ -5,6 +5,9 @@
 project = 'Korpusomat EU'
 copyright = '2022, IPI PAN'
 author = 'IPI PAN'
+language = 'pl'
+gettext_uuid = True
+gettext_compact = False
 
 release = '0.1'
 version = '0.1.0'

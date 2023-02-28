@@ -23,7 +23,9 @@ Dokumentacja
    mtas
    narzedzia
    licencja
-
+   cytowanie
+   autorzy
+   
 ..
    profile-slow
    statystyki

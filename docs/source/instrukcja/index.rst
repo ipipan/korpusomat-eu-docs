@@ -7,5 +7,3 @@ Korzystanie z aplikacji
    tworzenie-korpusu
    wyszukiwanie
    preferencje
-   cytowanie
-   autorzy

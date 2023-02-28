@@ -8,30 +8,27 @@ Zespół
 | **Witold Kieraś**
 | Opiekun merytoryczny
 
---------------
-
 | **Łukasz Kobyliński**
-| Autor aplikacji
-
---------------
+| Kierownik projektu, autor wersji oryginalnej
 
 | **Karol Saputa**
-| Administrator
+| Główny programista
 
---------------
-
-| Programiści:
-|
 | **Sandra Penno**
-|
+| Programista
 
 | **Filip Koselski**
-|
+| Programista
 
 --------------
 
 Dotychczasowi współpracownicy
 =======================
-
-| Programiści:
-|
+ * Zbigniew Gawłowicz
+ * Michał Wasiluk
+ * Agnieszka Olech
+ * Filip Karpiński
+ * Marcel Kawski
+ * Michał Modzelewski
+ * Kacper Mirowski
+ * Ryszard Tuora
