@@ -1,0 +1,61 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../index.rst:9 b8561e6645c34f95993e4f938cf837c3
+msgid "Korpusomat"
+msgstr ""
+
+#: ../../index.rst:11 e21f70994edc4919a2775db9b6615b2e
+msgid ""
+"**Korpusomat** jest aplikacją webową służącą do tworzenia wielowarstwowo "
+"oznakowanych korpusów tekstów, z których można korzystać za pomocą "
+"wyszukiwarki MTAS. Do znakowania wykorzystywane są nowoczesne "
+"wielojęzyczne zestawy narzędzi programistycznych spaCy i Stanza. "
+"Zasadniczym celem Korpusomatu jest udostępnienie badaczom wyników działań"
+" tych narzędzi na dowolnych tekstach bez konieczności szczegółowej "
+"znajomości technicznej strony ich działania."
+msgstr "**Korpusomat** is a web app for building multi-layered annotated corpora, which can then be accessed via the MTAS browser. The annotation is performed using two state-of-the-art multilingual sets of programming tools: spaCy and Stanza. The main goal of the app is to provide researchers – who do not necessarily possess any special technical skills or knowledge – with the results of operations conducted using these tools on any given (set of) text(s)."
+
+#: ../../index.rst:13 f3aba0a18c184f01a297773d1190e334
+msgid ""
+"Korpusomat przetwarza pliki tekstowe (txt) oraz większość innych formatów"
+" służących do przechowywania danych tekstowych (np. epub, mobi, doc, rtf "
+"czy pdf – pełna lista możliwych formatów dostępna jest pod adresem "
+"http://tika.apache.org/1.17/formats.html). Narzędzia, z których korzysta,"
+" wymagają stosowania kodowania UTF-8, jeśli jednak użytkownik prześle "
+"plik w innym kodowaniu, np. ISO-8859-2 czy CP-1250 (w wypadku języka "
+"polskiego), Korpusomat automatycznie skonwertuje je do kodowania UTF-8 na"
+" swój wewnętrzny użytek."
+msgstr "Korpusomat processes txt files as well as other major formats (e.g. epub, mobi, doc, rtf, and pdf; the complete list of supported formats is available at http://tika.apache.org/1.17/formats.html). Since the tools it employs require UTF-8 encoding, files using a different character encoding (e.g. ISO-8859-2 or CP-1250 for Polish), will be automatically converted into UTF-8."
+
+#: ../../index.rst:15 42f9d2531dcc4dd4affb8e14df89e2b4
+msgid ""
+"Korpusomat pozwala również na dodawanie artykułów ze stron internetowych."
+" W takim przypadku wskazana strona zostaje przetworzona za pomocą "
+"biblioteki newspaper, której opis dostępny jest pod adresem: "
+"https://newspaper.readthedocs.io/."
+msgstr "Texts may also be added directly from the web, in which case the selected websites will be processed using the newspaper library. For details, see https://newspaper.readthedocs.io/."
+
+#: ../../index.rst:18 7257ff6365f749dbaa9473e53d1d6a11
+msgid "Dokumentacja"
+msgstr "Documentation"
+

@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../tools-resources.rst:2 23884381604b4a02a5081b74bf43370a
+msgid "Wykorzystane narzędzia"
+msgstr "Tools"
+
+#: ../../tools-resources.rst:4 f8530764b978423d84dcf0f48581c836
+msgid ""
+"Korpusomat korzysta z z dwóch wysokopoziomowych bibliotek "
+"programistycznych do przetwarzania języków naturalnych `spaCy "
+"<https://spacy.io/>`__ oraz `Stanza "
+"<https://stanfordnlp.github.io/stanza/>`__ oraz zbudowanych przez ich "
+"twórców modeli dla poszczególnych języków."
+msgstr "Korpusomat employs two high-level programming libraries for natural language processing: `spaCy <https://spacy.io/>`__ and `Stanza <https://stanfordnlp.github.io/stanza/>`__ as well as language-specific models built by their creators."
+
+#: ../../tools-resources.rst:8 224e05e271b641709ee8d8549e71771c
+msgid "Inne wykorzystane narzędzia i zasoby:"
+msgstr "It also employs the following tools and resources:"
+
+#: ../../tools-resources.rst:7 f771dd9dafae4a548746c9848d11b5d3
+msgid "`Universal Dependencies <https://universaldependencies.org/>`__,"
+msgstr "`Universal Dependencies <https://universaldependencies.org/>`__,"
+
+#: ../../tools-resources.rst:8 601879559123408b817be733c6d0fd07
+msgid ""
+"Marciniak, M., Mykowiecka, A., & Rychlik, P. (2016). TermoPL - a Flexible"
+" Tool for Terminology Extraction. LREC."
+msgstr "Marciniak, M., Mykowiecka, A., & Rychlik, P. (2016). TermoPL - a Flexible Tool for Terminology Extraction. LREC."
+
+#: ../../tools-resources.rst:9 af2ac589e4f340dc86ab6723af625a5a
+msgid ""
+"Matthijs Brouwer, Hennie Brugman and Marc Kemps-Snijders 2017. MTAS: A "
+"Solr/Lucene based multi tier annotation search solution. Selected papers "
+"from the CLARIN Annual Conference 2016. Linköping Electronic Conference "
+"Proceedings 136: 19–37."
+msgstr "Matthijs Brouwer, Hennie Brugman and Marc Kemps-Snijders 2017. MTAS: A Solr/Lucene based multi tier annotation search solution. Selected papers from the CLARIN Annual Conference 2016. Linköping Electronic Conference Proceedings 136: 19–37."
+

@@ -1,0 +1,149 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../statistics.rst:2 4a7f54e868124b3f93a50a2199352ebf
+msgid "Ekran statystyk"
+msgstr ""
+
+#: ../../statistics.rst:5 8cdd51fcbb1b4a95a6c138e795a6e232
+msgid "Lista frekwencyjna"
+msgstr ""
+
+#: ../../statistics.rst:7 4c557ea7357a46288d0c2ab539f2eecd
+msgid ""
+"W tym polu wyświetlana jest lista frekwencyjna ze względu na lematy słów."
+" Wstępnie odfiltrowana jest do słów pełnoznacznych, jednak za pomocą "
+"przycisku na górze można ją odfiltrować do dowolnie wybranych części "
+"mowy. Po kliknięciu przycisku „Pobierz” zostanie pobrana pełna lista "
+"frekwencyjna bez zastosowanego filtrowania, natomiast zawierająca "
+"pierwszy 1000 najczęściej występujących lematów."
+msgstr ""
+
+#: ../../statistics.rst:10 23c4dcf80e0740309cd00e0cdcf720da
+msgid "Słownictwo charakterystyczne"
+msgstr ""
+
+#: ../../statistics.rst:12 54bb880d0910424c85ee4c2a1e4b995c
+msgid ""
+"Słownictwo charakterystyczne generowane jest przez aplikację TermoPL. "
+"Opis jej działania, instrukcja i dodatkowe informacje dostępne są na tej "
+"stronie."
+msgstr ""
+
+#: ../../statistics.rst:14 a370a19faf97497b9e999e2818a904b9
+msgid ""
+"W polu na stronie informacje ograniczone są do formy bazowej, wartości "
+"C-value oraz liczby wystąpień, posortowane wg C-value. Po kliknięciu "
+"przycisku „Pobierz” pobrany zostaje plik zawierający wszystkie dane "
+"wygenerowane przez TermoPL w formacie wyjściowym aplikacji."
+msgstr ""
+
+#: ../../statistics.rst:16 608acd66dda04099888885b6b2fafba0
+msgid ""
+"Pliki wygenerowane przez Korpusomat są kompatybilne z aplikacją TermoPL –"
+" po pobraniu „plików źródłowych korpusu” (przycisk dostępny na ekranie "
+"korpusu) można samodzielnie uruchomić aplikację TermoPL z wybranymi przez"
+" siebie opcjami."
+msgstr ""
+
+#: ../../statistics.rst:19 8064be5aa37e4eb5b5e7702ab91d5685
+msgid "Wykres wg metadanych"
+msgstr ""
+
+#: ../../statistics.rst:21 8f22e1d76782445d942c3bc22d94d85c
+msgid ""
+"W tym polu wyświetlany jest wykres przedstawiający podział segmentów w "
+"korpusie ze względu na wybraną metadaną, wybraną przez użytkownika."
+msgstr ""
+
+#: ../../statistics.rst:24 fddcb691327449728ee6ef7b1e84f56c
+msgid "Kolokacje"
+msgstr ""
+
+#: ../../statistics.rst:26 57906b435d3643a1b24b0b41a7f1e08e
+msgid ""
+"To pole zawiera wyznaczone najbardziej prawdopodobne związki wyrazowe dla"
+" zadanego schematu. Domyślnie wyświetlone są formy bazowe każdego ze słów"
+" składających się na dane wystąpienie, liczba wystąpień oraz symetryczne "
+"prawdopodobieństwo warunkowe. Wyświetlanych jest 50 związków "
+"posortowanych wg prawdopodobieństwa."
+msgstr ""
+
+#: ../../statistics.rst:28 ef979a5984b44ccaaa5f878625a627c3
+msgid ""
+"W pliku dostępnym do pobrania znajdują się wszystkie związki spełniające "
+"dane kryterium wyszukiwania oraz kilka miar je charakteryzujących."
+msgstr ""
+
+#: ../../statistics.rst:36 7866bbc5b9454c6eaec7d87ee8d348ac
+msgid "Te miary to:"
+msgstr ""
+
+#: ../../statistics.rst:31 5990f315c5d344aabeb81afbd458b8a7
+msgid "Liczba wystąpień danego związku"
+msgstr ""
+
+#: ../../statistics.rst:32 22f74513e81a4bda9ed957ab88bc4d6a
+msgid "Prawdopodobieństwo warunkowe symetryczne."
+msgstr ""
+
+#: ../../statistics.rst:33 448f4fa5df514bfc9a523a608c5d21fb
+msgid "Maksymalne prawdopodobieństwo warunkowe."
+msgstr ""
+
+#: ../../statistics.rst:34 7d36a061b68c4696a127927c346128e3
+msgid "Miara Dice."
+msgstr ""
+
+#: ../../statistics.rst:35 2fb0bcedf34a4b74969cddad90ec029c
+msgid "Prawdopodobieństwo warunkowe obliczone dla każdego ze składników związku."
+msgstr ""
+
+#: ../../statistics.rst:36 1ef6f36e3f96475d91908b51347d274c
+msgid "Liczba wystąpień każdego ze składników związku."
+msgstr ""
+
+#: ../../statistics.rst:39 36af05c7c03e426fa9af6022ea7896e6
+msgid "Słowa kluczowe"
+msgstr ""
+
+#: ../../statistics.rst:41 f793d3b3f0c745ab9469546bedda6051
+msgid ""
+"Słowa kluczowe obliczone są na podstawie porównania listy frekwencyjnej "
+"korpusu z listą frekwencyjną korpusu referencyjnego. Korpusem "
+"referencyjnym w tym przypadku jest milionowy korpus NKJP."
+msgstr ""
+
+#: ../../statistics.rst:44 5aebc2eeced5449b9bb9d2165675ad62
+msgid "Rozkład słów kluczowych"
+msgstr ""
+
+#: ../../statistics.rst:46 ffd4ac92f24d4c079997ec0ebb6b6dd9
+msgid ""
+"Wizualizacja przedstawia występowanie słów kluczowych korpusu w ramach "
+"każdego dokumentu tekstowego. Położenie i wielkość są oparte na sumach "
+"wystąpień poszczególnych słów kluczowych w kolejnych zdaniach dokumentu. "
+"Regulacja zagęszczenia pozwala na sumowanie wystąpień słów z kilku zdań "
+"do jednego punktu na wizualizacji, domyślnie ustawiona wartość "
+"zagęszczenia ma na celu zwiększenie czytelności wizualizacji."
+msgstr ""
+

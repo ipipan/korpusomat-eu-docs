@@ -1,0 +1,853 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../mtas.rst:3 e5ce1970e90b4709aa8819faa9f26941
+msgid "Tworzenie zapytań do korpusu"
+msgstr ""
+
+#: ../../mtas.rst:5 990117e854ac44208346131b467b0cda
+msgid ""
+"Niniejsza część instrukcji opisuje język zapytań CQL w odniesieniu do "
+"warstw znakowania dostępnych w Korpusomacie."
+msgstr ""
+
+#: ../../mtas.rst:8 38cd9ac163d044caa05abdedf7737530
+msgid "Segmentacja"
+msgstr ""
+
+#: ../../mtas.rst:10 f89dd294bc03481eab407e0ebe31e2f0
+msgid ""
+"Znaczniki morfosyntaktyczne, tzw. tagi, przypisane są segmentom (tokenom,"
+" w przybliżeniu słowom). Segmenty nie są dłuższe niż słowa ortograficzne "
+"(słowa ‘od spacji do spacji’ z oddzieleniem znaków interpunkcyjnych), ale"
+" w niektórych wypadkach segmenty mogą być krótsze niż takie słowa. "
+"Szczegółowe zasady segmentacji dla poszczególnych języków mogą się różnić"
+" i zależą od decyzji podjętych przez twórców zasobów jezykowych dla "
+"danego języka (głównie twórców banków drzew zależnościowych) oraz przez "
+"twórców konkretnych narzędzi programistycznych. Przykładowo, w korpusach "
+"języka polskiego (w tym m.in. w Narodowym Korpusie Języka Polskiego) na "
+"etapie segmentacji zwykło się oddzielać od form przeszłych czasowników "
+"tzw. aglutynant (wykładnik osoby i liczby) a także partykułę *by* będącą "
+"wykładnikiem trybu warunkowego. W efekcie jedno słowo tekstowe zostaje "
+"rozbite odpowiednio na dwa lub trzy segmenty i każdemu z nich jest "
+"przypisana osobna interpretacja fleksyjna: np. *[pisał][eś]*, "
+"*[jedli][by][śmy]*. Jednak w Korpusomacie ta decyzja jest dodatkowo "
+"zależna od wybranego potoku przetwarzania, bowiem twórcy tych potoków "
+"podjęli w tej sprawie różne decyzje: Stanza stosuje segmentację taką, jak"
+" w Narodowym Korpusie Języka Polskiego, czyli oddziela aglutynant i "
+"partykułę *by*, ale spaCy uznaje formy czasu przeszłego oraz trybu "
+"warunkowego za pojedyncze segmenty i nie rozbija ich. To jednak rzadkie i"
+" skrajne przypadki wynikające ze specyfiki wykorzystanych narzędzi — w "
+"większości wypadków teksty w poszczególnych językach powinny być "
+"segmentowane w obu potokach tak samo i zgodnie z typową dla danego języka"
+" segmentacją stosowaną w bankach drzew składniowych oraz korpusach "
+"narodowych danych języków."
+msgstr ""
+
+#: ../../mtas.rst:17 43c7c60d10354fe894c058f7a4a1c752
+msgid "Znaczniki morfosyntaktyczne"
+msgstr ""
+
+#: ../../mtas.rst:19 efbde9f9c70c4b7d8fabb137b294e009
+msgid ""
+"Wszystkie korpusy w Korpusomacie zawierają warstwę informacji "
+"morfosyntaktycznej zgodną ze specyfikacją Universal Dependencies. "
+"Informacja ta jest rozdzielona na dwie składowe: oznaczenie części mowy "
+"(tzw. UPOS — *universal part of speech*) oraz cechy morfosyntaktyczne "
+"(tzw. UFEATS — *universal features*). Obie te składowe (nazwy części "
+"mowy, nazwy cech morfoskładniowych i listy ich możliwych wartości) są "
+"opisane w dokumentacji `na stronie projektu UD "
+"<https://universaldependencies.org/guidelines.html>`__. Ponieważ z zasady"
+" jest to opis uniwersalny, każdy z konkretnych języków korzysta tylko z "
+"podzbioru cech morfologicznych i ich wartości."
+msgstr ""
+
+#: ../../mtas.rst:21 4b9c1692dbd94e0d83e5271be97e651a
+msgid ""
+"Oprócz informacji morfosyntaktycznej zgodnej ze specyfikacją UD w "
+"większości korpusów dostępny jest również dodatkowy znacznik, tzn. XPOS, "
+"który przechowuje informację morfosyntaktyczną zgodną z tagsetem "
+"stosowanym w zasobach dla danego języka. Oba potoki przetwarzania znakują"
+" teksty również znacznikami XPOS, ale ich konkretna postać zależy zarówno"
+" od twórców narzędzi, jak i twórców banku drzew UD. W szczególności od "
+"twórców banku drzew zależy, jaka postać znacznika znajdzie się w polu "
+"XPOS — zarówno pod względem szczegółowości opisu morfosyntaktycznego, jak"
+" i technicznego opisu samego tagsetu, dlatego nie mają one "
+"ustandaryzowanej wspólnej postaci. Najczęściej są to jednak systemy "
+"znaczników stosowane w narodowych korpusach tych języków. W wypadku gdy "
+"twórcy banku drzew UD nie umieścili w nim znaczników XPOS, Korpusomat "
+"również nie umożliwa korzystania z nich — tak jest wypadku języka "
+"rosyjskiego (w obu potokach przetwarzania). W niektórych wypadkach postać"
+" znacznika XPOS może się różnić w zależności od potoku przetwarzania, np."
+" w wypadku języka polskiego Stanza zwraca pełne znaczniki "
+"morfosyntaktyczne (w tagsecie stosowanym w polskich korpusach), spaCy zaś"
+" ogranicza się tylko do pierwszej części takiego znacznika oznaczającej "
+"przynależność słowa do klasy gramatycznej."
+msgstr ""
+
+#: ../../mtas.rst:25 41ddcbd5ce85482e891b052b04510548
+msgid "Język zapytań"
+msgstr ""
+
+#: ../../mtas.rst:27 dd1722cd0ea94488b498c956d44d15a1
+msgid ""
+"Składnia zapytań w programie MTAS została oparta na języku zapytań o "
+"nazwie Corpus Query Language (CQL), który jest powszechnie znany i "
+"stosowany w wyszukiwarkach korpusowych. Niniejszy rozdział omawia "
+"składnię CQL w wariancie zastowanym w Korpusomacie."
+msgstr ""
+
+#: ../../mtas.rst:31 de403951f63f456db3a41b70c10f7944
+msgid ""
+"MTAS jest uniwersalną wyszukiwarką pozwalającą na przeszukiwanie korpusów"
+" zawierających wiele warstw anotacyjnych. Niniejsza instrukcja dotyczy "
+"przeszukiwania korpusów postaci indeksowanej przez Korpusomat, który "
+"tworzy aktualnie trzy warstwy znakowania: warstwę morfosyntaktyczną i "
+"składniową oraz warstwę jednostek nazewniczych. Ogólna podstawowa "
+"dokumentacja wyszukiwarki MTAS znajduje się `na jej stronie internetowej "
+"<https://meertensinstituut.github.io/mtas/>`__."
+msgstr ""
+
+#: ../../mtas.rst:39 3dc9e7ea601841b799f02630ca83a317
+msgid "Zapytania o segmenty"
+msgstr ""
+
+#: ../../mtas.rst:41 5e601672e71042d7bb70e63f463c4a61
+msgid ""
+"Podstawową jednostką wyszukiwaną w korpusie jest segment. Segmenty w "
+"zapytaniach są ograniczone nawiasami kwadratowymi, wewnątrz których można"
+" określać konkretne cechy, które segment ma spełniać. W najprostszym "
+"przypadku jest to kształt tekstowy (napis). Do zapytań o tę postać "
+"ortograficzną segmentu służy atrybut ``orth``, można też jednak "
+"ograniczyć się do wpisania w oknie wyszukiwarki poszukiwanego słowa (lub "
+"słów). Zatem poniższe zapytanie o dwa sąsiadujące ze sobą segmenty:"
+msgstr ""
+
+#: ../../mtas.rst:54 26649f7086f0441d8e2c5dfb55e7c283
+msgid "można zadać również w prostszy sposób:"
+msgstr ""
+
+#: ../../mtas.rst:60 e18907985fa640fd81b5722cb424d1ec
+msgid ""
+"Domyślnie rozróżniana jest kasztowość (wielkość) liter, a zatem poniższe "
+"dwa zapytania dadzą różne wyniki:"
+msgstr ""
+
+#: ../../mtas.rst:63 8ecf54d5f2dd4990b7b3988fc1b8a1db
+msgid "``przyszedł``"
+msgstr ""
+
+#: ../../mtas.rst:65 6365073c2dac467aaebb52a34295d3a4
+msgid "``Przyszedł``"
+msgstr ""
+
+#: ../../mtas.rst:67 651ab0b588794658a13dc16a7925bd8b
+msgid ""
+"Dostępny jest jednak dodatkowy atrybut pomocniczy ``orth_lc`` (``lc`` od "
+"ang. *lower case*) przechowujący postać ortograficzną segmentu z "
+"zamienionymi literami wielkimi na małe. Dzięki temu można wyszukiwać "
+"słowa zapisane w różny sposób bez konieczności odwoływania się do wyrażeń"
+" regularnych. Na przykład zapytanie ``[orth_lc=\"przyszedł\"]`` zwróci "
+"wystąpienia słów postaci *przyszedł* i *Przyszedł*, jak również "
+"*PRZYSZEDŁ* czy *PRzySZedŁ*."
+msgstr ""
+
+#: ../../mtas.rst:75 848d39610927476a9a9474ff738e7cb6
+msgid ""
+"W zapytaniach o segmenty mogą wystąpić standardowe wyrażenia regularne "
+"wykorzystujące następujące znaki specjalne: ``?``, ``*``, ``+``, ``.``, "
+"``,``, ``|``, ``,``, ``[``, ``]``, ``(,`` ``)`` oraz liczby naturalne "
+"pisane cyframi arabskimi, np. ``0`` czy ``21``. Ponieważ formalny opis "
+"wyrażeń regularnych wykracza poza ramy niniejszej instrukcji, ograniczymy"
+" się tutaj do kilku przykładów, które powinny pozwolić użytkownikowi na "
+"szybkie przyswojenie składni i znaczenia takich wyrażeń."
+msgstr ""
+
+#: ../../mtas.rst:88 9d26c26aacd142609f705f4cae0e7ca2
+msgid ""
+"znak ``|`` oznacza alternatywę dwóch wyrażeń (całość należy dodatkowo "
+"ująć w nawiasy okrągłe), a zatem zapytanie to może zostać użyte do "
+"znalezienia wszystkich wystąpień segmentów *Ala* lub *Ela*,"
+msgstr ""
+
+#: ../../mtas.rst:96 28daee26384e4df6b39b45c13e0bee7d
+msgid ""
+"nawiasy kwadratowe oznaczają alternatywę znaków, a zatem zapytanie to "
+"może zostać użyte do znalezienia tych segmentów, których pierwszy znak to"
+" *A* lub *E*, po którym następuje ciąg znaków postaci *la*, tj. zapytanie"
+" to jest równoważne poprzedniemu,"
+msgstr ""
+
+#: ../../mtas.rst:105 63f01b6498ff4036b97035fdd4cb7487
+msgid ""
+"znak zapytania oznacza opcjonalność znaku (tutaj ostatniego *a*) lub "
+"ujętego w nawiasy okrągłe wyrażenia bezpośrednio poprzedzającego znak "
+"``?``, a zatem w wyniku zadania tego zapytania znalezione zostaną "
+"segmenty *bez* i *beza*,"
+msgstr ""
+
+#: ../../mtas.rst:114 88b362fbe06542ad9f04785baa0dba62
+msgid ""
+"kropka oznacza dowolny znak, a zatem wynikiem tego zapytania będą "
+"segmenty *beza*, *bezy*, *bezą* itp., ale nie *bez* czy *bezami*,"
+msgstr ""
+
+#: ../../mtas.rst:121 ff4fb553b2074fd688c3946879312f90
+msgid "*bez*, *beza*, *bezy*, *bezą* itp., ale nie *bezami*,"
+msgstr ""
+
+#: ../../mtas.rst:127 7f5f4ae109f746279c36b6d6f6a4668f
+msgid ""
+"segmenty pięcioznakowe, w których 2. i 4. znak to *z* (np. *czczą* i "
+"*rzezi*),"
+msgstr ""
+
+#: ../../mtas.rst:134 ca361005b7d04757b9d920721c89ca3e
+msgid ""
+"gwiazdka oznacza dowolną liczbę wystąpień znaku lub wyrażenia "
+"bezpośrednio przed nią, a zatem zapytanie to może posłużyć do znalezienia"
+" segmentów składających się z dowolnej liczby liter *a*, po których "
+"następuje ciąg *by*, np. *by* (zero wystąpień *a*), *aby*, *aaaaby* itp.,"
+msgstr ""
+
+#: ../../mtas.rst:144 6733c85a60044339b15c9a29e269e3fc
+msgid "segmenty zaczynające się na *Ala*, np. *Ala* i *Alabama*,"
+msgstr ""
+
+#: ../../mtas.rst:150 2576a96107cc40d099ea78a3fe3127fe
+msgid ""
+"plus ma działanie podobne do gwiazdki i oznacza dowolną większą od zera "
+"liczbę wystąpień znaku lub wyrażenia bezpośrednio przed nim, a zatem "
+"wynikiem tego zapytania będzie znalezienie segmentów kończących się na "
+"*al*, *all*, *alll* itd., ale nie na *a*, np. *dal*, *robal* i *Gall*,"
+msgstr ""
+
+#: ../../mtas.rst:160 85b06c0edff04c70a3ed62bdd59c6a62
+msgid ""
+"konstrukcja typu ``n,m`` oznacza od ``n`` do ``m`` wystąpień znaku lub "
+"wyrażenia bezpośrednio przed nią, a zatem zapytanie to pomoże znaleźć "
+"segmenty zaczynające się od ciągu od 1 do 3 liter a, po którym następuje "
+"litera b, a następnie dowolny ciąg znaków (por. ``.*``), np. *aby*, "
+"*aaaby*, *absolutnie*,"
+msgstr ""
+
+#: ../../mtas.rst:170 a347f30ead384e12a7acdf559a491065
+msgid ""
+"konstrukcja typu ``n,`` oznacza co najmniej ``n`` wystąpień znaku lub "
+"ujętego w nawiasy okrągłe wyrażenia bezpośrednio przed nią, a zatem "
+"zapytanie to może posłużyć do znalezienia segmentów, w których ciąg *la* "
+"występuje przynajmniej 3 razy z rzędu, np. *tralalala*, *sialalala*,"
+msgstr ""
+
+#: ../../mtas.rst:178 8df5f3a9dcb94751b68581b2edb37e7e
+msgid "Zapytania z innymi atrybutami"
+msgstr ""
+
+#: ../../mtas.rst:180 ada3850e44004782b761bed0a1d78dbc
+msgid ""
+"Aby znaleźć wszystkie formy leksemu *korpus*, można użyć następującego "
+"zapytania:"
+msgstr ""
+
+#: ../../mtas.rst:187 ffd11c4177b547898ee9df6af8871831
+msgid ""
+"Atrybut ``lemma`` jest jednym z wielu, jakie mogą pojawić się w "
+"zapytaniu. Wartością tego atrybutu powinna być forma podstawowa "
+"(hasłowa), a zatem zapytanie ``[lemma=\"pisać\"]`` może być użyte do "
+"znalezienia form typu *pisać*, *piszę*, *pisała*, *piszcie*, *pisanie*, "
+"*pisano*, *pisane* itp."
+msgstr ""
+
+#: ../../mtas.rst:193 134ddbe015f144ea906635b03ada743a
+msgid ""
+"Podobnie jak w wypadku atrybutu ``orth`` wartościami atrybutu ``lemma`` "
+"mogą być wyrażenia regularne, np:"
+msgstr ""
+
+#: ../../mtas.rst:200 408a86ce9d29424280a3d224930fecc2
+msgid ""
+"znalezione zostaną wszystkie segmenty, których forma hasłowa ma postać "
+":lex:`komitet` lub :lex:`komitat`."
+msgstr ""
+
+#: ../../mtas.rst:203 4c78d39935504748ab7d4a5832d751de
+msgid ""
+"Zapytania o różne atrybuty segmentów można łączyć. Na przykład, aby "
+"znaleźć wszystkie wystąpienia segmentu *minę* rozumianego jako forma "
+"leksemu :lex:`mina` (a nie na przykład leksemu :lex:`minąć`), można zadać"
+" następujące zapytanie:"
+msgstr ""
+
+#: ../../mtas.rst:212 471daf2565604e78b5ccf0b2f9b5d2e6
+msgid ""
+"Podobne znaczenie ma następujące zapytanie o te wystąpienia segmentu "
+"*minę*, które nie są interpretowane jako formy leksemu :lex:`minąć`."
+msgstr ""
+
+#: ../../mtas.rst:219 b2ce5120de0f43d78a1900eec91023bc
+msgid ""
+"W powyższych zapytaniach operator ``&`` spełnia rolę logicznej "
+"koniunkcji. Operatorem do niego dualnym jest operator ``|``, spełniający "
+"rolę logicznej alternatywy. Oto kilka przykładów użycia tego operatora:"
+msgstr ""
+
+#: ../../mtas.rst:227 36fd8c90a82c48ae95547a4928a4e13e
+msgid ""
+"wszystkie formy zaimków :lex:`on` i :lex:`ja`, równoważne zapytaniu "
+"``[lemma=\"on|ja\"]``,"
+msgstr ""
+
+#: ../../mtas.rst:234 1c4e88a4949f4f62ada71e1f774b1ba7
+msgid "wszystkie formy zaimka :lex:`on`, a także segmenty *mnie* i *ciebie*,"
+msgstr ""
+
+#: ../../mtas.rst:240 a90cd92a0c8649e69ff60e20544d190f
+msgid ""
+"segment *pora* niebędący ani formą leksemu :lex:`por`, ani formą leksemu "
+":lex:`pora`."
+msgstr ""
+
+#: ../../mtas.rst:243 aec0efeccedf49cba05e31d87e679680
+msgid ""
+"Aby lepiej zrozumieć różnicę pomiędzy operatorami ``&`` i ``|``, "
+"porównajmy następujące dwa zapytania:"
+msgstr ""
+
+#: ../../mtas.rst:251 2c9861861e3c428598cd388eb980cdf7
+msgid ""
+"W wyniku zadania pierwszego zapytania znalezione zostaną te segmenty, "
+"które są jednocześnie (koniunkcja) segmentem *minę* i formą leksemu "
+":lex:`mina`, a więc wyłącznie te wystąpienia segmentu *minę*, które są "
+"interpretowane jako formy leksemu :lex:`mina`. W wyniku zadania drugiego "
+"zapytania znalezione natomiast zostaną te segmenty, które są albo "
+"dowolnie interpretowanym segmentem *minę*, albo formą leksemu :lex:`mina`"
+" (alternatywa), czyli wszystkie wystąpienia zarówno segmentu *minę*, jak "
+"i segmentów *mina*, *miny*, *minami* itp. interpretowanych jako formy "
+"leksemu :lex:`mina`."
+msgstr ""
+
+#: ../../mtas.rst:261 739384c5c5ca400c8950f67338aafe2c
+msgid ""
+"Specyfikacje pozycji w korpusie, ujęte w nawiasy kwadratowe, mogą "
+"zawierać dowolną liczbę warunków typu ``atrybut=\"wartość\"`` (na "
+"przykład ``orth=\"nie\"``) połączonych operatorami ``!``, ``&`` i ``|``, "
+"tak jak pokazują to powyższe przykłady. Możliwe jest także całkowite "
+"pominięcie jakichkolwiek warunków. Poniższe zapytanie mogłoby posłużyć do"
+" znalezienia wszystkich segmentów w korpusie."
+msgstr ""
+
+#: ../../mtas.rst:272 121dc4d20a5842ce8251d2bfe122060e
+msgid ""
+"Taka „pusta” specyfikacja pozycji w korpusie, pasująca do dowolnego "
+"segmentu, może posłużyć na przykład do znalezienia dwóch form "
+"oddzielonych od siebie dowolnymi dwoma segmentami, np.:"
+msgstr ""
+
+#: ../../mtas.rst:280 7715be60e3254f739321f81b17447158
+msgid ""
+"W wyniku tego zapytania zostaną znalezione ciągi takie jak *się mnie też "
+"bać* czy *się nie chcę bać*."
+msgstr ""
+
+#: ../../mtas.rst:283 bc432e271c25492d8a0d57c52ea8a10d
+msgid ""
+"Dla wielu zastosowań ciekawsza byłaby możliwość zapytania na przykład o "
+"formy oddalone od siebie o najwyżej pięć pozycji. MTAS umożliwia "
+"zadawanie takich pytań, gdyż pozwala na formułowanie wyrażeń regularnych "
+"także na poziomie pozycji korpusu. Na przykład zapytanie o formę leksemu "
+":lex:`bać` występującą dwie, trzy lub cztery pozycje dalej niż forma "
+"*się* może wyglądać następująco:"
+msgstr ""
+
+#: ../../mtas.rst:294 fa2d7d4c2b5b46d191169e53bb56394e
+msgid ""
+"W wyniku tego zapytania zostaną znalezione ciągi uzyskane w wyniku "
+"poprzedniego zapytania, a także na przykład ciąg *się pani niczego nie "
+"boi*."
+msgstr ""
+
+#: ../../mtas.rst:298 b1556698e832403ba0922c7f3fa05639
+msgid ""
+"Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form "
+"tzw. czasownika zwrotnego :lex:`bać się` byłoby zapytanie o *się* w "
+"pewnej odległości przed formą leksemu :lex:`bać`, ale bez znaku "
+"interpunkcyjnego pomiędzy tymi formami, lub bezpośrednio za taką formą, "
+"ewentualnie oddzielone od formy bać zaimkiem osobowym:"
+msgstr ""
+
+#: ../../mtas.rst:310 ad7e470c70b143bca578313c659d21ac
+msgid "Zapytania o znaczniki morfosyntaktyczne"
+msgstr ""
+
+#: ../../mtas.rst:312 d75c5ad4fe7d460b8346b2e13dd1ff35
+msgid ""
+"Powyższe zapytanie można uprościć poprzez zastąpienie warunku "
+"``orth!=\"[.!?,:]\"`` bezpośrednim odwołaniem do „części mowy” ``PUNCT``:"
+msgstr ""
+
+#: ../../mtas.rst:320 19ef0fd63df942688d81b757fdbac81b
+msgid ""
+"Ogólniej, wartościami atrybutu ``upos`` (*universal part of speech*) są "
+"skróty nazw klas gramatycznych `omówionych w dokumentacji Universal "
+"Dependencies <https://universaldependencies.org/u/pos/index.html>`__. Na "
+"przykład zapytanie o sekwencję dwóch form rzeczownikowych "
+"rozpoczynających się na *a* może być sformułowane w sposób następujący:"
+msgstr ""
+
+#: ../../mtas.rst:329 ba6ecb9a2bca4e988dfafd03967dbc49
+msgid ""
+"Podobnie jak to miało miejsce w wypadku specyfikacji form obu warstw "
+"tekstowych i form hasłowych, także specyfikacje klas gramatycznych mogą "
+"zawierać wyrażenia regularne."
+msgstr ""
+
+#: ../../mtas.rst:333 4b1123b9f7e14bdc85f3a23e8cdeba4d
+msgid ""
+"Dodatkowo za pomocą atrybutu ``xpos`` można odwołać się w zapytaniu do "
+"znacznika specyficznego dla języka. Specyfikacja tego atrybutu również "
+"może zawierać wyrażenia regularne. Na przykład w korpusie stworzony w "
+"języku czeskim następujące zapytanie:"
+msgstr ""
+
+#: ../../mtas.rst:341 fce58cf9033d417ea4b8ff17a26a379d
+msgid ""
+"wyszuka wszystkie rzeczowniki w rodzaju nijakim w mianowniku liczby "
+"pojedynczej. Rzeczowniki o tych samych cechach w polskim korpusie (w "
+"potoku Stanzy) znajdzie zapytanie:"
+msgstr ""
+
+#: ../../mtas.rst:348 65a4777a16f847b9b300fc89a31e79af
+msgid ""
+"W obu wypadkach wartość atrybutu ``xpos`` jest zakończona wyrażeniem "
+"``.*``, ponieważ po wartościach części mowy, liczby, rodzaju i przypadka "
+"mogą pojawić się jeszcze wartości innych kategorii uwzględnionych w obu "
+"tagsetach."
+msgstr ""
+
+#: ../../mtas.rst:353 a2204a84cfed48b4a4647670646901bd
+msgid ""
+"W zapytaniach można określić nie tylko postać ortograficzną segmentu (za "
+"pomocą atrybutu ``orth``), formę hasłową (za pomocą ``lemma``) i klasę "
+"gramatyczną (za pomocą ``upos`` lub ewentualnie ``xpos``), ale także "
+"wartości poszczególnych kategorii gramatycznych, np. przypadka czy "
+"rodzaju — o ile te kategorie występują w danym języku. W korpusach danego"
+" języka można używać atrybutów o nazwie kategorii obecnych w banku drzew "
+"zależnościowych w warstwie cech morfosyntaktycznych (UFEATS) dla tego "
+"języka. Listę wszystkich kategorii można znaleźć `na stronie Universal "
+"Dependencies <https://universaldependencies.org/u/feat/all.html>`__."
+msgstr ""
+
+#: ../../mtas.rst:361 aad39d2f63a7468c9a27f90b13d5e704
+msgid ""
+"A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe "
+"jest zadanie na przykład następujących zapytań:"
+msgstr ""
+
+#: ../../mtas.rst:367 b08bc13c1ba643dda815a4c18b583849
+msgid "znalezione zostaną wszystkie formy w liczbie pojedynczej,"
+msgstr ""
+
+#: ../../mtas.rst:373 706eb09981a14589944cad9ccc44bd9a
+msgid "znalezione zostaną formy rzeczowników pospolitych w liczbie pojedynczej,"
+msgstr ""
+
+#: ../../mtas.rst:379 3dd330488aa6479b8fdcfc6e3c147dc8
+msgid ""
+"formy rzeczowników pospolitych w rodzaju innym niż żeński (czyli np. dla "
+"polskiego, czeskiego czy ukraińskiego: w rodzaju męskim lub nijakim),"
+msgstr ""
+
+#: ../../mtas.rst:385 5d57448a6376487f92f5f1251286106b
+msgid ""
+"pojedyncze mianownikowe lub biernikowe formy męskie (jeśli w języku są "
+"kategorie liczby, przypadka i rodzaju)."
+msgstr ""
+
+#: ../../mtas.rst:387 bac1eca17ce24682bd06575d76c63c88
+msgid ""
+"Można również stosować zbiorczy atrybut ``ufeat`` w zastępstwie każdej "
+"innej nazwy kategorii. Ujednoznacznienie dokona się przez odpowiednią "
+"wartość. Dlatego następujące dwa zapytania zwrócą te same wyniki:"
+msgstr ""
+
+#: ../../mtas.rst:402 3a9254f1fe2e4f9d968d374d3697fe69
+msgid "Graficzny konstruktor zapytań"
+msgstr ""
+
+#: ../../mtas.rst:404 0246df1bc56449c693ffc8344bb30be3
+msgid ""
+"Do tworzenia podstawowych zapytań o sekwencje segmentów można użyć "
+"prostego graficznego konstruktora. W oknie konstruktora można definiować "
+"warunki określające cechy kolejnych segmentów zapytania, np. część mowy "
+"(UPOS), postać segmentu w obu warstwach tekstowych, formę hasłową, a "
+"także wartości wszystkich kategorii gramatycznych opisanych w "
+"`dokumentacji UD <https://universaldependencies.org/u/feat/all.html>`__. "
+"Poszczególne warunki w obrębie segmentu mogą być łączone operatorami "
+"*oraz* (koniunkcja) i *lub* (alternatywa). Po zdefiniowaniu wszystkich "
+"segmentów zapytania należy wcisnąć przycisk *Zapisz*, następnie określić "
+"dodatkowe parametry wyszukania, np. ograniczenia za pomocą metadanych, i "
+"rozpocząć wyszukiwanie. Zbudowane za pomocą konstruktora zapytania pojawi"
+" się w pasku wyszukiwania, dzięki czemu można dodatkowo zweryfikować jego"
+" poprawność."
+msgstr ""
+
+#: ../../mtas.rst:418 0030603990c7421183da5661b933311e
+msgid "Ograniczenie zapytania do zdania lub akapitu"
+msgstr ""
+
+#: ../../mtas.rst:420 94d84416f4734deeab8c7ef9ad6f5b6c
+msgid ""
+"Jednostkami organizacji tekstu w korpusach indeksowanych przez Korpusomat"
+" są zdania i akapity. Podział ten można wykorzystać w zapytaniach, na "
+"przykład ograniczając dopasowanie do jednego zdania."
+msgstr ""
+
+#: ../../mtas.rst:424 74fe540b645b4545b07a5c871428add6
+msgid ""
+"Aby ograniczyć zasięg zapytania, należy dopisać do zapytania słowo "
+"kluczowe ``within``, a po nim ``<s/>`` lub ``<p/>``, w zależności od "
+"tego, czy zasięg ma być ograniczony do zdania (ang. *sentence*) czy do "
+"akapitu (ang. *paragraph*). Ilustruje to następujący przykład zapytania o"
+" zdania, w których forma *się* występuje za formą leksemu :lex:`być`, w "
+"odległości co najmniej jednego i nie więcej niż dziesięciu segmentów:"
+msgstr ""
+
+#: ../../mtas.rst:435 9a3f589fd68f41c79f7bf655d34929d1
+msgid ""
+"Dodatkowo można również na elementy ``<s/>`` i ``<p/>`` nałożyć pewne "
+"warunki dotyczące tego, czy zawierają segmenty innego typu. Przykładowo, "
+"za pomocą następującego zapytania można znaleźć wszystkie wystąpienia "
+"czasownika pomocniczego :lex:`być` w czasie przyszłym ograniczone do zdań"
+" zawierających formę bezokolicznika:"
+msgstr ""
+
+#: ../../mtas.rst:445 4e8a88204fc04af7893f3565df20ef8e
+msgid ""
+"Intencją takiego zapytania jest odnalezienie (w przybliżeniu) wszystkich "
+"wystąpień konstrukcji czasu przyszłego złożonego, w których pojawia się "
+"bezokolicznik. Wśród wyników będą oczywiście również takie zdania, w "
+"których czas przyszły został utworzony z użyciem formy przeszłej "
+"czasownika, a bezokolicznik pełni w zdaniu inną funkcję gramatyczną. "
+"Można też sformułować zapytanie odwrotnie i zapytać o zdania, w których "
+"forma przeszła w ogóle nie występuje:"
+msgstr ""
+
+#: ../../mtas.rst:457 8add4589d2e64445a6d578de34ac6b11
+msgid ""
+"Pełną listę słów kluczowych, które mogą się pojawić w zapytaniach "
+"wyszukiwarki MTAS, można znaleźć w jej `dokumentacji "
+"<https://meertensinstituut.github.io/mtas/search_cql.html>`__, nie "
+"wszystkie jednak będą miały sensowne zastosowanie w Korpusomacie."
+msgstr ""
+
+#: ../../mtas.rst:462 a9f4570507ae48e293e9573705b62c56
+msgid ""
+"Oprócz znaczników odnoszących się do elementów struktury tekstu (np. "
+"``<s/>``) istnieją również znaczniki odnoszące się do ich początku i "
+"końca. W wypadku ``<s/>`` będą to odpowiednio: ``<s>`` i ``</s>``. Ich "
+"dopasowaniem nie jest żaden segment, ale mogą być użyte w połączeniu z "
+"warunkami definiującymi inne segmenty, np. zapytanie:"
+msgstr ""
+
+#: ../../mtas.rst:472 207a7dc89a0c48d591a767ec29ddedd5
+msgid ""
+"odnajdzie wszystkie wystąpienia liczebnika stojącego na początku zdania. "
+"Analogicznie zapytanie:"
+msgstr ""
+
+#: ../../mtas.rst:479 73a941a5a25b46958ff3da748e24d9c0
+msgid ""
+"odnajdzie wszystkie wystąpienia ciągu składającego się z liczebnika i "
+"znaku interpunkcyjnego stojących na końcu zdania."
+msgstr ""
+
+#: ../../mtas.rst:483 05eb382ba434448aa3745b9e341714d9
+msgid "Warstwa składniowa"
+msgstr ""
+
+#: ../../mtas.rst:485 4c076ac3dc50462c8bc265bf45e212eb
+msgid ""
+"Kolejną warstwą znakowania w Korpusomacie jest parsowanie zależnościowe. "
+"Wprowadzony przez użytkownika tekst jest automatycznie dzielony na "
+"wypowiedzenia, które z kolei są poddawane pełnej analizie składniowej w "
+"aparacie zależnościowym według zasad przyjętych w `projekcie Universal "
+"Dependencies <https://universaldependencies.org>`__. Przykład takiej "
+"analizy znajduje się na poniższym rysunku."
+msgstr ""
+
+#: 6cca2d499cea4ed6a24f2db64fe69f8e
+msgid "Rozbiór składniowy przykładowego zdania"
+msgstr ""
+
+#: ../../mtas.rst:495 5fdd297710604e2c9e727f5a8ad833d8
+msgid ""
+"MTAS nie jest wyszukiwarką struktur składniowych, nie pozwala zatem na "
+"indeksowanie i przeszukiwanie pełnych rozbiorów zdań. Jednak na poziomie "
+"każdego segmentu w tekście Korpusomat indeksuje informację o jego "
+"bezpośrednim nadrzędniku składniowym (tzn. jego formie hasłowej i klasie "
+"fleksyjnej) oraz o typie relacji zależności łączącej oba te elementy w "
+"wypowiedzeniu. Ponadto indeksuje również ich położenie względem siebie w "
+"wypowiedzeniu: kolejność w porządku linearnym oraz odległość (liczoną w "
+"segmentach). Pozwala to na łatwe wyszukanie w korpusie prostszych "
+"konstrukcji składniowych oraz analitycznych nieciągłych form fleksyjnych."
+msgstr ""
+
+#: ../../mtas.rst:506 34567d5246c7457887acecd4e2a2ab8c
+msgid "W warstwie znakowania składniowego dostępne są następujące atrybuty:"
+msgstr ""
+
+#: ../../mtas.rst:508 6464e6eb5137416e92062253de804387
+msgid ""
+"``deprel`` — typ zależności, jaką dany segment jest związany ze swoim "
+"bezpośrednim nadrzędnikiem składniowym; wartością tego atrybutu może być "
+"jedna z 65 relacji zależności przewidzianych w `specyfikacji Universal "
+"Dependencies <https://universaldependencies.org/u/dep/index.html>`__ (nie"
+" wszystkie muszą jednak wystąpić w rozbiorach zdań w każdym języku),"
+msgstr ""
+
+#: ../../mtas.rst:512 6dafb3efc71e48bca3e69b46edebba2f
+msgid "``head.upos`` — część mowy (UPOS) bezpośredniego nadrzędnika segmentu,"
+msgstr ""
+
+#: ../../mtas.rst:514 a9f21b789f33474a977921856e302ea4
+msgid "``head.lemma`` — forma hasłowa bezpośredniego nadrzędnika segmentu,"
+msgstr ""
+
+#: ../../mtas.rst:516 2acb934054184237a5b9f2543dbb7fc1
+msgid ""
+"``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego "
+"nadrzędnika segmentu,"
+msgstr ""
+
+#: ../../mtas.rst:518 ae961261e7154b9f8bd430a39c693a06
+msgid "``head.distance`` — odległość bezpośredniego nadrzędnika segmentu,"
+msgstr ""
+
+#: ../../mtas.rst:520 2f408915c982499abedf2ed672093948
+msgid ""
+"``head.position`` — położenie (lewo- lub prawostronne) bezpośredniego "
+"nadrzędnika względem segmentu w porządku linearnym wypowiedzenia."
+msgstr ""
+
+#: ../../mtas.rst:523 9fe0fd96d0834727b215699fa2ccf52b
+msgid ""
+"Dzięki rozszerzeniu języka zapytań o powyższe atrybuty można np. łatwo "
+"znaleźć wszystkie rzeczowniki pospolite użyte w funkcji dopełnienia "
+"bliższego konkretnego czasownika:"
+msgstr ""
+
+#: ../../mtas.rst:531 6c40af6f97b5462a810c348fa0fc4663
+msgid ""
+"Możliwe jest również odwrotne wyszukanie odpowiadające na pytanie, przy "
+"jakich czasownikach w roli dopełnienia występuje w korpusie konkretny "
+"rzeczownik:"
+msgstr ""
+
+#: ../../mtas.rst:539 189bd6309d2b48f384de1ee3b4e27071
+msgid ""
+"Należy jednak zwrócić uwagę, że w powyższym przykładzie wynikiem "
+"zapytania będą wystąpienia rzeczownika :lex:`osoba`, nadrzędne względem "
+"nich formy czasownikowe (finitywne i niefinitywne) będą się zaś "
+"znajdowały w lewym lub prawym kontekście wyników wyróżnione pismem "
+"pogrubionym. Można je jednak zgrupować i posortować względem ich "
+"częstości dzięki opcjom Statystyk. Wartością atrybutu ``deprel`` jest "
+"jedna z etykiet krawędzi w drzewie zależnościowym odnosząca się do "
+"dopełnienia bliższego. Pełny zestaw etykiet relacji zależnościowych "
+"znajduje się w `dokumentacji UD "
+"<https://universaldependencies.org/u/dep/index.html>`__."
+msgstr ""
+
+#: ../../mtas.rst:549 3183135fc8484da69ed4cfa1ee785aed
+msgid ""
+"Dzięki atrybutowi kodującemu lewo- i prawostronną pozycję nadrzędnika "
+"względem segmentu można znaleźć przykłady niekanonicznego szyku zdania, "
+"np. podmiotu po orzeczeniu:"
+msgstr ""
+
+#: ../../mtas.rst:557 66b5bb4930d246d7bae01e1072337ff3
+msgid "lub dopełnienia bliższego przed orzeczeniem:"
+msgstr ""
+
+#: ../../mtas.rst:563 576d6d5be8bb4c9eba7b606a32b7d311
+msgid ""
+"Podobnie w wypadku innych konstrukcji — brak określenia pozycji "
+"nadrzędnika w zapytaniu:"
+msgstr ""
+
+#: ../../mtas.rst:570 e8d41dba74eb4b2f9a819d0dae74d420
+msgid ""
+"zwróci wszystkie przymiotnikowe określenia rzeczownika :lex:`zupa`. "
+"Dodanie parametru pozycji pozwoli ograniczyć wyszukanie do określeń "
+"lewostronnych (np. *gorąca zupa*) lub prawostronnych (np. *zupa "
+"pomidorowa*)."
+msgstr ""
+
+#: ../../mtas.rst:574 4a7bba68ef124de6be73a62110080529
+msgid ""
+"Częściowa anotacja składniowa pozwala na odnalezienie elementów "
+"wypowiedzenia połączonych ze sobą bezpośrednią relacją zależności bez "
+"względu na to, czy sąsiadują one ze sobą w porządku linearnym, czy też są"
+" przedzielone innymi elementami wypowiedzenia. Atrybut odległości pozwala"
+" np. na ograniczenie wyników tylko do takich przypadków, w których "
+"elementy nie sąsiadują ze sobą:"
+msgstr ""
+
+#: ../../mtas.rst:585 a96ca1aa0a1c479ea2b00e7d93401401
+msgid ""
+"Powyższe przykładowe zapytanie wyszuka dopełnienia bliższe orzeczenia w "
+"czasie przeszłym, które są oddzielone od tego orzeczenia co najmniej "
+"jednym elementem."
+msgstr ""
+
+#: ../../mtas.rst:589 6fca6feece484fa1841d994e8e785ce4
+msgid ""
+"Innym przykładem użycia znakowania składniowego w korpusie może być "
+"zapytanie wyszukujące konstrukcje w stronie biernej:"
+msgstr ""
+
+#: ../../mtas.rst:596 ac6c7cde91474de6b8d0eace1cbd8c02
+msgid ""
+"którego dopasowaniem są słowa posiłkowe konstrukcji biernej połączone z "
+"formą imiesłowu biernego (oznaczoną jako przymiotnik) relacją "
+"``aux:pass``."
+msgstr ""
+
+#: ../../mtas.rst:600 7e0cac9e3c5c481d92fc44142a28d06f
+msgid "Warstwa jednostek nazewniczych"
+msgstr ""
+
+#: ../../mtas.rst:602 1edeaf1ea17f46a9aef09113d41f974e
+msgid ""
+"Ostatnią warstwą informacji znakowaną w Korpusomacie jest warstwa "
+"jednostek nazewniczych (ang. *named entities*). Są to jednostki tekstowe "
+"jedno- lub wielowyrazowe nazywające osoby, miejsca, instytucje czy "
+"momenty czasowe. Ponieważ nie istnieje międzynarodowy standard i "
+"wielojęzyczny zestaw danych oznakowanych, w których oznakowano w spójny "
+"sposób jednostki nazewnicze, zbiór wartości i ich zakres różni się w "
+"poszczególnych potokach przetwarzania oraz może być różny dla różnych "
+"języków w obrębie tych potoków. Ponadto, nie dla wszystkich języków "
+"istnieją odpowiednie modele do oznaczania jednostek nazewniczych."
+msgstr ""
+
+#: ../../mtas.rst:611 34416845a703457cb2cbd19b3ae3039e
+msgid ""
+"Najprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych"
+" składa się tylko z czterech elementów: ``PER`` (osoba), ``LOC`` "
+"(miejsce), ``ORG`` (organizacja) i ``MISC`` (inne), ale dla niektórych "
+"języków istnieją bardziej szczegółowe klasyfikacje, np. języki chiński i "
+"angielski w potoku Stanzy mają 18 wartości klasyfikacji jednostek "
+"nezewniczych. W poniższych przykładach stosuje się powyższą najprostszą "
+"klasyfikację, która dostępna jest np. w potoku Stanzy dla języków "
+"hiszpańskiego, francuskiego, rosyjskiego czy ukraińskiego. Pełną listę "
+"wartości klasyfikacji dla danego korpusu użytkownik znajdzie w graficznym"
+" konstruktorze zapytań."
+msgstr ""
+
+#: ../../mtas.rst:620 6b644b9c83944035b6ff5acdc9271219
+msgid ""
+"Jednostki nazewnicze, podobnie jak opisane wyżej zdania i akapity, "
+"przekraczają granicę segmentu, więc można się do nich odnosić w "
+"zapytaniach korpusowych tak samo jak do zdań, za pomocą znacznika ``<ne "
+"/>``. Obowiązują również te same zasady dotyczące znaku ukośnika wewnątrz"
+" znacznika:"
+msgstr ""
+
+#: ../../mtas.rst:626 8f449e01b13e491f901a28000816f4d6
+msgid "``<ne>`` oznacza początek ciągu opisanego jako jednostka nazewnicza,"
+msgstr ""
+
+#: ../../mtas.rst:628 841c5d24cfd1447e86523add5b270ac8
+msgid "``</ne>`` oznacza koniec ciągu opisanego jako jednostka nazewnicza."
+msgstr ""
+
+#: ../../mtas.rst:630 9babdaf965f442308676535f15bbef01
+msgid "Najprostsze możliwe zapytanie tego typu ma postać:"
+msgstr ""
+
+#: ../../mtas.rst:636 a001d5d584c84e23a90ed0012ca9966a
+msgid ""
+"i zwróci wszystkie jednostki nazewnicze wszystkich typów odnalezione w "
+"korpusie. Wyszukanie można ograniczyć do konkretnego typu nazw np. nazw "
+"miejsc:"
+msgstr ""
+
+#: ../../mtas.rst:644 7abae0ce92ae4865ac7a3c92d1bd14ed
+msgid ""
+"Podobnie jak w wypadku zdań i akapitów, zapytania o jednostki nazewnicze "
+"można łączyć z cechami ortograficznymi i morfosyntaktycznymi segmentów, z"
+" których są one zbudowane lub klasyfikacją nazewniczą ich elementów "
+"składowych. Oto kilka przykładów takich zapytań:"
+msgstr ""
+
+#: ../../mtas.rst:653 25402808ab4b405680f7881652c97c52
+msgid ""
+"— wszystkie nazwy organizacji zawierające spójnik współrzędny, np. "
+"*Krajowa Rada Radiofonii i Telewizji* czy *Instytut Meteorologii i "
+"Gospodarki Wodnej*,"
+msgstr ""
+
+#: ../../mtas.rst:659 0b56bd3af8214577b126e9d195265f46
+msgid ""
+"— wystąpienia dwóch nazw geograficznych połączonych spójnikiem "
+"współrzędnym, np. *Europa Zachodnia lub Skandynawia*."
+msgstr ""
+
+#: ../../mtas.rst:665 59091021afaa42379749a525e7ee0729
+msgid ""
+"— dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś "
+"od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam "
+"Michnik*, *Antoni Macierewicz*."
+msgstr ""
+
+#: ../../mtas.rst:667 abc8ea1c4e3e453f9ab1ce10f6d3def3
+msgid ""
+"Ponadto indeksowany jest również atrybut zawierający informację o "
+"długości jednostki nazewniczej mierzonej w segmentach. Zapytanie:"
+msgstr ""
+
+#: ../../mtas.rst:673 ace8763188194463a5686eb36638b476
+msgid ""
+"odnajdzie wszystkie takie jednostki składające się z dokładnie trzech "
+"segmentów."
+msgstr ""
+
+#: ../../mtas.rst:677 1903a060028347468f539e1f3153867d
+msgid "Ograniczenie zapytania za pomocą metadanych"
+msgstr ""
+
+#: ../../mtas.rst:679 6aa4eef00b5e4dc8b41a5d039a340fca
+msgid ""
+"Teksty wprowadzane przez użytkownika do Korpusomatu są domyślnie "
+"opatrywane czterema polami metadanych o etykietach: autor, tytuł, rok "
+"wydania, gatunek. Od użytkownika zależy to, w jaki sposób zostaną one "
+"wypełnione, w szczególności mogą pozostać puste. Użytkownik może też "
+"zdefiniować własne pola o dowolnych etykietach."
+msgstr ""
+
+#: ../../mtas.rst:685 e279b60e1d614e26a9804b3244ce1d23
+msgid ""
+"Pól metadanych można użyć następnie do ograniczenia zasięgu zapytań w "
+"wyszukaniach korpusowych. Służy do tego przycisk metadane, pod którym "
+"można zdefiniować takie ograniczenia. Można nałożyć wiele ograniczeń "
+"jednocześnie, dodając je za pomocą przycisku dodaj ograniczenie."
+msgstr ""
+

@@ -1,0 +1,45 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../citing.rst:2 0330945eb50145a280ca6c5ce468019d
+msgid "Cytowanie"
+msgstr ""
+
+#: ../../citing.rst:4 70dca68b3b3942449165f21880697396
+msgid ""
+"W przypadku użycia w pracy naukowej prosimy o zacytowanie jednego z "
+"artykułów: Witold Kieraś, Łukasz Kobyliński. **Korpusomat – stan obecny i"
+" przyszłość projektu** . *Język Polski* , CI(2):49–58, 2021. `bibtex "
+"<http://publications.nlp.ipipan.waw.pl/bibtex/kie%3Akob%3A21/>`_ `doi "
+"<https://jezyk-polski.pl/index.php/jp/article/view/70/>`_"
+msgstr ""
+
+#: ../../citing.rst:7 34d095abfe0f4a2f94c269b867a4eb7b
+msgid ""
+"Witold Kieraś, Łukasz Kobyliński, and Maciej Ogrodniczuk. **Korpusomat — "
+"a tool for creating searchable morphosyntactically tagged corpora** . "
+"*Computational Methods in Science and Technology* , 24(1):21–27, 2018. "
+"`bibtex "
+"<http://publications.nlp.ipipan.waw.pl/bibtex/kier%3Akob%3Aogr%3A18%3Acmst/>`_"
+" `doi <https://doi.org/10.12921/cmst.2018.0000005/>`_"
+msgstr ""
+

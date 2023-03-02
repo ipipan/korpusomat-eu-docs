@@ -1,0 +1,276 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../manual/create-corpus.rst:2 192aac4c0f30486188c8080c89517f35
+msgid "Tworzenie korpusu"
+msgstr "Creating a corpus"
+
+#: ../../manual/create-corpus.rst:4 50b1ec861d614aab9083043c2f922f08
+msgid "Aby utworzyć nowy korpus, należy kliknąć „Nowy korpus” w menu głównym."
+msgstr "In order to create a new corpus, select \"New corpus\" from the main menu."
+
+#: ../../manual/create-corpus.rst:6 635432ec75d448d0bef854269f67c2f5
+msgid "|image4|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:132 b7a57242ba0743fd8cc341288b394df2
+#: c7142d83786245aab11ac769f1f6b02c
+msgid "image4"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:10 b9a4de9f3b9a4745945b988f3ff325e5
+msgid ""
+"Następnie należy wprowadzić nazwę i opis korpusu (6) oraz wybrać język "
+"korpusu (7)."
+msgstr "Now, enter the name and description of your corpus (6) and choose the language of the corpus (7)."
+
+#: ../../manual/create-corpus.rst:13 c9493d9060aa4f6cb2c13b7480e8c106
+msgid "|image5| |image19|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:134 4af074c487c248148f0ac0abf6e2e6e0
+#: b59a58d598684c8bae276fbd6746523d
+msgid "image5"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:152 6e43273d4d5445f3b07942d493502222
+#: e3a8dd86efc749f78410c8486af5b15f
+msgid "image19"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:18 85ea0153d5bc4e71b331a220f53c5333
+msgid ""
+"Po naciśnięciu ikony ustawień obok pola (7) możliwe jest wybranie "
+"preferowanego potoku przetwarzania. Jeśli dla danego języka dostępne są "
+"oba potoki przetwarzania, domyślnym potokiem jest Spacy. W polach (8) "
+"można wprowadzić metadane dla wszystkich tekstów w korpusie (możliwe jest"
+" ich zmodyfikowanie po utworzeniu korpusu). Aby zapisać korpus, należy "
+"kliknąć przycisk „Utwórz” (9)."
+msgstr "In order to select the processing pipeline, click on the settings icon next to (7). If both pipelines are available for your corpus, the default setting is Spacy. You can add metadata of every text in your corpus (8). You can also modify them once the corpus is created. To save your corpus, click on the \"Create\" button (9). "
+
+#: ../../manual/create-corpus.rst:24 04fbea29b4874160a59936518f89a1be
+msgid "|image6|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:136 aa287e55231d418c9bfd97890fe27d89
+#: cdee6a0f706e43158b2c8d2cb8e4376f
+msgid "image6"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:28 021cd4c0d13c4da697c4f6e4ae59e6cb
+msgid ""
+"Użytkownik zostanie przekierowany do widoku utworzonego korpusu. Po "
+"zmianie stanu korpusu na „Gotowy” (10) można dodać pierwszy tekst za "
+"pomocą przycisku „+” (11)."
+msgstr "Next, you will be redirected to the control panel for your corpus. Once its status switches to \"Ready\" (10), you can start adding texts by pressing the \"+\" button (11)."
+
+#: ../../manual/create-corpus.rst:31 4e8763dcf17c4d43beb4a4de17a900f6
+msgid "|image7|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:138 009e012f462048a3bd8d192ce768656a
+#: e7f7c72f57934b4482cc14b9ebdac597
+msgid "image7"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:35 231f2f623da043cc84fefc53b05156ff
+msgid ""
+"Po kliknięciu nastąpi przekierowanie do ekranu dodawania tekstu. Lista "
+"dozwolonych formatów znajduje się `tutaj "
+"<https://korpusomat.pl/overview>`__. Teksty można dodać na dwa sposoby."
+msgstr "When you click on the \"+\" button, you will be redirected to the page which will allow you to add your texts. The list of supported formats is available `here <https://korpusomat.pl/overview>`__. There are two ways of adding new texts to a corpus."
+
+#: ../../manual/create-corpus.rst:38 7af81beb23c641148729d9cd24f70657
+msgid "|image8|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:140 53bf6f1181a84e77ae2afcb241eb2b1f
+#: ca2bfba575a6425481e586382542c8cb
+msgid "image8"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:42 5d358b6541e343feaabc22e096565987
+msgid ""
+"Pierwszym jest kliknięcie przycisku „+ Dodaj pliki” (16), który pozwala "
+"na dodawanie plików z lokalnego dysku. Po kliknięciu pojawi się okno "
+"wyboru plików, w którym można wskazać jeden lub wiele plików "
+"jednocześnie. Drugim sposobem jest podanie bezpośrednio linku do tekstu w"
+" polu tekstowym „Lub podaj URL:” (17), a następnie kliknięcie przycisku "
+"„Pobierz” (18). Korpusomat pobierze wtedy plik automatycznie i przetworzy"
+" go. W takim wypadku możliwe jest również podanie linku do artykułu (np. "
+"z portalu internetowego), z którego zostanie wydobyta treść i "
+"przetworzona do pliku tekstowego."
+msgstr "One approach is to upload files from your local drive. In order to do that, you need to press the \"+ Add files\" button (16) and choose one or more files from the pop-up window. The other approach consists in providing links to the texts that are supposed to make up your corpus in the appropriate window (17), and clicking on the \"Download\" button (18). Korpusomat will download and process them automatically."
+
+#: ../../manual/create-corpus.rst:51 4ecfb51894ab4d3cb5c70927361309aa
+msgid ""
+"Po załadowaniu treści można wprowadzić lub zmodyfikować metadane (19). "
+"Korpusomat automatycznie spróbuje wydobyć metadane z dodanego pliku, "
+"jednak nie zawsze jest to możliwe. W wypadku tekstów w formatach EPUB i "
+"MOBI oraz stron internetowych Korpusomat spróbuje wydobyć metadany z "
+"nagłówków dokumentów. W wypadku plików tekstowych automatyczne "
+"rozpoznawanie metadanych wymaga tego, by nazwy plików zapisane były w "
+"następującym formacie: „autor - tytuł (miejsce, rok)”. Przykładowo, aby "
+"Korpusomat automatycznie rozpoznał metadane „Pana Tadeusza” z nazwy "
+"pliku, dodany plik powinien nazywać się „Adam Mickiewicz - Pan Tadeusz "
+"(Paryż, 1834).txt”."
+msgstr "You can now add or modify metadata of your texts (19). Korpusomat will try to extract metadata from each file, but it will not always be possible. Metadata may be extracted from website headers or from EPUB and MOBI files. For Korpusomat to be able to extract metadata from text files, their names should follow a specific format: \"author - title (place, year)\", for example „Adam Mickiewicz - Pan Tadeusz (Paris, 1834).txt”."
+
+#: ../../manual/create-corpus.rst:58 d22613cfc4184e7da75672145bc363ee
+msgid ""
+"Aby dodać więcej tekstów, należy ponownie użyć przycisku „+ Dodaj pliki…”"
+" (16), czy  pola „Lub podaj URL” (17)."
+msgstr "To add more texts, press the \"+ Add files\" button again (16) or copy and paste another link in the search bar (17)."
+
+#: ../../manual/create-corpus.rst:61 4078a376702345328a40f7c4d07bd6e4
+msgid "|image9|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:142 02045b5eaf3542a798a862f35b6e7450
+#: cc8a18cfc04d419f8be0f0e87372a2bf
+msgid "image9"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:63 9fb3fe90f84841068d45c813fe52e32f
+msgid "Aby przejść dalej, należy kliknąć przycisk „Dodaj” (20)."
+msgstr "Press the \"Add\" button to finish adding texts to your corpus (20)."
+
+#: ../../manual/create-corpus.rst:67 e3fb050c36ab41e3a129cdf2993fa9ba
+msgid ""
+"Po dodaniu tekstów zostaniemy przeniesieni do ekranu korpusu, a "
+"Korpusomat zacznie przetwarzać teksty. Przy nazwie korpusu pojawi się "
+"informacja o stanie jego przetwarzania oraz data jego utworzenia (21). "
+"Przy każdym z tekstów będzie wyświetlony status przetwarzania (22). "
+"Podczas analizy będzie to „Trwa przetwarzanie” (22). Przetworzanie "
+"książki o objętości ok. 80-100 tys. słów powinno potrwać około 4-5 minut,"
+" choć zależy to również od aktualnego obciążenia serwera oraz wybranych "
+"warstw znakowania. Obecnie maksymalny czas przetwarzania jednego pliku "
+"wynosi 10 minut – zadania dłuższe zakończą się niepowodzeniem. Podczas "
+"przetwarzania tekstów można nadal dodawać kolejne teksty za pomocą "
+"przycisku (11)."
+msgstr "You will then be redirected back to the corpus control panel, while Korpusomat processes the added texts. You will be able to verify the status of each text, such as \"In processing\" (22). To process a book consisting of 80-100 thousand words, Korpusomat will need approximately 4-5 minutes, although the exact processing time depends on the server load and the selected layers of annotation. Currently, the maximum processing time of one file is 10 minutes - longer tasks will fail. While your texts are being processed, you can add new files using the \"+\" button (11)."
+
+#: ../../manual/create-corpus.rst:76 cc1d4904a42f464ab20af9684ad61543
+msgid "|image10|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:144 6656440ed02e42458b20972a18e1f6cd
+#: a336085405be411b91c892411a387835
+msgid "image10"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:80 9e8d04f1ecc9462caaf9e39737546649
+msgid ""
+"Gdy wszystkie teksty zostaną przetworzone a ich status zostanie oznaczony"
+" jako „Przetworzony prawidłowo”, status całego korpusu zostanie również "
+"automatycznie zmieniony na „Gotowy” (23)."
+msgstr "Once your texts are processed, their status will change to \"Processed correctly\". The status of the corpus will also then switch to \"Ready\" (23)."
+
+#: ../../manual/create-corpus.rst:83 9987f7710f7445ea883aa54463a2e7c1
+msgid "|image11|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:146 d0f5a44959b649a69d9d4f9a31eefa4a
+#: d894f969809641218e5a3df6a0c49247
+msgid "image11"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:87 56e4497ea48f45e98023133a235a0a97
+msgid ""
+"Na tym etapie będzie można przystąpić do dalszej pracy z korpusem. "
+"Możliwe dalsze czynności to:"
+msgstr "Now you can start working with your corpus. The potential next steps are:"
+
+#: ../../manual/create-corpus.rst:89 f50362b80a9244f3ad5822aeea53d829
+msgid "Edycja korpusu (12)"
+msgstr "Editing the corpus (12)"
+
+#: ../../manual/create-corpus.rst:90 1bc3d1ab2f6340a2a928c422b6518abf
+msgid "Udostępnienie korpusu innym użytkownikom (13)"
+msgstr "Sharing the corpus with other users (13)"
+
+#: ../../manual/create-corpus.rst:91 a80e7b37a31841d4b35a4cf4335f0c03
+msgid "Pobieranie przetworzonych plików XML — przycisk (14)"
+msgstr "Downloading the processed XML files (14)"
+
+#: ../../manual/create-corpus.rst:92 e6f778c97d2046acbae7b3f7d25dcc60
+msgid "Przeszukiwanie korpusu (15)"
+msgstr "Querying the corpus (15)"
+
+#: ../../manual/create-corpus.rst:94 2497c2fbb10847e1955f62f6c75d8f49
+msgid ""
+"Ad 1. Po wciśnięciu przycisku (12) możliwa jest edycja nazwy i opisu "
+"korpusu, a także dodanie lub zmiana metadanych (25)."
+msgstr "You can edit the name and description of your corpus, add and edit metadata (25) by pressing the pencil icon (12)."
+
+#: ../../manual/create-corpus.rst:99 f97ab2908ca847fb95a367485980334e
+msgid "|image12|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:148 03c1331d7c3b4b13975a34a6e3307d78
+#: 875bfe0639f945d0b1866dfdb042f24b
+msgid "image12"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:103 056ddd84070448c496b5c8bbac9a557c
+msgid ""
+"Ad 2. Po wciśnięciu przycisku (13) możliwe jest udostępnienie utworzonego"
+" korpusu innym użytkownikom Korpusomatu. W polu (26) należy wpisać adres "
+"email użytkownika, któremu udostępnia się utworzony korpus, następnie "
+"wybiera się rodzaj dostępu jaki ma być przydzielony (27). Po "
+"zatwierdzeniu zmian przyciskiem „Dodaj” (28) nowy użytkownik korpusu "
+"zostaje dodany. Możemy go usunąć przyciskiem (29). W celu udostępnienia "
+"korpusu wszystkim użytkownikom Korpusomatu należy przełączyć przycisk "
+"(30)."
+msgstr "You can share your corpus with other users by pressing the \"Share corpus\" button (13). You just need to enter their email address(es) (26), choose the access type (27), and press \"Add\" (28). You can also remove their access to your corpus using the \"Delete\" button (29). In order to share the corpus with all Korpusomat users, swipe the \"Public corpus\" button to the right (30)."
+
+#: ../../manual/create-corpus.rst:113 f6ce57d1346342d89f1e8d7727177754
+msgid "|image13|"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:150 3e07cee88708400b9ac3a61e6c58d451
+#: 5350c444034442a3876a4f09bc975b4c
+msgid "image13"
+msgstr ""
+
+#: ../../manual/create-corpus.rst:117 0ef9cf13174543e4beac1281a9082fb2
+msgid ""
+"Ad 3. Kliknięcie przycisku (14) spowoduje pobranie archiwum z "
+"przetworzonymi plikami XML tekstów w korpusie. Pliki te są w formacie "
+"zgodnym ze specyfikacją `CCL "
+"<http://www.nlp.pwr.wroc.pl/redmine/projects/corpus2/wiki/CCL_format>`__."
+msgstr "You can download the processed XML files of all the texts in the corpus by clicking on the \"Download corpus files\" button (14). The format of the files will be in line with the following specification `CCL <http://www.nlp.pwr.wroc.pl/redmine/projects/corpus2/wiki/CCL_format>`__."
+
+#: ../../manual/create-corpus.rst:123 3a1f30ab2cd2417f98e8a7aca1def599
+msgid ""
+"Na tym etapie nadal można edytować korpus. Dodawanie oraz usuwanie "
+"tekstów spowoduje automatyczne uruchomienie procesu przetwarzania, po "
+"zakończeniu którego korpus z powrotem otrzyma status „Gotowy”."
+msgstr "You can continue to edit your corpus. Adding or removing texts will require the corpus to be processed again."
+
+#: ../../manual/create-corpus.rst:128 8d842e92f12642ae90aba3a661ebe91a
+msgid ""
+"Ad 4. Kliknięcie przycisku (15) spowoduje przeniesienie do ekranu "
+"wyszukiwania. Sposób tworzenia zapytań został opisany w dalszej części "
+"instrukcji."
+msgstr "Clicking on the question mark icon (15) will redirect you to the search screen. The following sections of this guide explain how to create corpus queries."
+

@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../authors.rst:3 5c8c5038f95c47eca7c36b53456a8bd7
+msgid "Autorzy"
+msgstr ""
+
+#: ../../authors.rst:6 fd4f710cfb53486d8abe3caf16d66cfa
+msgid "Zespół"
+msgstr ""
+
+#: ../../authors.rst:8 0d8acc2d8977434e90c41eeae8567a38
+msgid "**Witold Kieraś**"
+msgstr ""
+
+#: ../../authors.rst:9 93f8fc09ee16428f9147b1ad73599ee2
+msgid "Opiekun merytoryczny"
+msgstr ""
+
+#: ../../authors.rst:11 ea62e76b13234abe83f75b9930b9c031
+msgid "**Łukasz Kobyliński**"
+msgstr ""
+
+#: ../../authors.rst:12 ffc3082f635c461d8bbcd1ca633af038
+msgid "Kierownik projektu, autor wersji oryginalnej"
+msgstr ""
+
+#: ../../authors.rst:14 991e46ec0a154057a520cb1f255a3089
+msgid "**Karol Saputa**"
+msgstr ""
+
+#: ../../authors.rst:15 08f4268f8f9f42feb228cd9826d56f33
+msgid "Główny programista"
+msgstr ""
+
+#: ../../authors.rst:17 936281d8454d4730be182da6c87fc5d2
+msgid "**Sandra Penno**"
+msgstr ""
+
+#: ../../authors.rst:18 ../../authors.rst:21 7c1c29a730f3431cab9c9ac671395e59
+#: 7d38cc5fac2541f3ba3bad8e4785751c
+msgid "Programista"
+msgstr ""
+
+#: ../../authors.rst:20 1c7edf99e70d49cbadfa96f1ea58864e
+msgid "**Filip Koselski**"
+msgstr ""
+
+#: ../../authors.rst:26 dfc2a60c4fd44e3298fe2bcd0b47bf60
+msgid "Dotychczasowi współpracownicy"
+msgstr ""
+
+#: ../../authors.rst:27 0f66363f31984112953a8a323a135c26
+msgid "Zbigniew Gawłowicz"
+msgstr ""
+
+#: ../../authors.rst:28 894fa4b2d34f4858b9d3c17ad2908f61
+msgid "Michał Wasiluk"
+msgstr ""
+
+#: ../../authors.rst:29 47af7255fffe478e919340e7eb3d7e61
+msgid "Agnieszka Olech"
+msgstr ""
+
+#: ../../authors.rst:30 f36144a96d2041498650fb00aff41ad0
+msgid "Filip Karpiński"
+msgstr ""
+
+#: ../../authors.rst:31 c2a52dfac918483ba6d23821ddcd5a89
+msgid "Marcel Kawski"
+msgstr ""
+
+#: ../../authors.rst:32 5150703720cb4ba984c67c84ca601310
+msgid "Michał Modzelewski"
+msgstr ""
+
+#: ../../authors.rst:33 52ec9c1e90e1407295b8c7fe0424e4bc
+msgid "Kacper Mirowski"
+msgstr ""
+
+#: ../../authors.rst:34 9ab8106309774fa5adc2e87ef0d4e035
+msgid "Ryszard Tuora"
+msgstr ""
+

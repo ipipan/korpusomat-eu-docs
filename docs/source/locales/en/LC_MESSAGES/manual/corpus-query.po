@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2022, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-02 15:34+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../manual/corpus-query.rst:2 f92982fd3824458a99ade6032b99094a
+msgid "Wyszukiwanie w korpusie"
+msgstr "Corpus querying"
+
+#: ../../manual/corpus-query.rst:4 38ac530d8a9c4164999c1a7232ea1df9
+msgid ""
+"W polu „Zapytanie” (31) należy wpisać zapytanie, które chcemy wykonać, a "
+"następnie wcisnąć przycisk „Wyszukaj” (34). Opis języka zapytań dostępny "
+"jest w `kolejnej części instrukcji "
+"<https://korpusomat.readthedocs.io/pl/latest/mtas.html>`__. Przycisk (32)"
+" uruchamia graficzny konstruktor zapytań. Przycisk (33) rozwija menu "
+"ograniczenia wyszukiwania do tekstów o konkretnych metadanych."
+msgstr "Write your query in the \"Query\" search bar (31), and press \"Search\" (34). The Corpus Query Language is described in detail in `the following section <https://korpusomat.readthedocs.io/pl/latest/mtas.html>`__. Press the button marked as (32) to use the visual query builder. Click on \"Metadata\" (33) to limit your search criteria using the metadata of your texts."
+
+#: ../../manual/corpus-query.rst:13 d39a841b296f46b8b778d2b1bb83d239
+msgid "|image14|"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:80 40604f4dd1c84a938ce5f470397e1097
+#: d135c32e09cb4c6e98718754491324c9
+msgid "image14"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:17 e99e8bbbd0dc472da6bc41e3728f9ca0
+msgid ""
+"Kliknięcie przycisku (32) spowoduje otwarcie ekranu konstruktora zapytań."
+" Pozwala on na zbudowanie interesującego zapytania poprzez wybranie cech "
+"segmentów z rozwijanych list. Po wybraniu wszystkich cech należy kliknąć "
+"przycisk „Zapisz”, aby powrócić do ekranu wyszukiwania. W polu zapytanie "
+"pojawi się zapytanie przetworzone na język zapytań wyszukiwarki (CQL – "
+"Corpus Query Language)."
+msgstr "The visual query builder (32) allows you to form your query by selecting features of the items of interest from a drop-down list. Press \"Save\" to return to the search screen. Your query, \"translated\" into the Corpus Query Language, will appear in the search bar."
+
+#: ../../manual/corpus-query.rst:25 254189f47e274f18af7f9d5d17e32a41
+msgid "|image15|"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:82 75e372fc927f4115aba6f3b6ce496524
+#: cc6887e7cf4945f7a218efead0212691
+msgid "image15"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:29 4e87ef1e80a647469e24102b4855d2dd
+msgid ""
+"Kliknięcie przycisku (35) spowoduje rozwinięcie menu metadanych (36). "
+"Można tutaj ograniczyć wyniki wyszukiwania jedynie do tekstów, które "
+"spełniają określone kryteria."
+msgstr "Press the button marked as (33) to drop down the Metadata menu (36). Now, you can limit your search to texts that fulfil some specific criteria."
+
+#: ../../manual/corpus-query.rst:34 d9e86210bd6e4ca489c92f12edccb41d
+msgid "|image16|"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:84 7773a1c1d04a4843b7687900137cddda
+#: bef441477db347b8ae06e26fab667d94
+msgid "image16"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:38 10afc00e760a4070ae93d55d6f2ff615
+msgid ""
+"Po wykonaniu zapytania użytkownik zostanie przeniesiony do strony z "
+"wynikami w postaci konkordancji. Szerszy kontekst znalezionego wyrazu lub"
+" wyrażenia oraz metadane tekstu, z którego pochodzi, można obejrzeć, "
+"klikając na niego (37). Aby pobrać całą listę wyników w formie pliku CSV "
+"lub XLS, należy wybrać typ pliku (38) i wcisnąć przycisk „Pobierz wyniki”"
+" (39)."
+msgstr "Once you press \"Search\" (34), the results of your query (in the form of a concordance) will be displayed. Clicking on the word or expression of interest (37) will display a wider context and the metadata of the text. In order to download the results of your query in CSV or XLS format, choose the file type and press \"Save results\" (39). "
+
+#: ../../manual/corpus-query.rst:42 033b478033cf4ef09c51674fed4234e4
+msgid "|image25| |image20|"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:86 66d08550816041f9b179134789bc9541
+#: 8b2b16b282c8456aa7ca03b0d7b8d95a
+msgid "image25"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:88 058a38df119a485c85cb66976a236ddd
+#: 84e6e21855b54522958306aaaa2e5cc4
+msgid "image20"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:47 6543cfaacf004446a9f6d56d94e3a980
+msgid ""
+"Po kliknięciu ikony (40) użytkownik zostaje przekierowany do strony z "
+"wizualizacją drzew zależnościowych. Wizualizacji podlega pełne "
+"wypowiedzenie, zawierające konkretny przykład wyszukanych rezultatów "
+"zapytania. Użytkownik może się przełączać między dwoma układami: "
+"linearnym (41), bądź drzewiastym (42)."
+msgstr "Clicking on the icon marked as (40) will allow you to examine visualisations of dependency trees. Specifically, the entire sentence, of which the word or expression of interest forms part, will be visualised. You can switch between two layouts: linear (41) and tree-like (42)."
+
+#: ../../manual/corpus-query.rst:52 4606b87d02b945429252c44689f32ec0
+msgid "|image21| |image22|"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:90 3ce600e8d69b45558089b9fd8be531eb
+#: 93da209ae4b74c6d8edd4db2605cbac6
+msgid "image21"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:92 7d98011e095a465b9139ad7646f81d0c
+#: bbd8c5863fc34c73beed7be34b0a2fdd
+msgid "image22"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:57 1bc1a8ea9a7d4d2582296c3759396eb0
+msgid ""
+"Użytkownik może zwinąć wybrane węzły. W tym celu należy najechać myszą na"
+" wybrany węzeł i kliknąć ikonę (43). W ten sam sposób można rozwinąć "
+"zwinięty wcześniej węzeł lub użyć przycisku (44), który rozwinie "
+"wszystkie węzły w drzewie."
+msgstr "You can hide selected nodes by placing your cursor over the selected node and clicking on the icon marked as (43). You can expand it in a similar manner. Or, you can press the \"Expand all nodes\" button (44)."
+
+#: ../../manual/corpus-query.rst:61 8a86295cf9d24d5aa9193bb64da2911d
+msgid "|image23|"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:94 298d8888db5a46f9ab8dcc2fe7ffa3cb
+#: fc78b434d6614ee394a097ceb7e3082a
+msgid "image23"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:65 4be205f7d2f148d3a949d696681b54f3
+msgid ""
+"Wizualizację drzewa można zapisać w formacie SVG lub PNG (45). w polach "
+"(46) dostępne są dodatkowe opcje:"
+msgstr "You can save the visualisation in the SVG or PNG format (45). Additional options (46) include:"
+
+#: ../../manual/corpus-query.rst:68 775c2e3a1cc34ba599b7295311712213
+msgid ""
+"ukrycia znaków interpunkcyjnych w analizowanym zdaniu dla zwiększenia "
+"jego czytelności,"
+msgstr "hiding punctuation marks (this will make the tree easier to read),"
+
+#: ../../manual/corpus-query.rst:70 70d45152b797422c9393e64ed1ce33e0
+msgid ""
+"automatycznego pozycjonowania drzewa (po wybraniu tego przcisku "
+"analizowane drzewo zostanie usytuowane w centralnej części okna "
+"modalnego),"
+msgstr "automatic scaling of the tree (the tree will be positioned in the center of the modal window),"
+
+#: ../../manual/corpus-query.rst:74 40b64c16c5dc44e5ae16f65c0fd80d56
+msgid ""
+"modyfikacji struktury drzewa (poszczególne węzły można przesuwać w "
+"obrębie drzewa)."
+msgstr "modifying the structure of the tree (specifically, modifying the positioning of its nodes)."
+
+#: ../../manual/corpus-query.rst:76 6e8ec005c0514351a2ede97cba4ef8cd
+msgid "|image24|"
+msgstr ""
+
+#: ../../manual/corpus-query.rst:96 3fb19b86c46a418b87cce45c434b1615
+#: 7033b4a8260747c7a233eec8d502b9dc
+msgid "image24"
+msgstr ""
+

@@ -19,12 +19,12 @@ Dokumentacja
 
 .. toctree::
 
-   instrukcja/index
+   manual/index
    mtas
-   narzedzia
-   licencja
-   cytowanie
-   autorzy
+   tools-resources
+   licence
+   citing
+   authors
    
 ..
    profile-slow
