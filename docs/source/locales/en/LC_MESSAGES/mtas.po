@@ -109,7 +109,7 @@ msgstr ""
 
 #: ../../mtas.rst:25 41ddcbd5ce85482e891b052b04510548
 msgid "Język zapytań"
-msgstr ""
+msgstr "Corpus Query Language"
 
 #: ../../mtas.rst:27 dd1722cd0ea94488b498c956d44d15a1
 msgid ""
@@ -118,6 +118,7 @@ msgid ""
 "stosowany w wyszukiwarkach korpusowych. Niniejszy rozdział omawia "
 "składnię CQL w wariancie zastowanym w Korpusomacie."
 msgstr ""
+"The syntax of queries in MTAS in based on the Corpus Query Language (CQL), used in many other corpus browsers. This section describes the CQL as it is employed in Korpusomat."
 
 #: ../../mtas.rst:31 de403951f63f456db3a41b70c10f7944
 msgid ""
@@ -129,6 +130,7 @@ msgid ""
 "dokumentacja wyszukiwarki MTAS znajduje się `na jej stronie internetowej "
 "<https://meertensinstituut.github.io/mtas/>`__."
 msgstr ""
+"MTAS is a multifunctional browser, ideal for corpora with many layers of annotation. The following is a guide to querying corpora indexed in Korpusomat, which are annotated at three different levels: morphosyntactic, syntactic, and the level of named entities. More general, basic information on MTAS is available at: <https://meertensinstituut.github.io/mtas/>`__."
 
 #: ../../mtas.rst:39 3dc9e7ea601841b799f02630ca83a317
 msgid "Zapytania o segmenty"
