@@ -21,21 +21,24 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 
 #: ../../mtas.rst:3 e5ce1970e90b4709aa8819faa9f26941
-msgid "Corpus Query Language"
-msgstr ""
+msgid "Tworzenie zapytań do korpusu"
+msgstr "Corpus Query Language"
 
 #: ../../mtas.rst:5 990117e854ac44208346131b467b0cda
 msgid ""
+"Niniejsza część instrukcji opisuje język zapytań CQL w odniesieniu do "
+"warstw znakowania dostępnych w Korpusomacie."
+msgstr ""
 "This section comprises a guide into the Corpus Query Language, which takes"
 "into account the different layers of annotation available in Korpusomat."
-msgstr ""
 
 #: ../../mtas.rst:8 38cd9ac163d044caa05abdedf7737530
-msgid "Tokenisation"
-msgstr ""
+msgid "Segmentacja"
+msgstr "Tokenisation"
 
 #: ../../mtas.rst:10 f89dd294bc03481eab407e0ebe31e2f0
-msgid ""
+msgid "Znaczniki morfosyntaktyczne, tzw. tagi, przypisane są segmentom (tokenom, w przybliżeniu słowom). Segmenty nie są dłuższe niż słowa ortograficzne (słowa ‘od spacji do spacji’ z oddzieleniem znaków interpunkcyjnych), ale w niektórych wypadkach segmenty mogą być krótsze niż takie słowa. Szczegółowe zasady segmentacji dla poszczególnych języków mogą się różnić i zależą od decyzji podjętych przez twórców zasobów jezykowych dla danego języka (głównie twórców banków drzew zależnościowych) oraz przez twórców konkretnych narzędzi programistycznych. Przykładowo, w korpusach języka polskiego (w tym m.in. w Narodowym Korpusie Języka Polskiego) na etapie segmentacji zwykło się oddzielać od form przeszłych czasowników tzw. aglutynant (wykładnik osoby i liczby) a także partykułę *by* będącą wykładnikiem trybu warunkowego. W efekcie jedno słowo tekstowe zostaje rozbite odpowiednio na dwa lub trzy segmenty i każdemu z nich jest przypisana osobna interpretacja fleksyjna: np. *[pisał][eś]*, *[jedli][by][śmy]*. Jednak w Korpusomacie ta decyzja jest dodatkowo zależna od wybranego potoku przetwarzania, bowiem twórcy tych potoków podjęli w tej sprawie różne decyzje: Stanza stosuje segmentację taką, jak w Narodowym Korpusie Języka Polskiego, czyli oddziela aglutynant i partykułę *by*, ale spaCy uznaje formy czasu przeszłego oraz trybu warunkowego za pojedyncze segmenty i nie rozbija ich. To jednak rzadkie i skrajne przypadki wynikające ze specyfiki wykorzystanych narzędzi — w większości wypadków teksty w poszczególnych językach powinny być segmentowane w obu potokach tak samo i zgodnie z typową dla danego języka segmentacją stosowaną w bankach drzew składniowych oraz korpusach narodowych danych języków."
+msgstr ""
 "Morphosyntactic tags are attributed to tokens, which correspond roughly "
 " to words. A token cannot be longer than an orthographic word (separated"
 " by spaces from other orthographic words, punctuation marks excluded),"
@@ -60,11 +63,10 @@ msgid ""
 "the tokenisation of texts in a given language should be in line with the models"
 " adopted in the treebanks and the national corpora of this language, "
 "regardless of the pipeline employed."
-msgstr ""
 
 #: ../../mtas.rst:17 43c7c60d10354fe894c058f7a4a1c752
 msgid "Znaczniki morfosyntaktyczne"
-msgstr ""
+msgstr "Morphosyntactic tags"
 
 #: ../../mtas.rst:19 efbde9f9c70c4b7d8fabb137b294e009
 msgid ""
