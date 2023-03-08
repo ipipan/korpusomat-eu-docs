@@ -21,7 +21,7 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 
 #: ../../citing.rst:2 0330945eb50145a280ca6c5ce468019d
-msgid "Cytowanie"
+msgid "Referencing Korpusomat"
 msgstr ""
 
 #: ../../citing.rst:4 70dca68b3b3942449165f21880697396
@@ -32,6 +32,11 @@ msgid ""
 "<http://publications.nlp.ipipan.waw.pl/bibtex/kie%3Akob%3A21/>`_ `doi "
 "<https://jezyk-polski.pl/index.php/jp/article/view/70/>`_"
 msgstr ""
+"To cite Korpusomat in academic publications, use one of the following papers:"
+" Witold Kieraś, Łukasz Kobyliński. **Korpusomat – stan obecny i"
+" przyszłość projektu** . *Język Polski* , CI(2):49–58, 2021. `bibtex "
+"<http://publications.nlp.ipipan.waw.pl/bibtex/kie%3Akob%3A21/>`_ `doi "
+"<https://jezyk-polski.pl/index.php/jp/article/view/70/>`_"
 
 #: ../../citing.rst:7 34d095abfe0f4a2f94c269b867a4eb7b
 msgid ""
@@ -42,4 +47,10 @@ msgid ""
 "<http://publications.nlp.ipipan.waw.pl/bibtex/kier%3Akob%3Aogr%3A18%3Acmst/>`_"
 " `doi <https://doi.org/10.12921/cmst.2018.0000005/>`_"
 msgstr ""
+"Witold Kieraś, Łukasz Kobyliński, and Maciej Ogrodniczuk. **Korpusomat — "
+"a tool for creating searchable morphosyntactically tagged corpora** . "
+"*Computational Methods in Science and Technology* , 24(1):21–27, 2018. "
+"`bibtex "
+"<http://publications.nlp.ipipan.waw.pl/bibtex/kier%3Akob%3Aogr%3A18%3Acmst/>`_"
+" `doi <https://doi.org/10.12921/cmst.2018.0000005/>`_"
 
