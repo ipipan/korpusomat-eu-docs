@@ -22,18 +22,18 @@ msgstr ""
 
 #: ../../authors.rst:3 5c8c5038f95c47eca7c36b53456a8bd7
 msgid "Autorzy"
-msgstr ""
+msgstr "Authors"
 
 #: ../../authors.rst:6 fd4f710cfb53486d8abe3caf16d66cfa
 msgid "Zespół"
-msgstr ""
+msgstr "Team"
 
 #: ../../authors.rst:8 0d8acc2d8977434e90c41eeae8567a38
 msgid "**Witold Kieraś**"
 msgstr ""
 
 #: ../../authors.rst:9 93f8fc09ee16428f9147b1ad73599ee2
-msgid "Opiekun merytoryczny"
+msgid "Content supervisor"
 msgstr ""
 
 #: ../../authors.rst:11 ea62e76b13234abe83f75b9930b9c031
@@ -41,7 +41,7 @@ msgid "**Łukasz Kobyliński**"
 msgstr ""
 
 #: ../../authors.rst:12 ffc3082f635c461d8bbcd1ca633af038
-msgid "Kierownik projektu, autor wersji oryginalnej"
+msgid "Project manager, author of the original version"
 msgstr ""
 
 #: ../../authors.rst:14 991e46ec0a154057a520cb1f255a3089
@@ -49,7 +49,7 @@ msgid "**Karol Saputa**"
 msgstr ""
 
 #: ../../authors.rst:15 08f4268f8f9f42feb228cd9826d56f33
-msgid "Główny programista"
+msgid "Main programmer"
 msgstr ""
 
 #: ../../authors.rst:17 936281d8454d4730be182da6c87fc5d2
@@ -58,7 +58,7 @@ msgstr ""
 
 #: ../../authors.rst:18 ../../authors.rst:21 7c1c29a730f3431cab9c9ac671395e59
 #: 7d38cc5fac2541f3ba3bad8e4785751c
-msgid "Programista"
+msgid "Programmer"
 msgstr ""
 
 #: ../../authors.rst:20 1c7edf99e70d49cbadfa96f1ea58864e
@@ -66,7 +66,7 @@ msgid "**Filip Koselski**"
 msgstr ""
 
 #: ../../authors.rst:26 dfc2a60c4fd44e3298fe2bcd0b47bf60
-msgid "Dotychczasowi współpracownicy"
+msgid "Former collaborators"
 msgstr ""
 
 #: ../../authors.rst:27 0f66363f31984112953a8a323a135c26
