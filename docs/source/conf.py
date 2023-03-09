@@ -8,6 +8,7 @@ author = 'IPI PAN'
 language = 'pl'
 gettext_uuid = True
 gettext_compact = False
+gettext_additional_targets = ["literal-block"]
 
 release = '0.1'
 version = '0.1.0'
