@@ -190,7 +190,7 @@ msgstr ""
 
 #: ../../mtas.rst:39 3dc9e7ea601841b799f02630ca83a317
 msgid "Zapytania o segmenty"
-msgstr ""
+msgstr "Searching for tokens"
 
 #: ../../mtas.rst:41 5e601672e71042d7bb70e63f463c4a61
 msgid ""
@@ -202,32 +202,36 @@ msgid ""
 "ograniczyć się do wpisania w oknie wyszukiwarki poszukiwanego słowa (lub "
 "słów). Zatem poniższe zapytanie o dwa sąsiadujące ze sobą segmenty:"
 msgstr ""
+"The most basic unit in a corpus search is a token (an orthographic word). Usually, each element of a query has to be enclosed in square brackets. You can specify that you are searching for a token by adding the attribute ``orth``. In this way, you can search for one or more (neighbouring) tokens. For example, the following query will return all instances where the words "green" and "ideas" appear next to each other (but it will not return those
+instances where "green" modifies the singular noun "idea", or where the noun "ideas" is modified by adjectives such as "greener" or "greenish"):"
 
 #: ../../mtas.rst:52 090f0349df494aafafef16477c65744b
 msgid "[orth=\"komisja\"][orth=\"szkolna\"]"
 msgstr ""
+"[orth=\"green\"][orth=\"ideas\"]"
 
 #: ../../mtas.rst:54 26649f7086f0441d8e2c5dfb55e7c283
 msgid "można zadać również w prostszy sposób:"
-msgstr ""
+msgstr "You can also search for tokens by simply typing them into the search box:"
 
 #: ../../mtas.rst:58 8ddf9cc02a36415d9007139f735ba960
 msgid "komisja szkolna"
-msgstr ""
+msgstr "green ideas"
 
 #: ../../mtas.rst:60 e18907985fa640fd81b5722cb424d1ec
 msgid ""
 "Domyślnie rozróżniana jest kasztowość (wielkość) liter, a zatem poniższe "
 "dwa zapytania dadzą różne wyniki:"
 msgstr ""
+"By default, the tool distinguishes between lowercase and uppercase letters. As a result, the following queries will return different results:"
 
 #: ../../mtas.rst:63 8ecf54d5f2dd4990b7b3988fc1b8a1db
 msgid "``przyszedł``"
-msgstr ""
+msgstr "``colorless``"
 
 #: ../../mtas.rst:65 6365073c2dac467aaebb52a34295d3a4
 msgid "``Przyszedł``"
-msgstr ""
+msgstr "``Colorless``"
 
 #: ../../mtas.rst:67 651ab0b588794658a13dc16a7925bd8b
 msgid ""
@@ -239,6 +243,7 @@ msgid ""
 "wystąpienia słów postaci *przyszedł* i *Przyszedł*, jak również "
 "*PRZYSZEDŁ* czy *PRzySZedŁ*."
 msgstr ""
+"You can, however, use the attribute ``orth_lc`` (where ``lc`` stands for *lower case*) to change all uppercase letters in a token into lowercase letters. As a result, a query such as ``[orth_lc="colorless"]`` will return all instances of words such as *colorless*, *Colorless*, *COLORLESS*, and *COlorLESs*."
 
 #: ../../mtas.rst:75 848d39610927476a9a9474ff738e7cb6
 msgid ""
@@ -250,10 +255,11 @@ msgid ""
 " się tutaj do kilku przykładów, które powinny pozwolić użytkownikowi na "
 "szybkie przyswojenie składni i znaczenia takich wyrażeń."
 msgstr ""
+"Queries may also be based on standard regular expressions, which employ special characters such as ``?``, ``*``, ``+``, ``.``, ``,``, ``|``, ``,``, ``[``, ``]``, ``(,`` ``)``, as well as natural numbers (written in Arabic numerals), e.g. ``0`` or ``21``. While a more formal description of regular expressions is beyond the scope of this guide, the following examples illustrate the most essential rules of their use."
 
 #: ../../mtas.rst:86 60a3d0b414be4befb525cb06398e9c94
 msgid "[orth=\"(Ala|Ela)\"]"
-msgstr ""
+msgstr "[orth=\"(pal|gal)\"]"
 
 #: ../../mtas.rst:88 9d26c26aacd142609f705f4cae0e7ca2
 msgid ""
@@ -261,10 +267,11 @@ msgid ""
 "ująć w nawiasy okrągłe), a zatem zapytanie to może zostać użyte do "
 "znalezienia wszystkich wystąpień segmentów *Ala* lub *Ela*,"
 msgstr ""
+"``|`` is an equivalent to "or": it matches all instances of one of two tokens (which are placed inside round brackets), such as *gal* or *pal*,"
 
 #: ../../mtas.rst:94 4dd22959dad44cd895efb7c580620e0d
 msgid "[orth=\"[AE]la\"]"
-msgstr ""
+msgstr "[orth=\"[gp]al\"]"
 
 #: ../../mtas.rst:96 28daee26384e4df6b39b45c13e0bee7d
 msgid ""
@@ -273,10 +280,11 @@ msgid ""
 " *A* lub *E*, po którym następuje ciąg znaków postaci *la*, tj. zapytanie"
 " to jest równoważne poprzedniemu,"
 msgstr ""
+"placing *p* and *g* inside square brackets, followed by *al*, will return all instances of words beginning with either *p* or *g*, followed by *al*, in the exact same manner as the query above,"
 
 #: ../../mtas.rst:103 6d13085c35234b2ab121bcb8efad44cb
 msgid "[orth=\"beza?\"]"
-msgstr ""
+msgstr "[orth=\"gall?\"]"
 
 #: ../../mtas.rst:105 63f01b6498ff4036b97035fdd4cb7487
 msgid ""
@@ -285,38 +293,42 @@ msgid ""
 "``?``, a zatem w wyniku zadania tego zapytania znalezione zostaną "
 "segmenty *bez* i *beza*,"
 msgstr ""
+"``?`` makes the element it follows (or a group of elements placed inside round brackets) optional. The above query will return all instances of *gal* and *gall*,"
 
 #: ../../mtas.rst:112 b22a2d354f7c410a95364053e14dd34b
 msgid "[orth=\"bez.\"]"
-msgstr ""
+msgstr "[orth=\"gal.\"]"
 
 #: ../../mtas.rst:114 88b362fbe06542ad9f04785baa0dba62
 msgid ""
 "kropka oznacza dowolny znak, a zatem wynikiem tego zapytania będą "
 "segmenty *beza*, *bezy*, *bezą* itp., ale nie *bez* czy *bezami*,"
 msgstr ""
+"full stop substitutes for one character only. This query will return all instances of tokens such as *gall*, *gale*, *gala*, *gals*, but not *gal* or *galled*,"
 
 #: ../../mtas.rst:119 2649c9c4a66349c2b7054e2c608cda56
 msgid "[orth=\"bez.?\"]"
-msgstr ""
+msgstr "[orth=\"gal.?\"]"
 
 #: ../../mtas.rst:121 ff4fb553b2074fd688c3946879312f90
 msgid "*bez*, *beza*, *bezy*, *bezą* itp., ale nie *bezami*,"
 msgstr ""
+"*gal*, *gals*, *gale*, *gala*, *gall*, but not *galled*,"
 
 #: ../../mtas.rst:125 d97d45d7142840e4a11227480b374d34
 msgid "[orth=\".z.z.\"]"
-msgstr ""
+msgstr "[orth=\"t.t..\"]"
 
 #: ../../mtas.rst:127 7f5f4ae109f746279c36b6d6f6a4668f
 msgid ""
 "segmenty pięcioznakowe, w których 2. i 4. znak to *z* (np. *czczą* i "
 "*rzezi*),"
 msgstr ""
+"tokens with five characters, where *t* is the first and third character (e.g. *tutor*, *totem*, *total*),"
 
 #: ../../mtas.rst:132 e98f4bafcd5f48ccb93fb3702a65d1e5
 msgid "[orth=\"a*by\"]"
-msgstr ""
+msgstr "[orth=\"w*i\"]"
 
 #: ../../mtas.rst:134 ca361005b7d04757b9d920721c89ca3e
 msgid ""
@@ -325,18 +337,19 @@ msgid ""
 " segmentów składających się z dowolnej liczby liter *a*, po których "
 "następuje ciąg *by*, np. *by* (zero wystąpień *a*), *aby*, *aaaaby* itp.,"
 msgstr ""
+"asterisk repeats the preceding character or a group of characters any number of times. For instance, we can use it to search for tokens consisting of the letter *w* followed by zero or more letters *i*, such as *w*, *wi*, *wii*, *wiii*, etc.,"
 
 #: ../../mtas.rst:142 2fa29932c6d74eda914cd16a8aefd416
 msgid "[orth=\"Ala.*\"]"
-msgstr ""
+msgstr "[orth=\"gal.*\"]"
 
 #: ../../mtas.rst:144 6733c85a60044339b15c9a29e269e3fc
 msgid "segmenty zaczynające się na *Ala*, np. *Ala* i *Alabama*,"
-msgstr ""
+msgstr "tokens beginning with *gal*, such as *gal* or *gallery*,"
 
 #: ../../mtas.rst:148 7ca72cf3dbdb498198ed3147fab4073b
 msgid "[orth=\".*al+\"]"
-msgstr ""
+msgstr "[orth=\".*al+\"]"
 
 #: ../../mtas.rst:150 2576a96107cc40d099ea78a3fe3127fe
 msgid ""
@@ -345,10 +358,11 @@ msgid ""
 "wynikiem tego zapytania będzie znalezienie segmentów kończących się na "
 "*al*, *all*, *alll* itd., ale nie na *a*, np. *dal*, *robal* i *Gall*,"
 msgstr ""
+"the plus sign has a similar function: it repeats the preceding character or a group of characters any number of times higher than zero. The above query will return tokens which end in *al*, *all*, *alll*, etc., but not in *a*, for example *gal*, *regal*, or *gall*,"
 
 #: ../../mtas.rst:158 70f2a0d687054020bc4d64d8bc833c67
 msgid "[orth=\"a{1,3}b.*\"]"
-msgstr ""
+msgstr "[orth=\"wi{1,3}.*\"]"
 
 #: ../../mtas.rst:160 85b06c0edff04c70a3ed62bdd59c6a62
 msgid ""
@@ -358,10 +372,11 @@ msgid ""
 "litera b, a następnie dowolny ciąg znaków (por. ``.*``), np. *aby*, "
 "*aaaby*, *absolutnie*,"
 msgstr ""
+"*w* is followed by between 1 and 3 letters *i*, which are then followed by any number of characters. The results might include tokens such as *wi*, *wii*, and *winter*,"
 
 #: ../../mtas.rst:168 018f84a4c48f47bdbe9481d4084b16db
 msgid "[orth=\".*(la){3,}.*\"]"
-msgstr ""
+msgstr "[orth=\".*(ha){3,}.*\"]"
 
 #: ../../mtas.rst:170 a347f30ead384e12a7acdf559a491065
 msgid ""
@@ -370,20 +385,21 @@ msgid ""
 "zapytanie to może posłużyć do znalezienia segmentów, w których ciąg *la* "
 "występuje przynajmniej 3 razy z rzędu, np. *tralalala*, *sialalala*,"
 msgstr ""
+"``n,`` repeats the preceding character or a group of characters (placed inside square brackets) at least n times. For example, the above query will return tokens where *ha* is repeated at least three times, such as *ahahaha* or *hahahaha*,"
 
 #: ../../mtas.rst:178 8df5f3a9dcb94751b68581b2edb37e7e
 msgid "Zapytania z innymi atrybutami"
-msgstr ""
+msgstr "Queries with different attributes"
 
 #: ../../mtas.rst:180 ada3850e44004782b761bed0a1d78dbc
 msgid ""
 "Aby znaleźć wszystkie formy leksemu *korpus*, można użyć następującego "
 "zapytania:"
-msgstr ""
+msgstr "In order to find all forms of the word *corpus*, type in the following query:"
 
 #: ../../mtas.rst:185 d76eef00d95e43d2a8bfa2e223de3387
 msgid "[lemma=\"korpus\"]"
-msgstr ""
+msgstr "[lemma=\"corpus\"]"
 
 #: ../../mtas.rst:187 ffd11c4177b547898ee9df6af8871831
 msgid ""
@@ -393,22 +409,25 @@ msgid ""
 "znalezienia form typu *pisać*, *piszę*, *pisała*, *piszcie*, *pisanie*, "
 "*pisano*, *pisane* itp."
 msgstr ""
+"``lemma`` is one of the many attributes which may form part of a query. It takes the basic, dictionary form of a word as its value. For instance, ``[lemma="sleep"]`` will return forms such as *sleep*, *slept*, and *sleeping*."
 
 #: ../../mtas.rst:193 134ddbe015f144ea906635b03ada743a
 msgid ""
 "Podobnie jak w wypadku atrybutu ``orth`` wartościami atrybutu ``lemma`` "
 "mogą być wyrażenia regularne, np:"
 msgstr ""
+"Similarly as in the case of the attribute ``orth``, regular expressions may be used to form queries about lemmas. For example, the following"
 
 #: ../../mtas.rst:198 0ab5a78e007649f18190ce909194d0cd
 msgid "[lemma=\"komit[ae]t\"]"
-msgstr ""
+msgstr "[lemma=\"p[ao]tent\"]"
 
 #: ../../mtas.rst:200 408a86ce9d29424280a3d224930fecc2
 msgid ""
 "znalezione zostaną wszystkie segmenty, których forma hasłowa ma postać "
 ":lex:`komitet` lub :lex:`komitat`."
 msgstr ""
+"will return all instances of tokens whose dictionary forms (lemmas) are either :lex:`patent` or :lex:`potent`."
 
 #: ../../mtas.rst:203 4c78d39935504748ab7d4a5832d751de
 msgid ""
@@ -417,20 +436,22 @@ msgid ""
 "leksemu :lex:`mina` (a nie na przykład leksemu :lex:`minąć`), można zadać"
 " następujące zapytanie:"
 msgstr ""
+"You can also specify more than one attribute of your search item. For instance, if you wish to find all instances of the token *cooler*, but only in its adjectival meaning (i.e. the comparative form of the adjective *cool*), but you want to exclude those instances where *cooler* is used as a noun, the following query may be employed:"
 
 #: ../../mtas.rst:210 edbf72a3a9eb4dd98fedbed46485edf6
 msgid "[orth=\"minę\" & lemma=\"mina\"]"
-msgstr ""
+msgstr "[orth=\"cooler\" & lemma=\"cool\"]"
 
 #: ../../mtas.rst:212 471daf2565604e78b5ccf0b2f9b5d2e6
 msgid ""
 "Podobne znaczenie ma następujące zapytanie o te wystąpienia segmentu "
 "*minę*, które nie są interpretowane jako formy leksemu :lex:`minąć`."
 msgstr ""
+"The following query, which instead excludes those instances where *cooler* is used as a noun, will return similar results:"
 
 #: ../../mtas.rst:217 00f938484cf141f492988cd00d98c2e2
 msgid "[orth=\"minę\" & !lemma=\"minąć\"]"
-msgstr ""
+msgstr "[orth=\"cooler\" & !lemma=\"cooler\"]"
 
 #: ../../mtas.rst:219 b2ce5120de0f43d78a1900eec91023bc
 msgid ""
@@ -438,46 +459,53 @@ msgid ""
 "koniunkcji. Operatorem do niego dualnym jest operator ``|``, spełniający "
 "rolę logicznej alternatywy. Oto kilka przykładów użycia tego operatora:"
 msgstr ""
+"While ``&`` is the operator of logical conjunction, a disjunctive formula is notated with ``|``. Here are some examples of how the latter can be employed:"
 
 #: ../../mtas.rst:225 e1d77385becb47e09e0bd25815acd63b
 msgid "[lemma=\"on\" | lemma=\"ja\"]"
-msgstr ""
+msgstr "[lemma=\"sleep\" | lemma=\"dream\"]"
 
 #: ../../mtas.rst:227 36fd8c90a82c48ae95547a4928a4e13e
 msgid ""
 "wszystkie formy zaimków :lex:`on` i :lex:`ja`, równoważne zapytaniu "
 "``[lemma=\"on|ja\"]``,"
 msgstr ""
+"returns all forms of the verbs :lex:`sleep` and :lex:`dream`; this query is equivalent to ``[lemma="sleep|dream"]``,"
 
 #: ../../mtas.rst:232 8bc8a14bec174e72bcb3f3bc7ea44d0b
 msgid "[lemma=\"on\" | orth=\"mnie\" | orth=\"ciebie\"]"
-msgstr ""
+msgstr "[lemma=\"sleep\" | orth=\"dreaming\" | orth=\"dreamer\"]"
 
 #: ../../mtas.rst:234 1c4e88a4949f4f62ada71e1f774b1ba7
 msgid "wszystkie formy zaimka :lex:`on`, a także segmenty *mnie* i *ciebie*,"
 msgstr ""
+"returns all forms of the verb :lex:`sleep`, as well as all instances of the segments *dreaming* and *dreamer*,"
 
 #: ../../mtas.rst:238 fdec3c01a1c14620be3e38f149a8a654
 msgid "[orth=\"pora\" & !(lemma=\"por\" | lemma=\"pora\")]"
-msgstr ""
+msgstr "[orth=\"cooler\" & !(lemma=\"cool\" | lemma=\"cooler\")]"
 
 #: ../../mtas.rst:240 a90cd92a0c8649e69ff60e20544d190f
 msgid ""
 "segment *pora* niebędący ani formą leksemu :lex:`por`, ani formą leksemu "
 ":lex:`pora`."
 msgstr ""
+"returns all instances of the token *cooler* which are neither forms of the lexeme :lex:`cool`, nor forms of the lexeme :lex:`cooler`."
 
 #: ../../mtas.rst:243 aec0efeccedf49cba05e31d87e679680
 msgid ""
 "Aby lepiej zrozumieć różnicę pomiędzy operatorami ``&`` i ``|``, "
 "porównajmy następujące dwa zapytania:"
 msgstr ""
+"In order to better understand the difference between the two operators - ``&`` and ``|`` - let us compare the following two queries:"
 
 #: ../../mtas.rst:248 363583462eca4376ac29659b46a863ea
 msgid ""
 "[orth=\"minę\" & lemma=\"mina\"]\n"
 "[orth=\"minę\" | lemma=\"mina\"]"
 msgstr ""
+"[orth=\"cooler\" & lemma=\"cool\"]\n"
+"[orth=\"cooler\" | lemma=\"cool\"]"
 
 #: ../../mtas.rst:251 2c9861861e3c428598cd388eb980cdf7
 msgid ""
@@ -491,6 +519,7 @@ msgid ""
 "i segmentów *mina*, *miny*, *minami* itp. interpretowanych jako formy "
 "leksemu :lex:`mina`."
 msgstr ""
+"The first query matches only tokens which are interpreted as forms of the lexeme :lex:`cool`. The second query matches all tokens of the word *cooler*, regardless of their interpretation (noun or adjective), as well as all forms of the lexeme :lex:`cool`, such as, among others *cooling*, *coolest*, and *coolers*."
 
 #: ../../mtas.rst:261 739384c5c5ca400c8950f67338aafe2c
 msgid ""
@@ -501,10 +530,11 @@ msgid ""
 "pominięcie jakichkolwiek warunków. Poniższe zapytanie mogłoby posłużyć do"
 " znalezienia wszystkich segmentów w korpusie."
 msgstr ""
+"A query may include as many attributes (with their values) as necessary, which may be connected using operators such as ``!``, ``&``, and ``|``, as the examples above demonstrate. But a query without any conditions is also possible. The following query may be used to retrieve all tokens in the corpus."
 
 #: ../../mtas.rst:270 f496128d3b1f42e283c8157b63bdd17f
 msgid "[]"
-msgstr ""
+msgstr "[]"
 
 #: ../../mtas.rst:272 121dc4d20a5842ce8251d2bfe122060e
 msgid ""
@@ -512,16 +542,18 @@ msgid ""
 "segmentu, może posłużyć na przykład do znalezienia dwóch form "
 "oddzielonych od siebie dowolnymi dwoma segmentami, np.:"
 msgstr ""
+"In other words, empty square brackets stand for any token. They can be used, for instance, to retrieve two specific tokens, which are separated by two unspecified tokens:"
 
 #: ../../mtas.rst:278 8be7e59335b94821bc78b5c61b5e2c29
 msgid "[orth=\"się\"][][][lemma=\"bać\"]"
-msgstr ""
+msgstr "[orth=\"you\"][][][lemma=\"sleep\"]"
 
 #: ../../mtas.rst:280 7715be60e3254f739321f81b17447158
 msgid ""
 "W wyniku tego zapytania zostaną znalezione ciągi takie jak *się mnie też "
 "bać* czy *się nie chcę bać*."
 msgstr ""
+"This will retrieve multi-word items such as *you can always sleep* or *you and I sleep*."
 
 #: ../../mtas.rst:283 bc432e271c25492d8a0d57c52ea8a10d
 msgid ""
@@ -532,10 +564,11 @@ msgid ""
 ":lex:`bać` występującą dwie, trzy lub cztery pozycje dalej niż forma "
 "*się* może wyglądać następująco:"
 msgstr ""
+"You can also search for two tokens which are separated by up to n unspecified tokens. For example, the following query will return multi-word expressions, where *you* is separated from *sleep* by two, three, or four unspecified tokens:"
 
 #: ../../mtas.rst:292 f3c9153c40034caabcd88ac0acdf5f1e
 msgid "[orth=\"się\"][]{2,4}[lemma=\"bać\"]"
-msgstr ""
+msgstr "[orth=\"you\"][]{2,4}[lemma=\"sleep\"]"
 
 #: ../../mtas.rst:294 fa2d7d4c2b5b46d191169e53bb56394e
 msgid ""
@@ -543,6 +576,7 @@ msgid ""
 "poprzedniego zapytania, a także na przykład ciąg *się pani niczego nie "
 "boi*."
 msgstr ""
+"The results will include expressions retrieved using the preceding query (*you can always sleep* and *you and I sleep*), as well as others, such as *you can go to sleep* or *you and I will sleep*."
 
 #: ../../mtas.rst:298 b1556698e832403ba0922c7f3fa05639
 msgid ""
