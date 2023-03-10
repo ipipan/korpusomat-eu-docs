@@ -1,3 +1,9 @@
+.. role:: todo
+    :class: todo
+
+.. role:: lex
+    :class: lex
+
 Tworzenie zapytań do korpusu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -296,7 +302,10 @@ boi*.
 
 .. ifconfig:: language in ('pl')
 
-   Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form tzw. czasownika zwrotnego  :lex: `bać się` byłoby zapytanie o *się* w pewnej odległości przed formą leksemu :lex:`bać`, ale bez znaku interpunkcyjnego pomiędzy tymi formami, lub bezpośrednio za taką formą, ewentualnie oddzielone od formy bać zaimkiem osobowym:
+   Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form tzw. czasownika zwrotnego :lex:`bać się`
+   byłoby zapytanie o *się* w pewnej odległości przed formą leksemu :lex:`bać`
+   , ale bez znaku interpunkcyjnego pomiędzy tymi formami, lub bezpośrednio za taką formą, 
+   ewentualnie oddzielone od formy bać zaimkiem osobowym:
 
    ::
 

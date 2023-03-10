@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Korpusomat EU 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-10 16:28+0100\n"
+"POT-Creation-Date: 2023-03-10 16:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -20,11 +20,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: ../../mtas.rst:2 e5ce1970e90b4709aa8819faa9f26941
+#: ../../mtas.rst:8 e5ce1970e90b4709aa8819faa9f26941
 msgid "Tworzenie zapytań do korpusu"
 msgstr "Corpus Query Language"
 
-#: ../../mtas.rst:4 990117e854ac44208346131b467b0cda
+#: ../../mtas.rst:10 990117e854ac44208346131b467b0cda
 msgid ""
 "Niniejsza część instrukcji opisuje język zapytań CQL w odniesieniu do "
 "warstw znakowania dostępnych w Korpusomacie."
@@ -33,11 +33,11 @@ msgstr ""
 "takesinto account the different layers of annotation available in "
 "Korpusomat."
 
-#: ../../mtas.rst:7 38cd9ac163d044caa05abdedf7737530
+#: ../../mtas.rst:13 38cd9ac163d044caa05abdedf7737530
 msgid "Segmentacja"
 msgstr "Tokenisation"
 
-#: ../../mtas.rst:9 f89dd294bc03481eab407e0ebe31e2f0
+#: ../../mtas.rst:15 f89dd294bc03481eab407e0ebe31e2f0
 msgid ""
 "Znaczniki morfosyntaktyczne, tzw. tagi, przypisane są segmentom (tokenom,"
 " w przybliżeniu słowom). Segmenty nie są dłuższe niż słowa ortograficzne "
@@ -90,11 +90,12 @@ msgstr ""
 " should be in line with the models adopted in the treebanks and the "
 "national corpora of this language, regardless of the pipeline employed."
 
-#: ../../mtas.rst:16 43c7c60d10354fe894c058f7a4a1c752
+#: ../../mtas.rst:22 43c7c60d10354fe894c058f7a4a1c752
 msgid "Znaczniki morfosyntaktyczne"
 msgstr "Morphosyntactic tags"
 
-#: ../../mtas.rst:18 efbde9f9c70c4b7d8fabb137b294e009
+#: ../../mtas.rst:24 efbde9f9c70c4b7d8fabb137b294e009
+#, fuzzy
 msgid ""
 "Wszystkie korpusy w Korpusomacie zawierają warstwę informacji "
 "morfosyntaktycznej zgodną ze specyfikacją Universal Dependencies. "
@@ -117,7 +118,7 @@ msgstr ""
 "principle, it is a universal description, only a subset of morphological "
 "features and their values will apply to any particular language."
 
-#: ../../mtas.rst:20 4b9c1692dbd94e0d83e5271be97e651a
+#: ../../mtas.rst:26 4b9c1692dbd94e0d83e5271be97e651a
 msgid ""
 "Oprócz informacji morfosyntaktycznej zgodnej ze specyfikacją UD w "
 "większości korpusów dostępny jest również dodatkowy znacznik, tzn. XPOS, "
@@ -156,11 +157,11 @@ msgstr ""
 "in Polish corpora), whereas spaCy will reduce them to the component which"
 " signals the grammatical class of the given word."
 
-#: ../../mtas.rst:24 41ddcbd5ce85482e891b052b04510548
+#: ../../mtas.rst:30 41ddcbd5ce85482e891b052b04510548
 msgid "Język zapytań"
 msgstr "Corpus Query Language"
 
-#: ../../mtas.rst:26 dd1722cd0ea94488b498c956d44d15a1
+#: ../../mtas.rst:32 dd1722cd0ea94488b498c956d44d15a1
 msgid ""
 "Składnia zapytań w programie MTAS została oparta na języku zapytań o "
 "nazwie Corpus Query Language (CQL), który jest powszechnie znany i "
@@ -171,7 +172,7 @@ msgstr ""
 "(CQL), used in many other corpus browsers. This section describes the CQL"
 " as it is employed in Korpusomat."
 
-#: ../../mtas.rst:30 de403951f63f456db3a41b70c10f7944
+#: ../../mtas.rst:36 de403951f63f456db3a41b70c10f7944
 msgid ""
 "MTAS jest uniwersalną wyszukiwarką pozwalającą na przeszukiwanie korpusów"
 " zawierających wiele warstw anotacyjnych. Niniejsza instrukcja dotyczy "
@@ -188,11 +189,11 @@ msgstr ""
 "general, basic information on MTAS is available `at the project's website"
 " <https://meertensinstituut.github.io/mtas/>`__."
 
-#: ../../mtas.rst:38 3dc9e7ea601841b799f02630ca83a317
+#: ../../mtas.rst:44 3dc9e7ea601841b799f02630ca83a317
 msgid "Zapytania o segmenty"
 msgstr "Searching for tokens"
 
-#: ../../mtas.rst:40 5e601672e71042d7bb70e63f463c4a61
+#: ../../mtas.rst:46 5e601672e71042d7bb70e63f463c4a61
 msgid ""
 "Podstawową jednostką wyszukiwaną w korpusie jest segment. Segmenty w "
 "zapytaniach są ograniczone nawiasami kwadratowymi, wewnątrz których można"
@@ -210,19 +211,19 @@ msgstr ""
 "instances where the words \"green\" and \"ideas\" appear next to each "
 "other (but it will not return thos"
 
-#: ../../mtas.rst:51 090f0349df494aafafef16477c65744b
+#: ../../mtas.rst:57 090f0349df494aafafef16477c65744b
 msgid "[orth=\"komisja\"][orth=\"szkolna\"]"
 msgstr "[orth=\"green\"][orth=\"ideas\"]"
 
-#: ../../mtas.rst:53 26649f7086f0441d8e2c5dfb55e7c283
+#: ../../mtas.rst:59 26649f7086f0441d8e2c5dfb55e7c283
 msgid "można zadać również w prostszy sposób:"
 msgstr "You can also search for tokens by simply typing them into the search box:"
 
-#: ../../mtas.rst:57 8ddf9cc02a36415d9007139f735ba960
+#: ../../mtas.rst:63 8ddf9cc02a36415d9007139f735ba960
 msgid "komisja szkolna"
 msgstr "green ideas"
 
-#: ../../mtas.rst:59 e18907985fa640fd81b5722cb424d1ec
+#: ../../mtas.rst:65 e18907985fa640fd81b5722cb424d1ec
 msgid ""
 "Domyślnie rozróżniana jest kasztowość (wielkość) liter, a zatem poniższe "
 "dwa zapytania dadzą różne wyniki:"
@@ -231,15 +232,15 @@ msgstr ""
 "letters. As a result, the following queries will return different "
 "results:"
 
-#: ../../mtas.rst:62 8ecf54d5f2dd4990b7b3988fc1b8a1db
+#: ../../mtas.rst:68 8ecf54d5f2dd4990b7b3988fc1b8a1db
 msgid "``przyszedł``"
 msgstr "``colorless``"
 
-#: ../../mtas.rst:64 6365073c2dac467aaebb52a34295d3a4
+#: ../../mtas.rst:70 6365073c2dac467aaebb52a34295d3a4
 msgid "``Przyszedł``"
 msgstr "``Colorless``"
 
-#: ../../mtas.rst:66 651ab0b588794658a13dc16a7925bd8b
+#: ../../mtas.rst:72 651ab0b588794658a13dc16a7925bd8b
 msgid ""
 "Dostępny jest jednak dodatkowy atrybut pomocniczy ``orth_lc`` (``lc`` od "
 "ang. *lower case*) przechowujący postać ortograficzną segmentu z "
@@ -255,7 +256,7 @@ msgstr ""
 "return all instances of words such as *colorless*, *Colorless*, "
 "*COLORLESS*, and *COlorLESs*."
 
-#: ../../mtas.rst:74 848d39610927476a9a9474ff738e7cb6
+#: ../../mtas.rst:80 848d39610927476a9a9474ff738e7cb6
 msgid ""
 "W zapytaniach o segmenty mogą wystąpić standardowe wyrażenia regularne "
 "wykorzystujące następujące znaki specjalne: ``?``, ``*``, ``+``, ``.``, "
@@ -272,11 +273,11 @@ msgstr ""
 "of regular expressions is beyond the scope of this guide, the following "
 "examples illustrate the most essential rules of their use."
 
-#: ../../mtas.rst:85 60a3d0b414be4befb525cb06398e9c94
+#: ../../mtas.rst:91 60a3d0b414be4befb525cb06398e9c94
 msgid "[orth=\"(Ala|Ela)\"]"
 msgstr "[orth=\"(pal|gal)\"]"
 
-#: ../../mtas.rst:87 9d26c26aacd142609f705f4cae0e7ca2
+#: ../../mtas.rst:93 9d26c26aacd142609f705f4cae0e7ca2
 msgid ""
 "znak ``|`` oznacza alternatywę dwóch wyrażeń (całość należy dodatkowo "
 "ująć w nawiasy okrągłe), a zatem zapytanie to może zostać użyte do "
@@ -285,11 +286,11 @@ msgstr ""
 "``|`` is an equivalent to \"or\": it matches all instances of one of two "
 "tokens (which are placed inside round brackets), such as *gal* or *pal*,"
 
-#: ../../mtas.rst:93 4dd22959dad44cd895efb7c580620e0d
+#: ../../mtas.rst:99 4dd22959dad44cd895efb7c580620e0d
 msgid "[orth=\"[AE]la\"]"
 msgstr "[orth=\"[gp]al\"]"
 
-#: ../../mtas.rst:95 28daee26384e4df6b39b45c13e0bee7d
+#: ../../mtas.rst:101 28daee26384e4df6b39b45c13e0bee7d
 msgid ""
 "nawiasy kwadratowe oznaczają alternatywę znaków, a zatem zapytanie to "
 "może zostać użyte do znalezienia tych segmentów, których pierwszy znak to"
@@ -300,11 +301,11 @@ msgstr ""
 " all instances of words beginning with either *p* or *g*, followed by "
 "*al*, in the exact same manner as the query above,"
 
-#: ../../mtas.rst:102 6d13085c35234b2ab121bcb8efad44cb
+#: ../../mtas.rst:108 6d13085c35234b2ab121bcb8efad44cb
 msgid "[orth=\"beza?\"]"
 msgstr "[orth=\"gall?\"]"
 
-#: ../../mtas.rst:104 63f01b6498ff4036b97035fdd4cb7487
+#: ../../mtas.rst:110 63f01b6498ff4036b97035fdd4cb7487
 msgid ""
 "znak zapytania oznacza opcjonalność znaku (tutaj ostatniego *a*) lub "
 "ujętego w nawiasy okrągłe wyrażenia bezpośrednio poprzedzającego znak "
@@ -315,11 +316,11 @@ msgstr ""
 "round brackets) optional. The above query will return all instances of "
 "*gal* and *gall*,"
 
-#: ../../mtas.rst:111 b22a2d354f7c410a95364053e14dd34b
+#: ../../mtas.rst:117 b22a2d354f7c410a95364053e14dd34b
 msgid "[orth=\"bez.\"]"
 msgstr "[orth=\"gal.\"]"
 
-#: ../../mtas.rst:113 88b362fbe06542ad9f04785baa0dba62
+#: ../../mtas.rst:119 88b362fbe06542ad9f04785baa0dba62
 msgid ""
 "kropka oznacza dowolny znak, a zatem wynikiem tego zapytania będą "
 "segmenty *beza*, *bezy*, *bezą* itp., ale nie *bez* czy *bezami*,"
@@ -328,19 +329,19 @@ msgstr ""
 "instances of tokens such as *gall*, *gale*, *gala*, *gals*, but not *gal*"
 " or *galled*,"
 
-#: ../../mtas.rst:118 2649c9c4a66349c2b7054e2c608cda56
+#: ../../mtas.rst:124 2649c9c4a66349c2b7054e2c608cda56
 msgid "[orth=\"bez.?\"]"
 msgstr "[orth=\"gal.?\"]"
 
-#: ../../mtas.rst:120 ff4fb553b2074fd688c3946879312f90
+#: ../../mtas.rst:126 ff4fb553b2074fd688c3946879312f90
 msgid "*bez*, *beza*, *bezy*, *bezą* itp., ale nie *bezami*,"
 msgstr "*gal*, *gals*, *gale*, *gala*, *gall*, but not *galled*,"
 
-#: ../../mtas.rst:124 d97d45d7142840e4a11227480b374d34
+#: ../../mtas.rst:130 d97d45d7142840e4a11227480b374d34
 msgid "[orth=\".z.z.\"]"
 msgstr "[orth=\"t.t..\"]"
 
-#: ../../mtas.rst:126 7f5f4ae109f746279c36b6d6f6a4668f
+#: ../../mtas.rst:132 7f5f4ae109f746279c36b6d6f6a4668f
 msgid ""
 "segmenty pięcioznakowe, w których 2. i 4. znak to *z* (np. *czczą* i "
 "*rzezi*),"
@@ -348,11 +349,11 @@ msgstr ""
 "tokens with five characters, where *t* is the first and third character "
 "(e.g. *tutor*, *totem*, *total*),"
 
-#: ../../mtas.rst:131 e98f4bafcd5f48ccb93fb3702a65d1e5
+#: ../../mtas.rst:137 e98f4bafcd5f48ccb93fb3702a65d1e5
 msgid "[orth=\"a*by\"]"
 msgstr "[orth=\"w*i\"]"
 
-#: ../../mtas.rst:133 ca361005b7d04757b9d920721c89ca3e
+#: ../../mtas.rst:139 ca361005b7d04757b9d920721c89ca3e
 msgid ""
 "gwiazdka oznacza dowolną liczbę wystąpień znaku lub wyrażenia "
 "bezpośrednio przed nią, a zatem zapytanie to może posłużyć do znalezienia"
@@ -364,19 +365,19 @@ msgstr ""
 "consisting of the letter *w* followed by zero or more letters *i*, such "
 "as *w*, *wi*, *wii*, *wiii*, etc.,"
 
-#: ../../mtas.rst:141 2fa29932c6d74eda914cd16a8aefd416
+#: ../../mtas.rst:147 2fa29932c6d74eda914cd16a8aefd416
 msgid "[orth=\"Ala.*\"]"
 msgstr "[orth=\"gal.*\"]"
 
-#: ../../mtas.rst:143 6733c85a60044339b15c9a29e269e3fc
+#: ../../mtas.rst:149 6733c85a60044339b15c9a29e269e3fc
 msgid "segmenty zaczynające się na *Ala*, np. *Ala* i *Alabama*,"
 msgstr "tokens beginning with *gal*, such as *gal* or *gallery*,"
 
-#: ../../mtas.rst:147 7ca72cf3dbdb498198ed3147fab4073b
+#: ../../mtas.rst:153 7ca72cf3dbdb498198ed3147fab4073b
 msgid "[orth=\".*al+\"]"
 msgstr "[orth=\".*al+\"]"
 
-#: ../../mtas.rst:149 2576a96107cc40d099ea78a3fe3127fe
+#: ../../mtas.rst:155 2576a96107cc40d099ea78a3fe3127fe
 msgid ""
 "plus ma działanie podobne do gwiazdki i oznacza dowolną większą od zera "
 "liczbę wystąpień znaku lub wyrażenia bezpośrednio przed nim, a zatem "
@@ -388,11 +389,11 @@ msgstr ""
 "query will return tokens which end in *al*, *all*, *alll*, etc., but not "
 "in *a*, for example *gal*, *regal*, or *gall*,"
 
-#: ../../mtas.rst:157 70f2a0d687054020bc4d64d8bc833c67
+#: ../../mtas.rst:163 70f2a0d687054020bc4d64d8bc833c67
 msgid "[orth=\"a{1,3}b.*\"]"
 msgstr "[orth=\"wi{1,3}.*\"]"
 
-#: ../../mtas.rst:159 85b06c0edff04c70a3ed62bdd59c6a62
+#: ../../mtas.rst:165 85b06c0edff04c70a3ed62bdd59c6a62
 msgid ""
 "konstrukcja typu ``n,m`` oznacza od ``n`` do ``m`` wystąpień znaku lub "
 "wyrażenia bezpośrednio przed nią, a zatem zapytanie to pomoże znaleźć "
@@ -404,11 +405,11 @@ msgstr ""
 "by any number of characters. The results might include tokens such as "
 "*wi*, *wii*, and *winter*,"
 
-#: ../../mtas.rst:167 018f84a4c48f47bdbe9481d4084b16db
+#: ../../mtas.rst:173 018f84a4c48f47bdbe9481d4084b16db
 msgid "[orth=\".*(la){3,}.*\"]"
 msgstr "[orth=\".*(ha){3,}.*\"]"
 
-#: ../../mtas.rst:169 a347f30ead384e12a7acdf559a491065
+#: ../../mtas.rst:175 a347f30ead384e12a7acdf559a491065
 msgid ""
 "konstrukcja typu ``n,`` oznacza co najmniej ``n`` wystąpień znaku lub "
 "ujętego w nawiasy okrągłe wyrażenia bezpośrednio przed nią, a zatem "
@@ -420,11 +421,11 @@ msgstr ""
 "will return tokens where *ha* is repeated at least three times, such as "
 "*ahahaha* or *hahahaha*,"
 
-#: ../../mtas.rst:177 8df5f3a9dcb94751b68581b2edb37e7e
+#: ../../mtas.rst:183 8df5f3a9dcb94751b68581b2edb37e7e
 msgid "Zapytania z innymi atrybutami"
 msgstr "Queries with different attributes"
 
-#: ../../mtas.rst:179 ada3850e44004782b761bed0a1d78dbc
+#: ../../mtas.rst:185 ada3850e44004782b761bed0a1d78dbc
 msgid ""
 "Aby znaleźć wszystkie formy leksemu *korpus*, można użyć następującego "
 "zapytania:"
@@ -432,11 +433,11 @@ msgstr ""
 "In order to find all forms of the word *corpus*, type in the following "
 "query:"
 
-#: ../../mtas.rst:184 d76eef00d95e43d2a8bfa2e223de3387
+#: ../../mtas.rst:190 d76eef00d95e43d2a8bfa2e223de3387
 msgid "[lemma=\"korpus\"]"
 msgstr "[lemma=\"corpus\"]"
 
-#: ../../mtas.rst:186 ffd11c4177b547898ee9df6af8871831
+#: ../../mtas.rst:192 ffd11c4177b547898ee9df6af8871831
 msgid ""
 "Atrybut ``lemma`` jest jednym z wielu, jakie mogą pojawić się w "
 "zapytaniu. Wartością tego atrybutu powinna być forma podstawowa "
@@ -449,7 +450,7 @@ msgstr ""
 " ``[lemma=\"sleep\"]`` will return forms such as *sleep*, *slept*, and "
 "*sleeping*."
 
-#: ../../mtas.rst:192 134ddbe015f144ea906635b03ada743a
+#: ../../mtas.rst:198 134ddbe015f144ea906635b03ada743a
 msgid ""
 "Podobnie jak w wypadku atrybutu ``orth`` wartościami atrybutu ``lemma`` "
 "mogą być wyrażenia regularne, np:"
@@ -457,11 +458,11 @@ msgstr ""
 "Similarly as in the case of the attribute ``orth``, regular expressions "
 "may be used to form queries about lemmas. For example, the following"
 
-#: ../../mtas.rst:197 0ab5a78e007649f18190ce909194d0cd
+#: ../../mtas.rst:203 0ab5a78e007649f18190ce909194d0cd
 msgid "[lemma=\"komit[ae]t\"]"
 msgstr "[lemma=\"p[ao]tent\"]"
 
-#: ../../mtas.rst:199 408a86ce9d29424280a3d224930fecc2
+#: ../../mtas.rst:205 408a86ce9d29424280a3d224930fecc2
 msgid ""
 "znalezione zostaną wszystkie segmenty, których forma hasłowa ma postać "
 ":lex:`komitet` lub :lex:`komitat`."
@@ -469,7 +470,7 @@ msgstr ""
 "will return all instances of tokens whose dictionary forms (lemmas) are "
 "either :lex:`patent` or :lex:`potent`."
 
-#: ../../mtas.rst:202 4c78d39935504748ab7d4a5832d751de
+#: ../../mtas.rst:208 4c78d39935504748ab7d4a5832d751de
 msgid ""
 "Zapytania o różne atrybuty segmentów można łączyć. Na przykład, aby "
 "znaleźć wszystkie wystąpienia segmentu *minę* rozumianego jako forma "
@@ -482,11 +483,11 @@ msgstr ""
 "adjective *cool*), but you want to exclude those instances where *cooler*"
 " is used as a noun, the following query may be employed:"
 
-#: ../../mtas.rst:209 edbf72a3a9eb4dd98fedbed46485edf6
+#: ../../mtas.rst:215 edbf72a3a9eb4dd98fedbed46485edf6
 msgid "[orth=\"minę\" & lemma=\"mina\"]"
 msgstr "[orth=\"cooler\" & lemma=\"cool\"]"
 
-#: ../../mtas.rst:211 471daf2565604e78b5ccf0b2f9b5d2e6
+#: ../../mtas.rst:217 471daf2565604e78b5ccf0b2f9b5d2e6
 msgid ""
 "Podobne znaczenie ma następujące zapytanie o te wystąpienia segmentu "
 "*minę*, które nie są interpretowane jako formy leksemu :lex:`minąć`."
@@ -494,11 +495,11 @@ msgstr ""
 "The following query, which instead excludes those instances where "
 "*cooler* is used as a noun, will return similar results:"
 
-#: ../../mtas.rst:216 00f938484cf141f492988cd00d98c2e2
+#: ../../mtas.rst:222 00f938484cf141f492988cd00d98c2e2
 msgid "[orth=\"minę\" & !lemma=\"minąć\"]"
 msgstr "[orth=\"cooler\" & !lemma=\"cooler\"]"
 
-#: ../../mtas.rst:218 b2ce5120de0f43d78a1900eec91023bc
+#: ../../mtas.rst:224 b2ce5120de0f43d78a1900eec91023bc
 msgid ""
 "W powyższych zapytaniach operator ``&`` spełnia rolę logicznej "
 "koniunkcji. Operatorem do niego dualnym jest operator ``|``, spełniający "
@@ -508,11 +509,11 @@ msgstr ""
 " is notated with ``|``. Here are some examples of how the latter can be "
 "employed:"
 
-#: ../../mtas.rst:224 e1d77385becb47e09e0bd25815acd63b
+#: ../../mtas.rst:230 e1d77385becb47e09e0bd25815acd63b
 msgid "[lemma=\"on\" | lemma=\"ja\"]"
 msgstr "[lemma=\"sleep\" | lemma=\"dream\"]"
 
-#: ../../mtas.rst:226 36fd8c90a82c48ae95547a4928a4e13e
+#: ../../mtas.rst:232 36fd8c90a82c48ae95547a4928a4e13e
 msgid ""
 "wszystkie formy zaimków :lex:`on` i :lex:`ja`, równoważne zapytaniu "
 "``[lemma=\"on|ja\"]``,"
@@ -520,21 +521,21 @@ msgstr ""
 "returns all forms of the verbs :lex:`sleep` and :lex:`dream`; this query "
 "is equivalent to ``[lemma=\"sleep|dream\"]``,"
 
-#: ../../mtas.rst:231 8bc8a14bec174e72bcb3f3bc7ea44d0b
+#: ../../mtas.rst:237 8bc8a14bec174e72bcb3f3bc7ea44d0b
 msgid "[lemma=\"on\" | orth=\"mnie\" | orth=\"ciebie\"]"
 msgstr "[lemma=\"sleep\" | orth=\"dreaming\" | orth=\"dreamer\"]"
 
-#: ../../mtas.rst:233 1c4e88a4949f4f62ada71e1f774b1ba7
+#: ../../mtas.rst:239 1c4e88a4949f4f62ada71e1f774b1ba7
 msgid "wszystkie formy zaimka :lex:`on`, a także segmenty *mnie* i *ciebie*,"
 msgstr ""
 "returns all forms of the verb :lex:`sleep`, as well as all instances of "
 "the segments *dreaming* and *dreamer*,"
 
-#: ../../mtas.rst:237 fdec3c01a1c14620be3e38f149a8a654
+#: ../../mtas.rst:243 fdec3c01a1c14620be3e38f149a8a654
 msgid "[orth=\"pora\" & !(lemma=\"por\" | lemma=\"pora\")]"
 msgstr "[orth=\"cooler\" & !(lemma=\"cool\" | lemma=\"cooler\")]"
 
-#: ../../mtas.rst:239 a90cd92a0c8649e69ff60e20544d190f
+#: ../../mtas.rst:245 a90cd92a0c8649e69ff60e20544d190f
 msgid ""
 "segment *pora* niebędący ani formą leksemu :lex:`por`, ani formą leksemu "
 ":lex:`pora`."
@@ -542,7 +543,7 @@ msgstr ""
 "returns all instances of the token *cooler* which are neither forms of "
 "the lexeme :lex:`cool`, nor forms of the lexeme :lex:`cooler`."
 
-#: ../../mtas.rst:242 aec0efeccedf49cba05e31d87e679680
+#: ../../mtas.rst:248 aec0efeccedf49cba05e31d87e679680
 msgid ""
 "Aby lepiej zrozumieć różnicę pomiędzy operatorami ``&`` i ``|``, "
 "porównajmy następujące dwa zapytania:"
@@ -550,7 +551,7 @@ msgstr ""
 "In order to better understand the difference between the two operators - "
 "``&`` and ``|`` - let us compare the following two queries:"
 
-#: ../../mtas.rst:247 363583462eca4376ac29659b46a863ea
+#: ../../mtas.rst:253 363583462eca4376ac29659b46a863ea
 msgid ""
 "[orth=\"minę\" & lemma=\"mina\"]\n"
 "[orth=\"minę\" | lemma=\"mina\"]"
@@ -558,7 +559,7 @@ msgstr ""
 "[orth=\"cooler\" & lemma=\"cool\"]\n"
 "[orth=\"cooler\" | lemma=\"cool\"]"
 
-#: ../../mtas.rst:250 2c9861861e3c428598cd388eb980cdf7
+#: ../../mtas.rst:256 2c9861861e3c428598cd388eb980cdf7
 msgid ""
 "W wyniku zadania pierwszego zapytania znalezione zostaną te segmenty, "
 "które są jednocześnie (koniunkcja) segmentem *minę* i formą leksemu "
@@ -576,7 +577,7 @@ msgstr ""
 " as all forms of the lexeme :lex:`cool`, such as, among others *cooling*,"
 " *coolest*, and *coolers*."
 
-#: ../../mtas.rst:260 739384c5c5ca400c8950f67338aafe2c
+#: ../../mtas.rst:266 739384c5c5ca400c8950f67338aafe2c
 msgid ""
 "Specyfikacje pozycji w korpusie, ujęte w nawiasy kwadratowe, mogą "
 "zawierać dowolną liczbę warunków typu ``atrybut=\"wartość\"`` (na "
@@ -591,11 +592,11 @@ msgstr ""
 "also possible. The following query may be used to retrieve all tokens in "
 "the corpus."
 
-#: ../../mtas.rst:269 f496128d3b1f42e283c8157b63bdd17f
+#: ../../mtas.rst:275 f496128d3b1f42e283c8157b63bdd17f
 msgid "[]"
 msgstr "[]"
 
-#: ../../mtas.rst:271 121dc4d20a5842ce8251d2bfe122060e
+#: ../../mtas.rst:277 121dc4d20a5842ce8251d2bfe122060e
 msgid ""
 "Taka „pusta” specyfikacja pozycji w korpusie, pasująca do dowolnego "
 "segmentu, może posłużyć na przykład do znalezienia dwóch form "
@@ -605,11 +606,11 @@ msgstr ""
 "used, for instance, to retrieve two specific tokens, which are separated "
 "by two unspecified tokens:"
 
-#: ../../mtas.rst:277 8be7e59335b94821bc78b5c61b5e2c29
+#: ../../mtas.rst:283 8be7e59335b94821bc78b5c61b5e2c29
 msgid "[orth=\"się\"][][][lemma=\"bać\"]"
 msgstr "[orth=\"you\"][][][lemma=\"sleep\"]"
 
-#: ../../mtas.rst:279 7715be60e3254f739321f81b17447158
+#: ../../mtas.rst:285 7715be60e3254f739321f81b17447158
 msgid ""
 "W wyniku tego zapytania zostaną znalezione ciągi takie jak *się mnie też "
 "bać* czy *się nie chcę bać*."
@@ -617,7 +618,7 @@ msgstr ""
 "This will retrieve multi-word items such as *you can always sleep* or "
 "*you and I sleep*."
 
-#: ../../mtas.rst:282 bc432e271c25492d8a0d57c52ea8a10d
+#: ../../mtas.rst:288 bc432e271c25492d8a0d57c52ea8a10d
 msgid ""
 "Dla wielu zastosowań ciekawsza byłaby możliwość zapytania na przykład o "
 "formy oddalone od siebie o najwyżej pięć pozycji. MTAS umożliwia "
@@ -631,11 +632,11 @@ msgstr ""
 "word expressions, where *you* is separated from *sleep* by two, three, or"
 " four unspecified tokens:"
 
-#: ../../mtas.rst:291 f3c9153c40034caabcd88ac0acdf5f1e
+#: ../../mtas.rst:297 f3c9153c40034caabcd88ac0acdf5f1e
 msgid "[orth=\"się\"][]{2,4}[lemma=\"bać\"]"
 msgstr "[orth=\"you\"][]{2,4}[lemma=\"sleep\"]"
 
-#: ../../mtas.rst:293 fa2d7d4c2b5b46d191169e53bb56394e
+#: ../../mtas.rst:299 fa2d7d4c2b5b46d191169e53bb56394e
 msgid ""
 "W wyniku tego zapytania zostaną znalezione ciągi uzyskane w wyniku "
 "poprzedniego zapytania, a także na przykład ciąg *się pani niczego nie "
@@ -645,39 +646,39 @@ msgstr ""
 "(*you can always sleep* and *you and I sleep*), as well as others, such "
 "as *you can go to sleep* or *you and I will sleep*."
 
-#: ../../mtas.rst:299 b1556698e832403ba0922c7f3fa05639
+#: ../../mtas.rst:305 b1556698e832403ba0922c7f3fa05639
 #, fuzzy
 msgid ""
 "Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form "
-"tzw. czasownika zwrotnego  :lex: `bać się` byłoby zapytanie o *się* w "
-"pewnej odległości przed formą leksemu :lex:`bać`, ale bez znaku "
+"tzw. czasownika zwrotnego :lex:`bać się` byłoby zapytanie o *się* w "
+"pewnej odległości przed formą leksemu :lex:`bać` , ale bez znaku "
 "interpunkcyjnego pomiędzy tymi formami, lub bezpośrednio za taką formą, "
 "ewentualnie oddzielone od formy bać zaimkiem osobowym:"
 msgstr " "
 
-#: ../../mtas.rst:303 a4f2b782426f4755b780cae907a26160
+#: ../../mtas.rst:312 a4f2b782426f4755b780cae907a26160
 msgid ""
 "[orth=\"się\"][!orth=\"[.!?,:]\"]{0,5}[lemma=\"bać\"] | "
 "[lemma=\"bać\"][lemma=\"on|ja|ty|my|wy\"]?[orth=\"się\"]"
 msgstr " "
 
-#: ../../mtas.rst:307 ad7e470c70b143bca578313c659d21ac
+#: ../../mtas.rst:316 ad7e470c70b143bca578313c659d21ac
 msgid "Zapytania o znaczniki morfosyntaktyczne"
 msgstr "Queries using morphosyntactic tags"
 
-#: ../../mtas.rst:311 d75c5ad4fe7d460b8346b2e13dd1ff35
+#: ../../mtas.rst:320 d75c5ad4fe7d460b8346b2e13dd1ff35
 msgid ""
 "Powyższe zapytanie można uprościć poprzez zastąpienie warunku "
 "``orth!=\"[.!?,:]\"`` bezpośrednim odwołaniem do „części mowy” ``PUNCT``:"
 msgstr " "
 
-#: ../../mtas.rst:317 90c472f71b19478c9066ffac3c9993a3
+#: ../../mtas.rst:326 90c472f71b19478c9066ffac3c9993a3
 msgid ""
 "[orth=\"się\"][!upos=\"PUNCT\"]{0,5}[lemma=\"bać\"] | "
 "[lemma=\"bać\"][lemma=\"on|ja|ty|my|wy\"]?[orth=\"się\"]"
 msgstr " "
 
-#: ../../mtas.rst:319 19ef0fd63df942688d81b757fdbac81b
+#: ../../mtas.rst:328 19ef0fd63df942688d81b757fdbac81b
 msgid ""
 "Ogólniej, wartościami atrybutu ``upos`` (*universal part of speech*) są "
 "skróty nazw klas gramatycznych `omówionych w dokumentacji Universal "
@@ -687,14 +688,14 @@ msgid ""
 msgstr ""
 "The attribute ``upos`` (*universal part of speech*) takes as its values "
 "different grammatical classes; their symbols are listed here: "
-"<https://universaldependencies.org/u/pos/index.html>`__. You can use it, "
+"https://universaldependencies.org/u/pos/index.html. You can use it, "
 "for example, to search for two adjacent nouns, both beginning with *a*:"
 
-#: ../../mtas.rst:326 0fd8b0e8b89a4fffa17df2693967f1f7
+#: ../../mtas.rst:335 0fd8b0e8b89a4fffa17df2693967f1f7
 msgid "[upos=\"NOUN\" & orth=\"a.*\"]{2}"
 msgstr "[upos=\"NOUN\" & orth=\"a.*\"]{2}"
 
-#: ../../mtas.rst:328 ba6ecb9a2bca4e988dfafd03967dbc49
+#: ../../mtas.rst:337 ba6ecb9a2bca4e988dfafd03967dbc49
 msgid ""
 "Podobnie jak to miało miejsce w wypadku specyfikacji form obu warstw "
 "tekstowych i form hasłowych, także specyfikacje klas gramatycznych mogą "
@@ -703,7 +704,7 @@ msgstr ""
 "Similarly as in the case of orthographic words and lemmas, you can also "
 "use regular expressions in queries about grammatical classes."
 
-#: ../../mtas.rst:332 4b1123b9f7e14bdc85f3a23e8cdeba4d
+#: ../../mtas.rst:341 4b1123b9f7e14bdc85f3a23e8cdeba4d
 msgid ""
 "Dodatkowo za pomocą atrybutu ``xpos`` można odwołać się w zapytaniu do "
 "znacznika specyficznego dla języka. Specyfikacja tego atrybutu również "
@@ -716,11 +717,11 @@ msgstr ""
 " neuter nouns in the nominative case in a corpus of Czech using the "
 "following query:"
 
-#: ../../mtas.rst:338 59ddb714c78d4d2da2678565c1cc1bf3
+#: ../../mtas.rst:347 59ddb714c78d4d2da2678565c1cc1bf3
 msgid "[xpos=\"NNNS1.*\"]"
 msgstr "[xpos=\"NNNS1.*\"]"
 
-#: ../../mtas.rst:340 fce58cf9033d417ea4b8ff17a26a379d
+#: ../../mtas.rst:349 fce58cf9033d417ea4b8ff17a26a379d
 msgid ""
 "wyszuka wszystkie rzeczowniki w rodzaju nijakim w mianowniku liczby "
 "pojedynczej. Rzeczowniki o tych samych cechach w polskim korpusie (w "
@@ -729,11 +730,11 @@ msgstr ""
 "In order to retrieve nouns of the same characteristics in a Polish corpus"
 " (using Stanza) you would need to type in the following query:"
 
-#: ../../mtas.rst:345 ac1949df54ba4604b87ede6535704c00
+#: ../../mtas.rst:354 ac1949df54ba4604b87ede6535704c00
 msgid "[xpos=\"subst:sg:nom:n.*\"]"
 msgstr "[xpos=\"subst:sg:nom:n.*\"]"
 
-#: ../../mtas.rst:347 65a4777a16f847b9b300fc89a31e79af
+#: ../../mtas.rst:356 65a4777a16f847b9b300fc89a31e79af
 msgid ""
 "W obu wypadkach wartość atrybutu ``xpos`` jest zakończona wyrażeniem "
 "``.*``, ponieważ po wartościach części mowy, liczby, rodzaju i przypadka "
@@ -745,7 +746,7 @@ msgstr ""
 "categories, apart from those that are specified in each query (part of "
 "speech, number, gender, and case)."
 
-#: ../../mtas.rst:352 a2204a84cfed48b4a4647670646901bd
+#: ../../mtas.rst:361 a2204a84cfed48b4a4647670646901bd
 msgid ""
 "W zapytaniach można określić nie tylko postać ortograficzną segmentu (za "
 "pomocą atrybutu ``orth``), formę hasłową (za pomocą ``lemma``) i klasę "
@@ -767,7 +768,7 @@ msgstr ""
 "the words of this language; their lists are available at "
 "<https://universaldependencies.org/u/feat/all.html>`__."
 
-#: ../../mtas.rst:360 aad39d2f63a7468c9a27f90b13d5e704
+#: ../../mtas.rst:369 aad39d2f63a7468c9a27f90b13d5e704
 msgid ""
 "A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe "
 "jest zadanie na przykład następujących zapytań:"
@@ -775,27 +776,27 @@ msgstr ""
 "For instance, if the grammar of the language of the corpus includes the "
 "property of grammatical number, you can form the following queries:"
 
-#: ../../mtas.rst:364 3bc2ccd5edf344c89b6372de331b6649
+#: ../../mtas.rst:373 3bc2ccd5edf344c89b6372de331b6649
 msgid "[number=\"sing\"]"
 msgstr "[number=\"sing\"]"
 
-#: ../../mtas.rst:366 b08bc13c1ba643dda815a4c18b583849
+#: ../../mtas.rst:375 b08bc13c1ba643dda815a4c18b583849
 msgid "znalezione zostaną wszystkie formy w liczbie pojedynczej,"
 msgstr "matches all singular forms,"
 
-#: ../../mtas.rst:370 ba2dc19e6a3d4e4e99ba330f2a0d60da
+#: ../../mtas.rst:379 ba2dc19e6a3d4e4e99ba330f2a0d60da
 msgid "[upos=\"NOUN\" & number=\"sing\"]"
 msgstr "[upos=\"NOUN\" & number=\"sing\"]"
 
-#: ../../mtas.rst:372 706eb09981a14589944cad9ccc44bd9a
+#: ../../mtas.rst:381 706eb09981a14589944cad9ccc44bd9a
 msgid "znalezione zostaną formy rzeczowników pospolitych w liczbie pojedynczej,"
 msgstr "matches singular common nouns,"
 
-#: ../../mtas.rst:376 1c9d08d7285b4b42b41b8f50817967f5
+#: ../../mtas.rst:385 1c9d08d7285b4b42b41b8f50817967f5
 msgid "[upos=\"NOUN\" & !gender=\"fem\"]"
 msgstr "[upos=\"NOUN\" & !gender=\"fem\"]"
 
-#: ../../mtas.rst:378 3dd330488aa6479b8fdcfc6e3c147dc8
+#: ../../mtas.rst:387 3dd330488aa6479b8fdcfc6e3c147dc8
 msgid ""
 "formy rzeczowników pospolitych w rodzaju innym niż żeński (czyli np. dla "
 "polskiego, czeskiego czy ukraińskiego: w rodzaju męskim lub nijakim),"
@@ -803,11 +804,11 @@ msgstr ""
 "matches common nouns with the value of gender other than feminine (e.g. "
 "masculine and neuter for languages such as Polish, Czech, or Ukrainian),"
 
-#: ../../mtas.rst:382 f33552d7ed4f43b6b5ea32fbb3d7cc53
+#: ../../mtas.rst:391 f33552d7ed4f43b6b5ea32fbb3d7cc53
 msgid "[number=\"sing\" & case=\"(nom|acc)\" & gender=\"masc\"]"
 msgstr "[number=\"sing\" & case=\"(nom|acc)\" & gender=\"masc\"]"
 
-#: ../../mtas.rst:384 5d57448a6376487f92f5f1251286106b
+#: ../../mtas.rst:393 5d57448a6376487f92f5f1251286106b
 msgid ""
 "pojedyncze mianownikowe lub biernikowe formy męskie (jeśli w języku są "
 "kategorie liczby, przypadka i rodzaju)."
@@ -815,7 +816,7 @@ msgstr ""
 "matches singular nominative or accusative masculine forms (if the grammar"
 " of the given language has the categories of number, case, and gender)."
 
-#: ../../mtas.rst:386 bac1eca17ce24682bd06575d76c63c88
+#: ../../mtas.rst:395 bac1eca17ce24682bd06575d76c63c88
 msgid ""
 "Można również stosować zbiorczy atrybut ``ufeat`` w zastępstwie każdej "
 "innej nazwy kategorii. Ujednoznacznienie dokona się przez odpowiednią "
@@ -825,19 +826,19 @@ msgstr ""
 "attribute ``ufeat``. For example, the following two queries will return "
 "the same results:"
 
-#: ../../mtas.rst:393 9e79627e05444cf5b51b547fc30e2189
+#: ../../mtas.rst:402 9e79627e05444cf5b51b547fc30e2189
 msgid "[upos=\"NOUN\" & case=\"acc\" & number=\"plur\" & gender=\"fem\"]"
 msgstr "[upos=\"NOUN\" & case=\"acc\" & number=\"plur\" & gender=\"fem\"]"
 
-#: ../../mtas.rst:397 9352268d8a7642d386d28e6b8094db38
+#: ../../mtas.rst:406 9352268d8a7642d386d28e6b8094db38
 msgid "[upos=\"NOUN\" & ufeat=\"acc\" & ufeat=\"plur\" & ufeat=\"fem\"]"
 msgstr "[upos=\"NOUN\" & ufeat=\"acc\" & ufeat=\"plur\" & ufeat=\"fem\"]"
 
-#: ../../mtas.rst:401 3a9254f1fe2e4f9d968d374d3697fe69
+#: ../../mtas.rst:410 3a9254f1fe2e4f9d968d374d3697fe69
 msgid "Graficzny konstruktor zapytań"
 msgstr "Visual CQL query builder"
 
-#: ../../mtas.rst:403 0246df1bc56449c693ffc8344bb30be3
+#: ../../mtas.rst:412 0246df1bc56449c693ffc8344bb30be3
 msgid ""
 "Do tworzenia podstawowych zapytań o sekwencje segmentów można użyć "
 "prostego graficznego konstruktora. W oknie konstruktora można definiować "
@@ -865,11 +866,11 @@ msgstr ""
 "you can define additional search parameters (this is optional): for "
 "instance, you can use metadata to limit your search."
 
-#: ../../mtas.rst:417 0030603990c7421183da5661b933311e
+#: ../../mtas.rst:426 0030603990c7421183da5661b933311e
 msgid "Ograniczenie zapytania do zdania lub akapitu"
 msgstr "Limiting the search to a sentence or a paragraph"
 
-#: ../../mtas.rst:419 94d84416f4734deeab8c7ef9ad6f5b6c
+#: ../../mtas.rst:428 94d84416f4734deeab8c7ef9ad6f5b6c
 msgid ""
 "Jednostkami organizacji tekstu w korpusach indeksowanych przez Korpusomat"
 " są zdania i akapity. Podział ten można wykorzystać w zapytaniach, na "
@@ -879,7 +880,7 @@ msgstr ""
 " and paragraphs. You can use this division when building your queries, "
 "for example by limiting a query to a single sentence."
 
-#: ../../mtas.rst:423 74fe540b645b4545b07a5c871428add6
+#: ../../mtas.rst:432 74fe540b645b4545b07a5c871428add6
 msgid ""
 "Aby ograniczyć zasięg zapytania, należy dopisać do zapytania słowo "
 "kluczowe ``within``, a po nim ``<s/>`` lub ``<p/>``, w zależności od "
@@ -895,13 +896,13 @@ msgstr ""
 "separated from the token *furiously* by at least one, but no more than "
 "ten segments:"
 
-#: ../../mtas.rst:432 e59213b8ffad4cb68c24e3adecd1335e
+#: ../../mtas.rst:441 e59213b8ffad4cb68c24e3adecd1335e
 msgid "[lemma=\"bać\"][!orth=\"się\"]{1,10}[orth=\"się\"] within <s/>"
 msgstr ""
 "[lemma=\"sleep\"][!orth=\"furiously\"]{1,10}[orth=\"furiously\"] within "
 "<s/>"
 
-#: ../../mtas.rst:434 9a3f589fd68f41c79f7bf655d34929d1
+#: ../../mtas.rst:443 9a3f589fd68f41c79f7bf655d34929d1
 msgid ""
 "Dodatkowo można również na elementy ``<s/>`` i ``<p/>`` nałożyć pewne "
 "warunki dotyczące tego, czy zawierają segmenty innego typu. Przykładowo, "
@@ -910,13 +911,13 @@ msgid ""
 " zawierających formę bezokolicznika:"
 msgstr " "
 
-#: ../../mtas.rst:442 a73f4f6c041b41d5a0bc03a5f7c95ba5
+#: ../../mtas.rst:451 a73f4f6c041b41d5a0bc03a5f7c95ba5
 msgid ""
 "[upos=\"AUX\" & lemma=\"być\" & tense=\"fut\"] within (<s/> containing "
 "[verbform=\"inf\"])"
 msgstr " "
 
-#: ../../mtas.rst:444 4e8a88204fc04af7893f3565df20ef8e
+#: ../../mtas.rst:453 4e8a88204fc04af7893f3565df20ef8e
 msgid ""
 "Intencją takiego zapytania jest odnalezienie (w przybliżeniu) wszystkich "
 "wystąpień konstrukcji czasu przyszłego złożonego, w których pojawia się "
@@ -927,13 +928,13 @@ msgid ""
 "forma przeszła w ogóle nie występuje:"
 msgstr " "
 
-#: ../../mtas.rst:454 5f7712283d3b420f945c56aef090fff9
+#: ../../mtas.rst:463 5f7712283d3b420f945c56aef090fff9
 msgid ""
 "[upos=\"AUX\" & lemma=\"być\" & tense=\"fut\"] within (<s/> !containing "
 "[tense=\"past\"])"
 msgstr " "
 
-#: ../../mtas.rst:456 8add4589d2e64445a6d578de34ac6b11
+#: ../../mtas.rst:465 8add4589d2e64445a6d578de34ac6b11
 msgid ""
 "Pełną listę słów kluczowych, które mogą się pojawić w zapytaniach "
 "wyszukiwarki MTAS, można znaleźć w jej `dokumentacji "
@@ -946,7 +947,7 @@ msgstr ""
 "important to note, however, that not all of them will have their uses in "
 "Korpusomat."
 
-#: ../../mtas.rst:461 a9f4570507ae48e293e9573705b62c56
+#: ../../mtas.rst:470 a9f4570507ae48e293e9573705b62c56
 msgid ""
 "Oprócz znaczników odnoszących się do elementów struktury tekstu (np. "
 "``<s/>``) istnieją również znaczniki odnoszące się do ich początku i "
@@ -960,11 +961,11 @@ msgstr ""
 " but they may be used to further limit the search for an already "
 "specified segment. For instance, the query:"
 
-#: ../../mtas.rst:469 3a06cd40a38945f9b859e4000d7ea12d
+#: ../../mtas.rst:478 3a06cd40a38945f9b859e4000d7ea12d
 msgid "<s> [upos=\"NUM\"]"
 msgstr "<s> [upos=\"NUM\"]"
 
-#: ../../mtas.rst:471 207a7dc89a0c48d591a767ec29ddedd5
+#: ../../mtas.rst:480 207a7dc89a0c48d591a767ec29ddedd5
 msgid ""
 "odnajdzie wszystkie wystąpienia liczebnika stojącego na początku zdania. "
 "Analogicznie zapytanie:"
@@ -972,11 +973,11 @@ msgstr ""
 "will retrieve all instances of a numeral at the beginning of a sentence. "
 "A similar query:"
 
-#: ../../mtas.rst:476 0adc6db774574bbdb4f4845a8b86a8c3
+#: ../../mtas.rst:485 0adc6db774574bbdb4f4845a8b86a8c3
 msgid "[upos=\"NUM\"][upos=\"PUNCT\"]</s>"
 msgstr "[upos=\"NUM\"][upos=\"PUNCT\"]</s>"
 
-#: ../../mtas.rst:478 73a941a5a25b46958ff3da748e24d9c0
+#: ../../mtas.rst:487 73a941a5a25b46958ff3da748e24d9c0
 msgid ""
 "odnajdzie wszystkie wystąpienia ciągu składającego się z liczebnika i "
 "znaku interpunkcyjnego stojących na końcu zdania."
@@ -984,11 +985,11 @@ msgstr ""
 "will retrieve all instances of a numeral followed by a punctuation mark "
 "at the end of a sentence."
 
-#: ../../mtas.rst:482 05eb382ba434448aa3745b9e341714d9
+#: ../../mtas.rst:491 05eb382ba434448aa3745b9e341714d9
 msgid "Warstwa składniowa"
 msgstr "The layer of syntax"
 
-#: ../../mtas.rst:484 4c076ac3dc50462c8bc265bf45e212eb
+#: ../../mtas.rst:493 4c076ac3dc50462c8bc265bf45e212eb
 msgid ""
 "Kolejną warstwą znakowania w Korpusomacie jest parsowanie zależnościowe. "
 "Wprowadzony przez użytkownika tekst jest automatycznie dzielony na "
@@ -1007,7 +1008,7 @@ msgstr ""
 msgid "Rozbiór składniowy przykładowego zdania"
 msgstr "Example of a sentence diagram"
 
-#: ../../mtas.rst:494 5fdd297710604e2c9e727f5a8ad833d8
+#: ../../mtas.rst:503 5fdd297710604e2c9e727f5a8ad833d8
 msgid ""
 "MTAS nie jest wyszukiwarką struktur składniowych, nie pozwala zatem na "
 "indeksowanie i przeszukiwanie pełnych rozbiorów zdań. Jednak na poziomie "
@@ -1028,13 +1029,13 @@ msgstr ""
 "(measured in tokens). As a result, one can search for simple syntactic "
 "structures as well as analytical discontinuous inflectional forms."
 
-#: ../../mtas.rst:505 34567d5246c7457887acecd4e2a2ab8c
+#: ../../mtas.rst:514 34567d5246c7457887acecd4e2a2ab8c
 msgid "W warstwie znakowania składniowego dostępne są następujące atrybuty:"
 msgstr ""
 "The following attributes are available at the level of syntactic "
 "annotation:"
 
-#: ../../mtas.rst:507 6464e6eb5137416e92062253de804387
+#: ../../mtas.rst:516 6464e6eb5137416e92062253de804387
 msgid ""
 "``deprel`` — typ zależności, jaką dany segment jest związany ze swoim "
 "bezpośrednim nadrzędnikiem składniowym; wartością tego atrybutu może być "
@@ -1047,15 +1048,15 @@ msgstr ""
 "<https://universaldependencies.org/u/dep/index.html>`__ (although the "
 "sets of values may differ between languages),"
 
-#: ../../mtas.rst:511 6dafb3efc71e48bca3e69b46edebba2f
+#: ../../mtas.rst:520 6dafb3efc71e48bca3e69b46edebba2f
 msgid "``head.upos`` — część mowy (UPOS) bezpośredniego nadrzędnika segmentu,"
 msgstr "``head.upos`` — part of speech (UPOS) of the head of the given token,"
 
-#: ../../mtas.rst:513 a9f21b789f33474a977921856e302ea4
+#: ../../mtas.rst:522 a9f21b789f33474a977921856e302ea4
 msgid "``head.lemma`` — forma hasłowa bezpośredniego nadrzędnika segmentu,"
 msgstr "``head.lemma`` — lemma of the head of the given token,"
 
-#: ../../mtas.rst:515 2acb934054184237a5b9f2543dbb7fc1
+#: ../../mtas.rst:524 2acb934054184237a5b9f2543dbb7fc1
 msgid ""
 "``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego "
 "nadrzędnika segmentu,"
@@ -1063,11 +1064,11 @@ msgstr ""
 "``head.ufeat`` — value of any morphological feature of the head of the "
 "given token,"
 
-#: ../../mtas.rst:517 ae961261e7154b9f8bd430a39c693a06
+#: ../../mtas.rst:526 ae961261e7154b9f8bd430a39c693a06
 msgid "``head.distance`` — odległość bezpośredniego nadrzędnika segmentu,"
 msgstr "``head.distance`` — distance from the token to its syntactic head,"
 
-#: ../../mtas.rst:519 2f408915c982499abedf2ed672093948
+#: ../../mtas.rst:528 2f408915c982499abedf2ed672093948
 msgid ""
 "``head.position`` — położenie (lewo- lub prawostronne) bezpośredniego "
 "nadrzędnika względem segmentu w porządku linearnym wypowiedzenia."
@@ -1075,7 +1076,7 @@ msgstr ""
 "``head.position`` — position (left- or right-branching) of the head with "
 "respect to the given token in a linear order."
 
-#: ../../mtas.rst:522 9fe0fd96d0834727b215699fa2ccf52b
+#: ../../mtas.rst:531 9fe0fd96d0834727b215699fa2ccf52b
 msgid ""
 "Dzięki rozszerzeniu języka zapytań o powyższe atrybuty można np. łatwo "
 "znaleźć wszystkie rzeczowniki pospolite użyte w funkcji dopełnienia "
@@ -1085,11 +1086,11 @@ msgstr ""
 "user can easily find, for instance, all common nouns employed in the "
 "function of a direct object of a given verb:"
 
-#: ../../mtas.rst:528 6d569284b4004967b6152caf521713e0
+#: ../../mtas.rst:537 6d569284b4004967b6152caf521713e0
 msgid "[upos=\"NOUN\" & deprel=\"obj\" & head.lemma=\"kupić\"]"
 msgstr "[upos=\"NOUN\" & deprel=\"obj\" & head.lemma=\"dream\"]"
 
-#: ../../mtas.rst:530 6c40af6f97b5462a810c348fa0fc4663
+#: ../../mtas.rst:539 6c40af6f97b5462a810c348fa0fc4663
 msgid ""
 "Możliwe jest również odwrotne wyszukanie odpowiadające na pytanie, przy "
 "jakich czasownikach w roli dopełnienia występuje w korpusie konkretny "
@@ -1098,11 +1099,11 @@ msgstr ""
 "Or, alternatively, one can search for the verbs which take a specified "
 "noun as their direct object:"
 
-#: ../../mtas.rst:536 69309afe0ec945268d199eb9445dc0be
+#: ../../mtas.rst:545 69309afe0ec945268d199eb9445dc0be
 msgid "[deprel=\"obj\" & head.upos=\"VERB\" & lemma=\"osoba\"]"
 msgstr "[deprel=\"obj\" & head.upos=\"VERB\" & lemma=\"idea\"]"
 
-#: ../../mtas.rst:538 189bd6309d2b48f384de1ee3b4e27071
+#: ../../mtas.rst:547 189bd6309d2b48f384de1ee3b4e27071
 #, fuzzy
 msgid ""
 "Należy jednak zwrócić uwagę, że w powyższym przykładzie wynikiem "
@@ -1117,7 +1118,7 @@ msgstr ""
 "on the left or on the right. Using the statistical module, they can be "
 "grouped and sorted according to their frequencies."
 
-#: ../../mtas.rst:545 3183135fc8484da69ed4cfa1ee785aed
+#: ../../mtas.rst:554 3183135fc8484da69ed4cfa1ee785aed
 msgid ""
 "Dzięki atrybutowi kodującemu lewo- i prawostronną pozycję nadrzędnika "
 "względem segmentu można znaleźć przykłady niekanonicznego szyku zdania, "
@@ -1128,29 +1129,29 @@ msgstr ""
 "standard word order. For example, the following queries will retrieve "
 "instances when the verb is followed by its subject:"
 
-#: ../../mtas.rst:551 fbf214c736ce4c3194547ef35202792b
+#: ../../mtas.rst:560 fbf214c736ce4c3194547ef35202792b
 msgid "[deprel=\"nsubj\" & head.position=\"left\"]"
 msgstr "[deprel=\"nsubj\" & head.position=\"left\"]"
 
-#: ../../mtas.rst:553 66b5bb4930d246d7bae01e1072337ff3
+#: ../../mtas.rst:562 66b5bb4930d246d7bae01e1072337ff3
 msgid "lub dopełnienia bliższego przed orzeczeniem:"
 msgstr "or when the verb is preceded by its direct object:"
 
-#: ../../mtas.rst:557 352bc7c94076457c9345c5286485f9cb
+#: ../../mtas.rst:566 352bc7c94076457c9345c5286485f9cb
 msgid "[deprel=\"obj\" & head.position=\"right\"]"
 msgstr "[deprel=\"obj\" & head.position=\"right\"]"
 
-#: ../../mtas.rst:559 576d6d5be8bb4c9eba7b606a32b7d311
+#: ../../mtas.rst:568 576d6d5be8bb4c9eba7b606a32b7d311
 msgid ""
 "Podobnie w wypadku innych konstrukcji — brak określenia pozycji "
 "nadrzędnika w zapytaniu:"
 msgstr "Similarly, a query which does not specify the position of the head, as in:"
 
-#: ../../mtas.rst:564 96d38e6c095942ed98c05a7af6d0b342
+#: ../../mtas.rst:573 96d38e6c095942ed98c05a7af6d0b342
 msgid "[upos=\"ADJ\" & deprel=\"amod\" & head.lemma=\"zupa\"]"
 msgstr "[upos=\"ADJ\" & deprel=\"amod\" & head.lemma=\"sleep\"]"
 
-#: ../../mtas.rst:566 e8d41dba74eb4b2f9a819d0dae74d420
+#: ../../mtas.rst:575 e8d41dba74eb4b2f9a819d0dae74d420
 msgid ""
 "zwróci wszystkie przymiotnikowe określenia rzeczownika :lex:`zupa`. "
 "Dodanie parametru pozycji pozwoli ograniczyć wyszukanie do określeń "
@@ -1162,7 +1163,7 @@ msgstr ""
 "the left (*furiously sleep*) or to the right (*sleep furiously*) of the "
 "verb."
 
-#: ../../mtas.rst:570 4a7bba68ef124de6be73a62110080529
+#: ../../mtas.rst:579 4a7bba68ef124de6be73a62110080529
 msgid ""
 "Częściowa anotacja składniowa pozwala na odnalezienie elementów "
 "wypowiedzenia połączonych ze sobą bezpośrednią relacją zależności bez "
@@ -1178,7 +1179,7 @@ msgstr ""
 "further limits the search to instances where these elements are not "
 "neighbouring words:"
 
-#: ../../mtas.rst:579 0583f588e74842518efa0e1390cf681c
+#: ../../mtas.rst:588 0583f588e74842518efa0e1390cf681c
 msgid ""
 "[deprel=\"obj\" & head.upos=\"VERB\" & tense=\"past\" & "
 "!head.distance=\"1\"]"
@@ -1186,7 +1187,7 @@ msgstr ""
 "[deprel=\"obj\" & head.upos=\"VERB\" & tense=\"past\" & "
 "!head.distance=\"1\"]"
 
-#: ../../mtas.rst:581 a96ca1aa0a1c479ea2b00e7d93401401
+#: ../../mtas.rst:590 a96ca1aa0a1c479ea2b00e7d93401401
 msgid ""
 "Powyższe przykładowe zapytanie wyszuka dopełnienia bliższe orzeczenia w "
 "czasie przeszłym, które są oddzielone od tego orzeczenia co najmniej "
@@ -1196,7 +1197,7 @@ msgstr ""
 "object of a verb in the past tense, separated from the verb by at least "
 "one element."
 
-#: ../../mtas.rst:585 6fca6feece484fa1841d994e8e785ce4
+#: ../../mtas.rst:594 6fca6feece484fa1841d994e8e785ce4
 msgid ""
 "Innym przykładem użycia znakowania składniowego w korpusie może być "
 "zapytanie wyszukujące konstrukcje w stronie biernej:"
@@ -1204,23 +1205,23 @@ msgstr ""
 "Syntactic annotation may also be employed to search for passive forms of "
 "verbs:"
 
-#: ../../mtas.rst:590 94abf03b56814385a80d7200a8eab00c
+#: ../../mtas.rst:599 94abf03b56814385a80d7200a8eab00c
 #, fuzzy
 msgid "[upos=\"AUX\" & deprel=\"aux:pass\" & head.upos=\"ADJ\"]"
 msgstr "[upos=\"ADJ\" & deprel=\"amod\" & head.lemma=\"sleep\"]"
 
-#: ../../mtas.rst:592 ac6c7cde91474de6b8d0eace1cbd8c02
+#: ../../mtas.rst:601 ac6c7cde91474de6b8d0eace1cbd8c02
 msgid ""
 "którego dopasowaniem są słowa posiłkowe konstrukcji biernej połączone z "
 "formą imiesłowu biernego (oznaczoną jako przymiotnik) relacją "
 "``aux:pass``."
 msgstr " "
 
-#: ../../mtas.rst:596 7e0cac9e3c5c481d92fc44142a28d06f
+#: ../../mtas.rst:605 7e0cac9e3c5c481d92fc44142a28d06f
 msgid "Warstwa jednostek nazewniczych"
 msgstr "The layer of named entities"
 
-#: ../../mtas.rst:598 1edeaf1ea17f46a9aef09113d41f974e
+#: ../../mtas.rst:607 1edeaf1ea17f46a9aef09113d41f974e
 msgid ""
 "Ostatnią warstwą informacji znakowaną w Korpusomacie jest warstwa "
 "jednostek nazewniczych (ang. *named entities*). Są to jednostki tekstowe "
@@ -1242,7 +1243,7 @@ msgstr ""
 "pipeline. Furthermore, for some languages, models of annotation of named "
 "entities are not available."
 
-#: ../../mtas.rst:607 34416845a703457cb2cbd19b3ae3039e
+#: ../../mtas.rst:616 34416845a703457cb2cbd19b3ae3039e
 msgid ""
 "Najprostszy i dość często stosowany zestaw etykiet jednostek nazewniczych"
 " składa się tylko z czterech elementów: ``PER`` (osoba), ``LOC`` "
@@ -1265,7 +1266,7 @@ msgstr ""
 "list of values available for a given corpus. The following examples "
 "employ the simplest four-element classification."
 
-#: ../../mtas.rst:616 6b644b9c83944035b6ff5acdc9271219
+#: ../../mtas.rst:625 6b644b9c83944035b6ff5acdc9271219
 msgid ""
 "Jednostki nazewnicze, podobnie jak opisane wyżej zdania i akapity, "
 "przekraczają granicę segmentu, więc można się do nich odnosić w "
@@ -1278,23 +1279,23 @@ msgstr ""
 "marked as named entities. The rules regarding the use of slash also apply"
 " here:"
 
-#: ../../mtas.rst:622 8f449e01b13e491f901a28000816f4d6
+#: ../../mtas.rst:631 8f449e01b13e491f901a28000816f4d6
 msgid "``<ne>`` oznacza początek ciągu opisanego jako jednostka nazewnicza,"
 msgstr "``<ne>`` marks the beginning of a string marked as a named entity,"
 
-#: ../../mtas.rst:624 841c5d24cfd1447e86523add5b270ac8
+#: ../../mtas.rst:633 841c5d24cfd1447e86523add5b270ac8
 msgid "``</ne>`` oznacza koniec ciągu opisanego jako jednostka nazewnicza."
 msgstr "``</ne>`` marks the end of a string marked as a named entity."
 
-#: ../../mtas.rst:626 9babdaf965f442308676535f15bbef01
+#: ../../mtas.rst:635 9babdaf965f442308676535f15bbef01
 msgid "Najprostsze możliwe zapytanie tego typu ma postać:"
 msgstr "The following is the simplest query about named entities:"
 
-#: ../../mtas.rst:630 fd0c84542b6b48618423b93f3946cc0b
+#: ../../mtas.rst:639 fd0c84542b6b48618423b93f3946cc0b
 msgid "<ne />"
 msgstr "<ne />"
 
-#: ../../mtas.rst:632 a001d5d584c84e23a90ed0012ca9966a
+#: ../../mtas.rst:641 a001d5d584c84e23a90ed0012ca9966a
 msgid ""
 "i zwróci wszystkie jednostki nazewnicze wszystkich typów odnalezione w "
 "korpusie. Wyszukanie można ograniczyć do konkretnego typu nazw np. nazw "
@@ -1303,11 +1304,11 @@ msgstr ""
 "It will retrieve all named entities of every type in the corpus. But the "
 "user can also limit the search to, for example, names of locations:"
 
-#: ../../mtas.rst:638 d1b8228d35634d6a8f481e764ab34bb6
+#: ../../mtas.rst:647 d1b8228d35634d6a8f481e764ab34bb6
 msgid "<ne=\"LOC\" />"
 msgstr "<ne=\"LOC\" />"
 
-#: ../../mtas.rst:640 7abae0ce92ae4865ac7a3c92d1bd14ed
+#: ../../mtas.rst:649 7abae0ce92ae4865ac7a3c92d1bd14ed
 msgid ""
 "Podobnie jak w wypadku zdań i akapitów, zapytania o jednostki nazewnicze "
 "można łączyć z cechami ortograficznymi i morfosyntaktycznymi segmentów, z"
@@ -1318,11 +1319,11 @@ msgstr ""
 "create queries about specific orthographic or morphosyntactic features of"
 " named entities. For example, the user may search for:"
 
-#: ../../mtas.rst:647 71e4c52542284dd5ae82e3cadb2a1b3f
+#: ../../mtas.rst:656 71e4c52542284dd5ae82e3cadb2a1b3f
 msgid "[upos=\"CCONJ\"] within <ne=\"PER\" />"
 msgstr "[upos=\"CCONJ\"] within <ne=\"PER\" />"
 
-#: ../../mtas.rst:649 25402808ab4b405680f7881652c97c52
+#: ../../mtas.rst:658 25402808ab4b405680f7881652c97c52
 msgid ""
 "— wszystkie nazwy organizacji zawierające spójnik współrzędny, np. "
 "*Krajowa Rada Radiofonii i Telewizji* czy *Instytut Meteorologii i "
@@ -1332,11 +1333,11 @@ msgstr ""
 "conjunction, such as *Department for Culture, Media, and Sport* or "
 "*Organisation for Economic Cooperation and Development*,"
 
-#: ../../mtas.rst:653 b79dc5a4e68149b6b0be06e81a7500ae
+#: ../../mtas.rst:662 b79dc5a4e68149b6b0be06e81a7500ae
 msgid "<ne=\"LOC\" /> [upos=\"CCONJ\"] <ne=\"LOC\" />"
 msgstr "<ne=\"LOC\" /> [upos=\"CCONJ\"] <ne=\"LOC\" />"
 
-#: ../../mtas.rst:655 0b56bd3af8214577b126e9d195265f46
+#: ../../mtas.rst:664 0b56bd3af8214577b126e9d195265f46
 #, fuzzy
 msgid ""
 "— wystąpienia dwóch nazw geograficznych połączonych spójnikiem "
@@ -1345,11 +1346,11 @@ msgstr ""
 "instances where two names of geographical spaces are joined by a "
 "coordinate conjunction, e.g. *Western Europe or Scandinavia*,"
 
-#: ../../mtas.rst:659 6c211c6264af49fc965cfc153b308e2b
+#: ../../mtas.rst:668 6c211c6264af49fc965cfc153b308e2b
 msgid "[orth=\"A.*\"][orth=\"M.*\"] fullyalignedwith <ne=\"PER\" />"
 msgstr "[orth=\"A.*\"][orth=\"M.*\"] fullyalignedwith <ne=\"PER\" />"
 
-#: ../../mtas.rst:661 59091021afaa42379749a525e7ee0729
+#: ../../mtas.rst:670 59091021afaa42379749a525e7ee0729
 msgid ""
 "— dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś "
 "od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam "
@@ -1358,7 +1359,7 @@ msgstr ""
 "two neighbouring tokens starting with, for instance, *T* and *M*, and "
 "forming a person's name, e.g. *Theresa May*, *Thomas Mann*."
 
-#: ../../mtas.rst:663 abc8ea1c4e3e453f9ab1ce10f6d3def3
+#: ../../mtas.rst:672 abc8ea1c4e3e453f9ab1ce10f6d3def3
 msgid ""
 "Ponadto indeksowany jest również atrybut zawierający informację o "
 "długości jednostki nazewniczej mierzonej w segmentach. Zapytanie:"
@@ -1367,21 +1368,21 @@ msgstr ""
 "in tokens) is available. The following query will return all named "
 "entities which consist of exactly three tokens:"
 
-#: ../../mtas.rst:667 705f15d9ba08414aa245b32b4bf70fcb
+#: ../../mtas.rst:676 705f15d9ba08414aa245b32b4bf70fcb
 msgid "<ne.len=\"3\" />"
 msgstr "<ne.len=\"3\" />"
 
-#: ../../mtas.rst:669 ace8763188194463a5686eb36638b476
+#: ../../mtas.rst:678 ace8763188194463a5686eb36638b476
 msgid ""
 "odnajdzie wszystkie takie jednostki składające się z dokładnie trzech "
 "segmentów."
 msgstr " "
 
-#: ../../mtas.rst:673 1903a060028347468f539e1f3153867d
+#: ../../mtas.rst:682 1903a060028347468f539e1f3153867d
 msgid "Ograniczenie zapytania za pomocą metadanych"
 msgstr "Using metadata to limit the search"
 
-#: ../../mtas.rst:675 6aa4eef00b5e4dc8b41a5d039a340fca
+#: ../../mtas.rst:684 6aa4eef00b5e4dc8b41a5d039a340fca
 msgid ""
 "Teksty wprowadzane przez użytkownika do Korpusomatu są domyślnie "
 "opatrywane czterema polami metadanych o etykietach: autor, tytuł, rok "
@@ -1394,7 +1395,7 @@ msgstr ""
 "is usually provided by the user, but the labels may also remain empty. "
 "The user may also add new labels."
 
-#: ../../mtas.rst:681 e279b60e1d614e26a9804b3244ce1d23
+#: ../../mtas.rst:690 e279b60e1d614e26a9804b3244ce1d23
 msgid ""
 "Pól metadanych można użyć następnie do ograniczenia zasięgu zapytań w "
 "wyszukaniach korpusowych. Służy do tego przycisk metadane, pod którym "
