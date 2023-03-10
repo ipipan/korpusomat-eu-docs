@@ -1,4 +1,3 @@
-
 Tworzenie zapytań do korpusu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -295,27 +294,27 @@ W wyniku tego zapytania zostaną znalezione ciągi uzyskane w wyniku
 poprzedniego zapytania, a także na przykład ciąg *się pani niczego nie
 boi*.
 
-Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form
-tzw. czasownika zwrotnego :lex:`bać się` byłoby zapytanie o *się* w pewnej
-odległości przed formą leksemu :lex:`bać`, ale bez znaku interpunkcyjnego
-pomiędzy tymi formami, lub bezpośrednio za taką formą, ewentualnie
-oddzielone od formy bać zaimkiem osobowym:
+.. ifconfig:: language in ('pl')
 
-::
+   Zapewne nieco bardziej precyzyjnym zapytaniem o różne wystąpienia form tzw. czasownika zwrotnego  :lex: `bać się` byłoby zapytanie o *się* w pewnej odległości przed formą leksemu :lex:`bać`, ale bez znaku interpunkcyjnego pomiędzy tymi formami, lub bezpośrednio za taką formą, ewentualnie oddzielone od formy bać zaimkiem osobowym:
 
-   [orth="się"][!orth="[.!?,:]"]{0,5}[lemma="bać"] | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
+   ::
+
+      [orth="się"][!orth="[.!?,:]"]{0,5}[lemma="bać"] | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
 
 Zapytania o znaczniki morfosyntaktyczne
 ---------------------------------------
 
-Powyższe zapytanie można uprościć poprzez zastąpienie warunku
-``orth!="[.!?,:]"`` bezpośrednim odwołaniem do „części mowy”
-``PUNCT``:
+.. ifconfig:: language in ('pl')
+   
+   Powyższe zapytanie można uprościć poprzez zastąpienie warunku
+   ``orth!="[.!?,:]"`` bezpośrednim odwołaniem do „części mowy”
+   ``PUNCT``:
 
-::
+   ::
 
-   [orth="się"][!upos="PUNCT"]{0,5}[lemma="bać"] | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
+      [orth="się"][!upos="PUNCT"]{0,5}[lemma="bać"] | [lemma="bać"][lemma="on|ja|ty|my|wy"]?[orth="się"]
 
 Ogólniej, wartościami atrybutu ``upos`` (*universal part of speech*) są skróty nazw klas gramatycznych 
 `omówionych w dokumentacji Universal Dependencies <https://universaldependencies.org/u/pos/index.html>`__. 
