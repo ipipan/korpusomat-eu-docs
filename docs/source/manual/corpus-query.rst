@@ -43,7 +43,7 @@ Wizualizację drzewa można zapisać w formacie SVG lub PNG (45). w polach (46) 
 
 -   ukrycia znaków interpunkcyjnych w analizowanym zdaniu dla zwiększenia jego czytelności,
 
--   automatycznego pozycjonowania drzewa (po wybraniu tego przcisku analizowane drzewo zostanie usytuowane w centralnej części okna modalnego),
+-   automatycznego pozycjonowania drzewa (po wybraniu tego przycisku analizowane drzewo zostanie usytuowane w centralnej części okna modalnego),
     
 -   modyfikacji struktury drzewa (poszczególne węzły można przesuwać w obrębie drzewa).
 
