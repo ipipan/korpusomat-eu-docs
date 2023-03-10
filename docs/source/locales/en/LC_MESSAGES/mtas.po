@@ -585,29 +585,29 @@ msgid ""
 "pewnej odległości przed formą leksemu :lex:`bać`, ale bez znaku "
 "interpunkcyjnego pomiędzy tymi formami, lub bezpośrednio za taką formą, "
 "ewentualnie oddzielone od formy bać zaimkiem osobowym:"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:306 a4f2b782426f4755b780cae907a26160
 msgid ""
 "[orth=\"się\"][!orth=\"[.!?,:]\"]{0,5}[lemma=\"bać\"] | "
 "[lemma=\"bać\"][lemma=\"on|ja|ty|my|wy\"]?[orth=\"się\"]"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:310 ad7e470c70b143bca578313c659d21ac
 msgid "Zapytania o znaczniki morfosyntaktyczne"
-msgstr ""
+msgstr "Queries using morphosyntactic tags"
 
 #: ../../mtas.rst:312 d75c5ad4fe7d460b8346b2e13dd1ff35
 msgid ""
 "Powyższe zapytanie można uprościć poprzez zastąpienie warunku "
 "``orth!=\"[.!?,:]\"`` bezpośrednim odwołaniem do „części mowy” ``PUNCT``:"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:318 90c472f71b19478c9066ffac3c9993a3
 msgid ""
 "[orth=\"się\"][!upos=\"PUNCT\"]{0,5}[lemma=\"bać\"] | "
 "[lemma=\"bać\"][lemma=\"on|ja|ty|my|wy\"]?[orth=\"się\"]"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:320 19ef0fd63df942688d81b757fdbac81b
 msgid ""
@@ -617,10 +617,11 @@ msgid ""
 "przykład zapytanie o sekwencję dwóch form rzeczownikowych "
 "rozpoczynających się na *a* może być sformułowane w sposób następujący:"
 msgstr ""
+"The attribute ``upos`` (*universal part of speech*) takes as its values different grammatical classes; their symbols are listed here: <https://universaldependencies.org/u/pos/index.html>`__. You can use it, for example, to search for two adjacent nouns, both beginning with *a*:"
 
 #: ../../mtas.rst:327 0fd8b0e8b89a4fffa17df2693967f1f7
 msgid "[upos=\"NOUN\" & orth=\"a.*\"]{2}"
-msgstr ""
+msgstr "[upos=\"NOUN\" & orth=\"a.*\"]{2}"
 
 #: ../../mtas.rst:329 ba6ecb9a2bca4e988dfafd03967dbc49
 msgid ""
@@ -628,6 +629,7 @@ msgid ""
 "tekstowych i form hasłowych, także specyfikacje klas gramatycznych mogą "
 "zawierać wyrażenia regularne."
 msgstr ""
+"Similarly as in the case of orthographic words and lemmas, you can also use regular expressions in queries about grammatical classes."
 
 #: ../../mtas.rst:333 4b1123b9f7e14bdc85f3a23e8cdeba4d
 msgid ""
@@ -636,10 +638,11 @@ msgid ""
 "może zawierać wyrażenia regularne. Na przykład w korpusie stworzony w "
 "języku czeskim następujące zapytanie:"
 msgstr ""
+"Furthermore, using the ``xpos`` attribute, words marked with tags specific for the given language may be retrieved. Here, too, regular expressions may be employed. For example, you can search for all singular neuter nouns in the nominative case in a corpus of Czech using the following query:"
 
 #: ../../mtas.rst:339 59ddb714c78d4d2da2678565c1cc1bf3
 msgid "[xpos=\"NNNS1.*\"]"
-msgstr ""
+msgstr "[xpos=\"NNNS1.*\"]"
 
 #: ../../mtas.rst:341 fce58cf9033d417ea4b8ff17a26a379d
 msgid ""
@@ -647,10 +650,11 @@ msgid ""
 "pojedynczej. Rzeczowniki o tych samych cechach w polskim korpusie (w "
 "potoku Stanzy) znajdzie zapytanie:"
 msgstr ""
+"In order to retrieve nouns of the same characteristics in a Polish corpus (using Stanza) you would need to type in the following query:"
 
 #: ../../mtas.rst:346 ac1949df54ba4604b87ede6535704c00
 msgid "[xpos=\"subst:sg:nom:n.*\"]"
-msgstr ""
+msgstr "[xpos=\"subst:sg:nom:n.*\"]"
 
 #: ../../mtas.rst:348 65a4777a16f847b9b300fc89a31e79af
 msgid ""
@@ -659,6 +663,7 @@ msgid ""
 "mogą pojawić się jeszcze wartości innych kategorii uwzględnionych w obu "
 "tagsetach."
 msgstr ""
+"In both cases, the values of the ``xpos`` attribute are followed by ``.*`` to reflect the fact that each tagset may also include other categories, apart from those that are specified in each query (part of speech, number, gender, and case)."
 
 #: ../../mtas.rst:353 a2204a84cfed48b4a4647670646901bd
 msgid ""
@@ -672,48 +677,49 @@ msgid ""
 "języka. Listę wszystkich kategorii można znaleźć `na stronie Universal "
 "Dependencies <https://universaldependencies.org/u/feat/all.html>`__."
 msgstr ""
+"Thus, you can search for orthographic forms (attribute ``orth``), lemmas (attribute ``lemma``), and tokens belonging to specific grammatical classes (``upos`` or, alternatively, ``xpos``). You can also specify the values of different grammatical categories - such as gender or case - provided that they are included in the grammar of the language under the investigation. The layer of morphosyntactic features (UFEATS) of a given language treebank includes all of the categories that can be applied to the words of this language; their lists are available at <https://universaldependencies.org/u/feat/all.html>`__."
 
 #: ../../mtas.rst:361 aad39d2f63a7468c9a27f90b13d5e704
 msgid ""
 "A zatem w korpusach dla języków posiadających liczbę gramatyczną możliwe "
 "jest zadanie na przykład następujących zapytań:"
-msgstr ""
+msgstr "For instance, if the grammar of the language of the corpus includes the property of grammatical number, you can form the following queries:"
 
 #: ../../mtas.rst:365 3bc2ccd5edf344c89b6372de331b6649
 msgid "[number=\"sing\"]"
-msgstr ""
+msgstr "[number=\"sing\"]"
 
 #: ../../mtas.rst:367 b08bc13c1ba643dda815a4c18b583849
 msgid "znalezione zostaną wszystkie formy w liczbie pojedynczej,"
-msgstr ""
+msgstr "matches all singular forms,"
 
 #: ../../mtas.rst:371 ba2dc19e6a3d4e4e99ba330f2a0d60da
 msgid "[upos=\"NOUN\" & number=\"sing\"]"
-msgstr ""
+msgstr "[upos=\"NOUN\" & number=\"sing\"]"
 
 #: ../../mtas.rst:373 706eb09981a14589944cad9ccc44bd9a
 msgid "znalezione zostaną formy rzeczowników pospolitych w liczbie pojedynczej,"
-msgstr ""
+msgstr "matches singular common nouns,"
 
 #: ../../mtas.rst:377 1c9d08d7285b4b42b41b8f50817967f5
 msgid "[upos=\"NOUN\" & !gender=\"fem\"]"
-msgstr ""
+msgstr "[upos=\"NOUN\" & !gender=\"fem\"]"
 
 #: ../../mtas.rst:379 3dd330488aa6479b8fdcfc6e3c147dc8
 msgid ""
 "formy rzeczowników pospolitych w rodzaju innym niż żeński (czyli np. dla "
 "polskiego, czeskiego czy ukraińskiego: w rodzaju męskim lub nijakim),"
-msgstr ""
+msgstr "matches common nouns with the value of gender other than feminine (e.g. masculine and neuter for languages such as Polish, Czech, or Ukrainian),"
 
 #: ../../mtas.rst:383 f33552d7ed4f43b6b5ea32fbb3d7cc53
 msgid "[number=\"sing\" & case=\"(nom|acc)\" & gender=\"masc\"]"
-msgstr ""
+msgstr "[number=\"sing\" & case=\"(nom|acc)\" & gender=\"masc\"]"
 
 #: ../../mtas.rst:385 5d57448a6376487f92f5f1251286106b
 msgid ""
 "pojedyncze mianownikowe lub biernikowe formy męskie (jeśli w języku są "
 "kategorie liczby, przypadka i rodzaju)."
-msgstr ""
+msgstr "matches singular nominative or accusative masculine forms (if the grammar of the given language has the categories of number, case, and gender)."
 
 #: ../../mtas.rst:387 bac1eca17ce24682bd06575d76c63c88
 msgid ""
@@ -721,18 +727,19 @@ msgid ""
 "innej nazwy kategorii. Ujednoznacznienie dokona się przez odpowiednią "
 "wartość. Dlatego następujące dwa zapytania zwrócą te same wyniki:"
 msgstr ""
+"The names of the categories can also be substituted by the universal attribute ``ufeat``. For example, the following two queries will return the same results:"
 
 #: ../../mtas.rst:394 9e79627e05444cf5b51b547fc30e2189
 msgid "[upos=\"NOUN\" & case=\"acc\" & number=\"plur\" & gender=\"fem\"]"
-msgstr ""
+msgstr "[upos=\"NOUN\" & case=\"acc\" & number=\"plur\" & gender=\"fem\"]"
 
 #: ../../mtas.rst:398 9352268d8a7642d386d28e6b8094db38
 msgid "[upos=\"NOUN\" & ufeat=\"acc\" & ufeat=\"plur\" & ufeat=\"fem\"]"
-msgstr ""
+msgstr "[upos=\"NOUN\" & ufeat=\"acc\" & ufeat=\"plur\" & ufeat=\"fem\"]"
 
 #: ../../mtas.rst:402 3a9254f1fe2e4f9d968d374d3697fe69
 msgid "Graficzny konstruktor zapytań"
-msgstr ""
+msgstr "Visual CQL query builder"
 
 #: ../../mtas.rst:404 0246df1bc56449c693ffc8344bb30be3
 msgid ""
@@ -750,10 +757,11 @@ msgid ""
 " się w pasku wyszukiwania, dzięki czemu można dodatkowo zweryfikować jego"
 " poprawność."
 msgstr ""
+"The visual CQL query builder may be employed to create simple queries. You can use it to define the attributes of each element of a query: part of speech, lemma, as well as values of all grammatical categories listed on the UD website: `<https://universaldependencies.org/u/feat/all.html>`__. Different conditions may be included using the operators *and* (conjunction) and *or* (disjunction). Once each element of a query is defined, press the *Save* button. The query will now appear in the search bar, so that you can verify whether it is correct. Before pressing the *Search* button, you can define additional search parameters (this is optional): for instance, you can use metadata to limit your search."
 
 #: ../../mtas.rst:418 0030603990c7421183da5661b933311e
 msgid "Ograniczenie zapytania do zdania lub akapitu"
-msgstr ""
+msgstr "Limiting the search to a sentence or a paragraph"
 
 #: ../../mtas.rst:420 94d84416f4734deeab8c7ef9ad6f5b6c
 msgid ""
@@ -761,6 +769,7 @@ msgid ""
 " są zdania i akapity. Podział ten można wykorzystać w zapytaniach, na "
 "przykład ograniczając dopasowanie do jednego zdania."
 msgstr ""
+"In corpora indexed in Korpusomat, the units of organisation are sentences and paragraphs. You can use this division when building your queries, for example by limiting a query to a single sentence."
 
 #: ../../mtas.rst:424 74fe540b645b4545b07a5c871428add6
 msgid ""
@@ -771,10 +780,11 @@ msgid ""
 " zdania, w których forma *się* występuje za formą leksemu :lex:`być`, w "
 "odległości co najmniej jednego i nie więcej niż dziesięciu segmentów:"
 msgstr ""
+"In order to limit a query, you need to add the keyword ``within``, followed by ``<s/>`` or ``<p/>``, depending on whether you want to limit it to a single sentence (``<s/>``) or paragraph (``<p/>``). For example, the following query matches sentences where the lemma :lex:`sleep` is separated from the token *furiously* by at least one, but no more than ten segments:"
 
 #: ../../mtas.rst:433 e59213b8ffad4cb68c24e3adecd1335e
 msgid "[lemma=\"bać\"][!orth=\"się\"]{1,10}[orth=\"się\"] within <s/>"
-msgstr ""
+msgstr "[lemma=\"sleep\"][!orth=\"furiously\"]{1,10}[orth=\"furiously\"] within <s/>"
 
 #: ../../mtas.rst:435 9a3f589fd68f41c79f7bf655d34929d1
 msgid ""
@@ -783,13 +793,13 @@ msgid ""
 "za pomocą następującego zapytania można znaleźć wszystkie wystąpienia "
 "czasownika pomocniczego :lex:`być` w czasie przyszłym ograniczone do zdań"
 " zawierających formę bezokolicznika:"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:443 a73f4f6c041b41d5a0bc03a5f7c95ba5
 msgid ""
 "[upos=\"AUX\" & lemma=\"być\" & tense=\"fut\"] within (<s/> containing "
 "[verbform=\"inf\"])"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:445 4e8a88204fc04af7893f3565df20ef8e
 msgid ""
@@ -800,13 +810,13 @@ msgid ""
 "czasownika, a bezokolicznik pełni w zdaniu inną funkcję gramatyczną. "
 "Można też sformułować zapytanie odwrotnie i zapytać o zdania, w których "
 "forma przeszła w ogóle nie występuje:"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:455 5f7712283d3b420f945c56aef090fff9
 msgid ""
 "[upos=\"AUX\" & lemma=\"być\" & tense=\"fut\"] within (<s/> !containing "
 "[tense=\"past\"])"
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:457 8add4589d2e64445a6d578de34ac6b11
 msgid ""
@@ -815,6 +825,7 @@ msgid ""
 "<https://meertensinstituut.github.io/mtas/search_cql.html>`__, nie "
 "wszystkie jednak będą miały sensowne zastosowanie w Korpusomacie."
 msgstr ""
+"The full list of keywords which can be employed in an MTAS search is available here: <https://meertensinstituut.github.io/mtas/search_cql.html>`__. It is important to note, however, that not all of them will have their uses in Korpusomat."
 
 #: ../../mtas.rst:462 a9f4570507ae48e293e9573705b62c56
 msgid ""
@@ -824,30 +835,33 @@ msgid ""
 "dopasowaniem nie jest żaden segment, ale mogą być użyte w połączeniu z "
 "warunkami definiującymi inne segmenty, np. zapytanie:"
 msgstr ""
+"Apart from tags marking elements of a text's structure, such as ``<s/>``, there are also tags marking their beginnings and ends, such as ``<s>`` and ``</s>``, respectively. They will not retrieve any specific segments, but they may be used to further limit the search for an already specified segment. For instance, the query:"
 
 #: ../../mtas.rst:470 3a06cd40a38945f9b859e4000d7ea12d
 msgid "<s> [upos=\"NUM\"]"
-msgstr ""
+msgstr "<s> [upos=\"NUM\"]"
 
 #: ../../mtas.rst:472 207a7dc89a0c48d591a767ec29ddedd5
 msgid ""
 "odnajdzie wszystkie wystąpienia liczebnika stojącego na początku zdania. "
 "Analogicznie zapytanie:"
 msgstr ""
+"will retrieve all instances of a numeral at the beginning of a sentence. A similar query:"
 
 #: ../../mtas.rst:477 0adc6db774574bbdb4f4845a8b86a8c3
 msgid "[upos=\"NUM\"][upos=\"PUNCT\"]</s>"
-msgstr ""
+msgstr "[upos=\"NUM\"][upos=\"PUNCT\"]</s>"
 
 #: ../../mtas.rst:479 73a941a5a25b46958ff3da748e24d9c0
 msgid ""
 "odnajdzie wszystkie wystąpienia ciągu składającego się z liczebnika i "
 "znaku interpunkcyjnego stojących na końcu zdania."
 msgstr ""
+"will retrieve all instances of a numeral followed by a punctuation mark at the end of a sentence."
 
 #: ../../mtas.rst:483 05eb382ba434448aa3745b9e341714d9
 msgid "Warstwa składniowa"
-msgstr ""
+msgstr "The layer of syntax"
 
 #: ../../mtas.rst:485 4c076ac3dc50462c8bc265bf45e212eb
 msgid ""
@@ -858,10 +872,11 @@ msgid ""
 "Dependencies <https://universaldependencies.org>`__. Przykład takiej "
 "analizy znajduje się na poniższym rysunku."
 msgstr ""
+"Another layer of annotation is based on dependency parsing. A text uploaded by a user is automatically divided into sentences, which are then analysed syntactically, in line with the principles of the `Universal Dependencies project <https://universaldependencies.org>`__. The following image shows an example."
 
 #: ../../mtas.rst:-1 6cca2d499cea4ed6a24f2db64fe69f8e
 msgid "Rozbiór składniowy przykładowego zdania"
-msgstr ""
+msgstr "Example of a sentence diagram"
 
 #: ../../mtas.rst:495 5fdd297710604e2c9e727f5a8ad833d8
 msgid ""
@@ -875,10 +890,11 @@ msgid ""
 "segmentach). Pozwala to na łatwe wyszukanie w korpusie prostszych "
 "konstrukcji składniowych oraz analitycznych nieciągłych form fleksyjnych."
 msgstr ""
+"As MTAS is not designed to search for syntactic structures, it cannot be employed to index or search for full sentence diagrams. However, at the level of a token, Korpusomat indexes information about its syntactic head (specifically, the head's lemma and inflectional class), and about the type of relation between these two elements. It also indexes their relative positions (in the linear order) and the distance between them (measured in tokens). As a result, one can search for simple syntactic structures as well as analytical discontinuous inflectional forms."
 
 #: ../../mtas.rst:506 34567d5246c7457887acecd4e2a2ab8c
 msgid "W warstwie znakowania składniowego dostępne są następujące atrybuty:"
-msgstr ""
+msgstr "The following attributes are available at the level of syntactic annotation:"
 
 #: ../../mtas.rst:508 6464e6eb5137416e92062253de804387
 msgid ""
@@ -888,30 +904,31 @@ msgid ""
 "Dependencies <https://universaldependencies.org/u/dep/index.html>`__ (nie"
 " wszystkie muszą jednak wystąpić w rozbiorach zdań w każdym języku),"
 msgstr ""
+"``deprel`` — type of relation between a token and its syntactic head; its value may be one of the 65 dependency relations listed at <https://universaldependencies.org/u/dep/index.html>`__ (although the sets of values may differ between languages),"
 
 #: ../../mtas.rst:512 6dafb3efc71e48bca3e69b46edebba2f
 msgid "``head.upos`` — część mowy (UPOS) bezpośredniego nadrzędnika segmentu,"
-msgstr ""
+msgstr "``head.upos`` — part of speech (UPOS) of the head of the given token,"
 
 #: ../../mtas.rst:514 a9f21b789f33474a977921856e302ea4
 msgid "``head.lemma`` — forma hasłowa bezpośredniego nadrzędnika segmentu,"
-msgstr ""
+msgstr "``head.lemma`` — lemma of the head of the given token,"
 
 #: ../../mtas.rst:516 2acb934054184237a5b9f2543dbb7fc1
 msgid ""
 "``head.ufeat`` — wartość dowolnej cechy morfologicznej bezpośredniego "
 "nadrzędnika segmentu,"
-msgstr ""
+msgstr "``head.ufeat`` — value of any morphological feature of the head of the given token,"
 
 #: ../../mtas.rst:518 ae961261e7154b9f8bd430a39c693a06
 msgid "``head.distance`` — odległość bezpośredniego nadrzędnika segmentu,"
-msgstr ""
+msgstr "``head.distance`` — distance from the token to its syntactic head,"
 
 #: ../../mtas.rst:520 2f408915c982499abedf2ed672093948
 msgid ""
 "``head.position`` — położenie (lewo- lub prawostronne) bezpośredniego "
 "nadrzędnika względem segmentu w porządku linearnym wypowiedzenia."
-msgstr ""
+msgstr "``head.position`` — position (left- or right-branching) of the head with respect to the given token in a linear order."
 
 #: ../../mtas.rst:523 9fe0fd96d0834727b215699fa2ccf52b
 msgid ""
@@ -919,21 +936,22 @@ msgid ""
 "znaleźć wszystkie rzeczowniki pospolite użyte w funkcji dopełnienia "
 "bliższego konkretnego czasownika:"
 msgstr ""
+"As a result of adding these attributes to the Corpus Query Language, the user can easily find, for instance, all common nouns employed in the function of a direct object of a given verb:"
 
 #: ../../mtas.rst:529 6d569284b4004967b6152caf521713e0
 msgid "[upos=\"NOUN\" & deprel=\"obj\" & head.lemma=\"kupić\"]"
-msgstr ""
+msgstr "[upos=\"NOUN\" & deprel=\"obj\" & head.lemma=\"dream\"]"
 
 #: ../../mtas.rst:531 6c40af6f97b5462a810c348fa0fc4663
 msgid ""
 "Możliwe jest również odwrotne wyszukanie odpowiadające na pytanie, przy "
 "jakich czasownikach w roli dopełnienia występuje w korpusie konkretny "
 "rzeczownik:"
-msgstr ""
+msgstr "Or, alternatively, one can search for the verbs which take a specified noun as their direct object:"
 
 #: ../../mtas.rst:537 69309afe0ec945268d199eb9445dc0be
 msgid "[deprel=\"obj\" & head.upos=\"VERB\" & lemma=\"osoba\"]"
-msgstr ""
+msgstr "[deprel=\"obj\" & head.upos=\"VERB\" & lemma=\"idea\"]"
 
 #: ../../mtas.rst:539 189bd6309d2b48f384de1ee3b4e27071
 msgid ""
@@ -948,6 +966,7 @@ msgid ""
 "znajduje się w `dokumentacji UD "
 "<https://universaldependencies.org/u/dep/index.html>`__."
 msgstr ""
+"The result of this query will be a concordance list of the lemma :lex:`idea`, whereas the verb forms (marked in bold) will appear either on the left or on the right. Using the statistical module, they can be grouped and sorted according to their frequencies."
 
 #: ../../mtas.rst:549 3183135fc8484da69ed4cfa1ee785aed
 msgid ""
@@ -955,28 +974,29 @@ msgid ""
 "względem segmentu można znaleźć przykłady niekanonicznego szyku zdania, "
 "np. podmiotu po orzeczeniu:"
 msgstr ""
+"The attribute coding for left- and right-branching of the syntactic head with respect to the given token allows the user to find examples of non-standard word order. For example, the following queries will retrieve instances when the verb is followed by its subject:"
 
 #: ../../mtas.rst:555 fbf214c736ce4c3194547ef35202792b
 msgid "[deprel=\"nsubj\" & head.position=\"left\"]"
-msgstr ""
+msgstr "[deprel=\"nsubj\" & head.position=\"left\"]"
 
 #: ../../mtas.rst:557 66b5bb4930d246d7bae01e1072337ff3
 msgid "lub dopełnienia bliższego przed orzeczeniem:"
-msgstr ""
+msgstr "or when the verb is preceded by its direct object:"
 
 #: ../../mtas.rst:561 352bc7c94076457c9345c5286485f9cb
 msgid "[deprel=\"obj\" & head.position=\"right\"]"
-msgstr ""
+msgstr "[deprel=\"obj\" & head.position=\"right\"]"
 
 #: ../../mtas.rst:563 576d6d5be8bb4c9eba7b606a32b7d311
 msgid ""
 "Podobnie w wypadku innych konstrukcji — brak określenia pozycji "
 "nadrzędnika w zapytaniu:"
-msgstr ""
+msgstr "Similarly, a query which does not specify the position of the head, as in:"
 
 #: ../../mtas.rst:568 96d38e6c095942ed98c05a7af6d0b342
 msgid "[upos=\"ADJ\" & deprel=\"amod\" & head.lemma=\"zupa\"]"
-msgstr ""
+msgstr "[upos=\"ADJ\" & deprel=\"amod\" & head.lemma=\"sleep\"]"
 
 #: ../../mtas.rst:570 e8d41dba74eb4b2f9a819d0dae74d420
 msgid ""
@@ -985,6 +1005,7 @@ msgid ""
 "lewostronnych (np. *gorąca zupa*) lub prawostronnych (np. *zupa "
 "pomidorowa*)."
 msgstr ""
+"will match all adverbs modifying the verb :lex:`sleep`. In turn, specifying its position will limit the search to adverbs positioned to the left (*furiously sleep*) or to the right (*sleep furiously*) of the verb."
 
 #: ../../mtas.rst:574 4a7bba68ef124de6be73a62110080529
 msgid ""
@@ -995,12 +1016,15 @@ msgid ""
 " np. na ograniczenie wyników tylko do takich przypadków, w których "
 "elementy nie sąsiadują ze sobą:"
 msgstr ""
+"Thanks to the partial syntactic annotation, the user can search for elements of a phrase which remain in a relation of dependency, regardless of the fact that they may not necessarily be neighbouring words, but may, in fact, be separated by other segments. The attribute of distance further limits the search to instances where these elements are not neighbouring words:"
 
 #: ../../mtas.rst:583 0583f588e74842518efa0e1390cf681c
 msgid ""
 "[deprel=\"obj\" & head.upos=\"VERB\" & tense=\"past\" & "
 "!head.distance=\"1\"]"
 msgstr ""
+"[deprel=\"obj\" & head.upos=\"VERB\" & tense=\"past\" & "
+"!head.distance=\"1\"]"
 
 #: ../../mtas.rst:585 a96ca1aa0a1c479ea2b00e7d93401401
 msgid ""
@@ -1008,27 +1032,28 @@ msgid ""
 "czasie przeszłym, które są oddzielone od tego orzeczenia co najmniej "
 "jednym elementem."
 msgstr ""
+"The above query will retrieve all words in the function of a direct object of a verb in the past tense, separated from the verb by at least one element."
 
 #: ../../mtas.rst:589 6fca6feece484fa1841d994e8e785ce4
 msgid ""
 "Innym przykładem użycia znakowania składniowego w korpusie może być "
 "zapytanie wyszukujące konstrukcje w stronie biernej:"
-msgstr ""
+msgstr "Syntactic annotation may also be employed to search for passive forms of verbs:"
 
 #: ../../mtas.rst:594 94abf03b56814385a80d7200a8eab00c
-msgid "[upos=\"AUX\" & deprel=\"aux:pass\" & head.upos=\"ADJ\"]"
-msgstr ""
+msgid "[deprel=\"aux:pass\"]"
+msgstr "[deprel=\"aux:pass\"]"
 
 #: ../../mtas.rst:596 ac6c7cde91474de6b8d0eace1cbd8c02
 msgid ""
 "którego dopasowaniem są słowa posiłkowe konstrukcji biernej połączone z "
 "formą imiesłowu biernego (oznaczoną jako przymiotnik) relacją "
 "``aux:pass``."
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:600 7e0cac9e3c5c481d92fc44142a28d06f
 msgid "Warstwa jednostek nazewniczych"
-msgstr ""
+msgstr "The layer of named entities"
 
 #: ../../mtas.rst:602 1edeaf1ea17f46a9aef09113d41f974e
 msgid ""
