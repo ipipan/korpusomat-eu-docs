@@ -182,7 +182,7 @@ msgstr ""
 "annotation. The following is a guide to querying corpora indexed in "
 "Korpusomat, which are annotated at three different levels: "
 "morphosyntactic, syntactic, and the level of named entities. More "
-"general, basic information on MTAS is available at the project's website <https://meertensinstituut.github.io/mtas/>`__."
+"general, basic information on MTAS is available `at the project's website <https://meertensinstituut.github.io/mtas/>`__."
 
 #: ../../mtas.rst:39 3dc9e7ea601841b799f02630ca83a317
 msgid "Zapytania o segmenty"
