@@ -1067,6 +1067,7 @@ msgid ""
 "języków w obrębie tych potoków. Ponadto, nie dla wszystkich języków "
 "istnieją odpowiednie modele do oznaczania jednostek nazewniczych."
 msgstr ""
+"The final layer of information added to texts indexed in Korpusomat is the layer of named entities. Named entities are one- or multi-word items designating people, places, institutions, etc. There is no single, universal standard for annotating named entities, nor is there a multilingual dataset annotated consistently for named entities. As a result, the values and their ranges at this layer of annotation vary depending on the pipeline as well as across languages within each pipeline. Furthermore, for some languages, models of annotation of named entities are not available."
 
 #: ../../mtas.rst:611 34416845a703457cb2cbd19b3ae3039e
 msgid ""
@@ -1081,6 +1082,7 @@ msgid ""
 "wartości klasyfikacji dla danego korpusu użytkownik znajdzie w graficznym"
 " konstruktorze zapytań."
 msgstr ""
+"The most basic commonly used set of labels for named entities consists of only four elements: ``PER`` (person), ``LOC`` (location), ``ORG`` (organisation), and ``MISC`` (miscellanea). It is available, within the Stanza pipeline, for Spanish, French, Russian, and Ukrainian, among others. However, some languages employ more detailed classifications. For instance, there are 18 values for the classification of named entities in English and Chinese. The visual CQL query builder provides the full list of values available for a given corpus. The following examples employ the simplest four-element classification."
 
 #: ../../mtas.rst:620 6b644b9c83944035b6ff5acdc9271219
 msgid ""
@@ -1090,33 +1092,34 @@ msgid ""
 "/>``. Obowiązują również te same zasady dotyczące znaku ukośnika wewnątrz"
 " znacznika:"
 msgstr ""
+"Named entities, similarly to sentences and paragraphs, may cross segment boundaries. Therefore, the ``<ne />`` tag may be used to refer to items marked as named entities. The rules regarding the use of slash also apply here:"
 
 #: ../../mtas.rst:626 8f449e01b13e491f901a28000816f4d6
 msgid "``<ne>`` oznacza początek ciągu opisanego jako jednostka nazewnicza,"
-msgstr ""
+msgstr "``<ne>`` marks the beginning of a string marked as a named entity,"
 
 #: ../../mtas.rst:628 841c5d24cfd1447e86523add5b270ac8
 msgid "``</ne>`` oznacza koniec ciągu opisanego jako jednostka nazewnicza."
-msgstr ""
+msgstr "``</ne>`` marks the end of a string marked as a named entity."
 
 #: ../../mtas.rst:630 9babdaf965f442308676535f15bbef01
 msgid "Najprostsze możliwe zapytanie tego typu ma postać:"
-msgstr ""
+msgstr "The following is the simplest query about named entities:"
 
 #: ../../mtas.rst:634 fd0c84542b6b48618423b93f3946cc0b
 msgid "<ne />"
-msgstr ""
+msgstr "<ne />"
 
 #: ../../mtas.rst:636 a001d5d584c84e23a90ed0012ca9966a
 msgid ""
 "i zwróci wszystkie jednostki nazewnicze wszystkich typów odnalezione w "
 "korpusie. Wyszukanie można ograniczyć do konkretnego typu nazw np. nazw "
 "miejsc:"
-msgstr ""
+msgstr "It will retrieve all named entities of every type in the corpus. But the user can also limit the search to, for example, names of locations:"
 
 #: ../../mtas.rst:642 d1b8228d35634d6a8f481e764ab34bb6
 msgid "<ne=\"LOC\" />"
-msgstr ""
+msgstr "<ne=\"LOC\" />"
 
 #: ../../mtas.rst:644 7abae0ce92ae4865ac7a3c92d1bd14ed
 msgid ""
@@ -1125,58 +1128,59 @@ msgid ""
 " których są one zbudowane lub klasyfikacją nazewniczą ich elementów "
 "składowych. Oto kilka przykładów takich zapytań:"
 msgstr ""
+"Similarly as in the case of sentences and paragraphs, it is possible to create queries about specific orthographic or morphosyntactic features of named entities. For example, the user may search for:"
 
 #: ../../mtas.rst:651 71e4c52542284dd5ae82e3cadb2a1b3f
 msgid "[upos=\"CCONJ\"] within <ne=\"PER\" />"
-msgstr ""
+msgstr "[upos=\"CCONJ\"] within <ne=\"PER\" />"
 
 #: ../../mtas.rst:653 25402808ab4b405680f7881652c97c52
 msgid ""
 "— wszystkie nazwy organizacji zawierające spójnik współrzędny, np. "
 "*Krajowa Rada Radiofonii i Telewizji* czy *Instytut Meteorologii i "
 "Gospodarki Wodnej*,"
-msgstr ""
+msgstr "names of organisations where segments are linked by a coordinate conjunction, such as *Department for Culture, Media, and Sport* or *Organisation for Economic Cooperation and Development*,"
 
 #: ../../mtas.rst:657 b79dc5a4e68149b6b0be06e81a7500ae
 msgid "<ne=\"LOC\" /> [upos=\"CCONJ\"] <ne=\"LOC\" />"
-msgstr ""
+msgstr "<ne=\"LOC\" /> [upos=\"CCONJ\"] <ne=\"LOC\" />"
 
 #: ../../mtas.rst:659 0b56bd3af8214577b126e9d195265f46
 msgid ""
 "— wystąpienia dwóch nazw geograficznych połączonych spójnikiem "
 "współrzędnym, np. *Europa Zachodnia lub Skandynawia*."
-msgstr ""
+msgstr "instances where two names of geographical spaces are joined by a coordinate conjunction, e.g. *Western Europe or Scandinavia*,"
 
 #: ../../mtas.rst:663 6c211c6264af49fc965cfc153b308e2b
 msgid "[orth=\"A.*\"][orth=\"M.*\"] fullyalignedwith <ne=\"PER\" />"
-msgstr ""
+msgstr "[orth=\"A.*\"][orth=\"M.*\"] fullyalignedwith <ne=\"PER\" />"
 
 #: ../../mtas.rst:665 59091021afaa42379749a525e7ee0729
 msgid ""
 "— dwa kolejne segmenty, z których pierwszy zaczyna się od *A*, drugi zaś "
 "od *M* i które w całości w tekście występują jako nazwa osoby, np. *Adam "
 "Michnik*, *Antoni Macierewicz*."
-msgstr ""
+msgstr "two neighbouring tokens starting with, for instance, *T* and *M*, and forming a person's name, e.g. *Theresa May*, *Thomas Mann*."
 
 #: ../../mtas.rst:667 abc8ea1c4e3e453f9ab1ce10f6d3def3
 msgid ""
 "Ponadto indeksowany jest również atrybut zawierający informację o "
 "długości jednostki nazewniczej mierzonej w segmentach. Zapytanie:"
-msgstr ""
+msgstr "Furthermore, information about the length of each named entity (measured in tokens) is available. The following query will return all named entities which consist of exactly three tokens:"
 
 #: ../../mtas.rst:671 705f15d9ba08414aa245b32b4bf70fcb
 msgid "<ne.len=\"3\" />"
-msgstr ""
+msgstr "<ne.len=\"3\" />"
 
 #: ../../mtas.rst:673 ace8763188194463a5686eb36638b476
 msgid ""
 "odnajdzie wszystkie takie jednostki składające się z dokładnie trzech "
 "segmentów."
-msgstr ""
+msgstr " "
 
 #: ../../mtas.rst:677 1903a060028347468f539e1f3153867d
 msgid "Ograniczenie zapytania za pomocą metadanych"
-msgstr ""
+msgstr "Using metadata to limit the search"
 
 #: ../../mtas.rst:679 6aa4eef00b5e4dc8b41a5d039a340fca
 msgid ""
@@ -1186,6 +1190,7 @@ msgid ""
 "wypełnione, w szczególności mogą pozostać puste. Użytkownik może też "
 "zdefiniować własne pola o dowolnych etykietach."
 msgstr ""
+"Texts uploaded into Korpusomat are, by default, given four metadata labels: author, title, date of publication, and genre. This information is usually provided by the user, but the labels may also remain empty. The user may also add new labels."
 
 #: ../../mtas.rst:685 e279b60e1d614e26a9804b3244ce1d23
 msgid ""
@@ -1194,4 +1199,4 @@ msgid ""
 "można zdefiniować takie ograniczenia. Można nałożyć wiele ograniczeń "
 "jednocześnie, dodając je za pomocą przycisku dodaj ograniczenie."
 msgstr ""
-
+"The metadata may be used to limit corpus searches. In order to do so, press the Metadata button, define a constraint, and then press Add constraint. This process can be repeated in order to add more than one constraint."
