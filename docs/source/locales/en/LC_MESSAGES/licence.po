@@ -37,7 +37,7 @@ msgid ""
 "Część pt. „Tworzenie zapytań do korpusu” stanowi pochodną `„Ściągawki do "
 "Narodowego Korpusu Języka Polskiego” "
 "<http://nkjp.pl/poliqarp/help/pl.html>`_ (dostępnej na warunkach licencji"
-" `Creative Commons BY-SA <https://creativecommons.org/licenses/by-sa/4.0/legalcode.pl>`__), której autorem jest Adam Przepiórkowski i którą"
+" `Creative Commons BY-SA <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`__), której autorem jest Adam Przepiórkowski i którą"
 " następnie poprawiali i rozszerzali Jakub Wilk i Aleksander Buczyński."
 msgstr "Section \"Corpus Query Language\" derives from `"Polish National Corpus: A Quick Start Guide" <http://nkjp.pl/poliqarp/help/pl.html>`_ (available under `Creative Commons BY-SA <https://creativecommons.org/licenses/by-sa/4.0/legalcode.pl>`__ licence). The latter document was first created by Adam Przepiórkowski, and updated by Jakub Wilk and Aleksander Buczyński."
 
