@@ -541,10 +541,7 @@ zapytania będą wystąpienia rzeczownika :lex:`osoba`, nadrzędne względem nic
 formy czasownikowe (finitywne i niefinitywne) będą się zaś znajdowały
 w lewym lub prawym kontekście wyników wyróżnione pismem pogrubionym.
 Można je jednak zgrupować i posortować względem ich częstości dzięki
-opcjom Statystyk. Wartością atrybutu ``deprel`` jest jedna z etykiet krawędzi 
-w drzewie zależnościowym odnosząca się do dopełnienia bliższego. Pełny zestaw 
-etykiet relacji zależnościowych znajduje się w `dokumentacji 
-UD <https://universaldependencies.org/u/dep/index.html>`__. 
+opcjom Statystyk.
 
 Dzięki atrybutowi kodującemu lewo- i prawostronną pozycję nadrzędnika
 względem segmentu można znaleźć przykłady niekanonicznego szyku zdania,
@@ -656,7 +653,7 @@ składowych. Oto kilka przykładów takich zapytań:
 
    <ne="LOC" /> [upos="CCONJ"] <ne="LOC" />
    
-— wystąpienia dwóch nazw geograficznych połączonych spójnikiem współrzędnym, np. *Europa Zachodnia lub Skandynawia*.
+— wystąpienia dwóch nazw geograficznych połączonych spójnikiem współrzędnym, np. *Europa Zachodnia lub Skandynawia*,
 
 ::
 
