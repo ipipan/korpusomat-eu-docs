@@ -50,7 +50,7 @@ internetowego), z którego zostanie wydobyta treść i przetworzona do pliku tek
 
 Po załadowaniu treści można wprowadzić lub zmodyfikować metadane (19). Korpusomat automatycznie
 spróbuje wydobyć metadane z dodanego pliku, jednak nie
-zawsze jest to możliwe. W wypadku tekstów w formatach EPUB i MOBI oraz stron internetowych Korpusomat spróbuje wydobyć metadany z nagłówków dokumentów. W wypadku plików tekstowych automatyczne rozpoznawanie metadanych wymaga tego, by nazwy plików zapisane były w następującym formacie:
+zawsze jest to możliwe. W wypadku tekstów w formatach EPUB i MOBI oraz stron internetowych Korpusomat spróbuje wydobyć metadane z nagłówków dokumentów. W wypadku plików tekstowych automatyczne rozpoznawanie metadanych wymaga tego, by nazwy plików zapisane były w następującym formacie:
 „autor - tytuł (miejsce, rok)”. Przykładowo, aby
 Korpusomat automatycznie rozpoznał metadane „Pana Tadeusza” z nazwy pliku, dodany plik powinien nazywać
 się „Adam Mickiewicz - Pan Tadeusz (Paryż, 1834).txt”.
