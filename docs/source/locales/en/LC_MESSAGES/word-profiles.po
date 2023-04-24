@@ -1,290 +1,309 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2022, IPI PAN
-# This file is distributed under the same license as the Korpusomat EU
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+# Copyright (C) 2023, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU package.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Korpusomat EU 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-02 15:34+0100\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language: en\n"
-"Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"POT-Creation-Date: 2023-04-24 14:21+0200\n"
+"PO-Revision-Date: 2023-04-24 17:30+0200\n"
+"Last-Translator: FULL NAME <c.klamra@ipipan.waw.pl>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
 
-#: ../../word-profiles.rst:2 053af8cbabca48989bff458ce8540d55
+#: ../word-profiles.rst:5
+#: f5c89f16724040928be8185c4c5aa696
 msgid "Profile słów"
-msgstr ""
+msgstr "Word profiles"
 
-#: ../../word-profiles.rst:5 3e11c1a0b28f48c69c248c27fbbd01ea
+#: ../word-profiles.rst:8
+#: 06dfbf530066416dad61183a77ad0d1e
 msgid "Wprowadzenie"
-msgstr ""
+msgstr "Introduction"
 
-#: ../../word-profiles.rst:7 2922df70bb114e24b1e4d424d0a99465
-msgid ""
-"Profile słów polegają na odnalezieniu w tekście słownictwa, które często "
-"łączy się ze wskazanym słowem w związki syntaktyczne określonego rodzaju."
-" Na przykład rzeczownik *oczy* często jest modyfikowany przez przymiotnik"
-" *niebieskie*, i często jest dopełnieniem bliższym czasownika *zamknąć*. "
-"Z kolei rzeczownik *pies* często pojawia się w związku koordynacji z "
-"rzeczownikiem *kot*. Otrzymane kolokacje charakteryzują język korpusu, "
-"tj. w korpusie reprezentatywnym dla standardowego języka polskiego, będą "
-"się głównie pojawiać związki wynikające z ogólnych zależności "
-"semantycznych lub frazeologii, natomiast w korpusie dziedzinowym, związki"
-" wywodzące się z języka danej dziedziny, związki charakteryzujące styl "
-"autora, lub jego sposób myślenia. Na przykład w korpusie ogólnym, słowo "
-"*funkcja* będzie często określane przymiotnikiem *podstawowa*, zaś w "
-"korpusie matematycznym, częściej pojawi się przymiotnik *ciągła* lub "
-"*różnowartościowa*. Można się też spodziewać, że przymiotnik "
-"*robotniczy*, będzie występował z innymi kolokatami w korpusie z czasów "
-"PRL, a z innymi w korpusie współczesnym."
-msgstr ""
+#: ../word-profiles.rst:10
+#: 64c8be7ad5824843a245c4295727d0cd
+msgid "Profile słów umożliwiają odnalezienie w tekście słownictwa, które często łączy się ze wskazanym słowem w związki syntaktyczne określonego rodzaju. Na przykład rzeczownik *oczy* często jest modyfikowany przez przymiotnik *niebieskie*, i często jest dopełnieniem bliższym czasownika *zamknąć*. Z kolei rzeczownik *pies* często pojawia się w związku koordynacji z rzeczownikiem *kot*. Otrzymane kolokacje charakteryzują język korpusu, tj. w korpusie reprezentatywnym dla standardowego języka polskiego, będą się głównie pojawiać związki wynikające z ogólnych zależności semantycznych lub frazeologii, natomiast w korpusie dziedzinowym, związki wywodzące się z języka danej dziedziny, związki charakteryzujące styl autora, lub jego sposób myślenia. Na przykład w korpusie ogólnym, słowo *funkcja* będzie często określane przymiotnikiem *podstawowa*, zaś w korpusie matematycznym, częściej pojawi się przymiotnik *ciągła* lub *różnowartościowa*. Można się też spodziewać, że przymiotnik *robotniczy*, będzie występował z innymi kolokatami w korpusie z czasów PRL, a z innymi w korpusie współczesnym."
+msgstr "Word profiles is a function that allows the user to find vocabulary that often co-occurs with with the specified word in syntactic relations of a certain type. For example, the noun *eyes* is often modified by the adjective *blue*, and is often the direct object of the verb *close*. Meanwhile, the noun *dog* often appears in a coordination with the noun *cat*.
+The identified collocations characterize the language of the corpus, i.e. in a general corpus most of the syntactic relationships present are related to general semantic associations or phraseology, while in a domain-specific corpus the relationships present result from the language of the domain, the author's style or his way of thinking. For example, in a general corpus the word *function* will be often modified by adjectives such as *basic*, while in a mathematical corpus – by words such as *continuous* or *injective*."
 
-#: ../../word-profiles.rst:11 dff1c12be1ca49109d83388d15a739a0
-msgid ""
-"Profile słów są dostępne wyłącznie dla korpusów posiadających warstwę "
-"anotacji zależnościowej."
-msgstr ""
 
-#: ../../word-profiles.rst:13 13fe69ccf49a447590c01c224a77bad6
-msgid ""
-"Należy zauważyć, że ze względów statystycznych funkcjonalność profili "
-"słów najlepiej działa dla korpusów stosunkowo dużych (od 1 miliona "
-"segmentów), oraz słów pojawiających się w danym korpusie relatywnie "
-"często."
-msgstr ""
 
-#: ../../word-profiles.rst:15 1524b4314e594a8ab6ed9c615a97067b
-msgid ""
-"Obliczenie profilu danego słowa, może potrwać od kilku, do "
-"kilkudziesięciu sekund, w zależności od wielkości korpusu i częstości "
-"słowa."
-msgstr ""
+#: ../word-profiles.rst:14
+#: 167be21dccbc43e28a8c4f2125c22ec0
+msgid "Profile słów są dostępne wyłącznie dla korpusów posiadających warstwę anotacji zależnościowej."
+msgstr "Word profiles are only available for corpora which have the dependency annotation enabled."
 
-#: ../../word-profiles.rst:18 9f1693cc67e04507aed9fb6b0644663b
+#: ../word-profiles.rst:16
+#: f755cc66c4624a4093425525f3b3016d
+msgid "Należy zauważyć, że ze względów statystycznych funkcjonalność profili słów najlepiej działa dla korpusów stosunkowo dużych (od 1 miliona segmentów), oraz słów pojawiających się w danym korpusie relatywnie często."
+msgstr "Please note that the search quality is higher for large corpora (the ones that have at least 1 million segments)"
+
+#: ../word-profiles.rst:18
+#: 01d73da0347b474287ef39db4dc3fb49
+msgid "Obliczenie profilu danego słowa, może potrwać od kilku, do kilkudziesięciu sekund, w zależności od wielkości korpusu i częstości słowa."
+msgstr "Please note that calculating the profile of a word might take anywhere from a few seconds to a few minutes, depending on the size of the corpus and the frequency of the word."
+
+
+#: ../word-profiles.rst:21
+#: 682c6bbf48d240e1ae233df8bdaff11f
 msgid "Korzystanie"
-msgstr ""
+msgstr "Usage"
 
-#: ../../word-profiles.rst:21 5b4c7253ff7b4163949ddefd9e3c2ff8
-msgid "|image14|"
-msgstr ""
+#: ../word-profiles.rst:24
+#: e8211441398f440c92cdcbe6ffe0b4f4
+msgid "|image29|"
+msgstr "|image29|"
 
-#: ../../word-profiles.rst:62 b2198fa4c6cd4c28bc325f379b31bd12
-#: b8a6cfeb6f57416d85d10c6ad9f4b58b
-msgid "image14"
-msgstr ""
+#: ../word-profiles.rst:114
+#: 861c3b988a7745adbc4d650ec9f8ebb7
+#: f97a8633dc5e42c9a31f343321505e26
+msgid "Panel \"odpytaj korpus\", w którym znajduje się zakładka profili słów"
+msgstr "The \"Word profiles\" tab is located in the \"Query corpus\" panel"
 
-#: ../../word-profiles.rst:23 6e254ddb802741dea28908fb07dac0f9
-msgid ""
-"Profile słów są dostępne z poziomu ekranu *Odpytaj korpus*, karta "
-"*Profile Słów* (**1** na obrazku). W pole *Słowo* należy wpisać słowo, "
-"którego profil chcemy obliczyć. Tworząc profil danego słowa, możemy "
-"wybrać, czy interesują nas wszystkie jego wystąpienia, niezależnie od "
-"formy w tekście (i.e. szukamy po lemacie), czy też chcemy zobaczyć "
-"jedynie kolokaty określonej formy danego leksemu (np. rzeczownika *psy*, "
-"a więc słowa w liczbie mnogiej, i mianowniku lub bierniku). Możemy też "
-"odfiltrować kolokaty, ustawiając minimalną liczbę wspólnych wystąpień w "
-"korpusie, ta funkcja pozwala ominąć pary które nie powtarzają się, a "
-"uzyskały wysoki wynik ze względu na ich rzadkość w korpusie."
-msgstr ""
 
-#: ../../word-profiles.rst:26 04dde68d28ce4273ae16910825ff50a6
-msgid "|image17|"
-msgstr ""
+#: ../word-profiles.rst:26
+#: 00dee56c8f594fef90f5132e04a1d884
+msgid "Profile słów są dostępne z poziomu ekranu *Odpytaj korpus*, karta *Profile Słów* (**1** na obrazku). W pole *Słowo* należy wpisać słowo, którego profil chcemy obliczyć."
+msgstr "Word profiles are available from the \"Word profiles\" tab in the \"Query corpus\" view (**1**). The field *Word* should be filled with the word the user want to search for."
 
-#: ../../word-profiles.rst:68 030ec32f4cfc4e358b5f5e797faabec8
-#: eeb8b3aa332b4cd1b1fbdf7111199dc0
-msgid "image17"
-msgstr ""
 
-#: ../../word-profiles.rst:26 1930ea96946347c58c6c709738af6707
-msgid ""
-"Formularz pozwalający doprecyzować parametry profilu słów: narzucić "
-"określoną interpretację pod względem klasy gramatycznej, określić czy "
-"interesują nas wystąpienia wskazanej formy, czy wszystkich form "
-"przynależących do danego leksemu, zastosować filtrowanie frekwencyjne, "
-"lub słowo kontrastowe."
-msgstr ""
 
-#: ../../word-profiles.rst:28 8b6e7dbcfd074a38bb66e979c943cd1d
-msgid ""
-"W wyniku otrzymujemy tabelę, z której każda kolumna odpowiada jednemu z "
-"typów związków syntaktycznych w jakie może wchodzić wskazane słowo. Dane "
-"w każdej z kolumn reprezentują ranking kolokatów, każdy z takich "
-"rankingów jest niezależny od pozostałych, więc uporządkowanie danych w "
-"wiersze w tabeli, nie ma znaczenia."
-msgstr ""
+#: ../word-profiles.rst:28
+#: 389c8a6e9f934f8c836811a3f09db4eb
+msgid "|image30|"
+msgstr "|image30|"
 
-#: ../../word-profiles.rst:30 aca91e0a2439419fa40883a31e7ce723
-msgid ""
-"Aplikacja umożliwia także tworzenie profili porównawczych. W tym celu "
-"należy wpisać do pola *porównaj z* drugie z interesujących nas słów. "
-"Przygotowując tabelę, aplikacja weźmie pod uwagę różnicę wartości "
-"**logDice** słowa podstawowego, oraz słowa porównawczego dla każdego z "
-"kolokatów. Tabela jest automatycznie skracana do postaci w której "
-"ekstrahowane są trzy sekcje: kolokaty wyraźnie preferujące pierwsze "
-"słowo, kolokaty neutralne (o wartościach różnicy logDice najbliższych 0),"
-" oraz kolokaty wyraźnie preferujące słowo porównawcze. Indeksy wierszy "
-"wpadających do każdej z tych sekcji są oznaczone innym kolorem."
-msgstr ""
+#: ../word-profiles.rst:117
+#: a40598598ef0445da4c5adc0504facb5
+#: 6dac354f1827442f8fa04b003dfa40d6
+msgid "Panel profili słów"
+msgstr "The word profiles panel"
 
-#: ../../word-profiles.rst:33 bc9ef357877e4f968f45fcf26b17f2a8
-msgid "|image18|"
-msgstr ""
+#: ../word-profiles.rst:31
+#: ../word-profiles.rst:120
+#: 23b13369f14744208b1e7777515a674b
+#: e79ab94e674c4b6a876d0d7724bcfb30
+#: eef0763754434a97bcbd86e09c3c7862
+msgid "Zaawansowane opcje wyszukiwania"
+msgstr "Advanced search options"
 
-#: ../../word-profiles.rst:70 156eb2237781415e9f97189a2111b3b8
-#: 7934285d9ced4116b1590ac0254cafad
-msgid "image18"
-msgstr ""
+#: ../word-profiles.rst:33
+#: 3994b8ee33254a1c8c2b1186cb81e01b
+msgid "Po kliknięciu w ikonę koła zębatego (**2**) dostępne są również zaawansowane opcje wyszukiwania – tworząc profil danego słowa, możemy wybrać, czy interesują nas wszystkie jego wystąpienia, niezależnie od formy w tekście (i.e. szukamy po lemacie), czy też chcemy zobaczyć jedynie kolokaty określonej formy danego leksemu (np. rzeczownika *psy*, a więc słowa w liczbie mnogiej, i mianowniku lub bierniku). Możemy też odfiltrować kolokaty, ustawiając minimalną liczbę wspólnych wystąpień w korpusie, ta funkcja pozwala ominąć pary które nie powtarzają się, a uzyskały wysoki wynik ze względu na ich rzadkość w korpusie."
+msgstr "Advanced search options can be accessed by clicking the cog icon (**2**). The user can choose whether the search should include the occurrences of all forms of the word (i.e. searching by base/lemma) or only of the particular form (e.g. the plural noun \"dogs\"). It is also possible to filter out the least common words by setting the minimal number of occurrences of the query word and the collocate – this option allows to filter out words which do not recur but are assigned a high score due to their infrequency."
 
-#: ../../word-profiles.rst:33 e449be563b8646dbaaf37056d7e2a34d
-msgid ""
-"Tabela wynikowa, dla profilu porównawczego: *serce* vs. *rozum* w "
-"korpusie dialogów Platona."
-msgstr ""
 
-#: ../../word-profiles.rst:35 c8f2353b86a24bbc9e513d2f4b262e6d
-msgid ""
-"Kliknięcie każdego z kolokatów, wygeneruje wyrażenie wyszukiwawcze które "
-"pozwoli odnaleźć wszystkie wspólne wystąpienia obu terminów w Korpusie."
-msgstr ""
+#: ../word-profiles.rst:36
+#: 3e8a3981aa4949cebe9de80ce8784ad8
+msgid "|image31|"
+msgstr "|image31|"
 
-#: ../../word-profiles.rst:38 33ee4251f01f43468dd3e9594afa27ae
+#: ../word-profiles.rst:36
+#: dbf45891636b4768be9a5ff0b06e6ef3
+msgid "Formularz pozwalający doprecyzować parametry profilu słów: narzucić określoną interpretację pod względem klasy gramatycznej, określić czy interesują nas wystąpienia wskazanej formy, czy wszystkich form przynależących do danego leksemu, zastosować filtrowanie frekwencyjne, lub słowo kontrastowe."
+msgstr "The advanced search form allows to specify the grammatical form of the word, choose whether to search by the base form or the orthographic form and filter out the least common collocates."
+
+
+#: ../word-profiles.rst:38
+#: 316b24af5f3d4cba872129612cae2bf9
+msgid "W wyniku otrzymujemy tabelę, z której każda kolumna odpowiada jednemu z typów związków syntaktycznych w jakie może wchodzić wskazane słowo. Dane w każdej z kolumn reprezentują ranking kolokatów, każdy z takich rankingów jest niezależny od pozostałych."
+msgstr "The results of the search are displayed in a table where each column represents one of the syntactic relationships of the word. 
+Every column contains a collocate ranking and each of the rankings is independent of other rankings."
+
+
+#: ../word-profiles.rst:41
+#: b4c4f6cb4fb74cae898aaae879e6b46f
+msgid "Profile porównawcze"
+msgstr "Comparative profiles"
+
+#: ../word-profiles.rst:42
+#: b39cc6e1e6d847838ea91e0cdfda6a60
+msgid "\"Aplikacja umożliwia także tworzenie profili porównawczych. W tym celu należy wpisać do pola *porównaj z* drugie z interesujących nas słów. Wyszukiwanie porównawcze zakłada, że zadane słowa należą do tej samej klasy gramatycznej. Przygotowując tabelę, aplikacja weźmie pod uwagę różnicę wartości **logDice** słowa podstawowego, oraz słowa porównawczego dla każdego z kolokatów. Tabela jest automatycznie skracana do postaci w której ekstrahowane są trzy sekcje. Kolokaty wyraźnie preferujące pierwsze słowo, kolokaty neutralne (o wartościach różnicy logDice najbliższych 0), oraz kolokaty wyraźnie preferujące słowo porównawcze. Indeksy wierszy wpadających do każdej z tych sekcji są oznaczone innym kolorem. |image32|"
+msgstr "It is also possible to create a comparative profiles. The second words should be typed into the *compare with* field. Comparative search assumes that both words are of the same gramatical class. While generating the table, the algorithm will calculate the difference in the **logDice** value of the two words, for each of the collocates. Then, the table is automaticaly shortened and cut into three sections – collocates strongly associated with the first words, strongly neutral collocates (those for which the logDice difference is closest to 0) and collocates that are strongly related to the second word. The indexes of rows falling into each of these categories are marked with a different color. |image32|"
+
+
+#: ../word-profiles.rst:123
+#: abc4dfd2a44a400aabfdd11e0396881f
+#: ca003cb94674455abc7549a6047cf9e9
+msgid "Przykładowe wyniki wyszukiwania porównawczego"
+msgstr "Comparative search results"
+
+
+#: ../word-profiles.rst:44
+#: 0e3dfe12f3a448649ddc946ba0910c59
+msgid "Tabela wynikowa, dla profilu porównawczego: *serce* vs. *rozum* w korpusie dialogów Platona."
+msgstr "Comparative search results: *spirit* vs *reason*"
+
+
+#: ../word-profiles.rst:46
+#: 5ef2af7b990c4bd2bab438d6148ccfde
+msgid "Kliknięcie każdego z kolokatów, wygeneruje wyrażenie wyszukiwawcze które pozwoli odnaleźć wszystkie wspólne wystąpienia obu terminów w Korpusie."
+msgstr "Clicking any of the collocates will generate a query that will allow to find all common occcurrences of both of the terms."
+
+
+
+#: ../word-profiles.rst:51
+#: 7751bbc2d47248e199f29ec58d55f1ec
 msgid "Wykorzystane miary"
-msgstr ""
+msgstr "Metrics used"
 
-#: ../../word-profiles.rst:40 e1002fe8ec5b4743bdb9f758220c5b15
-msgid ""
-"Profile słów przedstawiają słownictwo często współwystępujące ze "
-"wskazanym słowem. Znaczenie słowa *często*, jest tutaj formalizowane za "
-"pomocą miary **logDice** (i to te wartości są widoczne w tabeli). Miara "
-"ta przypisuje każdej z badanych par słów wynik będący w pewnym "
-"uproszczeniu stosunkiem liczby wystąpień w korpusie razem, do sumy "
-"wystąpień w korpusie w ogóle (razem lub osobno) każdego ze słów. W ten "
-"sposób odfiltrowujemy takie słowa, które pojawiają się obok słowa "
-"zadanego często, w wyniku tego że same są bardzo częste (np. czasownik "
-"*mieć*, w odróżnieniu od czasownika *zamykać*)."
-msgstr ""
+#: ../word-profiles.rst:53
+#: 7fdd26adf5fc46d08611b0d75bd411e5
+msgid "Profile słów przedstawiają słownictwo często współwystępujące ze wskazanym słowem. Znaczenie słowa *często*, jest tutaj formalizowane za pomocą miary **logDice** (i to te wartości są widoczne w tabeli). Miara ta przypisuje każdej z badanych par słów wynik będący w pewnym uproszczeniu stosunkiem liczby wystąpień w korpusie razem, do sumy wystąpień w korpusie w ogóle (razem lub osobno) każdego ze słów. W ten sposób odfiltrowujemy takie słowa, które pojawiają się obok słowa zadanego często, w wyniku tego że same są bardzo częste (np. czasownik *mieć*, w odróżnieniu od czasownika *zamykać*)."
+msgstr "Word profiles allow to find the vocabulary often co-occurring with a given word. *Often* here is formalized with the **logDice** mesure (i.e. the values displayed in the table). The measure represents the ratio of co-occcurrences of the words to total occcurrences in the corpus (separately or jointly), for each pair of words. Hence, it is possible to filter out the words which co-occur with the query word often, as a consequence of the fact that they themselves are common in the corpus (such as the verb *to want* as opposed to the verb *to pursue*)."
 
-#: ../../word-profiles.rst:42 2dac802ff36049fea5805b2952a69663
-msgid ""
-"Miara **logDice**, w odróżnieniu od innych miar stosowanych do ekstrakcji"
-" kolokacji, jest interpretowalna: maksymalnie osiąga wartość 14 (gdy "
-"słowa współwystępują zawsze), zaś różnica między wartościami wielkości 1,"
-" oznacza że jedna z kolokacji jest dwukrotnie częstsza niż druga. Wartość"
-" logDice nie jest też zależna od wielkości korpusu (można więc porównywać"
-" wartości otrzymane dla różnych korpusów)."
-msgstr ""
 
-#: ../../word-profiles.rst:45 95fc4f3f5373413f8cc19dc9720f259b
+#: ../word-profiles.rst:55
+#: b61b6ff08eea4994b2f7ccb706e61e46
+msgid "Miara **logDice**, w odróżnieniu od innych miar stosowanych do ekstrakcji kolokacji, jest interpretowalna: maksymalnie osiąga wartość 14 (gdy słowa współwystępują zawsze), zaś różnica między wartościami wielkości 1, oznacza że jedna z kolokacji jest dwukrotnie częstsza niż druga. Wartość logDice nie jest też zależna od wielkości korpusu (można więc porównywać wartości otrzymane dla różnych korpusów)."
+msgstr "The **logDice** is an interpretable measure used in collocate extraction. Its maximal value is 14 (when words always co-occur) and the difference between two values equal to 1 indicates that one of the collocates is twice as frequent as the other. The logDice value does not depend on the size of the corpus (it is thus possible to compare the values calculated for different corpora)."
+
+
+#: ../word-profiles.rst:58
+#: 47ffadd85f904575a04a5440c907f458
 msgid "Podstawa lingwistyczna"
-msgstr ""
+msgstr "Linguistic basis"
 
-#: ../../word-profiles.rst:47 a72ecd9d6425454eb381732f0a76f1b9
-msgid ""
-"Profile słów są obliczane na podstawie anotacji morfologicznej, i wyników"
-" parsowania zależnościowego, jest więc funkcją dostępną wyłącznie dla "
-"korpusów posiadających warstwę anotacji zależnościowej. Dla każdej z "
-"obsługiwanych części mowy (rzeczowniki, czasowniki, przymiotniki, "
-"przysłówki, imiesłowy przymiotnikowe czynne oraz bierne i przysłówkowe "
-"uprzednie oraz współczesne) przygotowano ręcznie zestaw reguł, "
-"pozwalających odnaleźć potencjalne kolokaty danego słowa. Na przykład dla"
-" rzeczowników, reguły odnajdują w korpusie czasowniki których dany "
-"rzeczownik jest podmiotem (*pracownik wykonuje*), dopełnieniem bliższym "
-"(*zwolnił pracownika*), lub rzeczowniki modyfikowane przez dany "
-"rzeczownik (*rynek pracownika*). Zestaw reguł jest domyślnie dobierany na"
-" podstawie klasy morfosyntaktycznej zadanego słowa, rozpoznanej przez "
-"aplikację automatycznie, natomiast możliwe jest także narzucenie "
-"określonej interpretacji (np. słowu *wieść* jako rzeczownik, a nie "
-"czasownik)."
-msgstr ""
+#: ../word-profiles.rst:60
+#: b298b9fec4df4cc48a4ec1464f83f5b8
+msgid "Profile słów są obliczane na podstawie anotacji morfologicznej i wyników parsowania zależnościowego, dlatego funkcja ta dostępna jest wyłącznie dla korpusów posiadających warstwę anotacji zależnościowej. Dla każdej z obsługiwanych części mowy przygotowano ręcznie zestaw reguł, pozwalających odnaleźć potencjalne kolokaty danego słowa. Na przykład dla rzeczowników, reguły odnajdują w korpusie czasowniki których dany rzeczownik jest podmiotem (*pracownik wykonuje*), dopełnieniem bliższym (*zwolnił pracownika*), lub rzeczowniki modyfikowane przez dany rzeczownik (*rynek pracownika*). Zestaw reguł jest domyślnie dobierany na podstawie klasy morfosyntaktycznej zadanego słowa, rozpoznanej przez aplikację automatycznie, natomiast możliwe jest także narzucenie określonej interpretacji (np. słowu *wieść* jako rzeczownik, a nie czasownik). W wykazie kolokacji wystąpienia pojawiają się w formie zlematyzowanej."
+msgstr "Word profiles are calculated based on morphological annotation and dependency parsing results, and hence this function is only available for corpora which have the dependency annotation layer. For each of the parts of speech, a set of rules has been prepared, which allows to find potential collocates of a given word. For example, for nouns the rules allow to find verbs which have the searched noun as their subject (*a person believes*), direct object (*to protect a person*), or noun modified by a given noun (*a person of commitment*). By default, the set of rules is selected by the morphosyntactic class of the query word, recognized automatically by the application, however it is possible to impose a grammatical interpretation (e.g. *walk* as a noun, not as a verb). In the output table the collocated are displayed in lemmatized form."
 
-#: ../../word-profiles.rst:50 75d57412087b4aa89a6016290306d2f1
-msgid "|image15|"
-msgstr ""
 
-#: ../../word-profiles.rst:64 28e6439f715b4963bb829ed1555f9c02
-#: f059b9ab284c408482f06c334546efcf
-msgid "image15"
-msgstr ""
+#: ../word-profiles.rst:63
+#: d6ad72083dc34b3b9eec72a590a96bc3
+msgid "|image27|"
+msgstr "|image27|"
 
-#: ../../word-profiles.rst:50 58c793bc1d4c4588ac3282795fd83007
-msgid ""
-"W obliczaniu profili słów, wykorzystywane są drzewa zależnościowe, takie "
-"jak fragment przedstawiony na obrazku. Jeżeli interesuje nas słowo "
-"*serce*, do kolumny *przymiotniki modyfikujące \"serce\"* trafi słowo "
-"*mały*, zaś do kolumny *rzeczowniki modyfikowane przez \"serce\"*, słowo "
-"*człowiek*."
-msgstr ""
 
-#: ../../word-profiles.rst:52 cb6d888d95934b3d912d0660e2a8e50d
-msgid ""
-"W wykazie kolokacji, wystąpienia pojawiają się w formie zlematyzowanej, "
-"jednak stosujemy tu inne zasady lematyzacji, niż te, których wyniki są "
-"zapisane w plikach korpusu (i dostępne dla odpytywania korpusu), w "
-"szczególności imiesłowy oraz gerundia nie są lematyzowane do form "
-"czasownikowych."
-msgstr ""
+#: ../word-profiles.rst:109
+#: 8044a31bfa3745fda7dd2e3d542accee
+#: c7c40a14f822447b9aadea68aaf35fa2
+msgid "Drzewo zależnościowe wyrażenia \"ludzie małego serca\""
+msgstr "The dependency tree of the expression \"people of little heart\""
 
-#: ../../word-profiles.rst:55 27c54dd976254778b38e8ab9ac96d55e
-msgid ""
-"Jedną z najistotniejszych relacji które można wziąć pod uwagę, są związki"
-" o charakterze współrzędnym - koordynacja. W wykorzystanym formalizmie "
-"gramatycznym, koordynację reprezentuje się jako poddrzewo, którego głową "
-"jest spójnik, zaś liścmi człony koordynacji. Te ostatnie są oetykietowane"
-" relacjami *conjunct*, zaś sam spójnik łączy się ze swoim nadrzędnikiem "
-"relacją, którą pełniłby każdy z członów gdyby wystąpił osobno. Na "
-"przykład w zdaniu *Pies i kot śpią.* słowa *Pies* oraz *kot* są "
-"podrzędnikami spójnika *i*, jako człony koordynacji mają więc etykiety "
-"*conjunct*, podczas gdy spójnik *i* przyjmuje etykietę *subj*, tak jakby "
-"to spójnik (a tak naprawdę cała konstrukcja) pełnił rolę podmiotu, "
-"względem czasownika *śpią*. W naszym systemie ekstrakcji kolokatów, "
-"traktujemy spójniki koordynujące w sposób szczególny, niejako "
-"przeskakując przez nie w drzewie. Analizując wskazany wyżej przykład, w "
-"poczet podmiotów czasownika *spać* (a więc idąc w dół drzewa) nie "
-"zostanie zaliczony spójnik *i* (jak trzeba by zrobić aplikując reguły do "
-"drzewa takiego, jakim jest) tylko wszystkie człony które koordynuje, i.e."
-" *pies* oraz *kot*. Obliczając zaś listę czasowników których podmiotem "
-"jest słowo *pies* (tj. idąc w górę drzewa), przejdziemy w drzewie dwa "
-"kroki, zaliczając wystąpienie czasownika *spać* zamiast pomijać go."
-msgstr ""
 
-#: ../../word-profiles.rst:57 dea73844159c45a68af7bc2a461f83bc
-msgid ""
-"Należy zwrócić uwagę na to, że kolokacje nie są liczone w sposób "
-"uwzględniający negacje. Wystąpienia danego słowa, będą zaliczane w poczet"
-" tego samego kolokatu niezależnie od tego, czy są w zasięgu słowa *nie*, "
-"spójnika takiego jak *ani*, modyfikatora o leksykalnym charakterze "
-"zbliżonym do negacji (jak np. *mało* w *mało przystojny*), albo wreszcie "
-"same są formą zanegowaną (np. imiesłów *niepoinformowany*)."
-msgstr ""
+#: ../word-profiles.rst:63
+#: 99440060449740ca9a36402560eebe1b
+msgid "W obliczaniu profili słów, wykorzystywane są drzewa zależnościowe, takie jak fragment przedstawiony na obrazku. Jeżeli interesuje nas słowo *serce*, do kolumny *przymiotniki modyfikujące \"serce\"* trafi słowo *mały*, zaś do kolumny *słowa których modyfikatorem nominalnym jest \"serce\"*, słowo *człowiek*."
+msgstr "To calculate the word profiles, dependency trees, such as the one shown in the picture, are used. In case of the word *heart* in the above example, *little* is an adjectival modifier of the word *heart*, and *person* is a word which has *heart* as its nominal modifier".
 
-#: ../../word-profiles.rst:60 48c82dc16b6647cb932f11491bf60a35
-msgid "|image16|"
-msgstr ""
 
-#: ../../word-profiles.rst:66 0649c084b5e44441a781c593e5770472
-#: 0c51e5e63df74fbcafd94a3c1d833e2d
-msgid "image16"
-msgstr ""
+#: ../word-profiles.rst:65
+#: 90ab188a5c0a46ebadde372b9d16f7ce
+msgid "Należy zwrócić uwagę na to, że kolokacje nie są liczone w sposób uwzględniający negacje. Wystąpienia danego słowa będą zaliczane w poczet tego samego kolkatu niezależnie od tego, czy są w zasięgu modyfikatorów negujących (np. słowo *nie*), spójników takich jak *ani*, modyfikatorów leksykalnych o charakterze zbliżonym do negacji (jak np. *mało* w *mało przystojny*), albo wreszcie same są formą zanegowaną (np. imiesłów *niepoinformowany*)."
+msgstr "It should be noted that the search does not recognize negated terms. The occurences of a word are considered the same collocate regardless of whether they are within the scope of negating modifiers (e.g. *not*), conjuncts such as *nor*, lexical modifiers which are semantically close to negation (e.g. *little* in *little influence*) or are themselves a negated form (e.g. *unseen*)."
 
-#: ../../word-profiles.rst:60 860731e397f440afa99e144da8b214ae
-msgid ""
-"Reprezentacja koordynacji, oraz negacji, w zastosowanym formalizmie "
-"składniowym. Ponieważ bezpośrednim podrzędnikiem relacji *obj* jest "
-"spójnik *i*, podczas obliczeń, przeskakujemy o poziom niżej, po relacjach"
-" z etykietą *conjunct*, aby zaliczyć w poczet *dopełnień bliższych "
-"\"objawiać\"* słowa *charakter* i *stanowisko*, zamiast słowa *i*. "
-"Profile słów nie są wrażliwe na to, czy więc we wskazanym przykładzie, "
-"licząc profil słowa *osoba*, czasownik *objawiać* trafi do kolumny "
-"*czasowniki których podmiotem jest \"osoba\"*."
-msgstr ""
 
+
+#: ../word-profiles.rst:68
+#: 7f9c0624153646eda9c57fa001c8175e
+msgid "Związki koordynacji"
+msgstr "Coordination relationships"
+
+#: ../word-profiles.rst:70
+#: b7ae11c347254bd7919269054161711c
+msgid "Jedną z najistotniejszych relacji które można wziąć pod uwagę, są związki o charakterze współrzędnym - koordynacja. W wykorzystanym formalizmie gramatycznym, koordynację reprezentuje się jako poddrzewo, którego głową jest pierwszy z członów koordynacji, zaś liśćmi - pozostałe człony. Głowa poddrzewa łączy się ze swoim nadrzędnikiem relacją, którą pełniłaby, gdyby występowała jako pojedyncze wyrażenie, natomiast pozostałe człony są oetykietowane relacjami *conj*. Ewentualne spójniki połączone są z liśćmi poddrzewa relacją *cc*. Na przykład w zdaniu *Czarny pies i kot śpią.* słowo *pies* łączy się z czasownikiem *śpią* relacją *nsubj*, słowo *kot* jest podrzędnikiem słowa *pies* i słowa te łączy relacja o etykiecie *conj*, natomiast *i* łączy się ze słowem *kot* jako spójnik łączący, przyjmuje więc etykietę *cc*, jak w poniższym przykładzie."
+msgstr "Coordinating conjunction is one of the most significant relations. In the adopted formalism, coordination is represented as a subtree in which the first component of the coordination is the head, and the subsequent units – the leaves. The head of the subtree is linked with its superordinate by the relation it would have if there were no conjuncts. Conjuncts, if there are any, are linked with the leaves by the *cc* relation. For example, in the sentence \"The black dog and the car are sleeping.\" the word *dog* is connected with the verb *sleep* by the *nsubj* relation, the word *cat* is a subordinate of the word *dog* linked to it by the *conj* relation and *and* if related with *cat* as a coordinating conjunction, with the *cc* tag, as in the below example."
+
+
+
+#: ../word-profiles.rst:72
+#: a58f2defae854a2f9fc8c72961fccbf2
+msgid "|image28|"
+msgstr "|image28|"
+
+#: ../word-profiles.rst:111
+#: 719d926d20a743c48a3b0580dafcf85b
+#: 7cd03d54bcac49918720d8b0ae8aec3b
+msgid "Drzewo zależnościowe wyrażenia \"Czarny pies i kot śpią.\""
+msgstr "The dependency tree of the expression \"The black dog and the car are sleeping.\""
+
+#: ../word-profiles.rst:74
+#: e715d7ab3c5c4de08b293f60be5df643
+msgid "Aby umożliwić rozpoznawanie słów występujących jako drugi lub kolejny człon koordynacji, w zastosowanym systemie ekstrakcji kolokatów traktujemy poddrzewa koordynacji w sposób szczególny. W ramach przeszukiwania drzewa niejako przeskakuje się przez pierwszy z członów koordynacji, czyli korzeń poddrzewa. Analizując wskazany wyżej przykład, w poczet podmiotów czasownika *spać* zostaną (a więc idąc w dół drzewa) zaliczone rzeczowniki *pies* i *kot*. Obliczając zaś listę czasowników, których podmiotem jest słowo *kot* (tj. idąc w górę drzewa), przejdziemy w drzewie dwa kroki, dzięki czemu zaliczymy wystąpienie czasownika *spać*."
+msgstr "In order to include words which are the second or subsequent coordination components, in the collocate extraction system used coordination subtrees are handled in a special way. During the tree search the algorithm leaps over the root of the subtree, i.e. the first component of the coordination. Specifically, for the above example, both *dog* and *cat* will be recognized as subjects of the word *sleep*. Conversely, *sleep* will be recognized as a verb which has *cat* as its subject, even though these words are indirectly linked through the word *dog*."
+
+
+#: ../word-profiles.rst:76
+#: e8a7c8fe01974c5f85ec570abc1eca19
+msgid "Warto zaznaczyć, że mechanizmem tym objęte są jedynie niektóre z relacji. W powyższym przykładzie słowo *czarny* nie zostanie uwzględnione jako modyfikator przymiotnikowy słowa *kot*. Następujące relacje uwzględniają wyżej opisany mechanizm rozszerzania koordynacji:"
+msgstr "This mechanism only applies to some of the possible relations. In the above example the word \"black\" will not be considered an adjectival modifier of the word \"cat\". The relations that trigger the mechanism of coordination extension include:"
+
+#: ../word-profiles.rst:78
+#: 3a7df151008f42d6bde1a394f549ae80
+msgid "dla rzeczowników (NOUN/PROPN):"
+msgstr "for nouns (NOUN/PROPN):"
+
+#: ../word-profiles.rst:80
+#: ba34b77f29534e53a86307bb8aa45f96
+msgid "*słowa których podmiotem jest (...)*,"
+msgstr "*words which have (...) as their nominal subject*"
+
+#: ../word-profiles.rst:82
+#: 74c6bc3a208a4586a8acec8a48862911
+msgid "*słowa których dopełnieniem bliższym jest (...)*,"
+msgstr "*words which have (...) as direct object*"
+
+#: ../word-profiles.rst:84
+#: 0d1ce118c4fc425eaece442c7ce35f1d
+msgid "*słowa których dopełnieniem dalszym jest (...)*."
+msgstr "*words which have (...) as indirect object*"
+
+#: ../word-profiles.rst:86
+#: 9fe43cd4c6584112825e176a5da8ae2c
+msgid "dla czasowników (VERB):"
+msgstr "for verbs (VERB):"
+
+#: ../word-profiles.rst:88
+#: efaa5e87a1d349f288598753e76c501b
+msgid "*słowa które są podmiotem (...)*,"
+msgstr "*words which are the nominal subject of (...)*"
+
+#: ../word-profiles.rst:90
+#: 56b8f94cc6d34e4caf0f4024aaa86cd0
+msgid "*słowa które są dopełnieniem bliższym (...)*,"
+msgstr "words which are the direct object of (...)*"
+
+#: ../word-profiles.rst:92
+#: 5d5bcd428b5b4b2ab43fd7303a79b6fc
+msgid "*słowa które są dopełnieniem dalszym (...)*,"
+msgstr "*words which are an indirect object of (...)*"
+
+#: ../word-profiles.rst:94
+#: 2e10d02b35d44171b34162bd49318701
+msgid "*słowa które są podmiotem zdaniowym (...)*,"
+msgstr "*words which are the clausal subject of (...)*"
+
+#: ../word-profiles.rst:96
+#: 9235be0fcbbe4aaaa5786613be85499b
+msgid "*słowa których podmiotem zdaniowym jest (...)*,"
+msgstr "*words which have (...) as their clausal subject*"
+
+#: ../word-profiles.rst:98
+#: 4c85a65611944d1bbc4cf3a0295ed4a3
+msgid "*słowa które są dopełnieniem zdaniowym (...)*,"
+msgstr "*words which are a clausal modifier of (...)*"
+
+#: ../word-profiles.rst:100
+#: 8e2cfb84549a42609de528283e514c68
+msgid "*słowa których dopełnieniem zdaniowym jest (...)*."
+msgstr "*words which have (...) as their clausal modifiers*"
+
+#: ../word-profiles.rst:104
+#: de90d240054943f0b2a2c93f79a62c38
+msgid "|image26|"
+msgstr "|image26|"
+
+#: ../word-profiles.rst:106
+#: 7ddc4e1d12d148799dda93a8e533db33
+#: 54c7e4ebc39f4c6fb5e9becc5b48b9d3
+msgid "Drzewo zależnościowe zdania \"Osoby nie objawiają różnych charakterów i stanowisk.\""
+msgstr "The dependency tree of the sentence \"The individuals do not manifest different characters and positions.\""
+
+#: ../word-profiles.rst:104
+#: 76f875d678b843ad954b817946f0f7f7
+msgid "Reprezentacja koordynacji oraz negacji w zastosowanym formalizmie składniowym. Ponieważ bezpośrednim podrzędnikiem relacji *obj* jest pierwszy z członów koordynacji, słowo *charakter* zostanie włączone w poczet *dopełnień bliższych \"objawiać\"*. Podczas obliczeń przeskakujemy dodatkowo o poziom niżej po relacjach z etykietą *conj*, aby uwzględnić również słowo *stanowisko*."
+msgstr "The representation of coordination and negation relationships in the syntactic formalism used. As the first coordination component is the direct subordinate of the *obj* relationship, the word *character* will be recognized as a *direct object of \"manifest\"*. Moreover, during the calculation the algorithm moves along the *conj* edges to additionally include the word *position*."

@@ -21,6 +21,7 @@ Dokumentacja
 
    manual/index
    mtas
+   word-profiles
    tools-resources
    licence
    citing
