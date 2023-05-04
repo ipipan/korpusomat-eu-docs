@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Korpusomat EU'
-copyright = '2022, IPI PAN'
+copyright = '2023, IPI PAN'
 author = 'IPI PAN'
 language = 'pl'
 gettext_uuid = True
