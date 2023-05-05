@@ -46,61 +46,61 @@ Aplikacja umożliwia także tworzenie profili porównawczych. W tym celu należy
 |image32|
       Tabela wynikowa, dla profilu porównawczego: *serce* vs. *rozum* w korpusie dialogów Platona.
 
-Kliknięcie każdego z kolokatów, wygeneruje wyrażenie wyszukiwawcze które pozwoli odnaleźć wszystkie wspólne wystąpienia obu terminów w Korpusie.
+Kliknięcie każdego z kolokatów, wygeneruje wyrażenie wyszukiwawcze które pozwoli odnaleźć wszystkie wspólne wystąpienia obu terminów w korpusie.
 
 
 
 Wykorzystane miary
 ==================
 
-Profile słów przedstawiają słownictwo często współwystępujące ze wskazanym słowem. Znaczenie słowa *często*, jest tutaj formalizowane za pomocą miary **logDice** (i to te wartości są widoczne w tabeli). Miara ta przypisuje każdej z badanych par słów wynik będący w pewnym uproszczeniu stosunkiem liczby wystąpień w korpusie razem, do sumy wystąpień w korpusie w ogóle (razem lub osobno) każdego ze słów. W ten sposób odfiltrowujemy takie słowa, które pojawiają się obok słowa zadanego często, w wyniku tego że same są bardzo częste (np. czasownik *mieć*, w odróżnieniu od czasownika *zamykać*).
+Profile słów przedstawiają słownictwo często współwystępujące ze wskazanym słowem. Znaczenie słowa *często* jest tutaj formalizowane za pomocą miary **logDice** (i to te wartości są widoczne w tabeli). Miara ta przypisuje każdej z badanych par słów wynik będący – w pewnym uproszczeniu – stosunkiem liczby wystąpień w korpusie razem do sumy wystąpień w korpusie w ogóle (razem lub osobno) każdego ze słów. W ten sposób odfiltrowujemy takie słowa, które pojawiają się obok zadanego słowa często w wyniku tego że same są bardzo częste (np. czasownik *mieć*, w odróżnieniu od czasownika *zamykać*).
 
-Miara **logDice**, w odróżnieniu od innych miar stosowanych do ekstrakcji kolokacji, jest interpretowalna: maksymalnie osiąga wartość 14 (gdy słowa współwystępują zawsze), zaś różnica między wartościami wielkości 1, oznacza że jedna z kolokacji jest dwukrotnie częstsza niż druga. Wartość logDice nie jest też zależna od wielkości korpusu (można więc porównywać wartości otrzymane dla różnych korpusów).
+Miara **logDice**, w odróżnieniu od innych miar stosowanych do ekstrakcji kolokacji, jest interpretowalna: maksymalnie osiąga wartość 14 (gdy słowa współwystępują zawsze), zaś różnica między wartościami wielkości 1 oznacza, że jedna z kolokacji jest dwukrotnie częstsza niż druga. Wartość **logDice** jest też niezależna od wielkości korpusu (można więc porównywać wartości otrzymane dla różnych korpusów).
 
 Podstawa lingwistyczna
 ======================
 
-Profile słów są obliczane na podstawie anotacji morfologicznej i wyników parsowania zależnościowego, dlatego funkcja ta dostępna jest wyłącznie dla korpusów posiadających warstwę anotacji zależnościowej. Dla każdej z obsługiwanych części mowy przygotowano ręcznie zestaw reguł, pozwalających odnaleźć potencjalne kolokaty danego słowa. Na przykład dla rzeczowników, reguły odnajdują w korpusie czasowniki których dany rzeczownik jest podmiotem (*pracownik wykonuje*), dopełnieniem bliższym (*zwolnił pracownika*), lub rzeczowniki modyfikowane przez dany rzeczownik (*rynek pracownika*). Zestaw reguł jest domyślnie dobierany na podstawie klasy morfosyntaktycznej zadanego słowa, rozpoznanej przez aplikację automatycznie, natomiast możliwe jest także narzucenie określonej interpretacji (np. słowu *wieść* jako rzeczownik, a nie czasownik). W wykazie kolokacji wystąpienia pojawiają się w formie zlematyzowanej. 
+Profile słów są obliczane na podstawie znakowania morfologicznego i składniowego (zależnościowego), dlatego funkcja ta dostępna jest wyłącznie dla korpusów posiadających warstwę anotacji zależnościowej. Dla każdej z obsługiwanych części mowy przygotowano ręcznie zestaw reguł pozwalających odnaleźć potencjalne kolokaty danego słowa. Na przykład dla rzeczowników reguły odnajdują w korpusie czasowniki, których dany rzeczownik jest podmiotem (*pracownik wykonuje*), dopełnieniem bliższym (*zwolnił pracownika*), lub rzeczowniki modyfikowane przez dany rzeczownik (*rynek pracownika*). Zestaw reguł jest domyślnie dobierany na podstawie klasy morfosyntaktycznej zadanego słowa, rozpoznanej przez aplikację automatycznie, natomiast możliwe jest także narzucenie określonej interpretacji (np. słowu *wieść* jako rzeczownik, a nie czasownik). W wykazie kolokacji wystąpienia pojawiają się w formie zlematyzowanej. 
 
 |image27|
-      W obliczaniu profili słów, wykorzystywane są drzewa zależnościowe, takie jak fragment przedstawiony na obrazku. Jeżeli interesuje nas słowo *serce*, do kolumny *przymiotniki modyfikujące "serce"* trafi słowo *mały*, zaś do kolumny *słowa których modyfikatorem nominalnym jest "serce"*, słowo *człowiek*.
+      W obliczaniu profili słów wykorzystywane są drzewa zależnościowe, takie jak fragment przedstawiony na obrazku. Jeżeli interesuje nas słowo *serce*, do kolumny *przymiotniki modyfikujące "serce"* trafi słowo *mały*, zaś do kolumny *słowa których modyfikatorem nominalnym jest "serce"*, słowo *człowiek*.
 
-Należy zwrócić uwagę na to, że kolokacje nie są liczone w sposób uwzględniający negacje. Wystąpienia danego słowa będą zaliczane w poczet tego samego kolkatu niezależnie od tego, czy są w zasięgu modyfikatorów negujących (np. słowo *nie*), spójników takich jak *ani*, modyfikatorów leksykalnych o charakterze zbliżonym do negacji (jak np. *mało* w *mało przystojny*), albo wreszcie same są formą zanegowaną (np. imiesłów *niepoinformowany*).
+Należy zwrócić uwagę na to, że kolokacje nie są liczone w sposób uwzględniający negacje. Wystąpienia danego słowa będą zaliczane do tego samego kolokatu niezależnie od tego, czy są w zasięgu modyfikatorów negujących (np. słowo *nie*), spójników takich jak *ani*, modyfikatorów leksykalnych o charakterze zbliżonym do negacji (jak np. *mało* w *mało przystojny*), albo wreszcie same są formą zanegowaną (np. imiesłów *niepoinformowany*).
 
 Związki koordynacji
 -------------------
 
-Jedną z najistotniejszych relacji które można wziąć pod uwagę, są związki o charakterze współrzędnym - koordynacja. W wykorzystanym formalizmie gramatycznym, koordynację reprezentuje się jako poddrzewo, którego głową jest pierwszy z członów koordynacji, zaś liśćmi - pozostałe człony. Głowa poddrzewa łączy się ze swoim nadrzędnikiem relacją, którą pełniłaby, gdyby występowała jako pojedyncze wyrażenie, natomiast pozostałe człony są oetykietowane relacjami *conj*. Ewentualne spójniki połączone są z liśćmi poddrzewa relacją *cc*. Na przykład w zdaniu *Czarny pies i kot śpią.* słowo *pies* łączy się z czasownikiem *śpią* relacją *nsubj*, słowo *kot* jest podrzędnikiem słowa *pies* i słowa te łączy relacja o etykiecie *conj*, natomiast *i* łączy się ze słowem *kot* jako spójnik łączący, przyjmuje więc etykietę *cc*, jak w poniższym przykładzie.
+Jedną z najistotniejszych relacji, które można wziąć pod uwagę, są związki o charakterze współrzędnym — koordynacja. W wykorzystanym formalizmie gramatycznym koordynację reprezentuje się jako poddrzewo, którego nadrzędnikiem jest pierwszy z członów koordynacji, liśćmi zaś — pozostałe człony. Nadrzędnik poddrzewa łączy się ze swoim nadrzędnikiem relacją, którą pełniłby, gdyby występował jako pojedyncze wyrażenie, pozostałe człony natomiast są opatrzone etykietami relacji *conj*. Ewentualne spójniki połączone są z liśćmi poddrzewa relacją *cc*. Na przykład w zdaniu *Czarny pies i kot śpią.* słowo *pies* łączy się z czasownikiem *śpią* relacją *nsubj*, słowo *kot* jest podrzędnikiem słowa *pies* i słowa te łączy relacja o etykiecie *conj*, natomiast *i* łączy się ze słowem *kot* jako spójnik łączący, przyjmuje więc etykietę *cc*, jak w poniższym przykładzie.
 
 |image28|
 
-Aby umożliwić rozpoznawanie słów występujących jako drugi lub kolejny człon koordynacji, w zastosowanym systemie ekstrakcji kolokatów traktujemy poddrzewa koordynacji w sposób szczególny. W ramach przeszukiwania drzewa niejako przeskakuje się przez pierwszy z członów koordynacji, czyli korzeń poddrzewa. Analizując wskazany wyżej przykład, w poczet podmiotów czasownika *spać* zostaną (a więc idąc w dół drzewa) zaliczone rzeczowniki *pies* i *kot*. Obliczając zaś listę czasowników, których podmiotem jest słowo *kot* (tj. idąc w górę drzewa), przejdziemy w drzewie dwa kroki, dzięki czemu zaliczymy wystąpienie czasownika *spać*.
+Aby umożliwić rozpoznawanie słów występujących jako drugi lub kolejny człon koordynacji, w zastosowanym systemie ekstrakcji kolokatów traktujemy poddrzewa koordynacji w sposób szczególny. W ramach przeszukiwania drzewa niejako przeskakuje się przez pierwszy z członów koordynacji, czyli korzeń poddrzewa. Analizując wskazany wyżej przykład, w poczet podmiotów czasownika *spać* zostaną zaliczone rzeczowniki *pies* i *kot*. Obliczając zaś listę czasowników, których podmiotem jest słowo *kot* (tj. idąc w górę drzewa), przejdziemy w drzewie dwa kroki, dzięki czemu zaliczymy wystąpienie czasownika *spać*.
 
 Warto zaznaczyć, że mechanizmem tym objęte są jedynie niektóre z relacji. W powyższym przykładzie słowo *czarny* nie zostanie uwzględnione jako modyfikator przymiotnikowy słowa *kot*. Następujące relacje uwzględniają wyżej opisany mechanizm rozszerzania koordynacji:
 
 * dla rzeczowników (NOUN/PROPN):
 
-  * *słowa których podmiotem jest (...)*,
+  * *słowa których podmiotem jest (…)*,
 
-  * *słowa których dopełnieniem bliższym jest (...)*,
+  * *słowa których dopełnieniem bliższym jest (…)*,
 
-  * *słowa których dopełnieniem dalszym jest (...)*.
+  * *słowa których dopełnieniem dalszym jest (…)*.
 
 * dla czasowników (VERB):
 
-  * *słowa które są podmiotem (...)*,
+  * *słowa które są podmiotem (…)*,
 
-  * *słowa które są dopełnieniem bliższym (...)*,
+  * *słowa które są dopełnieniem bliższym (…)*,
 
-  * *słowa które są dopełnieniem dalszym (...)*,
+  * *słowa które są dopełnieniem dalszym (…)*,
 
-  * *słowa które są podmiotem zdaniowym (...)*,
+  * *słowa które są podmiotem zdaniowym (…)*,
 
-  * *słowa których podmiotem zdaniowym jest (...)*,
+  * *słowa których podmiotem zdaniowym jest (…)*,
 
-  * *słowa które są dopełnieniem zdaniowym (...)*,
+  * *słowa które są dopełnieniem zdaniowym (…)*,
 
-  * *słowa których dopełnieniem zdaniowym jest (...)*.
+  * *słowa których dopełnieniem zdaniowym jest (…)*.
 
 
 |image26|
