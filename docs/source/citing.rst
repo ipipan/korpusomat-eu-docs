@@ -1,8 +1,7 @@
 Cytowanie
 =======================
 
-W przypadku użycia w pracy naukowej prosimy o zacytowanie jednego z artykułów:
-Witold Kieraś, Łukasz Kobyliński. **Korpusomat – stan obecny i przyszłość projektu** . *Język Polski* , CI(2):49–58, 2021. `bibtex <http://publications.nlp.ipipan.waw.pl/bibtex/kie%3Akob%3A21/>`_ `doi <https://jezyk-polski.pl/index.php/jp/article/view/70/>`_
+W przypadku użycia w pracy naukowej prosimy o zacytowanie artykułu:
 
-Witold Kieraś, Łukasz Kobyliński, and Maciej Ogrodniczuk. **Korpusomat — a tool for creating searchable
-morphosyntactically tagged corpora** . *Computational Methods in Science and Technology* , 24(1):21–27, 2018. `bibtex <http://publications.nlp.ipipan.waw.pl/bibtex/kier%3Akob%3Aogr%3A18%3Acmst/>`_ `doi <https://doi.org/10.12921/cmst.2018.0000005/>`_
+Karol Saputa, Aleksandra Tomaszewska, Natalia Zawadzka-Paluektau, Witold Kieraś, and Łukasz Kobyliński. Korpusomat.eu: A multilingual platform for building and analysing linguistic corpora. In Jiří Mikyška, Clélia de Mulatier, Maciej Paszynski, Valeria V. Krzhizhanovskaya, Jack J. Dongarra, and Peter M.A. Sloot, editors, Computational Science – ICCS 2023. 23rd International Conference, Prague, Czech Republic, July 3–5, 2023, Proceedings, Part II, number 14074 in Lecture Notes in Computer Science, pages 230–237, Cham, 2023. Springer Nature Switzerland. `bibtex <http://publications.nlp.ipipan.waw.pl/bibtex/sap%3Aetal%3A23%3Aiccs>`_ `doi <https://doi.org/10.1007/978-3-031-36021-3_22>`_
+
