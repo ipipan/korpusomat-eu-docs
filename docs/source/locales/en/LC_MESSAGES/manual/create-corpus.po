@@ -160,8 +160,8 @@ msgstr ""
 "possible. Metadata may be extracted from website headers or from EPUB and"
 " MOBI files. For Korpusomat to be able to extract metadata from text "
 "files, their names should follow a specific format: \"author - title "
-"(place, year)\", for example /"Adam Mickiewicz - Pan Tadeusz (Paris, "
-"1834).txt/"."
+"(place, year)\", for example \"Adam Mickiewicz - Pan Tadeusz (Paris, "
+"1834).txt\"."
 
 #: ../../manual/create-corpus.rst:58 d22613cfc4184e7da75672145bc363ee
 msgid ""
