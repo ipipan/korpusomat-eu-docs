@@ -195,8 +195,7 @@ msgid ""
 "modyfikacji struktury drzewa (poszczególne węzły można przesuwać w "
 "obrębie drzewa)."
 msgstr ""
-"modifying the structure of the tree (specifically, modifying the "
-"positioning of its nodes)."
+"modifying the structure of the tree (specifically, modifying the positioning of its nodes)."
 
 #: ../../manual/corpus-query.rst:50 6e8ec005c0514351a2ede97cba4ef8cd
 msgid "|image24|"
