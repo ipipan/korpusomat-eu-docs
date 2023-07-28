@@ -187,8 +187,7 @@ msgid ""
 "analizowane drzewo zostanie usytuowane w centralnej części okna "
 "modalnego),"
 msgstr ""
-"automatic scaling of the tree (the tree will be positioned in the center "
-"of the modal window),"
+"automatic scaling of the tree (the tree will be positioned in the center of the modal window),"
 
 #: ../../manual/corpus-query.rst:48 40b64c16c5dc44e5ae16f65c0fd80d56
 msgid ""
