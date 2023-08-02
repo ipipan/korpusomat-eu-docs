@@ -1,4 +1,4 @@
-Statystyki Korpusu
+Statystyki korpusu
 ^^^^^^^^^^^^^^^
 
 Lista frekwencyjna
