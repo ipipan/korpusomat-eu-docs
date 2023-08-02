@@ -281,8 +281,8 @@ msgstr "Terminology"
 
 #: ../../statistics.rst:103
 #: 54bb880d0910424c85ee4c2a1e4b995c
-msgid "Lista terminów generowana jest przez aplikację [TermoPL](http://zil.ipipan.waw.pl/TermoPL). Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji."
-msgstr "Terminology is generated through [TermoPL](http://zil.ipipan.waw.pl/TermoPL) application. Description of its operation, instructions and additional information are available on applications page."
+msgid "Lista terminów generowana jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji."
+msgstr "Terminology is generated through TermoPL application. Description of its operation, instructions and additional information are available on applications page."
 
 #: ../../statistics.rst:105
 #: a370a19faf97497b9e999e2818a904b9
