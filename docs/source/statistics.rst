@@ -100,10 +100,10 @@ Dla korpusów składających się tylko z jednego tekstu obliczane są jedynie f
 Dostępne miary zostały opisane w artykule „Dispersions and adjusted frequencies
 in corpora” (Gries, 2008) oraz rozdziale 5. podręcznika „A Practical Handbook of Corpus Linguistics” (Gries, 2021).
 
-Słownictwo charakterystyczne
+Terminologia
 ============================
 
-Słownictwo charakterystyczne generowane jest przez aplikację [TermoPL](http://zil.ipipan.waw.pl/TermoPL). Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji.
+Lista terminów generowana jest przez aplikację [TermoPL](http://zil.ipipan.waw.pl/TermoPL). Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji.
 
 W zakładce Terminologii informacje ograniczone są do formy bazowej, wartości C-value oraz liczby wystąpień, posortowane wg C-value. Po kliknięciu przycisku „Pobierz” pobrany zostaje plik txt zawierający wszystkie dane wygenerowane przez TermoPL.
 
