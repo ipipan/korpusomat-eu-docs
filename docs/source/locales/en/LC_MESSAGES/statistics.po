@@ -205,7 +205,7 @@ msgstr "DP_{norm} = \\frac{DP}{1 - \\frac{1}{N}}\n"
 #: ../../statistics.rst:71
 #: 583ddcf55b0b4fb9b22c9e74bc1e4393
 msgid "*D2* i *Um* Carolla – miara dyspersji (*D2*) i skorygowanej frekwencji (*Um*). Miara *D2* przyjmuje wartości z przedziału :math:`[0, 1]`, przy czym wyższe wartości *D2* świadczą o bardziej równomiernej dystrybuji słowa w korpusie. *Um* przyjmuje wartości z przedziału :math:`[\\frac{F}{N}, F]`."
-msgstr "Caroll's *D2* and *Um* – measures of dispersion (*D2*) and adjusted frequency (*Um*). The measure *D2* may have values from the :math:`[0,1]` range and the lower the values, the more uneven the distribution of the word. The values of *Um* fall into the range :math:`[\\frac{F}{N},F]`."
+msgstr "Caroll's *D2* and *Um* – measures of dispersion (*D2*) and adjusted frequency (*Um*). *D2* displays values from the :math:`[0,1]` range; the lower the values, the more uneven the distribution of the word. The values of *Um* fall within the range of :math:`[\\frac{F}{N},F]`."
 
 #: ../../statistics.rst:73
 #: 4150794f8ec946319222a7128c2afe53
@@ -224,7 +224,7 @@ msgstr "U_m = F \\cdot D_2 + (1 - D_2) \\cdot \\frac{F}{N}\n"
 #: ../../statistics.rst:78
 #: 2c32490e2e6a476bb010c6d264d7888f
 msgid "Rozbieżność KL (*KLD*) – niesymetryczna miara różnic w rozkładach prawdopodonieństwa, używana jako miara dyspersji. Przy obliczaniu wartości tej metryki przyjmuje się, że :math:`\\\\log_2 0 = 0`. Miara przyjmuje nieujemne wartości – tym wyższe, im mniej równomiernie dane słowo występuje w korpusie."
-msgstr "KL Divergence (*KLD*) – nonsymmetrical measure of the difference in probability distributions, used as a dispersion measure. The measure has non-negative values, where higher values represent a more even distribution of the word. In the following formula it is assumed that :math:`\\\\log_2 0 = 0`."
+msgstr "KL Divergence (*KLD*) – non-symmetric measure of the difference in probability distributions, used as a dispersion measure. The measure has non-negative values, where higher values represent a more uneven distribution of the word. In the following formula it is assumed that :math:`\\\\log_2 0 = 0`."
 
 #: ../../statistics.rst:80
 #: 07e305e4ccb9400daa41d8e88db5a8d1
@@ -236,7 +236,7 @@ msgstr "KLD = \\sum_{i=1}^N \\Bigg( \\frac{F_i}{F} \\cdot \\log_2 \\left( \\frac
 #: ../../statistics.rst:82
 #: 7aea95a7748241f3b55778b93241276d
 msgid "*S* i *AF* Roesengrena – miara dyspersji (*S*) oraz frekwencji (*AF*). Miary obliczane są przy pomocy skorygowanej formuły, która uwzględnia różnie objętości tekstów należących do korpusu. *S* przyjmuje wartości z przedziału :math:`[\\frac{1}{N}, 1]`, przy czym wyższe wartości odzwierciedlają bardziej równomierną dystrybuję słowa. AF przyjmuje natomiast wartości z przedziału :math:`[\\frac{F}{N}, F]`."
-msgstr "Rosengren's *S* and *AF* – measures of dispersion (*S*) and adjusted frequency (*AF*). The values of the metrics are calculated using an adjusted formula, which allows the texts in the corpus to have different lengths. *S* may have values from the range :math:`[\\frac{1}{N}, 1]`, where higher values reprezent a more even distribution of the word in the corpus, and the values of AF – from the range :math:`[\\frac{F}/{N}, F]`."
+msgstr "Rosengren's *S* and *AF* – measures of dispersion (*S*) and adjusted frequency (*AF*). The values of the metrics are calculated using an adjusted formula, which takes differing text sizes into account. *S* displays values from the range :math:`[\\frac{1}{N}, 1]`, where higher values represent a more even distribution of the word in the corpus. The values of AF fall within the range of :math:`[\\frac{F}/{N}, F]`."
 
 #: ../../statistics.rst:84
 #: 47af5ca4c3354e74a2f558afcd769161
@@ -255,7 +255,7 @@ msgstr ""
 #: ../../statistics.rst:89
 #: e8a685b0ef9c4168b80a5a1cc9d3e737
 msgid "*ARF* – miara zmodyfikowanej frekwencji oparta o odległości pomiędzy wystąpieniami danego słowa. W poniższym wzorze zmienna :math:`d_j` oznacza dystans między j-tym i j+1-szym wystąpienie słowa (a dla :math:`j = F` – odległość pomiędzy pierwszym i ostatnim wystąpieniem słowa zakładając, że pierwsze i ostatnie słowo korpusu sąsiadują ze sobą). Miara przyjmuje wartości z przedziału :math:`[1, F]`, tym wyższe, im bardziej równomierna jest dystrybuja słowa w korpusie."
-msgstr "*ARF* – a measure of adjusted frequency based on the distances between the occurrences of a given word. In the below formula, the variable :math:`d_j` stands for the distance between the j-th and j+1-th occurrence of the word (for :math:`j=F` – the distance between the first and the last word assuming that the distance between the first and the last word of the corpus is 1). The values of ARF fall into the range :math:`[1,F]` (higher values reprezent a more even distribution of the word)."
+msgstr "*ARF* – a measure of adjusted frequency based on the distances between the occurrences of a given word. In the formula below, the variable :math:`d_j` stands for the distance between the j-th and j+1-th occurrence of the word (for :math:`j=F` – the distance between the first and the last word, assuming that the distance between the first and the last word of the corpus is 1). The values of ARF fall within the range of :math:`[1,F]` (higher values represent a more even distribution of the word)."
 
 #: ../../statistics.rst:91
 #: 23e52676a3f74fe6be8ad762ee4779f6
@@ -272,7 +272,7 @@ msgstr "For corpora consisting of only one text, only frequency and ARF are calc
 #: ../../statistics.rst:97
 #: 1435258df7fa4ce7bd138b6fde86afc4
 msgid "Dostępne miary zostały opisane w artykule „Dispersions and adjusted frequencies in corpora” (Gries, 2008) oraz rozdziale 5. podręcznika „A Practical Handbook of Corpus Linguistics” (Gries, 2021)."
-msgstr "The measures of dispersion have been described in the paper „Dispersions and adjusted frequencies in corpora” (Gries, 2008) andthe 5th chapter of the handbook „A Practical Handbook of Corpus Linguistics” (Gries, 2021)."
+msgstr "The measures of dispersion are described in more detail in „Dispersions and adjusted frequencies in corpora” (Gries, 2008) and in chapter 5 of the handbook „A Practical Handbook of Corpus Linguistics” (Gries, 2021)."
 
 #: ../../statistics.rst:101
 #: 23c4dcf80e0740309cd00e0cdcf720da
@@ -282,17 +282,17 @@ msgstr "Terminology"
 #: ../../statistics.rst:103
 #: 54bb880d0910424c85ee4c2a1e4b995c
 msgid "Lista terminów generowana jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji."
-msgstr "Terminology is generated through TermoPL application. Description of its operation, instructions and additional information are available on applications page."
+msgstr "Terminology is generated through the TermoPL application, where you can also find its detailed description, instructions, and additional information."
 
 #: ../../statistics.rst:105
 #: a370a19faf97497b9e999e2818a904b9
 msgid "W zakładce Terminologii informacje ograniczone są do formy bazowej, wartości C-value oraz liczby wystąpień, posortowane wg C-value. Po kliknięciu przycisku „Pobierz” pobrany zostaje plik txt zawierający wszystkie dane wygenerowane przez TermoPL."
-msgstr "On the Terminology tab information is limited to base form, C-value and number of occurrences, sorted by C-value. After clicking the "Download" button, a txt file containing all data generated by TermoPL is downloaded."
+msgstr "The information generated by the Terminology functionality is limited to base forms, C-values, and numbers of occurrences, sorted by C-value. After clicking on the "Download" button, a txt file containing all the data generated by TermoPL is downloaded to the user's computer."
 
 #: ../../statistics.rst:107
 #: 608acd66dda04099888885b6b2fafba0
 msgid "Pliki wygenerowane przez Korpusomat są kompatybilne z aplikacją TermoPL – po pobraniu „plików źródłowych korpusu” (przycisk dostępny na ekranie korpusu) można samodzielnie uruchomić aplikację TermoPL z wybranymi przez siebie opcjami."
-msgstr "The files generated by Korpusomat are compatible with the TermoPL application - after downloading the "corpus source files" (button available on corpus screen), you can run the TermoPL application with the options you choose."
+msgstr "The files generated by Korpusomat are compatible with the TermoPL application - after downloading the "corpus source files" (see the main corpus panel), you can run the TermoPL application with the options of your choice."
 
 #: ../../statistics.rst:110
 #: 8064be5aa37e4eb5b5e7702ab91d5685
