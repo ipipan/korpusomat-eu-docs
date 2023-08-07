@@ -29,7 +29,7 @@ msgstr "Frequency list"
 #: ../../statistics.rst:7
 #: 4c557ea7357a46288d0c2ab539f2eecd
 msgid "W tym polu wyświetlana jest lista frekwencyjna ze względu na lematy słów. Wstępnie odfiltrowana jest do słów pełnoznacznych, jednak za pomocą przycisku na górze można ją odfiltrować do dowolnie wybranych części mowy. Po kliknięciu przycisku „Pobierz” zostanie pobrana pełna lista frekwencyjna bez zastosowanego filtrowania."
-msgstr "This field displays the frequency list by lemmas. It is pre-filtered to notional words, but by clicking the button at the top any part of speech can be selected. After clicking the "Download" button the full frequency list without applied filters will be downloaded."
+msgstr "This option displays the frequency list of all lemmas in the corpus. By default, the list is limited to content words, but there is an option to include or exclude any part of speech by clicking on the button at the top of the page. Clicking on the "Download" button allows the user to download the full frequency list without the applied filters."
 
 #: ../../statistics.rst:11
 #: a49a798ae2884b1db6c0bb3079f25ea4
@@ -39,12 +39,12 @@ msgstr "Measures of dispersion and adjusted frequency"
 #: ../../statistics.rst:13
 #: 326bf092d44a4c0998f6be5c7028cd93
 msgid "Oprócz standardowej listy frekwencyjnej w polu „Lista frekwencyjna” wyświetlane są również miary dyspersji oraz skorygowanej frekwencji słów."
-msgstr "The field \"Frequency list\" also contains measures of dispersion and adjusted frequency."
+msgstr "Apart from the frequency list, adjusted word frequencies and dispersion measures can also be consulted."
 
 #: ../../statistics.rst:15
 #: 14a8cce0cfe64445b2708cce00dfc018
 msgid "Poniższa lista przedstawia wszystkie dostępne miary. W podanych wzorach przyjęto następujące oznaczenia:"
-msgstr "The measures available are listed below. The following denotations were assument in the formulas provided:"
+msgstr "The available measures are listed below. The following notation conventions have been adopted in the formulas below:"
 
 #: ../../statistics.rst:17
 #: 2579bb52a7204885b2e364f86a4c2d71
@@ -94,7 +94,7 @@ msgstr ":math:`\\bar{P}` – the average sation of the number of occurrences of 
 #: ../../statistics.rst:26
 #: 0d9d8021b4634f7c88b0f050882f4c11
 msgid ":math:`S_i` – stosunek liczby słów w i-tym tekście korpusu do liczby słów we wszystkich tekstach korpusu: :math:`S_i = \\frac{L_i}{L}`"
-msgstr ":math:`S_i` – the ratio of the number of words in the i-th text of the corpus nad the total number of words: :math:`S_i = \\frac{L_i}{L}`"
+msgstr ":math:`S_i` – the ratio of the number of words in the i-th text of the corpus nad the total number of words in the corpus: :math:`S_i = \\frac{L_i}{L}`"
 
 #: ../../statistics.rst:29
 #: 59d859d966634b4dbc4b208736b29c3e
@@ -117,7 +117,7 @@ msgstr "F\n"
 #: ../../statistics.rst:35
 #: ca3d2f17f1cf45609b7b96ac8d65113d
 msgid "*IDF* – miara ilości informacji wiążącej się z użyciem danego słowa. Przyjmuje wartość 0, jeśli słowo występuje we wszystkich tekstach korpusu, i wartości tym większe im mniejsza jest liczba tekstów, w których występuje słowo."
-msgstr "IDF – a measure of the amount of information related to the use of a given word. The value of IDF is equal to 0, if the word is present in all of the texts, and the lesser the number of texts containing the word, the higher the value."
+msgstr "IDF – a measure of the amount of information related to the use of a given word. The value of IDF is equal to 0, if the word is present in all of the texts, and the lower the number of texts containing the word, the higher the value."
 
 #: ../../statistics.rst:37
 #: 506a0c61866d471a92c34ae3e6ba91e7
@@ -148,7 +148,7 @@ msgstr "vc = \\frac{\\sigma_F}{\\bar{F}}\n"
 #: ../../statistics.rst:47
 #: 24704f98f7f544ba8ffe0d217321e4a5
 msgid "*D* i *U* Juillanda – miara dyspersji (*D*) i skorygowanej frekwencji (*U*). Miary obliczane są przy pomocy skorygowanej formuły, która uwzględnia różne objętości tekstów należących do korpusu. *D* przyjmuje wartości z przedziału :math:`[0, 1]`, natomiast *U* – z przedziału :math:`[0, F]`."
-msgstr "Juilland's *D* and *U* – measures of dispersion (*D*) and adjusted frequency (*U*). The values are calculated using an adjusted formula, which allows differing lengths of the subcorpora. The values of *D* fall within a range :math:`[0,1]`, and *U* – within :math:`[)0,F]`."
+msgstr "Juilland's *D* and *U* – measures of dispersion (*D*) and adjusted frequency (*U*). The values are calculated using an adjusted formula, which takes differences in text sizes into account. The values of *D* fall within the range of :math:`[0,1]`, whereas the values of *U* fall within the range of :math:`[0,F]`."
 
 #: ../../statistics.rst:49
 #: dc080310d92b46c490ccd9ecb5871b65
@@ -179,7 +179,7 @@ msgstr "*Note that the standard deviation values used to calculate Juilland's D 
 #: ../../statistics.rst:60
 #: aab0b7f48b974fc3bfe67e5aa45079d2
 msgid "*DP* Griesa (odwrotne *DP*, standaryzowane *DP*) – miary dyspersji. Oprócz standardowej miary *DP* obliczane są wartości odwrotnego *DP* (:math:`DP_{rev}`), które łatwiej można porównać z wartościami innych metryk dyspersji, a także standarydowanego *DP* (:math:`DP_{norm}`), wartości którego można porównać z korpusami składającymi się z innej liczby tekstów. Wyższe wartości *DP* i standaryzowanego *DP* (lub niższe wartości odwróconego *DP*)  reprezentują bardziej nierównomierne występowanie słowa w korpusie. *DP* przyjmuje wartości z przedziału :math:`[0, 1-min\\left\\{S_i \\right\\}_{i=1}^N]`, standaryzowane *DP* – z przedziału :math:`[0, 1]`, a odwrotne *DP* – z przedziału :math:`[min \\left\\{S_i \\right\\}_{i=1}^N, 1]`."
-msgstr "Gries' *DP* (reverted *DP*, normalized *DP*) – measures of dispersion. Except for *DP*, values of reverted *DP* (:math:`DP_{rev}`), which can be easily compared to other measures), and normalized *DP* (:math:`DP_{norm}`), which can be used to compare corpora consisting of a different number of texts, are calculated. Higher values of *DP* and normalized *DP* (and lower values of reverted *DP*) reprezent a higher dispersion of a given word. The values of *DP* fall into the :math:`[0, 1-min\\left\\{ S_i \\right\\}_{i=1}^{N}]` range, normalized *DP* – :math:`[0,1]`, and reverted *DP* – :math:`[min \\left\\{ S_i \\right\\}_{i=1}^N, 1]`."
+msgstr "Gries' *DP* (reverted *DP*, normalized *DP*) – measures of dispersion. Except for *DP*, values of reverted *DP* (:math:`DP_{rev}`) (which can be easily compared to other measures) and normalized *DP* (:math:`DP_{norm}`) (which can be used to compare corpora consisting of different numbers of texts) are calculated. Higher values of *DP* and normalized *DP* (and lower values of reverted *DP*) represent a higher dispersion of a given word. The values of *DP* fall within the range of :math:`[0, 1-min\\left\\{ S_i \\right\\}_{i=1}^{N}]`, the values of normalized *DP* fall within the range of :math:`[0,1]`, and the values of reverted *DP* fall within the range of :math:`[min \\left\\{ S_i \\right\\}_{i=1}^N, 1]`."
 
 #: ../../statistics.rst:62
 #: b6e80704c40d4947946d6586635039b1
