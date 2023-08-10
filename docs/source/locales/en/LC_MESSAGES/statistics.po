@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Korpusomat EU 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-24 14:57+0200\n"
+"POT-Creation-Date: 2023-08-10 14:37+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,360 +16,286 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../statistics.rst:2
-#: 4a7f54e868124b3f93a50a2199352ebf
+#: ../../source/statistics.rst:2
+#: de3304c7ab874d029d718c346ee9a5d9
 msgid "Statystyki korpusu"
 msgstr "Corpus statistics"
 
-#: ../../statistics.rst:5
-#: 8cdd51fcbb1b4a95a6c138e795a6e232
+#: ../../source/statistics.rst:5
+#: 05cc973b0dc54ad6a335b9c4bf8fd63c
 msgid "Lista frekwencyjna"
 msgstr "Frequency list"
 
-#: ../../statistics.rst:7
-#: 4c557ea7357a46288d0c2ab539f2eecd
+#: ../../source/statistics.rst:7
+#: 64aa9f10c54b45c383ec234eb83cd18c
 msgid "W tym polu wyświetlana jest lista frekwencyjna ze względu na lematy słów. Wstępnie odfiltrowana jest do słów pełnoznacznych, jednak za pomocą przycisku na górze można ją odfiltrować do dowolnie wybranych części mowy. Po kliknięciu przycisku „Pobierz” zostanie pobrana pełna lista frekwencyjna bez zastosowanego filtrowania."
 msgstr "This option displays the frequency list of all lemmas in the corpus. By default, the list is limited to content words, but there is an option to include or exclude any part of speech by clicking on the button at the top of the page. Clicking on the "Download" button allows the user to download the full frequency list without the applied filters."
 
-#: ../../statistics.rst:11
-#: a49a798ae2884b1db6c0bb3079f25ea4
+#: ../../source/statistics.rst:14
+#: 597c44ffd87b4148ba536bdc635e4422
 msgid "Miary dyspersji i skorygowanej frekwencji"
 msgstr "Measures of dispersion and adjusted frequency"
 
-#: ../../statistics.rst:13
-#: 326bf092d44a4c0998f6be5c7028cd93
+#: ../../source/statistics.rst:16
+#: 724383b89d26432fa97d0e3240b26fde
 msgid "Oprócz standardowej listy frekwencyjnej w polu „Lista frekwencyjna” wyświetlane są również miary dyspersji oraz skorygowanej frekwencji słów."
 msgstr "Apart from the frequency list, adjusted word frequencies and dispersion measures can also be consulted."
 
-#: ../../statistics.rst:15
-#: 14a8cce0cfe64445b2708cce00dfc018
+
+#: ../../source/statistics.rst:18
+#: d697f661202d438aae5d4f059f461e45
 msgid "Poniższa lista przedstawia wszystkie dostępne miary. W podanych wzorach przyjęto następujące oznaczenia:"
 msgstr "The available measures are listed below. The following notation conventions have been adopted in the formulas below:"
 
-#: ../../statistics.rst:17
-#: 2579bb52a7204885b2e364f86a4c2d71
+#: ../../source/statistics.rst:20
+#: a6358724ae174f39a712f1b78e1d9b45
 msgid ":math:`N` - liczba tekstów w korpusie."
 msgstr ":math:`N` – the number of texts in the corpus." 
 
-#: ../../statistics.rst:18
-#: 3893cfd9b2ad4d5b9058075ad3b308b4
+#: ../../source/statistics.rst:21
+#: fdf01231ca6e48a58214450cb6850245
 msgid ":math:`N_t` - liczba tekstów, w których występuje dane słowo."
 msgstr ":math:`N_t` - the number of texts containing a given word."
 
-#: ../../statistics.rst:19
-#: 21f03a9a52684e5593febb8ab9db7964
+#: ../../source/statistics.rst:22
+#: 82237ee5e46a476394f4d95a4c57d67d
 msgid ":math:`L` – liczba słów w korpusie."
 msgstr ":math:`L` – the number of words in the corpus."
 
-#: ../../statistics.rst:20
-#: 554f1082b3c145d1998697951d12e835
+#: ../../source/statistics.rst:23
+#: b42d8c79551547ec94e96836ef1dd701
 msgid ":math:`L_i` – liczba słów w i-tym tekście korpusu."
 msgstr ":math:`L_i` – the number of words in the i-th text of the corpus."
 
-#: ../../statistics.rst:21
-#: d10b84ffc1ca47419143996124279ffb
+#: ../../source/statistics.rst:24
+#: 1c565410111c4e5f9447f490acca3899
 msgid ":math:`F` - liczba wystąpień słowa w całym korpusie."
 msgstr ":math:`F`: – the number of occurrences of the word in the whole corpus."
 
-#: ../../statistics.rst:22
-#: 63602c5f6040432c975df2138b113e63
+#: ../../source/statistics.rst:25
+#: cc06f109b14c4fb2abea0d5153af9f19
 msgid ":math:`F_i` – liczba wystąpień słowa w i-tym tekście korpusu."
 msgstr ":math:`F_i` – the number of occurrences of the word in the i-th text of the corpus."
 
-#: ../../statistics.rst:23
-#: 81a31ae0b92b4e539ad658f1d225cc8b
+#: ../../source/statistics.rst:26
+#: 0bff91531c70450baab14d684943129b
 msgid ":math:`\\bar{F}` - średnia liczba wystąpień danego słowa w tekście korpusu: :math:`\\bar{F} = \\frac{\\sum_{i=1}^{N}F_i}{N}`."
 msgstr ":math:`\\bar{F}` – the average number of occurrences of the word in a text: :math:`\\bar{F} = \\frac{\\sum_{i=1}^{N}F_i}{N}`."
 
-#: ../../statistics.rst:24
-#: 7ba6bdc5d7d54633b54e60ab9fe71676
+#: ../../source/statistics.rst:27
+#: b8013058222f44849ff8710373186093
 msgid ":math:`P_i` – stosunek liczby wystąpień danego słowa do liczby wszystkich słów w i-tym tekście korpusu."
 msgstr ":math:`P_i` – the ratio of the number of occurrences of the word in the i-th text of the corpus and the total number of words in the i-th text of the corpus."
 
-#: ../../statistics.rst:25
-#: 01473187acb64586b7535946673e1e64
+#: ../../source/statistics.rst:28
+#: 5a3e1c4722834c829c2e45f161c9ee4e
 msgid ":math:`\\bar{P}` - średnia częstość wystąpień danego słowa w tekście korpusu: :math:`\\bar{P} = \\frac{\\sum_{i=1}^{N}P_i}{N}`."
 msgstr ":math:`\\bar{P}` – the average sation of the number of occurrences of the word and the total number of words in a corpus text: :math:`\\bar{P} = \\frac{\\sum_{i=1}^{N}P_i}{N}`."
 
-#: ../../statistics.rst:26
-#: 0d9d8021b4634f7c88b0f050882f4c11
+#: ../../source/statistics.rst:29
+#: f6247158f6004acfae6a1fc7d33fa8c8
 msgid ":math:`S_i` – stosunek liczby słów w i-tym tekście korpusu do liczby słów we wszystkich tekstach korpusu: :math:`S_i = \\frac{L_i}{L}`"
 msgstr ":math:`S_i` – the ratio of the number of words in the i-th text of the corpus nad the total number of words in the corpus: :math:`S_i = \\frac{L_i}{L}`"
 
-#: ../../statistics.rst:29
-#: 59d859d966634b4dbc4b208736b29c3e
+#: ../../source/statistics.rst:32
+#: e7b4d8c38f2c4bef88a2b0d7f31b495e
 msgid "Miary dyspersji i skorygowanej frekwencji:"
 msgstr "Measures of dispersion and adjusted frequency:"
 
-#: ../../statistics.rst:31
-#: 0c95139303404aa5b3ae643253699398
+#: ../../source/statistics.rst:34
+#: 22e0de9c7ac84c1186a11f8316beafde
 msgid "Frekwencja – liczba wystąpień danego słowa w korpusie."
 msgstr "Frequency – the number of occurrences of a word in the corpus."
 
-#: ../../statistics.rst:33
-#: 23b72f7e43ed42a5a2609c5fd695a430
+#: ../../source/statistics.rst:36
+#: 425418ce8d8d41ab97ea7d5f54a69c5a
 msgid "F\n"
 "\n"
 ""
-msgstr "F\n"
-"\n"
+msgstr "F"
 
-#: ../../statistics.rst:35
-#: ca3d2f17f1cf45609b7b96ac8d65113d
+#: ../../source/statistics.rst:38
+#: 4760c997733a4751b766f05e1d364031
 msgid "*IDF* – miara ilości informacji wiążącej się z użyciem danego słowa. Przyjmuje wartość 0, jeśli słowo występuje we wszystkich tekstach korpusu, i wartości tym większe im mniejsza jest liczba tekstów, w których występuje słowo."
 msgstr "IDF – a measure of the amount of information related to the use of a given word. The value of IDF is equal to 0, if the word is present in all of the texts, and the lower the number of texts containing the word, the higher the value."
 
-#: ../../statistics.rst:37
-#: 506a0c61866d471a92c34ae3e6ba91e7
+#: ../../source/statistics.rst:40
+#: ae3cb408c6564ccb8fbcf2e4640e905c
 msgid "\\\\log_2\\frac{N}{N_t}\n"
 "\n"
 ""
 msgstr "\\\\log_2\\frac{N}{N_t}\n"
 
-#: ../../statistics.rst:39
-#: fb50e41624bd47fcb9b525672ded2a65
+#: ../../source/statistics.rst:42
+#: 1b1899962086458ab4c9a8eb08418118
 msgid "Współczynnik zmienności (*vc*)."
 msgstr "Variation coefficient (*vc*)."
 
-#: ../../statistics.rst:41
-#: 7aef2100f8fe4467af65296854b341a0
+#: ../../source/statistics.rst:44
+#: 805cd6f9a44d47d5aee372ccea2ef79d
 msgid "\\sigma_F = \\sqrt{\\frac{\\sum_{i=1}^N(F_i - \\bar{F})^2}{N}}\n"
 "\n"
 ""
 msgstr "\\sigma_F = \\sqrt{\\frac{\\sum_{i=1}^N(F_i - \\bar{F})^2}{N}}\n"
 
-#: ../../statistics.rst:44
-#: 90f0e6f6438f4d2291136ddcd2b33d54
+#: ../../source/statistics.rst:47
+#: 64784e595e294ea384454bcf153f5457
 msgid "vc = \\frac{\\sigma_F}{\\bar{F}}\n"
 "\n"
 ""
 msgstr "vc = \\frac{\\sigma_F}{\\bar{F}}\n"
 
-#: ../../statistics.rst:47
-#: 24704f98f7f544ba8ffe0d217321e4a5
+#: ../../source/statistics.rst:50
+#: 8db5e8466092491fb2c19b7fca5f563a
 msgid "*D* i *U* Juillanda – miara dyspersji (*D*) i skorygowanej frekwencji (*U*). Miary obliczane są przy pomocy skorygowanej formuły, która uwzględnia różne objętości tekstów należących do korpusu. *D* przyjmuje wartości z przedziału :math:`[0, 1]`, natomiast *U* – z przedziału :math:`[0, F]`."
 msgstr "Juilland's *D* and *U* – measures of dispersion (*D*) and adjusted frequency (*U*). The values are calculated using an adjusted formula, which takes differences in text sizes into account. The values of *D* fall within the range of :math:`[0,1]`, whereas the values of *U* fall within the range of :math:`[0,F]`."
 
-#: ../../statistics.rst:49
-#: dc080310d92b46c490ccd9ecb5871b65
+
+#: ../../source/statistics.rst:52
+#: 9012917518b24566b5dd9309a7976e0f
 msgid "\\sigma_P = \\sqrt{\\frac{\\sum_{i=1}^N(P_i - \\bar{P})^2}{N}}\n"
 "\n"
 ""
 msgstr "\\sigma_P = \\sqrt{\\frac{\\sum_{i=1}^N(P_i - \\bar{P})^2}{N}}\n"
 
-#: ../../statistics.rst:52
-#: 342959f7f55b425f9d01bb75b21a61f9
+#: ../../source/statistics.rst:55
+#: d93c41bccd79495488281e383c10b10d
 msgid "D_{adj} = 1 - \\frac{\\sigma_P}{\\bar{P}\\sqrt{N - 1}}\n"
 "\n"
 ""
 msgstr "D_{adj} = 1 - \\frac{\\sigma_P}{\\bar{P}\\sqrt{N - 1}}\n"
 
-#: ../../statistics.rst:55
-#: 09ccdbcb4fd0460cac218c543a084d6f
+#: ../../source/statistics.rst:58
+#: fab382d6ea204befaec24e53d9f69ea0
 msgid "U = D_{adj} \\cdot F\n"
 "\n"
 ""
 msgstr "U = D_{adj} \\cdot F\n"
 
-#: ../../statistics.rst:58
-#: 6a0b9b3d70514b31b7fb4e3cbf7b10b4
+#: ../../source/statistics.rst:61
+#: 9149c446015043a8942f97f8350c1f2d
 msgid "*Uwaga: odchylenie standardowe wykorzystane do obliczania D i U Juillanda obliczane jest przy pomocy innej formuły, niż w przypadku współczynnika zmienności.*"
 msgstr "*Note that the standard deviation values used to calculate Juilland's D and U are calculated using different formulas than for the variation coefficient."
 
-#: ../../statistics.rst:60
-#: aab0b7f48b974fc3bfe67e5aa45079d2
+#: ../../source/statistics.rst:63
+#: e90f5bc7ec1b471f851270c9f0276a34
 msgid "*DP* Griesa (odwrotne *DP*, standaryzowane *DP*) – miary dyspersji. Oprócz standardowej miary *DP* obliczane są wartości odwrotnego *DP* (:math:`DP_{rev}`), które łatwiej można porównać z wartościami innych metryk dyspersji, a także standarydowanego *DP* (:math:`DP_{norm}`), wartości którego można porównać z korpusami składającymi się z innej liczby tekstów. Wyższe wartości *DP* i standaryzowanego *DP* (lub niższe wartości odwróconego *DP*)  reprezentują bardziej nierównomierne występowanie słowa w korpusie. *DP* przyjmuje wartości z przedziału :math:`[0, 1-min\\left\\{S_i \\right\\}_{i=1}^N]`, standaryzowane *DP* – z przedziału :math:`[0, 1]`, a odwrotne *DP* – z przedziału :math:`[min \\left\\{S_i \\right\\}_{i=1}^N, 1]`."
 msgstr "Gries' *DP* (reverted *DP*, normalized *DP*) – measures of dispersion. Except for *DP*, values of reverted *DP* (:math:`DP_{rev}`) (which can be easily compared to other measures) and normalized *DP* (:math:`DP_{norm}`) (which can be used to compare corpora consisting of different numbers of texts) are calculated. Higher values of *DP* and normalized *DP* (and lower values of reverted *DP*) represent a higher dispersion of a given word. The values of *DP* fall within the range of :math:`[0, 1-min\\left\\{ S_i \\right\\}_{i=1}^{N}]`, the values of normalized *DP* fall within the range of :math:`[0,1]`, and the values of reverted *DP* fall within the range of :math:`[min \\left\\{ S_i \\right\\}_{i=1}^N, 1]`."
 
-#: ../../statistics.rst:62
-#: b6e80704c40d4947946d6586635039b1
+
+#: ../../source/statistics.rst:65
+#: cffea0bd947a4fe8807414cc2fbca616
 msgid "DP = \\frac{\\sum_{i=1}^{N}|\\frac{F_i}{F}-S_i|}{2}\n"
 "\n"
 ""
 msgstr "DP = \\frac{\\sum_{i=1}^N | \\ frac{F_i}{F}-S_i | }{2}"
 
-#: ../../statistics.rst:65
-#: c0d063a74b9649d1805750d6ba96d02b
+#: ../../source/statistics.rst:68
+#: e26115f95c334c58804f539dd06b2d33
 msgid "DP_{rev} = 1 - DP\n"
 "\n"
 ""
-msgstr "1 - DP\n"
+msgstr "DP_{rev} = 1 - DP\n"
 
-#: ../../statistics.rst:68
-#: 483de76a5874452080f8ead9e49db1e4
+#: ../../source/statistics.rst:71
+#: 91482ddd4d544f4c812f24c11358bbe8
 msgid "DP_{norm} = \\frac{DP}{1 - \\frac{1}{N}}\n"
 "\n"
 ""
 msgstr "DP_{norm} = \\frac{DP}{1 - \\frac{1}{N}}\n"
 
-#: ../../statistics.rst:71
-#: 583ddcf55b0b4fb9b22c9e74bc1e4393
+#: ../../source/statistics.rst:74
+#: b3ce6cbdfb954c74bc97be358968b240
 msgid "*D2* i *Um* Carolla – miara dyspersji (*D2*) i skorygowanej frekwencji (*Um*). Miara *D2* przyjmuje wartości z przedziału :math:`[0, 1]`, przy czym wyższe wartości *D2* świadczą o bardziej równomiernej dystrybuji słowa w korpusie. *Um* przyjmuje wartości z przedziału :math:`[\\frac{F}{N}, F]`."
 msgstr "Caroll's *D2* and *Um* – measures of dispersion (*D2*) and adjusted frequency (*Um*). *D2* displays values from the :math:`[0,1]` range; the lower the values, the more uneven the distribution of the word. The values of *Um* fall within the range of :math:`[\\frac{F}{N},F]`."
 
-#: ../../statistics.rst:73
-#: 4150794f8ec946319222a7128c2afe53
+
+#: ../../source/statistics.rst:76
+#: f2d85f7edfed4b5d994c89129afb8b56
 msgid "D_2 = \\frac{- \\sum_{i=1}^{N} \\left( \\frac{P_i}{\\sum_{i=1}^{N} P_i} \\cdot \\log_2\\frac{P_i}{\\sum_{i=1}^{N}P_i} \\right)}{\\log_2{N}}\n"
 "\n"
-
+""
 msgstr "D_2 = \\frac{- \\sum_{i=1}^{N} \\left( \\frac{P_i}{\\sum_{i=1}^{N} P_i} \\cdot \\log_2\\frac{P_i}{\\sum_{i=1}^{N}P_i} \\right)}{\\log_2{N}}\n"
 
-#: ../../statistics.rst:76
-#: 9ed5a0802fc34a5784279b084ed7d5d3
+#: ../../source/statistics.rst:79
+#: da4cff451483457ca53c544e3ef411b6
 msgid "U_m = F \\cdot D_2 + (1 - D_2) \\cdot \\frac{F}{N}\n"
 "\n"
 ""
 msgstr "U_m = F \\cdot D_2 + (1 - D_2) \\cdot \\frac{F}{N}\n"
 
-#: ../../statistics.rst:78
-#: 2c32490e2e6a476bb010c6d264d7888f
+#: ../../source/statistics.rst:81
+#: 9497ff0e445143b78931bfc14058c9e9
 msgid "Rozbieżność KL (*KLD*) – niesymetryczna miara różnic w rozkładach prawdopodonieństwa, używana jako miara dyspersji. Przy obliczaniu wartości tej metryki przyjmuje się, że :math:`\\\\log_2 0 = 0`. Miara przyjmuje nieujemne wartości – tym wyższe, im mniej równomiernie dane słowo występuje w korpusie."
 msgstr "KL Divergence (*KLD*) – non-symmetric measure of the difference in probability distributions, used as a dispersion measure. The measure has non-negative values, where higher values represent a more uneven distribution of the word. In the following formula it is assumed that :math:`\\\\log_2 0 = 0`."
 
-#: ../../statistics.rst:80
-#: 07e305e4ccb9400daa41d8e88db5a8d1
+#: ../../source/statistics.rst:83
+#: 06e833da5ace40a6ad6817da3465c10a
 msgid "KLD = \\sum_{i=1}^N \\Bigg( \\frac{F_i}{F} \\cdot \\log_2 \\left( \\frac{F_i}{F} \\cdot \\frac{1}{S_i} \\right) \\Bigg)\n"
 "\n"
 ""
 msgstr "KLD = \\sum_{i=1}^N \\Bigg( \\frac{F_i}{F} \\cdot \\log_2 \\left( \\frac{F_i}{F} \\cdot \\frac{1}{S_i} \\right) \\Bigg)\n"
 
-#: ../../statistics.rst:82
-#: 7aea95a7748241f3b55778b93241276d
+#: ../../source/statistics.rst:85
+#: 3a6c7c06a87e4b0db3b9cda288e6d81a
 msgid "*S* i *AF* Roesengrena – miara dyspersji (*S*) oraz frekwencji (*AF*). Miary obliczane są przy pomocy skorygowanej formuły, która uwzględnia różnie objętości tekstów należących do korpusu. *S* przyjmuje wartości z przedziału :math:`[\\frac{1}{N}, 1]`, przy czym wyższe wartości odzwierciedlają bardziej równomierną dystrybuję słowa. AF przyjmuje natomiast wartości z przedziału :math:`[\\frac{F}{N}, F]`."
 msgstr "Rosengren's *S* and *AF* – measures of dispersion (*S*) and adjusted frequency (*AF*). The values of the metrics are calculated using an adjusted formula, which takes differing text sizes into account. *S* displays values from the range :math:`[\\frac{1}{N}, 1]`, where higher values represent a more even distribution of the word in the corpus. The values of AF fall within the range of :math:`[\\frac{F}/{N}, F]`."
 
-#: ../../statistics.rst:84
-#: 47af5ca4c3354e74a2f558afcd769161
+
+#: ../../source/statistics.rst:87
+#: 6dbece7ade0f483ea124f21ef38522d0
 msgid "S_{adj} = \\frac{1}{F} \\left( \\sum_{i=1}^N \\sqrt{F_i \\cdot S_i} \\right)^2\n"
 "\n"
 ""
 msgstr "S_{adj} = \\frac{1}{F} \\left( \\sum_{i=1}^N \\sqrt{F_i \\cdot S_i} \\right)^2\n"
 
-#: ../../statistics.rst:86
-#: 453e7189bfe04c1e8bd89e9433e86298
+#: ../../source/statistics.rst:89
+#: 16e10f1bb4c0427a81be97505f119c38
 msgid "AF = F \\cdot S_{adj}\n"
 "\n"
 ""
-msgstr ""
+msgstr "AF = F \\cdot S_{adj}"
 
-#: ../../statistics.rst:89
-#: e8a685b0ef9c4168b80a5a1cc9d3e737
+#: ../../source/statistics.rst:92
+#: f8a5f753a7284af69ccccbba527faf76
 msgid "*ARF* – miara zmodyfikowanej frekwencji oparta o odległości pomiędzy wystąpieniami danego słowa. W poniższym wzorze zmienna :math:`d_j` oznacza dystans między j-tym i j+1-szym wystąpienie słowa (a dla :math:`j = F` – odległość pomiędzy pierwszym i ostatnim wystąpieniem słowa zakładając, że pierwsze i ostatnie słowo korpusu sąsiadują ze sobą). Miara przyjmuje wartości z przedziału :math:`[1, F]`, tym wyższe, im bardziej równomierna jest dystrybuja słowa w korpusie."
 msgstr "*ARF* – a measure of adjusted frequency based on the distances between the occurrences of a given word. In the formula below, the variable :math:`d_j` stands for the distance between the j-th and j+1-th occurrence of the word (for :math:`j=F` – the distance between the first and the last word, assuming that the distance between the first and the last word of the corpus is 1). The values of ARF fall within the range of :math:`[1,F]` (higher values represent a more even distribution of the word)."
 
-#: ../../statistics.rst:91
-#: 23e52676a3f74fe6be8ad762ee4779f6
+
+#: ../../source/statistics.rst:94
+#: 024f2c32eaf342b2a7f765a4f29d03c9
 msgid "ARF = \\frac{F}{L} \\sum_{i=1}^F min \\left\\{ d_i, \\frac{L}{F} \\right\\}\n"
 "\n"
 ""
 msgstr "ARF = \\frac{F}{L} \\sum_{i=1}^F min \\left\\{ d_i, \\frac{L}{F} \\right\\}\n"
 
-#: ../../statistics.rst:95
-#: 71dc61c99350430188af6674a39c4068
+#: ../../source/statistics.rst:98
+#: 17de9b4459d74b06aea51796a9731cfe
 msgid "Dla korpusów składających się tylko z jednego tekstu obliczane są jedynie frekwencja oraz ARF."
 msgstr "For corpora consisting of only one text, only frequency and ARF are calculated."
 
-#: ../../statistics.rst:97
-#: 1435258df7fa4ce7bd138b6fde86afc4
+#: ../../source/statistics.rst:100
+#: 28f06d1942bd4f629daa34bd93b23f1a
 msgid "Dostępne miary zostały opisane w artykule „Dispersions and adjusted frequencies in corpora” (Gries, 2008) oraz rozdziale 5. podręcznika „A Practical Handbook of Corpus Linguistics” (Gries, 2021)."
 msgstr "The measures of dispersion are described in more detail in „Dispersions and adjusted frequencies in corpora” (Gries, 2008) and in chapter 5 of the handbook „A Practical Handbook of Corpus Linguistics” (Gries, 2021)."
 
-#: ../../statistics.rst:101
-#: 23c4dcf80e0740309cd00e0cdcf720da
+
+#: ../../source/statistics.rst:104
+#: 249aa879be944c4ba4aca7ae6916b809
 msgid "Terminologia"
 msgstr "Terminology"
 
-#: ../../statistics.rst:103
-#: 54bb880d0910424c85ee4c2a1e4b995c
+#: ../../source/statistics.rst:106
+#: d69794030687473fa5b196d9c3f1da25
 msgid "Lista terminów generowana jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji."
 msgstr "Terminology is generated through the TermoPL application, where you can also find its detailed description, instructions, and additional information."
 
-#: ../../statistics.rst:105
-#: a370a19faf97497b9e999e2818a904b9
+#: ../../source/statistics.rst:108
+#: 7f46b583540f4b2b923ed22a2561f797
 msgid "W zakładce Terminologii informacje ograniczone są do formy bazowej, wartości C-value oraz liczby wystąpień, posortowane wg C-value. Po kliknięciu przycisku „Pobierz” pobrany zostaje plik txt zawierający wszystkie dane wygenerowane przez TermoPL."
 msgstr "The information generated by the Terminology functionality is limited to base forms, C-values, and numbers of occurrences, sorted by C-value. After clicking on the "Download" button, a txt file containing all the data generated by TermoPL is downloaded to the user's computer."
 
-#: ../../statistics.rst:107
-#: 608acd66dda04099888885b6b2fafba0
+#: ../../source/statistics.rst:110
+#: 8f46e0a7e2eb469ba17b2e030227ab0f
 msgid "Pliki wygenerowane przez Korpusomat są kompatybilne z aplikacją TermoPL – po pobraniu „plików źródłowych korpusu” (przycisk dostępny na ekranie korpusu) można samodzielnie uruchomić aplikację TermoPL z wybranymi przez siebie opcjami."
 msgstr "The files generated by Korpusomat are compatible with the TermoPL application - after downloading the "corpus source files" (see the main corpus panel), you can run the TermoPL application with the options of your choice."
-
-#: ../../statistics.rst:110
-#: 8064be5aa37e4eb5b5e7702ab91d5685
-msgid "Wykres wg metadanych"
-msgstr ""
-
-#: ../../statistics.rst:112
-#: 8f22e1d76782445d942c3bc22d94d85c
-msgid "W tym polu wyświetlany jest wykres przedstawiający podział segmentów w korpusie ze względu na wybraną metadaną, wybraną przez użytkownika."
-msgstr ""
-
-#: ../../statistics.rst:115
-#: fddcb691327449728ee6ef7b1e84f56c
-msgid "Kolokacje"
-msgstr ""
-
-#: ../../statistics.rst:117
-#: 57906b435d3643a1b24b0b41a7f1e08e
-msgid "To pole zawiera wyznaczone najbardziej prawdopodobne związki wyrazowe dla zadanego schematu. Domyślnie wyświetlone są formy bazowe każdego ze słów składających się na dane wystąpienie, liczba wystąpień oraz symetryczne prawdopodobieństwo warunkowe. Wyświetlanych jest 50 związków posortowanych wg prawdopodobieństwa."
-msgstr ""
-
-#: ../../statistics.rst:119
-#: ef979a5984b44ccaaa5f878625a627c3
-msgid "W pliku dostępnym do pobrania znajdują się wszystkie związki spełniające dane kryterium wyszukiwania oraz kilka miar je charakteryzujących."
-msgstr ""
-
-#: ../../statistics.rst:127
-#: 7866bbc5b9454c6eaec7d87ee8d348ac
-msgid "Te miary to:"
-msgstr ""
-
-#: ../../statistics.rst:122
-#: 5990f315c5d344aabeb81afbd458b8a7
-msgid "Liczba wystąpień danego związku"
-msgstr ""
-
-#: ../../statistics.rst:123
-#: 22f74513e81a4bda9ed957ab88bc4d6a
-msgid "Prawdopodobieństwo warunkowe symetryczne."
-msgstr ""
-
-#: ../../statistics.rst:124
-#: 448f4fa5df514bfc9a523a608c5d21fb
-msgid "Maksymalne prawdopodobieństwo warunkowe."
-msgstr ""
-
-#: ../../statistics.rst:125
-#: 7d36a061b68c4696a127927c346128e3
-msgid "Miara Dice."
-msgstr ""
-
-#: ../../statistics.rst:126
-#: 2fb0bcedf34a4b74969cddad90ec029c
-msgid "Prawdopodobieństwo warunkowe obliczone dla każdego ze składników związku."
-msgstr ""
-
-#: ../../statistics.rst:127
-#: 1ef6f36e3f96475d91908b51347d274c
-msgid "Liczba wystąpień każdego ze składników związku."
-msgstr ""
-
-#: ../../statistics.rst:130
-#: 36af05c7c03e426fa9af6022ea7896e6
-msgid "Słowa kluczowe"
-msgstr ""
-
-#: ../../statistics.rst:132
-#: f793d3b3f0c745ab9469546bedda6051
-msgid "Słowa kluczowe obliczone są na podstawie porównania listy frekwencyjnej korpusu z listą frekwencyjną korpusu referencyjnego. Korpusem referencyjnym w tym przypadku jest milionowy korpus NKJP."
-msgstr ""
-
-#: ../../statistics.rst:135
-#: 5aebc2eeced5449b9bb9d2165675ad62
-msgid "Rozkład słów kluczowych"
-msgstr ""
-
-#: ../../statistics.rst:137
-#: ffd4ac92f24d4c079997ec0ebb6b6dd9
-msgid "Wizualizacja przedstawia występowanie słów kluczowych korpusu w ramach każdego dokumentu tekstowego. Położenie i wielkość są oparte na sumach wystąpień poszczególnych słów kluczowych w kolejnych zdaniach dokumentu. Regulacja zagęszczenia pozwala na sumowanie wystąpień słów z kilku zdań do jednego punktu na wizualizacji, domyślnie ustawiona wartość zagęszczenia ma na celu zwiększenie czytelności wizualizacji."
-msgstr ""
