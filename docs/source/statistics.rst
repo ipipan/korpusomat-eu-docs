@@ -103,7 +103,7 @@ in corpora” (Gries, 2008) oraz rozdziale 5. podręcznika „A Practical Handbo
 Słownictwo charakterystyczne
 ============================
 
-Słownictwo charakterystyczne generowane jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji.
+Słownictwo charakterystyczne generowane jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne `tutaj <https://clarin-pl.eu/dspace/bitstream/handle/11321/266/TermoPL.pdf?sequence=6&isAllowed=y>`__.
 
 W zakładce Terminologii informacje ograniczone są do formy bazowej, wartości C-value oraz liczby wystąpień, posortowane wg C-value. Po kliknięciu przycisku „Pobierz” pobrany zostaje plik txt zawierający wszystkie dane wygenerowane przez TermoPL.
 
