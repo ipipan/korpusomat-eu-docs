@@ -100,7 +100,7 @@ Dla korpusów składających się tylko z jednego tekstu obliczane są jedynie f
 Dostępne miary zostały opisane w artykule „Dispersions and adjusted frequencies
 in corpora” (Gries, 2008) oraz rozdziale 5. podręcznika „A Practical Handbook of Corpus Linguistics” (Gries, 2021).
 
-Słownictwo charakterystyczne
+Terminologia
 ============================
 
 Słownictwo charakterystyczne generowane jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne `tutaj <https://clarin-pl.eu/dspace/bitstream/handle/11321/266/TermoPL.pdf?sequence=6&isAllowed=y>`__.
