@@ -287,7 +287,7 @@ msgstr "Terminology"
 
 #: ../../statistics.rst:103
 #: 54bb880d0910424c85ee4c2a1e4b995c
-msgid "Słownictwo charakterystyczne generowane jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne `tutaj "
+msgid "Lista terminów generowana jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne `tutaj "
 "<https://clarin-pl.eu/dspace/bitstream/handle/11321/266/TermoPL.pdf?sequence=6&isAllowed=y>`__."
 msgstr "Terminology is generated through TermoPL application. Description of its operation, instructions and additional information available `here "
 "<https://clarin-pl.eu/dspace/bitstream/handle/11321/266/TermoPL.pdf?sequence=6&isAllowed=y>`__."
