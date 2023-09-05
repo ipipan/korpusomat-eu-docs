@@ -285,10 +285,12 @@ msgstr "The measures of dispersion are described in more detail in „Dispersion
 msgid "Terminologia"
 msgstr "Terminology"
 
-#: ../../source/statistics.rst:106
-#: d69794030687473fa5b196d9c3f1da25
-msgid "Lista terminów generowana jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne są na stronie aplikacji."
-msgstr "Terminology is generated through the TermoPL application, where you can also find its detailed description, instructions, and additional information."
+#: ../../statistics.rst:103
+#: 54bb880d0910424c85ee4c2a1e4b995c
+msgid "Lista terminów generowana jest przez aplikację TermoPL. Opis jej działania, instrukcja i dodatkowe informacje dostępne `tutaj "
+"<https://clarin-pl.eu/dspace/bitstream/handle/11321/266/TermoPL.pdf?sequence=6&isAllowed=y>`__."
+msgstr "Terminology is generated through TermoPL application. Description of its operation, instructions and additional information available `here "
+"<https://clarin-pl.eu/dspace/bitstream/handle/11321/266/TermoPL.pdf?sequence=6&isAllowed=y>`__."
 
 #: ../../source/statistics.rst:108
 #: 7f46b583540f4b2b923ed22a2561f797
