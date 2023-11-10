@@ -208,8 +208,7 @@ msgstr ""
 "You can specify that you are searching for a token by adding the "
 "attribute ``orth``. In this way, you can search for one or more "
 "(neighbouring) tokens. For example, the following query will return all "
-"instances where the words \"green\" and \"ideas\" appear next to each "
-"other (but it will not return thos"
+"instances where the words \"green\" and \"ideas\" appear next to each other:"
 
 #: ../../mtas.rst:57 090f0349df494aafafef16477c65744b
 msgid "[orth=\"komisja\"][orth=\"szkolna\"]"
