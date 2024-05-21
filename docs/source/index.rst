@@ -24,6 +24,7 @@ Dokumentacja
    word-profiles
    statistics
    tools-resources
+   videos
    licence
    citing
    authors
