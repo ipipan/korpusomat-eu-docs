@@ -23,6 +23,7 @@ Dokumentacja
    mtas
    word-profiles
    statistics
+   speech-to-text
    tools-resources
    videos
    licence

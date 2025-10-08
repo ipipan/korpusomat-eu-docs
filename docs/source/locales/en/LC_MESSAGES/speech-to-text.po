@@ -1,0 +1,73 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2023, IPI PAN
+# This file is distributed under the same license as the Korpusomat EU package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Korpusomat EU 0.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-08 14:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/speech-to-text.rst:2
+msgid "Mowa na tekst"
+msgstr "Speech to text"
+
+#: ../../source/speech-to-text.rst:5
+msgid "Obsługiwane formaty"
+msgstr "Supported formats"
+
+#: ../../source/speech-to-text.rst:7
+msgid "Korpusomat umożliwia automatyczne transkrypcje nagrań audio i video do postaci tekstowej. System obsługuje następujące formaty plików:"
+msgstr "Korpusomat enables automatic transcription of audio and video recordings into text format. The system supports the following file formats:"
+
+#: ../../source/speech-to-text.rst:9
+msgid "**.m4a** – format audio Apple (MPEG-4 Audio)"
+msgstr "**.m4a** – Apple audio format (MPEG-4 Audio)"
+
+#: ../../source/speech-to-text.rst:10
+msgid "**.wav** – format audio Waveform Audio File Format"
+msgstr "**.wav** – Waveform Audio File Format"
+
+#: ../../source/speech-to-text.rst:11
+msgid "**.mp3** – format audio MPEG Audio Layer III"
+msgstr "**.mp3** – MPEG Audio Layer III format"
+
+#: ../../source/speech-to-text.rst:12
+msgid "**URL YouTube** – bezpośrednie przetwarzanie filmów z serwisu YouTube"
+msgstr "**YouTube URL** – direct processing of videos from YouTube"
+
+#: ../../source/speech-to-text.rst:14
+msgid "Obsługiwane języki"
+msgstr "Supported languages"
+
+#: ../../source/speech-to-text.rst:16
+msgid "System automatycznie wykrywa język nagrania. Rozpoznawanie języka nie jest powiązane z językiem korpusu i działa niezależnie od jego ustawień."
+msgstr "The system automatically detects the recording language. Language detection is not correlated with the corpus language and works independently of its settings."
+
+#: ../../source/speech-to-text.rst:19
+msgid "Pełna lista obsługiwanych języków (100 języków):"
+msgstr "Full list of supported languages (100 languages):"
+
+#: ../../source/speech-to-text.rst:126
+msgid "Instrukcja"
+msgstr "Tutorial"
+
+#: ../../source/speech-to-text.rst:137
+msgid "W pierwszej kolejności należy kliknąć przycisk **Pobierz**."
+msgstr "First, you need to click the **Pobierz** (Download) button."
+
+#: ../../source/speech-to-text.rst:143
+msgid "Następnie należy wypełnić pola metadanych. Niektóre z nich (tytuł, autor, data) mogą zostać automatycznie uzupełnione."
+msgstr "Next, fill in the metadata fields. Some of them (Title, Author, Date) can be autofilled."
+
+#: ../../source/speech-to-text.rst:161
+msgid "Po zakończeniu transkrypcji istnieje możliwość edycji tekstu poprzez kliknięcie przycisku **Edytuj tekst**."
+msgstr "After the transcription is complete, it is possible to edit the text by clicking the **Edytuj tekst** (Edit text) button."
