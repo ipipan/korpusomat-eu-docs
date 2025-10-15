@@ -24,6 +24,7 @@ Dokumentacja
    word-profiles
    statistics
    speech-to-text
+   parallel-corpora
    tools-resources
    videos
    licence
