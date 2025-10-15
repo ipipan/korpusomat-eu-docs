@@ -27,30 +27,17 @@ Instrukcja
 
 Podczas tworzenia korpusu należy zaznaczyć checkbox **Korpus równoległy** oraz określić języki dodawanych tekstów.
 
-.. image:: img/parallel/1.png
-  :width: 800
-  :alt: Krok 1
+|image1|
 
 Następnie należy wybrać zrównoleglony wcześniej plik (DODAJ TEXT ZRÓWNOLEGLONY (TMX)) lub osobne pliki tekstowe (DODAJ TEKSTY DO ZRÓWNOLEGLENIA)
 
-.. image:: img/parallel/3.png
-  :width: 800
-  :alt: Krok 2
-
-.. image:: img/parallel/2.png
-  :width: 800
-  :alt: Krok 3
+|image2|
+|image3|
 
 Jeżeli w plikach, które dodajemy wiersz w jednym pliku odpowiada wierszowi w drugim pliku należy zaznaczyć checkbox **Wiersze w obu plikach odpowiadają sobie**.
 
-.. image:: img/parallel/4.png
-  :width: 800
-  :alt: Krok 4
-
-.. image:: img/parallel/5.png
-  :width: 800
-  :alt: Krok 5
-
+|image4|
+|image5|
 
 Wskazówki dla najlepszych rezultatów
 =====================================
@@ -58,3 +45,14 @@ Wskazówki dla najlepszych rezultatów
 Dla najdokładniejszego dopasowania używaj plików TMX lub plików, w których wiersze odpowiadają sobie.
 
 Unikaj bardzo długich akapitów w jednym wierszu. Podział zdań poprawia dokładność dopasowania.
+
+.. |image1| image:: img/parallel/1.png
+   :class: center-block
+.. |image2| image:: img/parallel/3.png
+   :class: center-block
+.. |image3| image:: img/parallel/2.png
+   :class: center-block
+.. |image4| image:: img/parallel/4.png
+   :class: center-block
+.. |image5| image:: img/parallel/5.png
+   :class: center-block
