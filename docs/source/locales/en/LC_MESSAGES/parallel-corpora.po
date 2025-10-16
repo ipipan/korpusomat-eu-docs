@@ -9,10 +9,9 @@ msgstr ""
 "Project-Id-Version: Korpusomat EU 0.1.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-16 11:46+0200\n"
-"PO-Revision-Date: 2025-10-16 12:00+0200\n"
-"Last-Translator: ChatGPT <noreply@openai.com>\n"
-"Language-Team: English <LL@li.org>\n"
-"Language: en\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -33,7 +32,7 @@ msgstr ""
 "Korpusomat allows you to create parallel corpora — collections in which texts "
 "in different languages are aligned at the sentence level. Each sentence in one "
 "language corresponds to a sentence (or group of sentences) in another language. "
-"This makes it possible to search for equivalents of words, phrases, and "
+"This makes it possible to search for equivalents of words, phrases and "
 "constructions between languages."
 
 #: ../../parallel-corpora.rst:9 ebb581256e554b0fbc3dd56c6b1ecbac
@@ -76,26 +75,6 @@ msgstr ""
 "the column headers. Each subsequent row is one sentence alignment — one sentence "
 "per language. Example (for two languages: Polish and English):"
 
-#: ../../parallel-corpora.rst:26 5184e547b2594417af68ea5fa9fb5f6e
-msgid ""
-"pl,en\n"
-"Niestety nadal nie jest dostępna szczepionka przeciwko wirusowemu "
-"zapaleniu wątroby typu C.,Vaccination against hepatitis C is not yet "
-"available.\n"
-"Zakażenie wirusem HIV,HIV infection\n"
-"Ludzki wirus upośledzenia odporności (HIV) powoduje jedną z "
-"najważniejszych chorób zakaźnych w Europie.,The human immunodeficiency "
-"virus (HIV) remains one of the most important communicable diseases in "
-"Europe."
-msgstr ""
-"pl,en\n"
-"Unfortunately, vaccination against hepatitis C is not yet available.,Vaccination "
-"against hepatitis C is not yet available.\n"
-"HIV infection,HIV infection\n"
-"The human immunodeficiency virus (HIV) causes one of the most important "
-"infectious diseases in Europe.,The human immunodeficiency virus (HIV) remains "
-"one of the most important communicable diseases in Europe."
-
 #: ../../parallel-corpora.rst:36 b497607a60da4fc1b257ccea417816cb
 msgid ""
 "c) **Oddzielne pliki tekstowe TXT** - Możliwe jest przesłanie dwóch "
@@ -109,13 +88,13 @@ msgid ""
 "słowników dwujęzycznych, aby dopasować do siebie odpowiadające zdania w "
 "obu językach."
 msgstr ""
-"c) **Separate TXT files** – You can upload two separate text files, one for each "
+"c) **Separate TXT files** – You can upload two separate text files - one for each "
 "language. \n"
-"- Files with corresponding lines: each line corresponds to one sentence, and lines "
+"- Files with corresponding lines: each line corresponds to one sentence and lines "
 "in both files are aligned. \n"
-"- Files with non-corresponding lines: for example, a book written in Polish and its "
-"English translation. The files have no direct sentence alignment. In this case, "
-"sentence alignment is performed by the **Hunalign** tool, which compares sentence "
+"- Files with non-corresponding lines: for example a book written in Polish and its "
+"English translation. The files have no direct sentence alignment. In this case "
+"sentence alignment is performed by the **Hunalign** tool which compares sentence "
 "lengths and uses bilingual dictionaries to match corresponding sentences in both "
 "languages."
 
@@ -128,37 +107,37 @@ msgid ""
 "Podczas tworzenia korpusu należy zaznaczyć checkbox **Korpus równoległy**"
 " oraz określić języki dodawanych tekstów."
 msgstr ""
-"When creating a corpus, select the **Parallel corpus** checkbox and specify the "
+"When creating a corpus select the **Parallel corpus** checkbox and specify the "
 "languages of the uploaded texts."
 
 #: ../../parallel-corpora.rst:48 5084080729214124b42dd392cb801d7a
 msgid "|image1|"
-msgstr "|image1|"
+msgstr ""
 
 #: ../../parallel-corpora.rst:67 b86c0c5c52ed4071b9923261fb6a7197
 msgid "image1"
-msgstr "image1"
+msgstr ""
 
 #: ../../parallel-corpora.rst:50 5b85401e4b7545d5abaa1df8b0c89551
 msgid ""
 "Następnie należy wybrać zrównoleglony wcześniej plik (DODAJ TEXT "
-"ZRÓWNOLEGLONY (TMX)) lub osobne pliki tekstowe (DODAJ TEKSTY DO "
+"ZRÓWNOLEGLONY (TMX, CSV)) lub osobne pliki tekstowe (DODAJ TEKSTY DO "
 "ZRÓWNOLEGLENIA)"
 msgstr ""
-"Next, choose either a previously aligned file (ADD ALIGNED TEXT (TMX)) or separate "
+"Next, choose either a previously aligned file (ADD ALIGNED TEXT (TMX, CSV)) or separate "
 "text files (ADD TEXTS TO ALIGN)."
 
 #: ../../parallel-corpora.rst:52 1329236be50344e2992bd97c9ed9eec5
 msgid "|image2| |image3|"
-msgstr "|image2| |image3|"
+msgstr ""
 
 #: ../../parallel-corpora.rst:69 5179d17e362a4519a495e8b1752b3511
 msgid "image2"
-msgstr "image2"
+msgstr ""
 
 #: ../../parallel-corpora.rst:71 7d3cbcb1edc14eaeb7440817cc897979
 msgid "image3"
-msgstr "image3"
+msgstr ""
 
 #: ../../parallel-corpora.rst:55 fa2c53e5c1474853b69446bab1b58a0d
 msgid ""
@@ -166,20 +145,20 @@ msgid ""
 "wierszowi w drugim pliku należy zaznaczyć checkbox **Wiersze w obu "
 "plikach odpowiadają sobie**."
 msgstr ""
-"If, in the files being added, each line in one file corresponds to a line in the "
-"other, select the checkbox **Lines in both files correspond**."
+"If in the files being added each line in one file corresponds to a line in the "
+"other select the checkbox **Lines in both files correspond to each other.**."
 
 #: ../../parallel-corpora.rst:57 c0ac7e47deb24399bc08795fbf74ea1e
 msgid "|image4| |image5|"
-msgstr "|image4| |image5|"
+msgstr ""
 
 #: ../../parallel-corpora.rst:73 f38e7f87dfff47959c6076c26d97b9f6
 msgid "image4"
-msgstr "image4"
+msgstr ""
 
 #: ../../parallel-corpora.rst:75 b82fe31be6014265ada34f4f42e28930
 msgid "image5"
-msgstr "image5"
+msgstr ""
 
 #: ../../parallel-corpora.rst:61 fc770c3f78a24968b4a9bdcc21dca14d
 msgid "Wskazówki dla najlepszych rezultatów"
@@ -190,7 +169,7 @@ msgid ""
 "Dla najdokładniejszego dopasowania używaj plików TMX lub plików, w "
 "których wiersze odpowiadają sobie."
 msgstr ""
-"For the most accurate alignment, use TMX files or files where lines correspond "
+"For the most accurate alignment use TMX files or files where lines correspond "
 "directly."
 
 #: ../../parallel-corpora.rst:65 6553bf6bc06a4445b21d21bc67583e74
