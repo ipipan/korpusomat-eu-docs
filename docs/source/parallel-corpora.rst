@@ -14,7 +14,26 @@ a) **plik TMX**
 - Zawiera już zdania sparowane w dwóch (lub więcej) językach.
 Korpusomat automatycznie odczytuje te pary i zachowuje ich powiązanie.
 
-b) **Oddzielne pliki tekstowe TXT**
+b) **plik CSV**
+- Każdy wiersz w pliku CSV odpowiada jednej parze (lub grupie) zdań w różnych językach.
+
+- Przygotowanie pliku CSV dla korpusu równoległego:
+  
+  Pierwszy wiersz musi zawierać kody języków UTF-8 (np. pl, en, de) — to nagłówki kolumn.
+  Każdy kolejny wiersz to jedno dopasowanie zdań — po jednym zdaniu w każdym języku.
+  Przykład (dla dwóch języków: polskiego i angielskiego):
+
+  .. code-block:: python
+
+
+   pl,en
+   Niestety nadal nie jest dostępna szczepionka przeciwko wirusowemu zapaleniu wątroby typu C.,Vaccination against hepatitis C is not yet available.
+   Zakażenie wirusem HIV,HIV infection
+   Ludzki wirus upośledzenia odporności (HIV) powoduje jedną z najważniejszych chorób zakaźnych w Europie.,The human immunodeficiency virus (HIV) remains one of the most important communicable diseases in Europe.
+
+
+
+c) **Oddzielne pliki tekstowe TXT**
 - Możliwe jest przesłanie dwóch osobnych plików tekstowych, po jednym dla każdego języka.
     - Pliki z wierszami odpowiadającymi sobie: każdy wiersz odpowiada jednemu zdaniu, a wiersze w obu plikach są sparowane.
 
